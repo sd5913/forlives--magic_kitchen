@@ -1,38 +1,11 @@
-# 古风奇幻药房：玩法提案
+# Herbal Pharmacy — early idea
 
-状态：讨论稿，待小组与 tutor 确认；尚未实现或完成试玩。
+A time-management game set in an ancient Chinese fantasy pharmacy. You play as an apprentice, taking prescriptions, picking herbs, weighing ingredients and wrapping orders before customers lose patience. Some herbs might run away or cause trouble while you work.
 
-## 概念
-玩家是古代奇幻中医馆的药房实习生，在限时营业中接收处方、抓药、加工称量、配包交付，并应付突发状况。面向喜欢限时经营与多任务游戏的玩家。药材、处方和效果均为架空游戏设定。
+The idea is to use the mouse with your right hand to manage orders, and webcam gestures with your left hand for actions like grinding herbs. You could grind one batch while preparing the next order with the mouse.
 
-## 核心循环
-接方 → 选药 → 按处方加工与称量 → 配包 → 交付。顾客有等待时间，设备有限；玩家利用加工间隙准备下一单。不是所有药材都需要全部工序。
+References: Airplane Chefs and Overcooked!
 
-## 操作：右手鼠标、左手手势
-- 鼠标：查看订单、打开药柜、移动药材、增减称量、配包交付。
-- 摄像头：左手画圈研磨。切药的上下动作和张掌稳定法术为后续候选。
-- 启动加工后锁定工具，鼠标可处理另一订单，不会改变手势目标。
-- 高亮、进度条和声音提示识别与完成状态。识别丢失时暂停并提示，不直接判错。
-- 每次动作仅几秒，允许手臂休息；准确度和舒适度需原型验证。
+We plan to build it in Python. First, we want to try one workbench and a circular grinding gesture to see whether using both hands feels fun. The rest is still open for discussion.
 
-## 事故候选
-- 灵草逃跑：抓取前抖动预警，逃出后干扰工作台，可用鼠标抓回。
-- 灵力失控：加工出现异常光效，需暂停并稳定。
-第一版只做一种，有预警且可补救。
-
-## 首个交互原型
-鼠标将药材放进药碾并启动 → 左手画圈研磨 → 右手同时准备下一单 → 完成提示 → 取回药材。
-
-验收：玩家能辨认手势目标；鼠标操作不会切换锁定工具；手离开画面可暂停、恢复或取消；请同学试玩并记录误识别、理解困难和疲劳。
-
-## 初始范围
-Python 二维游戏，一个工作台、四种架空药材、三张处方、一种手势、一种事故、三分钟关卡，含等待时间、计分、结算和基础音效。技术库待试验确定。暂不实现 Joy-Con、联机或开放世界。
-
-## 参考与发展
-《飞机大厨》：限时订单与工序安排。
-《Overcooked! / 胡闹厨房》：有限工作站与忙中救场。
-本作重点：中式药房工序、双手并行和魔法事故连锁反应。不复用参考作品代码或素材。
-
-## 下一步与 AI 说明
-与组员及 tutor 确认范围和负责人，先验证双手并行，再扩展切药等动作。
-本文由 Enmin Wu（deadlytomatovo）提出方向，与 OpenAI Codex 讨论整理；属于规划贡献，不代表已实现、全组通过或完成用户测试。
+*Draft wording assisted by Codex.*
