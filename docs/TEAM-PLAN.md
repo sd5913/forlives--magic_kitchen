@@ -15,7 +15,7 @@ Agree the project scope with the team/tutor and deliver one working interaction 
 | Tutor and exact meeting slot | To confirm | Team to agree |
 | Group member GitHub usernames | IceyHikari, MiaJiao5, deadlytomatovo, ZHANGYan-Sybil | Confirmed from supplied accounts |
 | Repository Write access | First three Admin verified; ZHANGYan-Sybil invitation pending acceptance | Repository administrator / invitee |
-| Team Project board | [Board #24](https://github.com/orgs/sd5913/projects/24), linked to repository; teammates configured as Writers | IceyHikari; teammates to verify access |
+| Team Project board | [Existing board #23](https://github.com/orgs/sd5913/projects/23), created by MiaJiao5 and linked to repository; IceyHikari can edit | Board administrators; teammates to verify access |
 
 Do not put student numbers, emails or private meeting details in this public document.
 
@@ -31,7 +31,7 @@ Assign each implementation task to a real teammate before starting. The initial 
 
 ## Board setup
 
-[Magic Kitchen team board #24](https://github.com/orgs/sd5913/projects/24) was copied from [Group Project 2026](https://github.com/orgs/sd5913/projects/1) with draft cards, under **Owner: sd5913**, and linked to `sd5913/forlives--magic_kitchen`. The five tutor review cards were verified; the final deadline card was explicitly added because it was absent after copying. The scope issue replaces the generic starter task. Board #23 was briefly readable during setup but then became inaccessible; it was not deleted or modified by this setup. Use #24 as the linked team board unless the group agrees to consolidate elsewhere.
+[Magic Kitchen team board #23](https://github.com/orgs/sd5913/projects/23) is the existing board created by MiaJiao5 from [Group Project 2026](https://github.com/orgs/sd5913/projects/1), owned by **sd5913**. It contains all five tutor review cards, the final deadline card and the starter planning card. Those existing cards are preserved. The repository is linked, and the setup issues have been added. A temporary duplicate was created while this board was inaccessible; setup was consolidated back into #23 at the team's request.
 
 Use the template's weekly Iteration field and views. A useful status flow is Backlog → Todo → In progress → Review → Done. Check the copied automation settings rather than assuming closed issues or merged PRs meet the Definition of Done. A Project's collaborators and repository links do not automatically come from the template.
 

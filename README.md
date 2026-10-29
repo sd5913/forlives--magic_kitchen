@@ -11,7 +11,7 @@ Team setup and project planning. The working title comes from the repository nam
 - [Planning and task ownership](docs/TEAM-PLAN.md)
 - [Weekly deliveries and tutor feedback](docs/WEEKLY-PROGRESS.md)
 - [Repository issues](https://github.com/sd5913/forlives--magic_kitchen/issues)
-- [Magic Kitchen team board](https://github.com/orgs/sd5913/projects/24)
+- [Magic Kitchen team board](https://github.com/orgs/sd5913/projects/23)
 - [Contribution and review workflow](CONTRIBUTING.md)
 - [Credits and AI assistance](CREDITS.md)
 
@@ -19,7 +19,7 @@ The team board is copied from the course [Group Project 2026 template](https://g
 
 ## Access
 
-Repository Admin access was verified for IceyHikari, MiaJiao5 and deadlytomatovo. ZHANGYan-Sybil has a pending repository invitation and must accept it before access can be verified. The three other teammates have been configured as board Writers, while IceyHikari created/administers the board. Each teammate still needs to confirm actual access. Keep the board's organization base access Read or No access in its settings; the API used for setup did not expose that setting for verification. The instructor must be able to view the evidence.
+Repository Admin access was verified for IceyHikari, MiaJiao5 and deadlytomatovo. ZHANGYan-Sybil has a pending repository invitation and must accept it before access can be verified. Use the existing team board created by MiaJiao5; IceyHikari can edit it. Each teammate still needs to confirm actual board access, which is separate from repository access. Keep the board's organization base access Read or No access in its settings; the API used for setup did not expose that setting for verification. The instructor must be able to view the evidence. Track remaining checks in issue #2.
 
 ## First delivery
 

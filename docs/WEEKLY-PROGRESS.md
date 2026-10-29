@@ -7,8 +7,8 @@ Final Canvas deadline: **6 December 2026, 23:59 HKT**. The dates below are Thurs
 - Verified: the repository is public and owned by sd5913; IceyHikari has Admin access.
 - Existing product state: only the initial README was present when setup began. No runnable project or playtest evidence yet.
 - Work prepared: collaboration guidance, proposed Definition of Done, scope/access backlog and this dated delivery record, using the official project brief and Week 8 teamwork guide.
-- Board: [#24](https://github.com/orgs/sd5913/projects/24) copied from the course template, linked to this repository, with weekly iteration/status views and delivery cards. Issues #1–#3 track scope, access and the first interaction.
-- Access: IceyHikari, MiaJiao5 and deadlytomatovo have repository Admin access. ZHANGYan-Sybil has a pending repository invitation. Board Write grants were configured for the three supplied teammates; actual teammate access and organization base-access setting still need verification.
+- Board: use MiaJiao5's existing [#23](https://github.com/orgs/sd5913/projects/23), with its template iterations/views and existing delivery cards preserved. The repository is linked. Issues #1–#3 track scope, access and the first interaction.
+- Access: IceyHikari, MiaJiao5 and deadlytomatovo have repository Admin access. ZHANGYan-Sybil has a pending repository invitation. IceyHikari can edit board #23; other teammates' actual board access and organization base-access setting still need verification. A temporary duplicate board was consolidated into the existing board at the user's request.
 - Blockers: audience, platform, scope and tutor slot are not recorded yet; pending invitation/access checks remain open.
 - Next: confirm access and scope, then implement the first small interaction. No tutor feedback has been received in this setup record.
 
