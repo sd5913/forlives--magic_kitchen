@@ -8,7 +8,7 @@
 
 ## Changes and review
 
-1. Create a branch, for example `codex/short-task-name` for AI-assisted work or `feature/short-task-name` for other development.
+1. Name branches by the purpose of the change: `feature/short-task-name` for features, `fix/short-task-name` for fixes, or `docs/short-task-name` for documentation. Use these names whether or not AI tools assisted the work; document AI assistance in the relevant process notes or credits.
 2. Make small, meaningful commits. Explain the behavior changed rather than increasing commit counts for their own sake.
 3. Open a pull request against the default branch with the issue link, what changed, how it was checked and known limitations. Use `Closes #<issue-number>` only when the work really resolves that issue.
 4. Ask a teammate to review and try the result. Record what they actually observed. A self-check is not a teammate review.
