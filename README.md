@@ -4,7 +4,13 @@ SD5913 group project · Shared repository: `sd5913/forlives--magic_kitchen`
 
 ## Current stage
 
-Team setup and project planning. The working title comes from the repository name; the team still needs to confirm the audience, concept, platform and first interaction with the tutor. No runnable application or completed user test is included yet.
+Our current proposal is **Herbs on the Clock**, a short, single-player fantasy pharmacy game. Players prepare fictional herbal prescriptions while managing customer patience and limited equipment. We want to explore grinding with one hand while managing another order with the mouse.
+
+The repository contains proposals and collaboration records, not a runnable game. Godot 2D is tentative. The latest design refinement prioritises a small two-hand interaction prototype; its gesture mapping, comfort and gameplay value still need testing and team/tutor agreement.
+
+- [Original proposal](docs/HERBAL-PHARMACY-PROPOSAL-EN.md), preserved for comparison
+- [6 November design refinement and prototype acceptance checks](docs/DESIGN-REFINEMENT.md)
+- [Related projects and interaction comparisons](docs/INTERACTION-REFERENCES.md)
 
 ## Collaboration
 
@@ -19,15 +25,15 @@ The team board is copied from the course [Group Project 2026 template](https://g
 
 ## Access
 
-Repository Admin access was verified for IceyHikari, MiaJiao5 and deadlytomatovo. ZHANGYan-Sybil has a pending repository invitation and must accept it before access can be verified. Use the existing team board created by MiaJiao5; IceyHikari can edit it. Each teammate still needs to confirm actual board access, which is separate from repository access. Keep the board's organization base access Read or No access in its settings; the API used for setup did not expose that setting for verification. The instructor must be able to view the evidence. Track remaining checks in issue #2.
+The 29 October setup record documents the initial repository permissions and a pending invitation. Those historical checks do not establish today's access. Use the existing team board created by MiaJiao5; verify repository access and board access separately with each teammate. Keep the board's organization base access Read or No access in its settings and ensure the instructor can view the evidence. Track remaining checks in issue #2.
 
-## First delivery
+## Next delivery
 
-For the class week of **5 November 2026**, agree one small interaction with the team and tutor, then bring a working version someone can try. Define the input, response, feedback and a relevant failure case before implementing it. See the plan and weekly record for open decisions. The tutor confirms the actual meeting time within the scheduled tutorial slot.
+The class week of **12 November 2026** focuses on an integrated core experience. Start by sharing any existing local implementation and recording what happened at the 5 November review; neither is available in this repository yet. The proposed first implementation connects herb selection, grinding and delivery, then tests grinding while managing a second order. See the design refinement for acceptance checks. The tutor confirms the actual meeting time within the scheduled tutorial slot.
 
 ## Running the project
 
-No implementation has been chosen yet. Once the platform is agreed, add exact prerequisites, install/run commands, target platform, limitations and a usable build or live link where appropriate. Do not infer the runtime from this planning scaffold.
+There is no runnable source or build in this repository yet. The original proposal tentatively selects Godot; confirm the existing team work before choosing a version or camera integration. Add exact prerequisites, install/run commands, target platform, limitations and a usable build when implementation is shared. Do not treat a proposal as a launch guide.
 
 ## Assessment and submission
 
@@ -39,4 +45,4 @@ Course sources: [project brief](https://github.com/sd5913/pfad/blob/2026/assignm
 
 ## 中文说明
 
-这是小组共享仓库，目前先搭建协作框架，具体题材、受众、平台和首个交互仍待组内与 tutor 确认。后续继续使用同一仓库。老师的 “Use this template” 指复制 GitHub Projects 看板模板；仓库已经建立，不必重建。看板与代码仓库的权限分别配置，组员账号确认后再添加写入权限。任务与每周交付先记录在上面的共享文档中，不把计划写成已完成成果。
+目前提案是短局奇幻药房经营游戏：玩家加工虚构药材、安排订单，并尝试一手研磨、一手管理的双手分工。11 月 6 日整理了交互修订、相关例子和原型验收条件，原提案保留不覆盖。Godot 仍是暂定方案，仓库尚无可运行工程或本项目试玩证据。先同步组员已有成果，再验证双手操作的趣味、反馈和舒适度。继续使用现有共享仓库与看板 #23，不重建项目，也不把文档更新当成可玩增量。

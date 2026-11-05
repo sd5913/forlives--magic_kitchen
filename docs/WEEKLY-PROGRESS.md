@@ -20,9 +20,18 @@ Goal: someone can try one input and see the intended response. Agree the next sm
 - Usable delivery / run link: pending
 - Issues, PRs and tests: pending
 - User or teammate observations: not yet recorded
-- Tutor feedback: not yet received
+- Tutor feedback: not recorded here; confirm with attendees rather than assuming no review took place
 - Blocker or question: to prepare
 - Next goal, owners and acceptance checks: to agree after review
+
+## 6 November 2026: proposal and interaction review
+
+- Completed documentation work: compared the current proposal with the course brief, screened the introductions of 36 supplied example repositories and inspected selected source excerpts from eight related projects. Added [design refinement](DESIGN-REFINEMENT.md) and [interaction references](INTERACTION-REFERENCES.md); updated README and the proposed team plan.
+- Kept: the fantasy pharmacy setting and the original two-hand preparation idea. The original proposal remains unchanged.
+- Changed: prioritise a small two-hand grinding prototype; explain the proposed relationship between gesture, material state and order scheduling instead of presenting camera use alone as the distinguishing feature. Keep a non-camera fallback and test tracking loss and comfort.
+- Evidence boundary: no example projects were run, no new game code was produced and no user/tutor trial is claimed. The shared main branch contained documentation only at the start of this update; teammates may have work elsewhere.
+- Open: share existing local work, confirm the actual 5 November review, agree prototype ownership and verify the current runtime and access. Do not close implementation tasks based on this document update.
+- Assistance: Codex conducted the repository reading and drafted this refinement at IceyHikari's request. Team decisions and actual observations still need confirmation.
 
 ## Class week of 12 November 2026: integrated core experience
 
