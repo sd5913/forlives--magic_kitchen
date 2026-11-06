@@ -1,0 +1,22 @@
+# OS and editor caches
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local configuration; example configuration stays shareable
+.env
+.env.*
+!.env.example
+
+# Python development tools (not an engine choice)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated Godot cache (keep project.godot, assets and *.uid)
+.godot/
+
+# Local export output
+/build/
+/dist/
