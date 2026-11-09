@@ -12,11 +12,11 @@ The original goal was a first working interaction for 5 November. Its delivery a
 | --- | --- | --- |
 | Intended user and purpose | Proposed: PC players who enjoy short time-management games and want to try hands-on preparation | Team/tutor to confirm |
 | Main input, response and visible feedback | Proposed: continuous grinding with one hand while the mouse manages orders; visible material progress and order binding | Prototype owner to agree |
-| Chosen platform/runtime | Original proposal tentatively selects Godot 2D; existing local work, version and camera integration need confirmation | Team to agree |
+| Chosen platform/runtime | [Godot 4.7.2 Standard, GDScript, Compatibility](ENGINE-DECISION.md); Windows/macOS desktop first. Camera remains optional | JIN Minyi (technical decision) |
 | Multimedia needed for the idea | Proposed: readable herb/tool states, grinding animation and sound, customer/order feedback; asset sources to record | Team to agree |
 | Tutor and exact meeting slot | To confirm | Team to agree |
 | Group member GitHub usernames | IceyHikari, MiaJiao5, deadlytomatovo, ZHANGYan-Sybil | Confirmed from supplied accounts |
-| Repository Write access | 29 October snapshot: first three Admin, ZHANGYan-Sybil invitation pending; current access needs rechecking | Repository administrator / invitee |
+| Repository Write access | 6 November permission API: all four Admin; actual push checks and Project access still require separate verification | Repository administrator / teammates |
 | Team Project board | [Existing board #23](https://github.com/orgs/sd5913/projects/23), created by MiaJiao5 and linked to repository; IceyHikari can edit | Board administrators; teammates to verify access |
 
 Do not put student numbers, emails or private meeting details in this public document.
@@ -32,7 +32,7 @@ Do not put student numbers, emails or private meeting details in this public doc
 | Test the two-hand interaction | Complete a bound grinding task while selecting a second order; pause/resume safely; show tracking status and a fallback | Proposed; owner to agree |
 | Integrate a playable shift | Add customer patience, a recoverable interruption, an end state and retry after the one-order loop works | Proposed; depends on prototype |
 
-Assign each implementation task to a real teammate before starting. The initial workflow work is being prepared at IceyHikari's request; this does not assign other team members to unagreed responsibilities.
+Assign each implementation task to a real teammate before starting. The initial workflow work is being prepared at IceyHikari's request; this does not assign other team members to unagreed responsibilities. Read [shared status and handoff](PROJECT-STATUS.md) when continuing on another computer.
 
 ## Board setup
 
@@ -40,4 +40,4 @@ Assign each implementation task to a real teammate before starting. The initial 
 
 Use the template's weekly Iteration field and views. A useful status flow is Backlog → Todo → In progress → Review → Done. Check the copied automation settings rather than assuming closed issues or merged PRs meet the Definition of Done. A Project's collaborators and repository links do not automatically come from the template.
 
-Three repository issues are linked to the board: [scope #1](https://github.com/sd5913/forlives--magic_kitchen/issues/1), [access #2](https://github.com/sd5913/forlives--magic_kitchen/issues/2) and [first interaction #3](https://github.com/sd5913/forlives--magic_kitchen/issues/3). Scope/access belong to the first weekly iteration; implementation remains Backlog until scope is agreed. Access remains In progress pending invitation acceptance and teammate verification. The board is private; check its base access in Settings (Read or No access), and confirm tutor visibility. These settings were not assumed from repository membership.
+Three repository issues are linked to the board: [scope #1](https://github.com/sd5913/forlives--magic_kitchen/issues/1), [access #2](https://github.com/sd5913/forlives--magic_kitchen/issues/2) and [first interaction #3](https://github.com/sd5913/forlives--magic_kitchen/issues/3). The setup record placed scope/access in the first iteration and implementation in Backlog; current Project statuses need a fresh check. Repository permissions now report all four members as Admin, while actual push checks, Project editing and tutor visibility remain unverified. The board was private at setup; check its current base access in Settings (Read or No access). These settings are not inferred from repository membership.
