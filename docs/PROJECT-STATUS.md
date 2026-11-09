@@ -1,6 +1,6 @@
 # Shared project status and handoff
 
-Updated 6 November 2026, Hong Kong time. I use this file as the short entry point when continuing from another computer or chat. My name is JIN Minyi (`IceyHikari`). Team decisions belong in the [team plan](TEAM-PLAN.md), tasks in the [existing board #23](https://github.com/orgs/sd5913/projects/23), and actual results in [weekly progress](WEEKLY-PROGRESS.md).
+Updated 9 November 2026, Hong Kong time. I use this file as the short entry point when continuing from another computer or chat. My name is JIN Minyi (`IceyHikari`). Team decisions belong in the [team plan](TEAM-PLAN.md), tasks in the [existing board #23](https://github.com/orgs/sd5913/projects/23), and actual results in [weekly progress](WEEKLY-PROGRESS.md).
 
 ## Verified starting point
 
@@ -12,7 +12,7 @@ Updated 6 November 2026, Hong Kong time. I use this file as the short entry poin
 
 ## Work in this change
 
-I am adding text/ignore rules, an offline repository checker, a three-platform CI workflow and [development instructions](DEVELOPMENT.md). Local check results belong in the PR; remote CI results must be read from GitHub. These tools do not count as the first playable interaction or close issues #1–#3.
+I am keeping development checks and the new [interaction input boundary](INPUT-ARCHITECTURE.md) together in [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). The reference router and demo run without hardware and test how overlapping input, tracking loss and focus loss are handled. The next engineering task is to wire one real ordinary input after the team agrees on the engine. Check the latest PR and CI before continuing on another computer. This is a technical increment; it does not count as a playable game or close issues #1–#3.
 
 The proposed next product slice remains one prescription through selection, grinding, wrapping and delivery, followed by a second order to test simultaneous input. Godot and camera integration remain tentative until I discuss them with the team. The next class-week focus is 12 November: an integrated core experience, with scope and exact meeting time confirmed by the tutor.
 

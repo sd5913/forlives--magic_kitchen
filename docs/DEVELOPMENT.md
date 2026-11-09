@@ -1,6 +1,6 @@
 # Development baseline
 
-I am preparing the repository for shared implementation while my teammates and I discuss the design. This baseline checks repository files; it does not select a game engine or implement camera interaction.
+I am preparing the repository for shared implementation while my teammates and I discuss the design. This baseline checks repository files and the [interaction input contract](INPUT-ARCHITECTURE.md); it does not select a game engine or implement camera interaction.
 
 ## Run the checks
 
@@ -9,16 +9,18 @@ Install Git and Python 3.9 or later. No Python packages are required. From the r
 ```sh
 # macOS / Linux
 python3 tools/check_repository.py
+python3 -m unittest discover -s tests -v
 ```
 
 ```powershell
 # Windows with the Python launcher
 py -3 tools/check_repository.py
+py -3 -m unittest discover -s tests -v
 ```
 
 The script reads Git-tracked and non-ignored untracked Markdown, Python, JSON, YAML and Godot text files. It reports unresolved conflict markers, UTF-8 decoding errors, invalid Python/JSON syntax and missing or case-mismatched simple inline Markdown file links. Exit code 0 means these checks passed, 1 means a file check failed, and 2 means Git could not list the checkout.
 
-It does not execute the game, validate YAML/Godot syntax, visit external links, inspect Markdown reference links/anchors, scan for secrets or establish that a teammate can play. GitHub Actions runs the same check on Linux, Windows and macOS for pushes and pull requests. A green workflow is repository evidence only.
+The file checker does not execute the game, validate YAML/Godot syntax, visit external links, inspect Markdown reference links/anchors or scan for secrets. GitHub Actions runs the file checker and interaction contract tests on Linux, Windows and macOS for pushes and pull requests. These checks do not establish that a teammate can play.
 
 ## Shared files
 

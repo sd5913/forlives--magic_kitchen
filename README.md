@@ -16,6 +16,7 @@ The repository contains proposals and collaboration records, not a runnable game
 
 - [Shared status and cross-computer handoff](docs/PROJECT-STATUS.md)
 - [Development setup and repository checks](docs/DEVELOPMENT.md)
+- [Interaction input boundary and hardware-free demo](docs/INPUT-ARCHITECTURE.md)
 - [Planning and task ownership](docs/TEAM-PLAN.md)
 - [Weekly deliveries and tutor feedback](docs/WEEKLY-PROGRESS.md)
 - [Repository issues](https://github.com/sd5913/forlives--magic_kitchen/issues)
