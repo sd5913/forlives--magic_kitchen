@@ -1,57 +1,23 @@
 # Magic Kitchen
 
-SD5913 group project · Shared repository: `sd5913/forlives--magic_kitchen`
+We're building a short 2D time-management game set in a fantasy herbal shop. You play an apprentice who picks ingredients, prepares fictional remedies and delivers orders before customers lose patience. We're making it for players who enjoy juggling small tasks under pressure.
 
-## Current stage
+我们在做一款以奇幻药房为背景的 2D 限时经营游戏。你扮演药房学徒，挑选药材、配制虚构药方，在顾客失去耐心前交付订单。适合喜欢在限时内安排多项任务的玩家。
 
-Our current proposal is **Herbs on the Clock**, a short, single-player fantasy pharmacy game. Players prepare fictional herbal prescriptions while managing customer patience and limited equipment. We want to explore grinding with one hand while managing another order with the mouse.
+## Workbench preview / 工作台预览
 
-The project includes a runnable Godot workbench with separate ingredient, mortar, order and delivery scenes for layout and input checks. The selected stack is [Godot 4.7.2 Standard, GDScript and Compatibility rendering](docs/ENGINE-DECISION.md). The latest design refinement prioritises a small two-hand interaction prototype; its gesture mapping, comfort and gameplay value still need testing and team/tutor agreement.
+You can try a workbench with four areas: ingredients, mortar, orders and delivery. Click **Test input** in the mortar area to switch its status between idle and active. You can also press **Tab** to focus the button, then **Enter** or **Space**. The preview covers layout and input feedback. Order fulfilment and gesture controls are still planned.
 
-- [Original proposal](docs/HERBAL-PHARMACY-PROPOSAL-EN.md), preserved for comparison
-- [6 November design refinement and prototype acceptance checks](docs/DESIGN-REFINEMENT.md)
-- [Related projects and interaction comparisons](docs/INTERACTION-REFERENCES.md)
+你可以打开工作台预览，查看药材、研钵、订单和交付四个区域。点击研钵区的 **Test input**，状态会在待机和激活之间切换。也可以按 **Tab** 选中按钮，再按 **Enter** 或 **Space**。当前版本可以体验工作台布局和输入反馈，完整的配药交付流程与手势操作仍在计划中。
 
-## Technical
+## Run the preview / 运行预览
 
-I chose **Godot 4.7.2 Standard with GDScript and the Compatibility renderer** for Windows and macOS. This project needs one 2D workbench, order UI, timers and readable feedback. Godot gives us the scene and UI tools to build that slice. Unity could deliver it too; I would favour Unity if we had an existing Unity project, strong team C# experience or a verified Unity-only dependency that saved us work. I am starting with keyboard and mouse and keeping gestures optional behind the same action interface.
+We use Godot 4.7.2 Standard with GDScript and target Windows and macOS. Switch to the preview branch `feature/development-foundation`, import `game/project.godot` in Godot and click **Run Project**. The preview runs with a keyboard or mouse. We checked it on macOS. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/) · [Preview source](https://github.com/sd5913/forlives--magic_kitchen/tree/633c1c60bc8179abd97872cd96133e9e59690a93/game)
 
-See the [technical module](docs/technical/README.md) for the trade-offs, current evidence and the next implementation checkpoint.
+我们使用 Godot 4.7.2 Standard 和 GDScript，目标平台为 Windows 和 macOS。切换到预览分支 `feature/development-foundation`，在 Godot 中导入 `game/project.godot`，点击 **运行项目**。预览可用键盘或鼠标操作，我们已在 macOS 上验证。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/) · [预览源码](https://github.com/sd5913/forlives--magic_kitchen/tree/633c1c60bc8179abd97872cd96133e9e59690a93/game)
 
-## Collaboration
+## Project notes / 项目资料
 
-- [Shared status and cross-computer handoff](docs/PROJECT-STATUS.md)
-- [Development setup and repository checks](docs/DEVELOPMENT.md)
-- [Interaction input boundary and hardware-free demo](docs/INPUT-ARCHITECTURE.md)
-- [Planning and task ownership](docs/TEAM-PLAN.md)
-- [Weekly deliveries and tutor feedback](docs/WEEKLY-PROGRESS.md)
-- [Repository issues](https://github.com/sd5913/forlives--magic_kitchen/issues)
-- [Magic Kitchen team board](https://github.com/orgs/sd5913/projects/23)
-- [Contribution and review workflow](CONTRIBUTING.md)
-- [Credits and AI assistance](CREDITS.md)
+[Project board](https://github.com/orgs/sd5913/projects/23) · [Development progress](docs/WEEKLY-PROGRESS.md) · [Credits and AI assistance](CREDITS.md)
 
-The team board is copied from the course [Group Project 2026 template](https://github.com/orgs/sd5913/projects/1), owned by `sd5913` and linked to this repository. It includes weekly iterations, status views, tutor delivery cards and the final submission deadline. The Markdown records above keep planning and feedback accessible from the public repository too.
-
-## Access
-
-The 29 October setup record documents the initial repository permissions and a pending invitation. Those historical checks do not establish today's access. Use the existing team board created by MiaJiao5; verify repository access and board access separately with each teammate. Keep the board's organization base access Read or No access in its settings and ensure the instructor can view the evidence. Track remaining checks in issue #2.
-
-## Next delivery
-
-The class week of **12 November 2026** focuses on an integrated core experience. Start by sharing any existing local implementation and recording what happened at the 5 November review; neither is available in this repository yet. The proposed first implementation connects herb selection, grinding and delivery, then tests grinding while managing a second order. See the design refinement for acceptance checks. The tutor confirms the actual meeting time within the scheduled tutorial slot.
-
-## Running the project
-
-Open [game/project.godot](game/project.godot) in Godot 4.7.2 Standard and run the project. Click **Test input**, or press **Tab** and then **Enter** or **Space**, to switch the mortar status. See the [technical module](docs/technical/README.md) for scene ownership and layout editing.
-
-## Assessment and submission
-
-The group project is 40% of the course grade. Its mark is divided into creative idea (25%), code (50%) and execution (25%). Weekly planning, contributions, usable increments, tests and feedback should explain the development decisions.
-
-Final deadline: **Sunday 6 December 2026, 23:59 Hong Kong time**. Submit **https://github.com/sd5913/forlives--magic_kitchen** through the Canvas group assignment and follow its actual group-submission settings. Submission on Canvas has not been verified by this repository setup.
-
-Course sources: [project brief](https://github.com/sd5913/pfad/blob/2026/assignments/group-project.md), [teamwork guide](https://github.com/sd5913/pfad/blob/2026/week08/teamwork.md).
-
-## 中文说明
-
-目前提案是短局奇幻药房经营游戏：玩家加工虚构药材、安排订单，并尝试一手研磨、一手管理的双手分工。11 月 6 日整理了交互修订、相关例子和原型验收条件，原提案保留不覆盖。引擎已定为 Godot 4.7.2 Standard，使用 GDScript 和 Compatibility；Godot 基础工程可以运行，用于工作台站位和键鼠反馈检查。先同步组员已有成果，再验证双手操作的趣味、反馈和舒适度。继续使用现有共享仓库与看板 #23，不重建项目，也不把文档更新当成可玩增量。
+[项目看板](https://github.com/orgs/sd5913/projects/23) · [开发进度](docs/WEEKLY-PROGRESS.md) · [致谢与 AI 辅助说明](CREDITS.md)
