@@ -4,6 +4,16 @@ We're building a short 2D time-management game set in a fantasy herbal shop. You
 
 我们在做一款以奇幻药房为背景的 2D 限时经营游戏。你扮演药房学徒，挑选药材、配制虚构药方，在顾客失去耐心前交付订单。适合喜欢在限时内安排多项任务的玩家。
 
+## How a shift works / 一轮怎么玩
+
+Our first playable shift will start with one prescription. Read the order, pick the herbs, grind them at the mortar, then wrap and deliver the medicine. Once a second order comes in, you’ll have to decide whether to finish the batch already in the mortar or switch to a customer who is about to leave.
+
+我们计划先做一张处方的完整流程。你先读订单、挑药材，再用研钵磨药，最后包好交给顾客。第二张订单进来后，你就得决定是先磨完手上这份药，还是先处理快等不及的顾客。
+
+We want to try grinding with one hand while using the mouse to manage another order. We’ll test that after the keyboard and mouse version can handle a full order.
+
+我们想试试能不能一只手研磨，另一只手用鼠标处理另一张订单。等键鼠版能完整做完一单，我们再试这种双手操作。
+
 ## Workbench preview / 工作台预览
 
 You can try a workbench with four areas: ingredients, mortar, orders and delivery. Click **Test input** in the mortar area to switch its status between idle and active. You can also press **Tab** to focus the button, then **Enter** or **Space**. The preview covers layout and input feedback. Order fulfilment and gesture controls are still planned.
@@ -12,9 +22,13 @@ You can try a workbench with four areas: ingredients, mortar, orders and deliver
 
 ## Run the preview / 运行预览
 
-We use Godot 4.7.2 Standard with GDScript and target Windows and macOS. Switch to the preview branch `feature/development-foundation`, import `game/project.godot` in Godot and click **Run Project**. The preview runs with a keyboard or mouse. We checked it on macOS. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/) · [Preview source](https://github.com/sd5913/forlives--magic_kitchen/tree/633c1c60bc8179abd97872cd96133e9e59690a93/game)
+Install **Godot 4.7.2 Standard**, then clone or download the [preview branch](https://github.com/sd5913/forlives--magic_kitchen/tree/feature/development-foundation). In Godot’s Project Manager, choose **Import**, open `game/project.godot` and click **Run Project**. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
-我们使用 Godot 4.7.2 Standard 和 GDScript，目标平台为 Windows 和 macOS。切换到预览分支 `feature/development-foundation`，在 Godot 中导入 `game/project.godot`，点击 **运行项目**。预览可用键盘或鼠标操作，我们已在 macOS 上验证。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/) · [预览源码](https://github.com/sd5913/forlives--magic_kitchen/tree/633c1c60bc8179abd97872cd96133e9e59690a93/game)
+安装 **Godot 4.7.2 Standard**，然后克隆或下载[预览分支](https://github.com/sd5913/forlives--magic_kitchen/tree/feature/development-foundation)。在 Godot 项目管理器中选择 **导入**，打开 `game/project.godot`，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
+
+We build the game in GDScript for Windows and macOS. We’ve verified the preview on macOS. Windows testing is pending. The preview needs a keyboard or mouse and runs without a camera or API key.
+
+我们用 GDScript 开发，目标平台为 Windows 和 macOS。预览已在 macOS 上验证，Windows 版待测。用键盘或鼠标就能运行预览，无需摄像头或 API 密钥。
 
 ## Project notes / 项目资料
 
