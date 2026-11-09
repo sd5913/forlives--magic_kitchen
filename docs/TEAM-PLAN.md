@@ -12,7 +12,7 @@ The original goal was a first working interaction for 5 November. Its delivery a
 | --- | --- | --- |
 | Intended user and purpose | Proposed: PC players who enjoy short time-management games and want to try hands-on preparation | Team/tutor to confirm |
 | Main input, response and visible feedback | Proposed: continuous grinding with one hand while the mouse manages orders; visible material progress and order binding | Prototype owner to agree |
-| Chosen platform/runtime | Original proposal tentatively selects Godot 2D; existing local work, version and camera integration need confirmation | Team to agree |
+| Chosen platform/runtime | [Godot 4.7.2 Standard, GDScript, Compatibility](ENGINE-DECISION.md); Windows/macOS desktop first. Camera remains optional | JIN Minyi (technical decision) |
 | Multimedia needed for the idea | Proposed: readable herb/tool states, grinding animation and sound, customer/order feedback; asset sources to record | Team to agree |
 | Tutor and exact meeting slot | To confirm | Team to agree |
 | Group member GitHub usernames | IceyHikari, MiaJiao5, deadlytomatovo, ZHANGYan-Sybil | Confirmed from supplied accounts |

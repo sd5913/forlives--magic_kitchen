@@ -1,6 +1,6 @@
 # Development baseline
 
-I am preparing the repository for shared implementation while my teammates and I discuss the design. This baseline checks repository files and the [interaction input contract](INPUT-ARCHITECTURE.md); it does not select a game engine or implement camera interaction.
+I am preparing the repository for shared implementation while my teammates and I discuss the design. This baseline checks repository files and the [interaction input contract](INPUT-ARCHITECTURE.md); the [game engine decision](ENGINE-DECISION.md) is separate from the Python development tooling.
 
 ## Run the checks
 
@@ -30,8 +30,8 @@ The file checker does not execute the game, validate YAML/Godot syntax, visit ex
 
 These rules do not remove files already tracked by Git. I will review changes before committing, especially new assets and configuration.
 
-## Before adding the engine
+## Game development
 
-I need to reconcile existing local work with the team, agree the engine/version and identify who owns the first playable slice. Then I can add the actual launch command and a game-specific smoke check. The Python script here is a development utility, not a decision to build the game in Python.
+I selected Godot 4.7.2 Standard with GDScript and Compatibility rendering. Install the pinned [official build](https://godotengine.org/download/archive/4.7.2-stable/) for your OS. The next implementation should reconcile any existing local work before committing a Godot project, then document its launch and smoke check. Python remains development tooling only.
 
 See [shared status and handoff](PROJECT-STATUS.md) before working from another computer.

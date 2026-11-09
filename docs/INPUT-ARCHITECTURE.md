@@ -1,6 +1,6 @@
 # Interaction input boundary
 
-I want the team to be able to change how an action is triggered without rewriting the rules that respond to it. I am testing that boundary before we settle the engine, gameplay or gesture design.
+I want the team to be able to change how an action is triggered without rewriting the rules that respond to it. I tested that boundary before choosing the [Godot runtime](ENGINE-DECISION.md). Gameplay and gesture design remain open.
 
 ```text
 Mouse / keyboard adapter     Optional gesture adapter or simulated input
@@ -38,4 +38,4 @@ On Windows, use `py -3` in place of `python3`. The demo replays a gesture and ke
 
 ## Integration checkpoint
 
-After we agree on the engine, I will first wire one ordinary input to a visible response and run the same contract checks against the chosen engine implementation. Python here is a reference harness; the engine may implement the same boundary directly. I will add a gesture source only if the team chooses one, and verify loss/recovery and ordinary input fallback before calling it ready. No hardware or camera choice is required for this change.
+I will first wire one Godot InputMap action to a visible response and run equivalent contract checks against the GDScript implementation. Python here is a reference harness and is not part of the game runtime. I will add a gesture source only if the team chooses one, and verify loss/recovery and ordinary input fallback before calling it ready. No hardware or camera choice is required for this change.

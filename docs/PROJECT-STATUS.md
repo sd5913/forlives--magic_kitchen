@@ -12,9 +12,9 @@ Updated 9 November 2026, Hong Kong time. I use this file as the short entry poin
 
 ## Work in this change
 
-I am keeping development checks and the new [interaction input boundary](INPUT-ARCHITECTURE.md) together in [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). The reference router and demo run without hardware and test how overlapping input, tracking loss and focus loss are handled. The next engineering task is to wire one real ordinary input after the team agrees on the engine. Check the latest PR and CI before continuing on another computer. This is a technical increment; it does not count as a playable game or close issues #1–#3.
+I am keeping development checks and the new [interaction input boundary](INPUT-ARCHITECTURE.md) together in [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). The reference router and demo run without hardware and test how overlapping input, tracking loss and focus loss are handled. The next engineering task is to wire one real ordinary input in [Godot 4.7.2 Standard](ENGINE-DECISION.md), after reconciling existing local work. Check the latest PR and CI before continuing on another computer. This is a technical increment; it does not count as a playable game or close issues #1–#3.
 
-The proposed next product slice remains one prescription through selection, grinding, wrapping and delivery, followed by a second order to test simultaneous input. Godot and camera integration remain tentative until I discuss them with the team. The next class-week focus is 12 November: an integrated core experience, with scope and exact meeting time confirmed by the tutor.
+The proposed next product slice remains one prescription through selection, grinding, wrapping and delivery, followed by a second order to test simultaneous input. I selected Godot and GDScript as the runtime. Camera integration remains optional and still needs discussion and testing. The next class-week focus is 12 November: an integrated core experience, with scope and exact meeting time confirmed by the tutor.
 
 ## Continuing on either computer
 
@@ -31,7 +31,7 @@ Git syncs committed repository content. It does not transfer untracked/ignored f
 
 - Existing local game code and active branches on either computer or teammates' machines.
 - The 5 November outcome and the next tutorial time.
-- Engine/version, camera approach and prototype ownership agreed with teammates.
+- Camera approach and prototype ownership agreed with teammates. The engine/version is recorded in the engine decision.
 - Board access and instructor visibility, checked separately from repository access.
 
 I keep this handoff focused on project state; private chat transcripts and account credentials do not belong here.

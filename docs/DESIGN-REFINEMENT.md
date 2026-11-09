@@ -44,7 +44,7 @@ These checks define work to perform; none is recorded as passed yet.
 
 ## Implementation boundaries
 
-The existing proposal tentatively selects Godot 2D. Confirm the current local project, engine version and vision integration before fixing the architecture. If camera recognition runs in a separate process, test startup, communication, disconnects and packaging early.
+The proposal originally listed Godot as tentative. See the [9 November engine decision](ENGINE-DECISION.md) for the selected stack; reconcile any existing local project before integration. If camera recognition runs in a separate process, test startup, communication, disconnects and packaging early.
 
 Keep order state and processing rules independent of input method. Customer departure should release tool references safely. Pause timers when the game pauses or loses focus. Show important feedback with text/shapes as well as colour or sound.
 
@@ -66,4 +66,4 @@ The [brief](https://github.com/sd5913/pfad/blob/2026/assignments/group-project.m
 
 我们保留原提案的古风奇幻药房与双手分工，先验证“一手研磨、一手管理另一张订单”。动作要改变材料状态，并影响安排工作的选择，不能只替代一个开始按钮。先做一单闭环，再增加第二张订单、一个可恢复事故和营业结算。
 
-摄像头追踪失败时停止加工并显示原因；键鼠提供替代。普通摄像头不能测真实压力或重量。Godot 仍待确认，先同步组员已有工程。本文是设计修订和验收计划，没有把未发生的试玩、课堂反馈或实现写成完成。
+摄像头追踪失败时停止加工并显示原因；键鼠提供替代。普通摄像头不能测真实压力或重量。引擎版本见 11 月 9 日技术选型，先同步组员已有工程。本文是设计修订和验收计划，没有把未发生的试玩、课堂反馈或实现写成完成。
