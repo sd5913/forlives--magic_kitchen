@@ -1,5 +1,7 @@
 # Working together
 
+Follow the [engineering standards](docs/technical/ENGINEERING-STANDARDS.md) for file layout, naming, scene boundaries and integration checks.
+
 ## Before coding
 
 1. Confirm that your registered GitHub account can push a branch to this repository. Repository and Project permissions are separate.
@@ -10,9 +12,9 @@
 
 1. Name branches by the purpose of the change: `feature/short-task-name` for features, `fix/short-task-name` for fixes, or `docs/short-task-name` for documentation. Use these names whether or not AI tools assisted the work; document AI assistance in the relevant process notes or credits.
 2. Make small, meaningful commits. Explain the behavior changed rather than increasing commit counts for their own sake.
-3. Open a pull request against the default branch with the issue link, what changed, how it was checked and known limitations. Use `Closes #<issue-number>` only when the work really resolves that issue.
-4. Ask a teammate to review and try the result. Record what they actually observed. A self-check is not a teammate review.
-5. Merge when the work meets the shared Definition of Done; update the task and weekly notes with evidence. Do not mark an untested implementation Done merely because it builds.
+3. When using a pull request, target `main` and include the issue link, what changed, how it was checked and known limitations. Use `Closes #<issue-number>` only when the work resolves that issue.
+4. Run the relevant checks and record the result. Record teammate or player observations when a trial takes place.
+5. The technical lead coordinates integration into `main`. Link the change and its verification in the task or weekly notes.
 
 The initial documentation scaffold may be reviewed separately from product work; it does not count as a working game/app increment.
 
@@ -25,7 +27,7 @@ The initial documentation scaffold may be reviewed separately from product work;
 - Setup instructions, credits and limitations remain accurate.
 - Evidence and any follow-up work are linked in the issue/PR and weekly record.
 
-This proposed standard needs the team's agreement. Platform-specific checks should be added after the platform is chosen.
+For Godot changes, record the operating system and editor version used for the check.
 
 ## Weekly tutor review
 

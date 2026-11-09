@@ -30,6 +30,12 @@ We build the game in GDScript for Windows and macOS. We’ve verified the previe
 
 我们用 GDScript 开发，目标平台为 Windows 和 macOS。预览已在 macOS 上验证，Windows 版待测。用键盘或鼠标就能运行预览，无需摄像头或 API 密钥。
 
+## Development standards / 开发规范
+
+The Godot project lives in `game/`. The workbench assembles four separate scenes in `game/scenes/`, and Python development tools live at the repository root. We use `snake_case` for game files and `PascalCase` for Godot nodes. The engineering guide covers asset placement, scene ownership, Git and verification. [Engineering standards](docs/technical/ENGINEERING-STANDARDS.md) · [Technical overview](docs/technical/README.md)
+
+Godot 工程放在 `game/`，工作台由 `game/scenes/` 中的四个子场景组成，Python 开发工具放在仓库根目录的独立目录中。游戏文件用 `snake_case`，Godot 节点用 `PascalCase`。素材归档、场景分工、Git 和验证流程见[工程规范](docs/technical/ENGINEERING-STANDARDS.md)与[技术总览](docs/technical/README.md)。
+
 ## Project notes / 项目资料
 
 [Project board](https://github.com/orgs/sd5913/projects/23) · [Development progress](docs/WEEKLY-PROGRESS.md) · [Credits and AI assistance](CREDITS.md)

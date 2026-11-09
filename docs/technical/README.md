@@ -39,10 +39,6 @@ The baseline uses a 960 × 540 reference viewport. Ingredients sit on the left, 
 
 I propose these assignments for the team to confirm. Contributors edit their subscenes in separate branches. I adjust instance positions in the workbench. Changes to a zone's footprint or to shared project settings go through the workbench owner.
 
-## Naming and review
+## Engineering standards
 
-- Use `snake_case` for scene and script filenames, variables and functions. Use `PascalCase` for scene nodes and classes. Use tabs in GDScript and UTF-8 with LF in source files.
-- Commit scene files, scripts and their generated `.gd.uid` sidecars. Keep the local `.godot/` cache out of Git.
-- Use `feature/`, `fix/` or `docs/` branches and keep each PR focused on its assigned area. Open the workbench and check that the changed zone fits and the input check still responds before integration.
-
-[Godot GDScript style guide](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html) · [Contribution workflow](../../CONTRIBUTING.md)
+Use the [engineering standards](ENGINEERING-STANDARDS.md) for directory layout, naming, Godot metadata, Git and verification.
