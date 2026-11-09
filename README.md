@@ -12,6 +12,12 @@ The repository contains proposals and collaboration records, not a runnable game
 - [6 November design refinement and prototype acceptance checks](docs/DESIGN-REFINEMENT.md)
 - [Related projects and interaction comparisons](docs/INTERACTION-REFERENCES.md)
 
+## Technical
+
+I chose **Godot 4.7.2 Standard with GDScript and the Compatibility renderer** for Windows and macOS. This project needs one 2D workbench, order UI, timers and readable feedback. Godot gives us the scene and UI tools to build that slice. Unity could deliver it too; I would favour Unity if we had an existing Unity project, strong team C# experience or a verified Unity-only dependency that saved us work. I am starting with keyboard and mouse and keeping gestures optional behind the same action interface.
+
+See the [technical module](docs/technical/README.md) for the trade-offs, current evidence and the next implementation checkpoint.
+
 ## Collaboration
 
 - [Shared status and cross-computer handoff](docs/PROJECT-STATUS.md)
