@@ -22,9 +22,9 @@ You can try a workbench with four areas: ingredients, mortar, orders and deliver
 
 ## Run the preview / 运行预览
 
-Install **Godot 4.7.2 Standard**, then clone or download the [preview branch](https://github.com/sd5913/forlives--magic_kitchen/tree/feature/development-foundation). In Godot’s Project Manager, choose **Import**, open `game/project.godot` and click **Run Project**. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/)
+Install **Godot 4.7.2 Standard**, then clone or download the [repository](https://github.com/sd5913/forlives--magic_kitchen). In Godot’s Project Manager, choose **Import**, open [`game/project.godot`](game/project.godot) and click **Run Project**. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
-安装 **Godot 4.7.2 Standard**，然后克隆或下载[预览分支](https://github.com/sd5913/forlives--magic_kitchen/tree/feature/development-foundation)。在 Godot 项目管理器中选择 **导入**，打开 `game/project.godot`，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
+安装 **Godot 4.7.2 Standard**，然后克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
 We build the game in GDScript for Windows and macOS. We’ve verified the preview on macOS. Windows testing is pending. The preview needs a keyboard or mouse and runs without a camera or API key.
 

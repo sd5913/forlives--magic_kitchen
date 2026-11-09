@@ -12,9 +12,9 @@ Updated 9 November 2026, Hong Kong time. I use this file as the short entry poin
 
 ## Current implementation
 
-I am sharing the Godot 4.7.2 workbench baseline through [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). It contains four independent work areas and a keyboard/mouse input check. I will integrate the layout in the main scene while contributors work inside their assigned subscenes. See the [technical module](technical/README.md) for proposed assignments, launch steps and naming conventions.
+The Godot 4.7.2 workbench baseline is available on `main`. See [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). It contains four independent work areas and a keyboard/mouse input check. I will integrate the layout in the main scene while contributors work inside their assigned subscenes. See the [technical module](technical/README.md) for proposed assignments, launch steps and naming conventions.
 
-The next product slice remains one prescription through selection, preparation and delivery. The current scene supports layout review and input verification. Camera input remains optional. Check the latest PR before continuing on another computer.
+The next product slice remains one prescription through selection, preparation and delivery. The current scene supports layout review and input verification. Camera input remains optional. Fetch `main` before continuing on another computer.
 
 ## Continuing on either computer
 
