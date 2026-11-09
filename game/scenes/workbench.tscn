@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/mortar.tscn" id="1_mortar"]
+[ext_resource type="PackedScene" path="res://scenes/order_panel.tscn" id="2_orders"]
+
+[ext_resource type="PackedScene" path="res://scenes/ingredient_storage.tscn" id="3_ingredients"]
+[ext_resource type="PackedScene" path="res://scenes/delivery_counter.tscn" id="4_delivery"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_worktop"]
+bg_color = Color(0.16, 0.22, 0.21, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_left = 18
+corner_radius_bottom_right = 18
+
+[node name="Workbench" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 36.0
+theme_override_font_sizes/font_size = 36
+text = "Magic Kitchen"
+
+[node name="Subtitle" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 91.0
+theme_override_colors/font_color = Color(0.7, 0.79, 0.76, 1)
+theme_override_font_sizes/font_size = 18
+text = "Workbench layout"
+
+[node name="Worktop" type="Panel" parent="."]
+offset_left = 48.0
+offset_top = 148.0
+offset_right = 912.0
+offset_bottom = 436.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_worktop")
+
+[node name="IngredientStorage" parent="." instance=ExtResource("3_ingredients")]
+offset_left = 72.0
+offset_top = 180.0
+offset_right = 252.0
+offset_bottom = 404.0
+
+[node name="Mortar" parent="." instance=ExtResource("1_mortar")]
+offset_left = 272.0
+offset_top = 180.0
+offset_right = 602.0
+offset_bottom = 404.0
+
+[node name="OrderPanel" parent="." instance=ExtResource("2_orders")]
+offset_left = 622.0
+offset_top = 180.0
+offset_right = 888.0
+offset_bottom = 284.0
+
+[node name="DeliveryCounter" parent="." instance=ExtResource("4_delivery")]
+offset_left = 622.0
+offset_top = 300.0
+offset_right = 888.0
+offset_bottom = 404.0
+
+[node name="ControlsHint" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 459.0
+theme_override_colors/font_color = Color(0.7, 0.79, 0.76, 1)
+theme_override_font_sizes/font_size = 16
+text = "Test input with a click, or press Tab then Enter or Space."

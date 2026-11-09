@@ -32,6 +32,6 @@ These rules do not remove files already tracked by Git. I will review changes be
 
 ## Game development
 
-I selected Godot 4.7.2 Standard with GDScript and Compatibility rendering. Install the pinned [official build](https://godotengine.org/download/archive/4.7.2-stable/) for your OS. The next implementation should reconcile any existing local work before committing a Godot project, then document its launch and smoke check. Python remains development tooling only.
+I selected Godot 4.7.2 Standard with GDScript and Compatibility rendering. Install the pinned [official build](https://godotengine.org/download/archive/4.7.2-stable/) for your OS. Import [game/project.godot](../game/project.godot) and run the project to open the workbench scaffold. See the [technical module](technical/README.md) for the input check and scene ownership. Python remains development tooling only.
 
 See [shared status and handoff](PROJECT-STATUS.md) before working from another computer.

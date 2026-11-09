@@ -22,6 +22,27 @@ For example, holding a key and a future gesture can both mean “start preparati
 
 ## Implementation and evidence
 
-I verified that the pinned Godot build starts on the Mac and can run a small headless check for a 2D node and InputMap press/release. That does not establish rendered performance, a Windows export or a playable build. The [development notes](../DEVELOPMENT.md) explain the checks currently in the repository.
+I verified the workbench on macOS with Godot 4.7.2 Standard. The project opened in a normal window with Compatibility rendering, and simulated mouse and keyboard events switched the mortar status. Windows launch and a desktop export are still to be checked. The [development notes](../DEVELOPMENT.md) cover the repository checks.
 
-I will first check for an existing local project from the team. Then I want one shared Godot scene where an ordinary input produces a visible response, with launch steps checked on the two target platforms. That is the point to grow the one-order loop. I would revisit the engine only if verified existing work or a blocker on the demonstration machines changes the trade-off.
+## Workbench layout and ownership
+
+Import [game/project.godot](../../game/project.godot) in Godot 4.7.2 Standard and run the project. Click **Test input** or press **Tab** then **Enter** or **Space** to switch the mortar status.
+
+The baseline uses a 960 × 540 reference viewport. Ingredients sit on the left, preparation in the centre, and orders above delivery on the right. This is a starting layout for integration and can change after review.
+
+| Proposed owner | Files | First responsibility |
+| --- | --- | --- |
+| JIN Minyi | [workbench.tscn](../../game/scenes/workbench.tscn), [project.godot](../../game/project.godot) | Maintain the main scene, zone placement and shared project settings. Integrate subscenes and check the full workbench. |
+| MiaJiao5 | [order_panel.tscn](../../game/scenes/order_panel.tscn) | Build the order display inside the assigned zone. |
+| ZHANGYan-Sybil | [ingredient_storage.tscn](../../game/scenes/ingredient_storage.tscn), [delivery_counter.tscn](../../game/scenes/delivery_counter.tscn) | Build ingredient and delivery interfaces inside their respective zones. |
+| deadlytomatovo | [mortar.tscn](../../game/scenes/mortar.tscn), [mortar.gd](../../game/scenes/mortar.gd) | Build preparation feedback and keep the keyboard and mouse check working. |
+
+I propose these assignments for the team to confirm. Contributors edit their subscenes in separate branches. I adjust instance positions in the workbench. Changes to a zone's footprint or to shared project settings go through the workbench owner.
+
+## Naming and review
+
+- Use `snake_case` for scene and script filenames, variables and functions. Use `PascalCase` for scene nodes and classes. Use tabs in GDScript and UTF-8 with LF in source files.
+- Commit scene files, scripts and their generated `.gd.uid` sidecars. Keep the local `.godot/` cache out of Git.
+- Use `feature/`, `fix/` or `docs/` branches and keep each PR focused on its assigned area. Open the workbench and check that the changed zone fits and the input check still responds before integration.
+
+[Godot GDScript style guide](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html) · [Contribution workflow](../../CONTRIBUTING.md)

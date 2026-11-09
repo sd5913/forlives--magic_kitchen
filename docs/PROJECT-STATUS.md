@@ -10,11 +10,11 @@ Updated 9 November 2026, Hong Kong time. I use this file as the short entry poin
 - Issues #1, #2 and #3 were open. #1 and #3 had no assignee; #2 was assigned to IceyHikari. Board status and tutor visibility remain unverified.
 - The actual 5 November demonstration and tutor feedback remain unrecorded. I will ask attendees rather than infer that the meeting happened or was missed.
 
-## Work in this change
+## Current implementation
 
-I am keeping development checks and the new [interaction input boundary](INPUT-ARCHITECTURE.md) together in [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). The reference router and demo run without hardware and test how overlapping input, tracking loss and focus loss are handled. The next engineering task is to wire one real ordinary input in [Godot 4.7.2 Standard](ENGINE-DECISION.md), after reconciling existing local work. Check the latest PR and CI before continuing on another computer. This is a technical increment; it does not count as a playable game or close issues #1–#3.
+I am sharing the Godot 4.7.2 workbench baseline through [PR #6](https://github.com/sd5913/forlives--magic_kitchen/pull/6). It contains four independent work areas and a keyboard/mouse input check. I will integrate the layout in the main scene while contributors work inside their assigned subscenes. See the [technical module](technical/README.md) for proposed assignments, launch steps and naming conventions.
 
-The proposed next product slice remains one prescription through selection, grinding, wrapping and delivery, followed by a second order to test simultaneous input. I selected Godot and GDScript as the runtime. Camera integration remains optional and still needs discussion and testing. The next class-week focus is 12 November: an integrated core experience, with scope and exact meeting time confirmed by the tutor.
+The next product slice remains one prescription through selection, preparation and delivery. The current scene supports layout review and input verification. Camera input remains optional. Check the latest PR before continuing on another computer.
 
 ## Continuing on either computer
 
@@ -29,9 +29,9 @@ Git syncs committed repository content. It does not transfer untracked/ignored f
 
 ## Items I still need to reconcile
 
-- Existing local game code and active branches on either computer or teammates' machines.
+- Active branches and any unpushed work before integrating additional changes.
 - The 5 November outcome and the next tutorial time.
-- Camera approach and prototype ownership agreed with teammates. The engine/version is recorded in the engine decision.
+- Confirm the proposed scene assignments and agree the camera approach with teammates.
 - Board access and instructor visibility, checked separately from repository access.
 
 I keep this handoff focused on project state; private chat transcripts and account credentials do not belong here.

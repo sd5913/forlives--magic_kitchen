@@ -6,7 +6,7 @@ SD5913 group project · Shared repository: `sd5913/forlives--magic_kitchen`
 
 Our current proposal is **Herbs on the Clock**, a short, single-player fantasy pharmacy game. Players prepare fictional herbal prescriptions while managing customer patience and limited equipment. We want to explore grinding with one hand while managing another order with the mouse.
 
-The repository contains proposals and collaboration records, not a runnable game. The selected stack is [Godot 4.7.2 Standard, GDScript and Compatibility rendering](docs/ENGINE-DECISION.md). The latest design refinement prioritises a small two-hand interaction prototype; its gesture mapping, comfort and gameplay value still need testing and team/tutor agreement.
+The project includes a runnable Godot workbench with separate ingredient, mortar, order and delivery scenes for layout and input checks. The selected stack is [Godot 4.7.2 Standard, GDScript and Compatibility rendering](docs/ENGINE-DECISION.md). The latest design refinement prioritises a small two-hand interaction prototype; its gesture mapping, comfort and gameplay value still need testing and team/tutor agreement.
 
 - [Original proposal](docs/HERBAL-PHARMACY-PROPOSAL-EN.md), preserved for comparison
 - [6 November design refinement and prototype acceptance checks](docs/DESIGN-REFINEMENT.md)
@@ -42,7 +42,7 @@ The class week of **12 November 2026** focuses on an integrated core experience.
 
 ## Running the project
 
-The Python input demo can run today. The Godot game project and desktop build are not yet in the repository. See the [engine decision](docs/ENGINE-DECISION.md) for the pinned version and first integration checkpoint.
+Open [game/project.godot](game/project.godot) in Godot 4.7.2 Standard and run the project. Click **Test input**, or press **Tab** and then **Enter** or **Space**, to switch the mortar status. See the [technical module](docs/technical/README.md) for scene ownership and layout editing.
 
 ## Assessment and submission
 
@@ -54,4 +54,4 @@ Course sources: [project brief](https://github.com/sd5913/pfad/blob/2026/assignm
 
 ## 中文说明
 
-目前提案是短局奇幻药房经营游戏：玩家加工虚构药材、安排订单，并尝试一手研磨、一手管理的双手分工。11 月 6 日整理了交互修订、相关例子和原型验收条件，原提案保留不覆盖。引擎已定为 Godot 4.7.2 Standard，使用 GDScript 和 Compatibility；仓库已有输入模拟，尚无 Godot 游戏工程或本项目试玩证据。先同步组员已有成果，再验证双手操作的趣味、反馈和舒适度。继续使用现有共享仓库与看板 #23，不重建项目，也不把文档更新当成可玩增量。
+目前提案是短局奇幻药房经营游戏：玩家加工虚构药材、安排订单，并尝试一手研磨、一手管理的双手分工。11 月 6 日整理了交互修订、相关例子和原型验收条件，原提案保留不覆盖。引擎已定为 Godot 4.7.2 Standard，使用 GDScript 和 Compatibility；Godot 基础工程可以运行，用于工作台站位和键鼠反馈检查。先同步组员已有成果，再验证双手操作的趣味、反馈和舒适度。继续使用现有共享仓库与看板 #23，不重建项目，也不把文档更新当成可玩增量。

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.22, 0.28, 0.29, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_left = 12
+corner_radius_bottom_right = 12
+
+[node name="DeliveryCounter" type="Panel"]
+offset_right = 266.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+theme_override_font_sizes/font_size = 25
+text = "Delivery"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/mortar.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_station"]
+bg_color = Color(0.23, 0.3, 0.28, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_left = 12
+corner_radius_bottom_right = 12
+
+[node name="Mortar" type="Panel"]
+offset_right = 330.0
+offset_bottom = 224.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_station")
+script = ExtResource("1_script")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+theme_override_font_sizes/font_size = 25
+text = "Mortar station"
+
+[node name="Status" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 72.0
+theme_override_font_sizes/font_size = 19
+text = "Input status: idle"
+
+[node name="InputCheck" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 242.0
+offset_bottom = 186.0
+theme_override_font_sizes/font_size = 18
+toggle_mode = true
+text = "Test input"
+
+[connection signal="toggled" from="InputCheck" to="." method="_on_input_check_toggled"]
