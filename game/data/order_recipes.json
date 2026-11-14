@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "ingredients": {
+    "duck_meat": {"en": "Roast duck", "zh": "烤鸭肉", "icon": "duck"},
+    "wrapper": {"en": "Pancake", "zh": "饼皮", "icon": "wrapper"},
+    "cucumber": {"en": "Cucumber", "zh": "黄瓜丝", "icon": "greens"},
+    "scallion": {"en": "Scallion", "zh": "葱丝", "icon": "scallion"},
+    "sweet_sauce": {"en": "Sweet bean sauce", "zh": "甜面酱", "icon": "sauce"},
+    "sugar": {"en": "Sugar", "zh": "白糖", "icon": "sugar"},
+    "melon": {"en": "Melon", "zh": "哈密瓜丝", "icon": "melon"},
+    "hawthorn": {"en": "Hawthorn", "zh": "山楂丝", "icon": "hawthorn"}
+  },
+  "recipes": [
+    {"id": "classic", "name": {"en": "The classic", "zh": "经典烤鸭卷"}, "patience_seconds": 120, "ingredients": [{"id": "wrapper", "quantity": 1}, {"id": "duck_meat", "quantity": 1}, {"id": "sweet_sauce", "quantity": 1}, {"id": "cucumber", "quantity": 1}, {"id": "scallion", "quantity": 1}], "excluded": [], "note": {"en": "A classic duck roll, please.", "zh": "来一份经典的烤鸭卷吧。"}},
+    {"id": "no_scallion", "name": {"en": "Fresh & mild", "zh": "清爽无葱卷"}, "patience_seconds": 110, "ingredients": [{"id": "wrapper", "quantity": 1}, {"id": "duck_meat", "quantity": 1}, {"id": "sweet_sauce", "quantity": 1}, {"id": "cucumber", "quantity": 2}], "excluded": ["scallion"], "note": {"en": "No scallion. Extra cucumber, please.", "zh": "不要葱，多放一份黄瓜，谢谢。"}},
+    {"id": "sweet", "name": {"en": "A little sweetness", "zh": "甜口烤鸭卷"}, "patience_seconds": 130, "ingredients": [{"id": "wrapper", "quantity": 1}, {"id": "duck_meat", "quantity": 1}, {"id": "sweet_sauce", "quantity": 1}, {"id": "melon", "quantity": 1}, {"id": "sugar", "quantity": 1}], "excluded": ["scallion"], "note": {"en": "Melon and sugar, without scallion.", "zh": "要哈密瓜和白糖，不放葱。"}},
+    {"id": "hawthorn", "name": {"en": "Sweet meets tart", "zh": "山楂烤鸭卷"}, "patience_seconds": 100, "ingredients": [{"id": "wrapper", "quantity": 1}, {"id": "duck_meat", "quantity": 1}, {"id": "sweet_sauce", "quantity": 1}, {"id": "hawthorn", "quantity": 1}, {"id": "cucumber", "quantity": 1}], "excluded": [], "note": {"en": "Hawthorn with cucumber. Thank you!", "zh": "山楂搭配黄瓜，谢谢！"}}
+  ],
+  "customers": [
+    {"id": "lin", "name": {"en": "Lin", "zh": "小林"}, "portrait": "customer_lin"},
+    {"id": "chen", "name": {"en": "Mr. Chen", "zh": "陈先生"}, "portrait": "customer_chen"},
+    {"id": "mei", "name": {"en": "Mei", "zh": "阿梅"}, "portrait": "customer_mei"},
+    {"id": "wu", "name": {"en": "Mr. Wu", "zh": "吴先生"}, "portrait": "customer_chen"}
+  ]
+}

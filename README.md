@@ -1,24 +1,26 @@
 # Magic Kitchen
 
-We're building a short 2D time-management game set in a fantasy herbal shop. You play an apprentice who picks ingredients, prepares fictional remedies and delivers orders before customers lose patience. We're making it for players who enjoy juggling small tasks under pressure.
+The current GDD v1.0 defines **Peking duck roll preparation**, a 2D time-management cooking game for Windows PC. Players take ingredient-specific orders, roast and slice duck, assemble rolls and deliver them. The earlier herbal-shop documents are historical exploration, not the current gameplay specification.
 
-我们在做一款以奇幻药房为背景的 2D 限时经营游戏。你扮演药房学徒，挑选药材、配制虚构药方，在顾客失去耐心前交付订单。适合喜欢在限时内安排多项任务的玩家。
+当前以 **Magic_Kitchen_GDD_v1.0** 的北京烤鸭卷制作方案为准：点单、烤鸭与片鸭、配料卷制、点击交付。目标是喜欢轻量经营、烹饪模拟和节奏管理的 Windows PC 玩家。早期药房文档作为历史探索保留，不再作为当前玩法要求。
 
 ## How a shift works / 一轮怎么玩
 
-Our first playable shift will start with one prescription. Read the order, pick the herbs, grind them at the mortar, then wrap and deliver the medicine. Once a second order comes in, you’ll have to decide whether to finish the batch already in the mortar or switch to a customer who is about to leave.
+The complete cooking loop is not integrated yet. On `feature/order-station`, NEKO / JIN Minyi's order module supports guest arrival, recipe inspection, acceptance, parallel tickets and waiting feedback. It exposes snapshots/signals for the other stations; the preview does not simulate finished cooking or score an order.
 
-我们计划先做一张处方的完整流程。你先读订单、挑药材，再用研钵磨药，最后包好交给顾客。第二张订单进来后，你就得决定是先磨完手上这份药，还是先处理快等不及的顾客。
+完整烹饪流程尚未整合。`feature/order-station` 提供 NEKO / JIN Minyi 负责的点单模块：顾客到店、查看配料与特殊要求、确认接单、多订单和等待反馈。它向其他模块提供数据和信号，不把未接入的烤制、料理和评分显示成已完成。
 
-We want to try grinding with one hand while using the mouse to manage another order. We’ll test that after the keyboard and mouse version can handle a full order.
+The GDD assigns mouse input to ordering, ingredients and navigation; camera gestures belong to roasting, slicing and rolling. The order station needs no camera. See the [module guide and integration contract](docs/technical/ORDER-STATION.md).
 
-我们想试试能不能一只手研磨，另一只手用鼠标处理另一张订单。等键鼠版能完整做完一单，我们再试这种双手操作。
+GDD 中，鼠标负责点单、配料和导航，摄像头手势用于入炉、取出、片鸭和卷制。点单模块本身无需摄像头。[运行与接口说明](docs/technical/ORDER-STATION.md)
+
+![Order station, rendered in Godot](docs/images/order_station_chinese.png)
 
 ## Workbench preview / 工作台预览
 
-You can try a workbench with four areas: ingredients, mortar, orders and delivery. Click **Test input** in the mortar area to switch its status between idle and active. You can also press **Tab** to focus the button, then **Enter** or **Space**. The preview covers layout and input feedback. Order fulfilment and gesture controls are still planned.
+The existing workbench is preserved. In its Orders area, click **Open order station** to open the new counter, then close it with **×** to return. The legacy mortar input check remains unchanged. The new counter uses a virtual 1440 × 900 layout scaled inside the current 960 × 540 project viewport; shared dimensions and other stations were not changed.
 
-你可以打开工作台预览，查看药材、研钵、订单和交付四个区域。点击研钵区的 **Test input**，状态会在待机和激活之间切换。也可以按 **Tab** 选中按钮，再按 **Enter** 或 **Space**。当前版本可以体验工作台布局和输入反馈，完整的配药交付流程与手势操作仍在计划中。
+原工作台保留。在 Orders 区点击 **Open order station** 打开点单台，用右上角 **×** 返回。旧研钵输入检查未改。点单台按 GDD 的 1440 × 900 设计坐标缩放显示，未擅自调整项目原有 960 × 540 设置或组员其他场景。
 
 ## Run the preview / 运行预览
 
@@ -26,9 +28,9 @@ Install **Godot 4.7.2 Standard**, then clone or download the [repository](https:
 
 安装 **Godot 4.7.2 Standard**，然后克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
-We build the game in GDScript for Windows and macOS. We’ve verified the preview on macOS. Windows testing is pending. The preview needs a keyboard or mouse and runs without a camera or API key.
+The earlier workbench was checked on macOS. This order-station change was checked on Windows with Godot 4.7.2 Standard, Compatibility rendering and simulated mouse/keyboard events. The preview runs locally without a camera, API key or runtime AI service. macOS checks of this new module and a packaged Windows export remain pending.
 
-我们用 GDScript 开发，目标平台为 Windows 和 macOS。预览已在 macOS 上验证，Windows 版待测。用键盘或鼠标就能运行预览，无需摄像头或 API 密钥。
+旧工作台有 macOS 检查记录；本次点单模块在 Windows、Godot 4.7.2 Standard 和 Compatibility 渲染下检查了画面及模拟鼠标/键盘操作。运行不需要摄像头、API 密钥或在线 AI 服务。新模块的 macOS 验证与 Windows 导出包仍待完成。
 
 ## Development standards / 开发规范
 

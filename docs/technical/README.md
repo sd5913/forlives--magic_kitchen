@@ -1,5 +1,7 @@
 # Technical module
 
+**14 November update:** GDD v1.0 now specifies Peking duck rolls. NEKO / JIN Minyi confirmed responsibility for ordering. The earlier ownership table below was a proposal for the herbal-workbench scaffold; it does not override this confirmed module assignment. See [order-station implementation and interface](ORDER-STATION.md). The original workbench geometry and other contributors' subscenes are preserved.
+
 I chose **Godot 4.7.2 Standard, GDScript and Compatibility rendering** for the Windows and macOS versions of Magic Kitchen. Godot is the engine; GDScript is the game scripting language. Go is not part of the stack. The [engine decision](../ENGINE-DECISION.md) records the pinned version and links to the official download.
 
 ## Why Godot for this game?
@@ -33,7 +35,7 @@ The baseline uses a 960 × 540 reference viewport. Ingredients sit on the left, 
 | Proposed owner | Files | First responsibility |
 | --- | --- | --- |
 | JIN Minyi | [workbench.tscn](../../game/scenes/workbench.tscn), [project.godot](../../game/project.godot) | Maintain the main scene, zone placement and shared project settings. Integrate subscenes and check the full workbench. |
-| MiaJiao5 | [order_panel.tscn](../../game/scenes/order_panel.tscn) | Build the order display inside the assigned zone. |
+| JIN Minyi / NEKO (confirmed 14 November) | [order_panel.tscn](../../game/scenes/order_panel.tscn), [order module](../../game/scenes/orders/order_station.tscn) | Own the GDD ordering module and its interface; preserve other scene boundaries. |
 | ZHANGYan-Sybil | [ingredient_storage.tscn](../../game/scenes/ingredient_storage.tscn), [delivery_counter.tscn](../../game/scenes/delivery_counter.tscn) | Build ingredient and delivery interfaces inside their respective zones. |
 | deadlytomatovo | [mortar.tscn](../../game/scenes/mortar.tscn), [mortar.gd](../../game/scenes/mortar.gd) | Build preparation feedback and keep the keyboard and mouse check working. |
 
