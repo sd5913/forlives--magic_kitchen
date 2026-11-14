@@ -84,6 +84,7 @@ Patience starts at arrival. `elapsed_wait_seconds` includes the pending phase; `
 - 38 manager checks: sample data, snapshot isolation, duplicate/invalid actions, capacity, lifecycle, expiry, reset IDs, missing catalog and recovery.
 - 385 rendered UI/layout assertions: simulated mouse and keyboard actions, language/state preservation, pause/cancel, expiry, local art/alpha, 960 × 540 fit, full-workbench open/close/reopen, same-ticket bilingual captures, specified label rectangles, text width and equal button geometry after translation. The earlier functional-only run contained 31 assertions; the layout checks were added after the user's alignment feedback.
 - Six existing Python router tests and the repository checker passed.
+- A fresh local clone of code commit `141e96c` (without the original `.godot/` cache) imported all art and passed the 38 manager checks, 385 UI/layout assertions and repository checker on the same Windows computer. This verifies committed files are sufficient for local re-import; it is not a test on a second physical machine.
 
 Reproduce from the repository root:
 

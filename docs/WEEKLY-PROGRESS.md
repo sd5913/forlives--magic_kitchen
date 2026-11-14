@@ -56,6 +56,7 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 - User feedback: English and Chinese appeared misaligned; use English by default for presentation and retain a Chinese toggle.
 - Changed: explicit vertical centring and text rectangles, language-specific heading fonts, queue subtitle/time heights, centred ingredient captions and customer nameplates. Some short text boxes were smaller than the system font's minimum height and Godot expanded them; the layout check now catches that condition.
 - Evidence: the rendered UI/layout run passes 385 assertions, including same-ticket bilingual screenshots, label bounds and button-geometry comparisons. The checks use simulated input; this is user-directed iteration, not an invented classmate trial. Final visual-owner review and fresh-machine/export checks remain pending.
+- Reproduction: a fresh local clone of code commit `141e96c`, without cached imports, passed asset import, 38 state checks, 385 UI/layout assertions and the repository checker on this Windows machine. A second physical machine and exported build have not been tested.
 
 Goal: bring observations from another person trying the experience and choose an improvement.
 
