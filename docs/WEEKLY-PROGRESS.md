@@ -43,6 +43,20 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 
 ## Class week of 19 November 2026: playtest and feedback
 
+### 14 November: NEKO ordering implementation prepared for review
+
+- Design input: user supplied GDD v1.0 for Peking duck rolls and confirmed NEKO / JIN Minyi owns ordering. The user rejected the first flat-vector visual draft and supplied a warm, faceted low-poly kitchen reference; that draft was replaced before any push.
+- Implemented on `feature/order-station`: isolated order manager, data-driven ingredient requests, customer arrival and selection, guarded acceptance/capacity, waiting and expiry, English/Chinese UI, pause and restart confirmation. Added a station overlay to the existing order panel; other zones and shared project settings were left unchanged.
+- Art: generated background, customer sheet, food-icon sheet and panel textures to follow the supplied reference. UI text, order state and buttons remain live Godot controls. Existing remote branches contained no matching art; Figma access was denied, so this is not a verified Figma reproduction.
+- Verification on Windows / Godot 4.7.2 / Compatibility renderer: 38 manager checks and 31 rendered UI checks passed, along with six existing Python router tests. Fixed oversized texture borders and verified local art imports, alpha, small-window layout, capacity, expiry, mouse/keyboard input and open/close behaviour. Screenshots and reproduction commands are linked in the [module guide](technical/ORDER-STATION.md).
+- Pending: review by the team's visual owner, real teammate trial and integration of oven/prep/delivery/scoring. No player or tutor feedback was invented. This is a usable ordering increment, not the completed cooking game.
+
+### 15 November: bilingual alignment follow-up
+
+- User feedback: English and Chinese appeared misaligned; use English by default for presentation and retain a Chinese toggle.
+- Changed: explicit vertical centring and text rectangles, language-specific heading fonts, queue subtitle/time heights, centred ingredient captions and customer nameplates. Some short text boxes were smaller than the system font's minimum height and Godot expanded them; the layout check now catches that condition.
+- Evidence: the rendered UI/layout run passes 385 assertions, including same-ticket bilingual screenshots, label bounds and button-geometry comparisons. The checks use simulated input; this is user-directed iteration, not an invented classmate trial. Final visual-owner review and fresh-machine/export checks remain pending.
+
 Goal: bring observations from another person trying the experience and choose an improvement.
 
 - Owners / usable delivery / evidence: pending

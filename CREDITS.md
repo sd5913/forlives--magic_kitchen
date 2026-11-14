@@ -6,9 +6,13 @@ We used OpenAI Codex to draft and translate project documents, compare interacti
 
 我们用 OpenAI Codex 起草和翻译项目文档、比较交互参考，并搭建仓库检查。Codex 也参与了 Python 输入路由、模拟和测试，以及 Godot 工作台初版场景和输入反馈的编写。文档措辞使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
 
-The workbench preview uses Godot’s built-in controls and colours. It runs locally without calling a generative AI service.
+The original workbench uses Godot's built-in controls and colours. The order station added on 14 November uses four image assets generated with OpenAI's built-in image tool from the user's supplied kitchen style reference. Codex wrote the module, tests and supporting documentation under NEKO / JIN Minyi's direction. The user corrected the first visual draft to match the team's established restaurant style. See [asset provenance and generation briefs](docs/technical/ORDER-ASSETS.md).
 
-工作台预览使用 Godot 自带的控件和颜色，在本地运行，无需调用生成式 AI 服务。
+旧工作台使用 Godot 自带控件和颜色。11 月 14 日新增点单模块使用内置图片生成工具制作的四份图像素材，以用户提供的厨房渲染稿为风格参考；Codex 在 NEKO / JIN Minyi 的指导下编写模块、测试和文档。用户指出初版风格不统一，随后替换为团队的暖色低多边形方向。[素材来源与生成说明](docs/technical/ORDER-ASSETS.md)
+
+Both previews run locally without calling a generative AI service. System fonts are referenced from the operating system, not redistributed. We did not retrieve Figma artwork, copy the supplied reference screenshot into the runtime, or import code/media from the example repositories for this module.
+
+两种预览都在本地运行，不调用在线生成服务。字体使用系统字体，不随仓库分发。点单模块没有声称取得 Figma 资源，也没有把参考截图整张贴入游戏；未复制课程例子仓库的代码或素材。
 
 ## Tools and references / 工具与参考
 
