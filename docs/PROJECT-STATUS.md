@@ -1,5 +1,18 @@
 # Shared project status and handoff
 
+## 14 November: current GDD and order-station branch
+
+- Current source of design: the supplied `Magic_Kitchen_GDD_v1.0.docx` defines Peking duck rolls, not the earlier herbal-shop concept. The local document hash and implementation assumptions are in the [order-station guide](technical/ORDER-STATION.md).
+- NEKO / JIN Minyi confirmed ownership of the ordering module. Work is on `feature/order-station`, based on `973f8e3`; fetch the branch before continuing. Do not assume this change is already merged into main.
+- Ordering now has guest arrival, ticket requirements/exclusions, guarded acceptance, three active orders plus one waiting guest, patience/expiry, pause, bilingual controls, restart confirmation, and an isolated state manager. The shared workbench can open/close the station without changing other zones.
+- Visuals follow the supplied warm, faceted low-poly restaurant reference. Four generated image assets are included. Figma access was denied; no Figma assets or implementation were claimed as retrieved. See [asset provenance](technical/ORDER-ASSETS.md).
+- Windows Godot checks passed: 38 state checks and 31 rendered UI checks; six existing Python router tests passed. These are agent-run checks, not a human playtest or tutor review. Screenshots are in `docs/images/`.
+- Still pending: oven/prep/serve integration, final shared state host and clock ownership, scoring, actual gesture adapters, a teammate trial, Figma design-owner review, and export/fresh-machine validation. Other station navigation in the module shows an explanatory message, not a fake destination.
+
+The 9 November handoff below records the earlier baseline and remains historical context.
+
+15 November follow-up: the user confirmed English-first presentation with a Chinese toggle and identified bilingual misalignment. Label bounds, centring and heading-font selection were corrected. The expanded UI/layout run now passes 385 assertions, including same-ticket language comparisons; the 38 manager checks remain separate. This does not replace visual-owner approval or a teammate trial.
+
 Updated 9 November 2026, Hong Kong time. I use this file as the short entry point when continuing from another computer or chat. My name is JIN Minyi (`IceyHikari`). Team decisions belong in the [team plan](TEAM-PLAN.md), tasks in the [existing board #23](https://github.com/orgs/sd5913/projects/23), and actual results in [weekly progress](WEEKLY-PROGRESS.md).
 
 ## Verified starting point

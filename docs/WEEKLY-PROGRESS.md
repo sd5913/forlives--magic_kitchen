@@ -43,6 +43,32 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 
 ## Class week of 19 November 2026: playtest and feedback
 
+### 16 November: PR #7 Linux CI setup correction
+
+- Diagnosis: PR head `2a4c26e` failed during setup-python, because the Ubuntu 26.04 runner had no Python 3.9 build. The project checks had not started; the Windows and macOS jobs passed.
+- Change: select Python 3.13 on the existing three-platform matrix, using the official actions/python-versions manifest to confirm an Ubuntu 26.04 x64 build. No tests were disabled and no gameplay files changed. Run outcomes remain inspectable on PR #7.
+
+### 14 November: NEKO ordering implementation prepared for review
+
+- Design input: user supplied GDD v1.0 for Peking duck rolls and confirmed NEKO / JIN Minyi owns ordering. The user rejected the first flat-vector visual draft and supplied a warm, faceted low-poly kitchen reference; that draft was replaced before any push.
+- Implemented on `feature/order-station`: isolated order manager, data-driven ingredient requests, customer arrival and selection, guarded acceptance/capacity, waiting and expiry, English/Chinese UI, pause and restart confirmation. Added a station overlay to the existing order panel; other zones and shared project settings were left unchanged.
+- Art: generated background, customer sheet, food-icon sheet and panel textures to follow the supplied reference. UI text, order state and buttons remain live Godot controls. Existing remote branches contained no matching art; Figma access was denied, so this is not a verified Figma reproduction.
+- Verification on Windows / Godot 4.7.2 / Compatibility renderer: 38 manager checks and 31 rendered UI checks passed, along with six existing Python router tests. Fixed oversized texture borders and verified local art imports, alpha, small-window layout, capacity, expiry, mouse/keyboard input and open/close behaviour. Screenshots and reproduction commands are linked in the [module guide](technical/ORDER-STATION.md).
+- Pending: review by the team's visual owner, real teammate trial and integration of oven/prep/delivery/scoring. No player or tutor feedback was invented. This is a usable ordering increment, not the completed cooking game.
+
+### 15 November: bilingual alignment follow-up
+
+- User feedback: English and Chinese appeared misaligned; use English by default for presentation and retain a Chinese toggle.
+- Changed: explicit vertical centring and text rectangles, language-specific heading fonts, queue subtitle/time heights, centred ingredient captions and customer nameplates. Some short text boxes were smaller than the system font's minimum height and Godot expanded them; the layout check now catches that condition.
+- Evidence: the rendered UI/layout run passes 385 assertions, including same-ticket bilingual screenshots, label bounds and button-geometry comparisons. The checks use simulated input; this is user-directed iteration, not an invented classmate trial. Final visual-owner review and fresh-machine/export checks remain pending.
+- Reproduction: a fresh local clone of code commit `141e96c`, without cached imports, passed asset import, 38 state checks, 385 UI/layout assertions and the repository checker on this Windows machine. A second physical machine and exported build have not been tested.
+
+### 16 November: macOS order station improvement
+
+- A clean export of [PR #7](https://github.com/sd5913/forlives--magic_kitchen/pull/7) exposed font-loading errors and 18 UI layout failures on macOS. I changed the macOS font selection and enlarged the title, ingredient quantities and customer name boxes.
+- Verification on this Mac with Godot 4.7.2 Standard: 38 order state checks and 385 rendered UI assertions passed. [Reproduction steps](technical/ORDER-STATION.md#macos-verification)
+- For the tutor review, ask someone to open the order station, find an ingredient requirement, accept a ticket and locate its waiting indicator. Record where they hesitate, then choose one change based on what they did. The cooking stations are still the integration blocker. Human observations and tutor feedback are pending.
+
 Goal: bring observations from another person trying the experience and choose an improvement.
 
 - Owners / usable delivery / evidence: pending
