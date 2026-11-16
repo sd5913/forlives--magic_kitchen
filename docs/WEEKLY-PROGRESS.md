@@ -43,6 +43,11 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 
 ## Class week of 19 November 2026: playtest and feedback
 
+### 16 November: PR #7 Linux CI setup correction
+
+- Diagnosis: PR head `2a4c26e` failed during setup-python, because the Ubuntu 26.04 runner had no Python 3.9 build. The project checks had not started; the Windows and macOS jobs passed.
+- Change: select Python 3.13 on the existing three-platform matrix, using the official actions/python-versions manifest to confirm an Ubuntu 26.04 x64 build. No tests were disabled and no gameplay files changed. Run outcomes remain inspectable on PR #7.
+
 ### 14 November: NEKO ordering implementation prepared for review
 
 - Design input: user supplied GDD v1.0 for Peking duck rolls and confirmed NEKO / JIN Minyi owns ordering. The user rejected the first flat-vector visual draft and supplied a warm, faceted low-poly kitchen reference; that draft was replaced before any push.
