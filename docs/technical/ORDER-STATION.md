@@ -98,8 +98,12 @@ python -m unittest discover -s tests -v
 
 The UI script needs a desktop for screenshots. It sends mouse events in viewport coordinates (not OS screen coordinates), uses focus/Space for a keyboard action and saves seven images. Set `MAGIC_KITCHEN_SCREENSHOT_DIR` to choose the output folder; otherwise it uses Godot user data. Checks are agent-run regression tests, not observations of a human tester. They do not establish game balance, full-game completion or delivery scoring.
 
+### macOS verification
+
+On 16 November, a clean export of the PR first reproduced font-loading errors and 18 layout failures. The fix uses Arial Unicode MS on macOS for Chinese text, keeps the existing Windows font preferences, and gives the title, quantities and customer name enough room for the Mac font metrics. A rendered macOS rerun passed all 385 UI assertions with no font-loading errors. All 38 manager checks passed.
+
 ## Pending
 
-Visual owner approval against the editable Figma source; true host-level shared state and time; oven, preparation, serving and scoring integration; actual player/teammate trial; macOS check of this module; packaged Windows export and fresh-computer launch. There is no background music, sound asset or camera adapter in this order-only increment.
+Visual owner approval against the editable Figma source; true host-level shared state and time; oven, preparation, serving and scoring integration; actual player/teammate trial; packaged Windows export and fresh-computer launch. There is no background music, sound asset or camera adapter in this order-only increment.
 
 中文交接：我（NEKO / JIN Minyi）负责点单。接单后发出数据副本；其他模块按稳定订单编号处理并回报状态。主游戏只维护一份 manager 和统一时钟，不能每个工作台各建一份。烤炉、料理、评分和真人试玩尚未完成；这次提交不冒充完整游戏。

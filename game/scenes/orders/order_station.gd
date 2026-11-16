@@ -8,6 +8,7 @@ signal pause_requested(is_paused: bool)
 signal restart_requested
 
 const Manager = preload("res://scenes/orders/order_manager.gd")
+const MACOS_CJK_FONT := "Arial Unicode MS"
 const DESIGN_SIZE := Vector2(1440, 900)
 const INK := Color("542c14")
 const MUTED := Color("8b6041")
@@ -54,12 +55,12 @@ var _textures: Dictionary = {}
 
 
 func _ready() -> void:
+	var is_macos := OS.get_name() == "macOS"
 	_font = SystemFont.new()
-	_font.font_names = PackedStringArray(["Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "Segoe UI"])
-	_font.allow_system_fallback = true
+	_font.font_names = PackedStringArray([MACOS_CJK_FONT] if is_macos else ["Microsoft YaHei", "Noto Sans CJK SC", "Segoe UI"])
+	_font.allow_system_fallback = not is_macos
 	_heading_font = SystemFont.new()
-	_heading_font.font_names = PackedStringArray(["Georgia", "KaiTi", "STKaiti", "Noto Serif CJK SC"])
-	_heading_font.allow_system_fallback = true
+	_heading_font.allow_system_fallback = not is_macos
 	_atlas = load("res://assets/ui/orders/ingredient_atlas.png")
 	_panel_atlas = load("res://assets/ui/orders/panel_atlas.png")
 	# Runtime atlas slicing and downsampling keep nine-slice borders proportional
@@ -133,7 +134,11 @@ func _fit() -> void:
 
 
 func _build() -> void:
-	_heading_font.font_names = PackedStringArray(["KaiTi", "STKaiti", "Noto Serif CJK SC"]) if language == "zh" else PackedStringArray(["Georgia", "Noto Serif", "DejaVu Serif"])
+	if language == "zh":
+		var fonts := [MACOS_CJK_FONT] if OS.get_name() == "macOS" else ["KaiTi", "STKaiti", "Noto Serif CJK SC"]
+		_heading_font.font_names = PackedStringArray(fonts)
+	else:
+		_heading_font.font_names = PackedStringArray(["Georgia", "Noto Serif", "DejaVu Serif"])
 	for child in get_children():
 		if child is Control:
 			remove_child(child)
@@ -144,7 +149,7 @@ func _build() -> void:
 	_canvas.size = DESIGN_SIZE
 	add_child(_canvas)
 	_picture(_canvas, _background, Rect2(0, 0, 1440, 900), false)
-	_label(_canvas, _t("Magic Kitchen", "烤鸭卷制作"), Rect2(48, 16, 260, 38), 29, PAPER)
+	_label(_canvas, _t("Magic Kitchen", "烤鸭卷制作"), Rect2(48, 15, 260, 40), 29, PAPER)
 	_label(_canvas, _t("ORDER COUNTER", "点单区"), Rect2(48, 58, 260, 26), 17, PAPER)
 	_button(_canvas, _t("Orders", "点单台"), Rect2(320, 18, 200, 64), "station", func(): _notice_text(_t("You are at the order station.", "你正在点单台。")), true)
 	_button(_canvas, _t("Roast", "烤炉台"), Rect2(536, 18, 200, 64), "roast_stub", _other_station)
@@ -247,7 +252,7 @@ func _draw_ticket(order: Dictionary) -> void:
 		var tile := Vector2(_atlas.get_width() / 4.0, _atlas.get_height() / 2.0)
 		icon.region = Rect2(Vector2((icon_index % 4) * tile.x, (icon_index / 4) * tile.y) + Vector2(12, 12), tile - Vector2(24, 24))
 		_picture(_content, icon, Rect2(x + 8, y + 4, 58, 58))
-		_label(_content, "×%d" % int(item["quantity"]), Rect2(x + 113, y + 10, 46, 28), 22)
+		_label(_content, "×%d" % int(item["quantity"]), Rect2(x + 113, y + 9, 46, 30), 22)
 		var caption := _label(_content, ingredient[language], Rect2(x + 10, y + 56, 148, 23), 14)
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	var exclusions: Array = []
@@ -270,7 +275,7 @@ func _draw_ticket(order: Dictionary) -> void:
 	customer_heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_picture(_content, _textures.get(order["portrait"]), Rect2(604, 60, 324, 365))
 	var nameplate := _panel(_content, Rect2(624, 403, 288, 103), PAPER, 10)
-	var name_label := _label(nameplate, _localized(order["customer_name"]), Rect2(28, 19, 232, 32), 25)
+	var name_label := _label(nameplate, _localized(order["customer_name"]), Rect2(28, 18, 232, 34), 25)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	var status_label := _label(nameplate, _status(order["status"]), Rect2(28, 56, 232, 28), 16, RED)
 	status_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER

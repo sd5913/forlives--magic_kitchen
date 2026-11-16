@@ -28,9 +28,9 @@ Install **Godot 4.7.2 Standard**, then clone or download the [repository](https:
 
 安装 **Godot 4.7.2 Standard**，然后克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
-The earlier workbench was checked on macOS. This order-station change was checked on Windows with Godot 4.7.2 Standard, Compatibility rendering and simulated mouse/keyboard events. The preview runs locally without a camera, API key or runtime AI service. macOS checks of this new module and a packaged Windows export remain pending.
+The earlier workbench was checked on macOS. This order-station change was checked on Windows with Godot 4.7.2 Standard, Compatibility rendering and simulated mouse/keyboard events. The preview runs locally without a camera, API key or runtime AI service. The order station also passed its automated checks on macOS. A packaged Windows export remains pending.
 
-旧工作台有 macOS 检查记录；本次点单模块在 Windows、Godot 4.7.2 Standard 和 Compatibility 渲染下检查了画面及模拟鼠标/键盘操作。运行不需要摄像头、API 密钥或在线 AI 服务。新模块的 macOS 验证与 Windows 导出包仍待完成。
+旧工作台有 macOS 检查记录；本次点单模块在 Windows、Godot 4.7.2 Standard 和 Compatibility 渲染下检查了画面及模拟鼠标/键盘操作。运行不需要摄像头、API 密钥或在线 AI 服务。点单模块也已通过 macOS 自动检查，Windows 导出包待验证。
 
 ## Development standards / 开发规范
 

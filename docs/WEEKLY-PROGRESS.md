@@ -63,6 +63,12 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 - Evidence: the rendered UI/layout run passes 385 assertions, including same-ticket bilingual screenshots, label bounds and button-geometry comparisons. The checks use simulated input; this is user-directed iteration, not an invented classmate trial. Final visual-owner review and fresh-machine/export checks remain pending.
 - Reproduction: a fresh local clone of code commit `141e96c`, without cached imports, passed asset import, 38 state checks, 385 UI/layout assertions and the repository checker on this Windows machine. A second physical machine and exported build have not been tested.
 
+### 16 November: macOS order station improvement
+
+- A clean export of [PR #7](https://github.com/sd5913/forlives--magic_kitchen/pull/7) exposed font-loading errors and 18 UI layout failures on macOS. I changed the macOS font selection and enlarged the title, ingredient quantities and customer name boxes.
+- Verification on this Mac with Godot 4.7.2 Standard: 38 order state checks and 385 rendered UI assertions passed. [Reproduction steps](technical/ORDER-STATION.md#macos-verification)
+- For the tutor review, ask someone to open the order station, find an ingredient requirement, accept a ticket and locate its waiting indicator. Record where they hesitate, then choose one change based on what they did. The cooking stations are still the integration blocker. Human observations and tutor feedback are pending.
+
 Goal: bring observations from another person trying the experience and choose an improvement.
 
 - Owners / usable delivery / evidence: pending
