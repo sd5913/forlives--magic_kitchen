@@ -1,24 +1,28 @@
-# Magic Kitchen
+# Roast Duck Kitchen / 烤鸭小店
 
-We're building a short 2D time-management game set in a fantasy herbal shop. You play an apprentice who picks ingredients, prepares fictional remedies and delivers orders before customers lose patience. We're making it for players who enjoy juggling small tasks under pressure.
+Roast Duck Kitchen is a 2D time-management game about running a roast duck shop, inspired by Papa's Burgeria.
 
-我们在做一款以奇幻药房为背景的 2D 限时经营游戏。你扮演药房学徒，挑选药材、配制虚构药方，在顾客失去耐心前交付订单。适合喜欢在限时内安排多项任务的玩家。
+《烤鸭小店》是一款经营烤鸭店的 2D 限时游戏，灵感来自《老爹汉堡店》。
 
-## How a shift works / 一轮怎么玩
+## How to Play / 一轮怎么玩
 
-Our first playable shift will start with one prescription. Read the order, pick the herbs, grind them at the mortar, then wrap and deliver the medicine. Once a second order comes in, you’ll have to decide whether to finish the batch already in the mortar or switch to a customer who is about to leave.
+1. **Take an order.** Check what the customer ordered.
+2. **Roast the duck.** Use hand gestures to control roasting.
+3. **Finish the dish.** Prepare the order at the workbench.
+4. **Serve and get rated.** Deliver the dish and see your score.
 
-我们计划先做一张处方的完整流程。你先读订单、挑药材，再用研钵磨药，最后包好交给顾客。第二张订单进来后，你就得决定是先磨完手上这份药，还是先处理快等不及的顾客。
+1. **接单。** 查看顾客的订单。
+2. **烤鸭。** 用手势操控烤制。
+3. **工作台。** 按订单完成餐点。
+4. **送餐与评分。** 送出餐点并查看评分。
 
-We want to try grinding with one hand while using the mouse to manage another order. We’ll test that after the keyboard and mouse version can handle a full order.
+## Workbench Preview / 工作台预览
 
-我们想试试能不能一只手研磨，另一只手用鼠标处理另一张订单。等键鼠版能完整做完一单，我们再试这种双手操作。
+The kitchen preview follows one order across four screens. At the order counter, check what the customer asked for. Then move to the roasting station and use hand gestures to control the roast. Once the duck is ready, take it to the workbench and finish the dish according to the order. On the last screen, serve the dish and see the score for that order.
 
-## Workbench preview / 工作台预览
+厨房预览用一张订单串起四个场景。先在接单区看清顾客的要求，再到烤制区用手势操控烤鸭。烤鸭出炉后，转到工作台，按订单要求完成餐点。最后进入送餐与评分场景，把餐点交给顾客，查看这一单的得分。
 
-You can try a workbench with four areas: ingredients, mortar, orders and delivery. Click **Test input** in the mortar area to switch its status between idle and active. You can also press **Tab** to focus the button, then **Enter** or **Space**. The preview covers layout and input feedback. Order fulfilment and gesture controls are still planned.
 
-你可以打开工作台预览，查看药材、研钵、订单和交付四个区域。点击研钵区的 **Test input**，状态会在待机和激活之间切换。也可以按 **Tab** 选中按钮，再按 **Enter** 或 **Space**。当前版本可以体验工作台布局和输入反馈，完整的配药交付流程与手势操作仍在计划中。
 
 ## Run the preview / 运行预览
 
