@@ -4,29 +4,21 @@ The current GDD v1.0 defines **Peking duck roll preparation**, a 2D time-managem
 
 当前以 **Magic_Kitchen_GDD_v1.0** 的北京烤鸭卷制作方案为准：点单、烤鸭与片鸭、配料卷制、点击交付。目标是喜欢轻量经营、烹饪模拟和节奏管理的 Windows PC 玩家。早期药房文档作为历史探索保留，不再作为当前玩法要求。
 
-## How a shift works / 一轮怎么玩
+## Playtest / 试玩
 
-The complete cooking loop is not integrated yet. On `feature/order-station`, NEKO / JIN Minyi's order module supports guest arrival, recipe inspection, acceptance, parallel tickets and waiting feedback. It exposes snapshots/signals for the other stations; the preview does not simulate finished cooking or score an order.
+The `feature/playable-shift` branch connects ordering, roasting, preparation and delivery in one workbench. Read the ticket and accept it at the order station. Click **Roast** to return to the workbench, then **Start roast**. The prototype roasts and slices the duck after a short wait. Select each other ingredient and click **Add ingredient** once per required portion. Click **Finish roll**, then **Serve roll**.
 
-完整烹饪流程尚未整合。`feature/order-station` 提供 NEKO / JIN Minyi 负责的点单模块：顾客到店、查看配料与特殊要求、确认接单、多订单和等待反馈。它向其他模块提供数据和信号，不把未接入的烤制、料理和评分显示成已完成。
+`feature/playable-shift` 分支把点单、烤制、料理和交付接到了同一工作台。先在点单台查看并接受订单。点击 **Roast** 返回工作台，再点 **Start roast**。原型会在短暂等待后完成烤制和片鸭。选择其余配料，按订单要求的份数点击 **Add ingredient**。最后点击 **Finish roll**，再点击 **Serve roll**。
 
-The GDD assigns mouse input to ordering, ingredients and navigation; camera gestures belong to roasting, slicing and rolling. The order station needs no camera. See the [module guide and integration contract](docs/technical/ORDER-STATION.md).
+You can clear the ingredients and try again if they do not match the ticket. Keep an eye on the countdown as you switch stations. The prototype clears unfinished food when an order expires and counts each successful delivery once.
 
-GDD 中，鼠标负责点单、配料和导航，摄像头手势用于入炉、取出、片鸭和卷制。点单模块本身无需摄像头。[运行与接口说明](docs/technical/ORDER-STATION.md)
-
-![Order station, rendered in Godot](docs/images/order_station_chinese.png)
-
-## Workbench preview / 工作台预览
-
-The existing workbench is preserved. In its Orders area, click **Open order station** to open the new counter, then close it with **×** to return. The legacy mortar input check remains unchanged. The new counter uses a virtual 1440 × 900 layout scaled inside the current 960 × 540 project viewport; shared dimensions and other stations were not changed.
-
-原工作台保留。在 Orders 区点击 **Open order station** 打开点单台，用右上角 **×** 返回。旧研钵输入检查未改。点单台按 GDD 的 1440 × 900 设计坐标缩放显示，未擅自调整项目原有 960 × 540 设置或组员其他场景。
+配料不符时，可以清空后重试。切换工作区域时留意倒计时。订单过期后会清掉未完成的食材，每份成功交付的订单只计一次。
 
 ## Run the preview / 运行预览
 
-Install **Godot 4.7.2 Standard**, then clone or download the [repository](https://github.com/sd5913/forlives--magic_kitchen). In Godot’s Project Manager, choose **Import**, open [`game/project.godot`](game/project.godot) and click **Run Project**. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/)
+Install **Godot 4.7.2 Standard**, then switch to the [playtest branch](https://github.com/sd5913/forlives--magic_kitchen/tree/feature/playable-shift). In Godot’s Project Manager, choose **Import**, open [`game/project.godot`](game/project.godot) and click **Run Project**. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
-安装 **Godot 4.7.2 Standard**，然后克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
+安装 **Godot 4.7.2 Standard**，然后切到[试玩分支](https://github.com/sd5913/forlives--magic_kitchen/tree/feature/playable-shift)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
 
 The earlier workbench was checked on macOS. This order-station change was checked on Windows with Godot 4.7.2 Standard, Compatibility rendering and simulated mouse/keyboard events. The preview runs locally without a camera, API key or runtime AI service. The order station also passed its automated checks on macOS. A packaged Windows export remains pending.
 

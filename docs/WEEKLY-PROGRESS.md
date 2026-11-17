@@ -69,6 +69,12 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 - Verification on this Mac with Godot 4.7.2 Standard: 38 order state checks and 385 rendered UI assertions passed. [Reproduction steps](technical/ORDER-STATION.md#macos-verification)
 - For the tutor review, ask someone to open the order station, find an ingredient requirement, accept a ticket and locate its waiting indicator. Record where they hesitate, then choose one change based on what they did. The cooking stations are still the integration blocker. Human observations and tutor feedback are pending.
 
+### 17 November: integrated playtest
+
+- Connected the same ticket from acceptance to timed roasting, ingredient matching and delivery. The workbench owns the manager and clock. A wrong recipe can be cleared and retried, and expiry clears food in progress.
+- Automated verification on macOS with Godot 4.7.2 Standard passed 38 order manager checks, 385 rendered order-station assertions and the integrated path from acceptance to delivery. The integration check also covers rejected recipes, pause, expiry and duplicate delivery.
+- Before the tutor review, have another person try a complete order with no initial walkthrough. Watch whether they find the ticket requirements, know where to roast and can recover from a recipe mismatch. Record one observation and the change it motivates. Human observations and tutor feedback are pending.
+
 Goal: bring observations from another person trying the experience and choose an improvement.
 
 - Owners / usable delivery / evidence: pending

@@ -14,6 +14,10 @@ Both previews run locally without calling a generative AI service. System fonts 
 
 两种预览都在本地运行，不调用在线生成服务。字体使用系统字体，不随仓库分发。点单模块没有声称取得 Figma 资源，也没有把参考截图整张贴入游戏；未复制课程例子仓库的代码或素材。
 
+We also used Codex to implement and verify the shared-clock playtest flow, including the connections between the existing order station and the provisional cooking controls.
+
+我们也用 Codex 编写和验证试玩版的统一计时流程，并把现有点单台接入临时烹饪操作。
+
 ## Tools and references / 工具与参考
 
 We build the game with [Godot](https://godotengine.org/) and GDScript. The input simulation and repository checks use Python’s standard library. We consulted other projects when exploring gesture controls. The [interaction reference notes](docs/INTERACTION-REFERENCES.md) list those projects and what we looked at. We did not copy their code or media.

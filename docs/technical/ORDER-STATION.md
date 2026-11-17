@@ -102,6 +102,10 @@ The UI script needs a desktop for screenshots. It sends mouse events in viewport
 
 On 16 November, a clean export of the PR first reproduced font-loading errors and 18 layout failures. The fix uses Arial Unicode MS on macOS for Chinese text, keeps the existing Windows font preferences, and gives the title, quantities and customer name enough room for the Mac font metrics. A rendered macOS rerun passed all 385 UI assertions with no font-loading errors. All 38 manager checks passed.
 
+## Integrated workbench preview
+
+The `feature/playable-shift` branch adds a host-owned manager and clock in [workbench.gd](../../game/scenes/workbench.gd). Order, roast, preparation and delivery use the same ticket ID. Timed roasting includes slicing in this prototype. The preparation station compares the selected ingredients and quantities against the order before allowing delivery. Run `godot --headless --path game --script res://tests/test_playable_shift.gd` after import to verify the shared path, including pause, expiry and duplicate delivery.
+
 ## Pending
 
 Visual owner approval against the editable Figma source; true host-level shared state and time; oven, preparation, serving and scoring integration; actual player/teammate trial; packaged Windows export and fresh-computer launch. There is no background music, sound asset or camera adapter in this order-only increment.
