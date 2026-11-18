@@ -2,6 +2,7 @@ extends Control
 ## Standalone 1440x900 GDD station. Scales inside the existing 960x540 workbench.
 
 signal close_requested
+signal workbench_requested(zone: String)
 signal order_accepted(order: Dictionary)
 signal order_selected(order_id: String)
 signal pause_requested(is_paused: bool)
@@ -119,7 +120,7 @@ func _process(delta: float) -> void:
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo:
+	if visible and event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_ESCAPE:
 			_toggle_pause()
 			get_viewport().set_input_as_handled()
@@ -152,8 +153,8 @@ func _build() -> void:
 	_label(_canvas, _t("Magic Kitchen", "烤鸭卷制作"), Rect2(48, 15, 260, 40), 29, PAPER)
 	_label(_canvas, _t("ORDER COUNTER", "点单区"), Rect2(48, 58, 260, 26), 17, PAPER)
 	_button(_canvas, _t("Orders", "点单台"), Rect2(320, 18, 200, 64), "station", func(): _notice_text(_t("You are at the order station.", "你正在点单台。")), true)
-	_button(_canvas, _t("Roast", "烤炉台"), Rect2(536, 18, 200, 64), "roast_stub", _other_station)
-	_button(_canvas, _t("Prepare", "料理台"), Rect2(752, 18, 200, 64), "prep_stub", _other_station)
+	_button(_canvas, _t("Roast", "烤炉台"), Rect2(536, 18, 200, 64), "roast_stub", func(): _open_workbench("roast"))
+	_button(_canvas, _t("Prepare", "料理台"), Rect2(752, 18, 200, 64), "prep_stub", func(): _open_workbench("prepare"))
 	_button(_canvas, _t("EN / 中文", "中文 / EN"), Rect2(968, 18, 132, 64), "language", _toggle_language)
 	_button(_canvas, _t("Pause", "暂停"), Rect2(1116, 18, 116, 64), "pause", _toggle_pause)
 	_button(_canvas, _t("Restart", "重来"), Rect2(1248, 18, 108, 64), "restart", _confirm_reset)
@@ -321,7 +322,10 @@ func _toggle_language() -> void:
 	_refresh()
 
 
-func _other_station() -> void:
+func _open_workbench(zone: String) -> void:
+	if embedded and not _owns_manager:
+		workbench_requested.emit(zone)
+		return
 	_notice_text(_t("This is NEKO's order module. Other stations are not connected in this preview.", "这是 NEKO 的点单模块预览，烤炉与料理台尚未接入。"))
 
 
@@ -342,7 +346,6 @@ func _toggle_auto() -> void:
 func _confirm_reset() -> void:
 	if not _owns_manager:
 		restart_requested.emit()
-		_notice_text(_t("The host game handles restarting shared orders.", "共享订单由主游戏统筹重新开始。"))
 		return
 	var was_paused := paused
 	paused = true
@@ -374,7 +377,7 @@ func _on_selected(id: String) -> void:
 
 
 func _on_accepted(order: Dictionary) -> void:
-	_notice_text(_t("%s accepted. Ticket recorded; oven integration is next.", "%s 已接单。订单已记录，等待烤炉模块接入。") % order["order_id"])
+	_notice_text(_t("%s accepted. Go to Roast to begin.", "%s 已接单。前往烤炉台开始制作。") % order["order_id"]) if not _owns_manager else _notice_text(_t("%s accepted.", "%s 已接单。") % order["order_id"])
 	order_accepted.emit(order.duplicate(true))
 
 
