@@ -104,18 +104,29 @@ func _confirm_restart() -> void:
 	dialog.title = "Restart the shift?"
 	dialog.dialog_text = "This clears all tickets, ingredients and served rolls."
 	var was_paused := _paused
+	var station = $OrderPanel._station
+	var station_was_paused: bool = station.paused
 	_paused = true
+	station.paused = true
+	station._refresh()
+	_refresh()
 	dialog.confirmed.connect(func():
 		_roasting.clear()
 		_fillings.clear()
 		_served_count = 0
 		manager.reset_orders()
 		manager.create_order()
+		station._auto_elapsed = 0.0
+		station.paused = station_was_paused
+		station._refresh()
 		_paused = was_paused
 		_refresh()
 		dialog.queue_free())
 	dialog.canceled.connect(func():
 		_paused = was_paused
+		station.paused = station_was_paused
+		station._refresh()
+		_refresh()
 		dialog.queue_free())
 	add_child(dialog)
 	dialog.popup_centered()

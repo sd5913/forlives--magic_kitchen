@@ -75,6 +75,13 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 - Automated verification on macOS with Godot 4.7.2 Standard passed 38 order manager checks, 385 rendered order-station assertions and the integrated path from acceptance to delivery. The integration check also covers rejected recipes, pause, expiry and duplicate delivery.
 - Before the tutor review, have another person try a complete order with no initial walkthrough. Watch whether they find the ticket requirements, know where to roast and can recover from a recipe mismatch. Record one observation and the change it motivates. Human observations and tutor feedback are pending.
 
+### 18 November: full shift regression
+
+- Automated regression on macOS with Godot 4.7.2 Standard covers acceptance, roasting, recipe correction, delivery, expiry and repeated delivery. Added checks for two-ticket switching, a busy oven, isolated ingredient selections, focus loss and restart confirmation/cancellation.
+- Fixed the restart confirmation: both the shared clock and guest arrivals now pause while it is open. Cancellation restores controls and preserves food; confirmation clears food and old tickets, resets timers and keeps an existing pause.
+- Verification: 38 order-manager checks, 27 shift checks, 385 rendered UI assertions, six Python interaction tests and the repository checker passed. A rendered shift run also saves ready/served screenshots and checks both files. These are automated observations, not human playtest feedback.
+- Remaining evidence for the 19 November review: another person tries a complete order before receiving instructions; record observed hesitation, choose one improvement and record tutor feedback. Exported-build and fresh-machine checks remain pending.
+
 Goal: bring observations from another person trying the experience and choose an improvement.
 
 - Owners / usable delivery / evidence: pending
