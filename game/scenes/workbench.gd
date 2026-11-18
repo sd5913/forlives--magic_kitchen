@@ -60,6 +60,7 @@ func _ready() -> void:
 	_reset_fillings_button = _button($IngredientStorage, "Clear ingredients", Vector2(10, 150), 160, _clear_ingredients)
 	_serve_button = _button($DeliveryCounter, "Serve roll", Vector2(20, 57), 226, _serve_roll)
 	_refresh()
+	$OrderPanel._on_open_pressed()
 
 
 func _process(delta: float) -> void:

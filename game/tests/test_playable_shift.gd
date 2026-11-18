@@ -13,8 +13,8 @@ func _run() -> void:
 	root.add_child(workbench)
 	workbench.set_process(false)
 	var panel = workbench.get_node("OrderPanel")
-	panel.get_node("OpenOrders").pressed.emit()
 	var station = panel._station
+	_check(is_instance_valid(station) and station.visible, "project starts at the restaurant order station")
 	var manager = workbench.manager
 	_check(station.manager == manager, "order station uses the host manager")
 	var id: String = manager.selected_order_id
