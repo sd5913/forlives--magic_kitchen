@@ -4,6 +4,12 @@ Updated 19 November 2026, Hong Kong time. I maintain this handoff as JIN Minyi (
 
 更新于 2026 年 11 月 19 日，香港时间。我以 JIN Minyi（`IceyHikari`）的身份维护这份交接，记录当前设计成果及后续 Godot 接入方式。
 
+## Repository exports / 仓库成果
+
+The [design review archive](README.md) contains the actual low-fidelity PNGs, UI Kit board exports, individual frames, SVG icons and a source manifest. These are committed files, alongside the editable Figma links below.
+
+[设计成果审查页](README.md)保存已提交的低保真 PNG、UI Kit 展示板、独立边框、SVG 图标及来源清单，下面的 Figma 链接仍用于可编辑源文件。
+
 ## Design sources / 设计入口
 
 | Source / 来源 | Purpose / 用途 |

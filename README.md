@@ -40,6 +40,14 @@ Our [shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node
 
 我们的[共享 Figma 文件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)集中保存低保真流程、已选定的视觉基准和[公共 UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119)。组件库包含共用导航、控件、订单票框、装饰边框、材质和图标，具体工作台的内容与公共界面分开。组件范围和接入状态见[界面设计交接](docs/design/UI-KIT.md)。
 
+[View the exported design gallery](docs/design/README.md): four low-fidelity screens, two UI Kit boards, individual frames and SVG icons.
+
+[查看已提交的设计成果](docs/design/README.md)：四张低保真、两张 UI Kit 展示板、独立边框与 SVG 图标。
+
+| Order / 点单低保真 | Preparation / 料理低保真 |
+| --- | --- |
+| ![Order low-fidelity design](docs/design/exports/low-fi/order.png) | ![Preparation low-fidelity design](docs/design/exports/low-fi/preparation.png) |
+
 ## Development standards / 开发规范
 
 The Godot project lives in `game/`. The workbench assembles four separate scenes in `game/scenes/`, and Python development tools live at the repository root. We use `snake_case` for game files and `PascalCase` for Godot nodes. The engineering guide covers asset placement, scene ownership, Git and verification. [Engineering standards](docs/technical/ENGINEERING-STANDARDS.md) · [Technical overview](docs/technical/README.md)

@@ -60,6 +60,15 @@ Goal: bring observations from another person trying the experience and choose an
 
 本次完成低保真进度同步、公共组件及装饰层交接；Figma 成果与 Godot 实现分开记录。后续由我统筹公共 UI 接入与视口尺寸，组员接入各自内容；真人试玩与 tutor 反馈保留为待记录。
 
+### 19 November: design exports archived for review
+
+- Archived four original-size low-fidelity PNGs from the Order, Roasting, Preparation and Scoring areas. I visually checked each export; source layouts were not edited or resized.
+- Added two UI Kit board PNGs, seven individual component PNGs and five SVG icons. A [visual review page](design/README.md) embeds the deliverables; the [manifest](design/exports/manifest.json) records source nodes, dimensions, checksums and border margins.
+- The selected low-fidelity screens retain their differing historical header layouts. Final common-header geometry belongs to the shared kit. This export pass does not assert that every old screen has been updated.
+- PNG/SVG files do not replace editable Figma components or prototype connections. No Godot scenes changed and no human trial was performed for this archive.
+
+本次把实际成果文件一并归档，不再只有文字与外链；四张低保真、两张组件展示、七张独立组件导出和五个 SVG 可直接在 GitHub 审查。原始尺寸与历史布局差异如实保留。
+
 ## Class week of 26 November 2026: delivery candidate
 
 Goal: test a runnable build, deployment or installation setup on the chosen platform.

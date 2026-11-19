@@ -11,7 +11,7 @@ Updated 19 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep 
 | [PR #7](https://github.com/sd5913/forlives--magic_kitchen/pull/7) | Open; `feature/order-station` → `main`, head `b0dfe9a`. Order-station implementation; GitHub currently reports a merge conflict |
 | [PR #9](https://github.com/sd5913/forlives--magic_kitchen/pull/9) | Open; `feature/playable-shift` → `feature/order-station`, head `f8e6020`. Shared order-to-delivery prototype, not merged into main |
 | Low-fidelity flow | Completed, confirmed by me for this update; other teammates' screens were not individually re-audited during the kit work |
-| Shared visual reference and UI Kit | Prepared in Figma; [component inventory and handoff](design/UI-KIT.md) |
+| Shared visual reference and UI Kit | Prepared in Figma; [component inventory and handoff](design/UI-KIT.md), [committed design gallery and downloads](design/README.md) |
 | Final visual implementation | Asset export and Godot integration pending |
 | Team planning | Continue using [board #23](https://github.com/orgs/sd5913/projects/23); board statuses were not reverified in this documentation update |
 | Human playtest / tutor feedback | No new observations supplied or collected in this update |
