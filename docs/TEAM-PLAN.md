@@ -1,5 +1,11 @@
 # Team plan
 
+## Current design handoff — 19 November 2026
+
+I confirmed the low-fidelity flow as completed and prepared the shared Figma UI Kit. The [UI handoff](design/UI-KIT.md) records component coverage, the approved visual reference and remaining Godot integration; [current project status](PROJECT-STATUS.md) distinguishes main from open implementation PRs. I coordinate shared UI integration and the viewport decision. Station-specific content owners still need to be agreed. The dated plan below is historical and does not override the current roast-duck direction.
+
+我已确认低保真流程完成，并整理公共 Figma UI Kit。[组件交接](design/UI-KIT.md)记录设计范围和待接入工作，[项目状态](PROJECT-STATUS.md)区分主分支与未合并实现。公共 UI 接入和视口决策由我统筹，具体工作台内容负责人仍需组内确认。下方为历史计划，不覆盖当前烤鸭游戏方向。
+
 ## Proposed goal for 6 to 12 November 2026
 
 Share any existing local project before starting parallel implementation. Connect one prescription from herb selection through grinding to delivery, then test grinding with one hand while managing another order with the mouse. See [design refinement](DESIGN-REFINEMENT.md) for scope and acceptance checks. Confirm owners and the tutor's feedback before treating this as the team's agreed commitment.

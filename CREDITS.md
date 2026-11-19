@@ -10,6 +10,16 @@ The workbench preview uses Godot’s built-in controls and colours. It runs loca
 
 工作台预览使用 Godot 自带的控件和颜色，在本地运行，无需调用生成式 AI 服务。
 
+## Shared interface design / 公共界面设计
+
+We used Codex to organise the shared Figma component library, separate common controls from station content, derive decorative frame parts from the team's selected image and inspect layout, text remnants and resize behaviour. The kit keeps text and vector icons editable while using local raster crops for decorative textures. No new generative image assets were created in this component pass.
+
+我们用 Codex 整理共享 Figma 组件库，区分公共控件与工作台内容，从团队选定的图片拆出装饰边框，并检查布局、文字残影和拉伸表现。组件中的文字与矢量图标可编辑，装饰纹理使用原图局部位图。本轮组件整理没有新生成插画素材。
+
+The [UI handoff](docs/design/UI-KIT.md) links the source image and components. The selected image's creator, original-generation details and permission for runtime redistribution have not yet been recorded here. Before exporting it into the game, we will document that provenance rather than infer authorship or a licence from Figma access.
+
+[界面交接](docs/design/UI-KIT.md)保存原图与组件链接。所选图片的作者、原始生成信息及运行时再分发许可尚未在这里登记；导出进入游戏前，我们会补齐来源，不把 Figma 访问权限当作作者或授权证明。
+
 ## Tools and references / 工具与参考
 
 We build the game with [Godot](https://godotengine.org/) and GDScript. The input simulation and repository checks use Python’s standard library. We consulted other projects when exploring gesture controls. The [interaction reference notes](docs/INTERACTION-REFERENCES.md) list those projects and what we looked at. We did not copy their code or media.
