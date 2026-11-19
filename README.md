@@ -1,61 +1,62 @@
 # Roast Duck Kitchen / 烤鸭小店
 
-Roast Duck Kitchen is a 2D time-management game about running a roast duck shop, inspired by Papa's Burgeria.
+Take orders, watch the roast and roll each duck wrap the way the customer likes it. We’re making a 2D time-management game inspired by Papa’s Burgeria, with a warm Beijing roast-duck shop as its setting.
 
-《烤鸭小店》是一款经营烤鸭店的 2D 限时游戏，灵感来自《老爹汉堡店》。
+记住顾客的要求，照看炉里的烤鸭，再把配菜卷进饼里。我们想做一款忙碌又有烟火气的 2D 经营游戏：灵感来自《老爹汉堡店》，场景是一间暖色调的北京烤鸭小店。
 
-## How to Play / 一轮怎么玩
+## A shift in the kitchen / 小店的一轮营业
 
-1. **Take an order.** Check what the customer ordered.
-2. **Roast the duck.** Use hand gestures to control roasting.
-3. **Finish the dish.** Prepare the order at the workbench.
-4. **Serve and get rated.** Deliver the dish and see your score.
+The game moves between four stations: take an order at the counter, roast the duck, assemble the wrap and serve it for a rating. Several customers may be waiting at once, so choosing what to do next matters as much as getting a single dish right. We’re exploring hand gestures for roasting and preparation, alongside mouse controls for orders.
 
-1. **接单。** 查看顾客的订单。
-2. **烤鸭。** 用手势操控烤制。
-3. **工作台。** 按订单完成餐点。
-4. **送餐与评分。** 送出餐点并查看评分。
+一张订单会经过点单、烤制、料理和送餐评分四个环节。顾客不只来一位，除了把这一单做好，也要安排好下一步先忙什么。我们计划用手势完成烤制和料理操作，用鼠标管理订单。
 
-## Workbench Preview / 工作台预览
-
-The kitchen preview follows one order across four screens. At the order counter, check what the customer asked for. Then move to the roasting station and use hand gestures to control the roast. Once the duck is ready, take it to the workbench and finish the dish according to the order. On the last screen, serve the dish and see the score for that order.
-
-厨房预览用一张订单串起四个场景。先在接单区看清顾客的要求，再到烤制区用手势操控烤鸭。烤鸭出炉后，转到工作台，按订单要求完成餐点。最后进入送餐与评分场景，把餐点交给顾客，查看这一单的得分。
-
-
-
-## Run the preview / 运行预览
-
-Install **Godot 4.7.2 Standard**, then clone or download the [repository](https://github.com/sd5913/forlives--magic_kitchen). In Godot’s Project Manager, choose **Import**, open [`game/project.godot`](game/project.godot) and click **Run Project**. [Download Godot](https://godotengine.org/download/archive/4.7.2-stable/)
-
-安装 **Godot 4.7.2 Standard**，然后克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。[下载 Godot](https://godotengine.org/download/archive/4.7.2-stable/)
-
-We build the game in GDScript for Windows and macOS. We’ve verified the preview on macOS. Windows testing is pending. The preview needs a keyboard or mouse and runs without a camera or API key.
-
-我们用 GDScript 开发，目标平台为 Windows 和 macOS。预览已在 macOS 上验证，Windows 版待测。用键盘或鼠标就能运行预览，无需摄像头或 API 密钥。
-
-## UI design / 界面设计
-
-Our [shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1) contains the low-fidelity flow, the approved visual reference and the [UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119). The kit brings together shared navigation, controls, order-ticket frames, decorative borders, materials and icons. Station content is kept separate from reusable interface elements. See the [UI design handoff](docs/design/UI-KIT.md) for component coverage and implementation status.
-
-我们的[共享 Figma 文件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)集中保存低保真流程、已选定的视觉基准和[公共 UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119)。组件库包含共用导航、控件、订单票框、装饰边框、材质和图标，具体工作台的内容与公共界面分开。组件范围和接入状态见[界面设计交接](docs/design/UI-KIT.md)。
-
-[View the exported design gallery](docs/design/README.md): four low-fidelity screens, two UI Kit boards, individual frames and SVG icons.
-
-[查看已提交的设计成果](docs/design/README.md)：四张低保真、两张 UI Kit 展示板、独立边框与 SVG 图标。
-
-| Order / 点单低保真 | Preparation / 料理低保真 |
+| Station / 工作区 | What happens / 玩家做什么 |
 | --- | --- |
-| ![Order low-fidelity design](docs/design/exports/low-fi/order.png) | ![Preparation low-fidelity design](docs/design/exports/low-fi/preparation.png) |
+| Order / 点单 | Read the customer’s request and accept the order / 查看顾客要求并接单 |
+| Roasting / 烤制 | Control the roast with the planned gesture input / 按设计用手势操控烤制 |
+| Preparation / 料理 | Finish the wrap with the requested ingredients / 按订单要求完成餐点 |
+| Serving / 送餐与评分 | Deliver the dish and see the result / 把餐点交给顾客，查看评分 |
 
-## Development standards / 开发规范
+## A first look / 看看小店
 
-The Godot project lives in `game/`. The workbench assembles four separate scenes in `game/scenes/`, and Python development tools live at the repository root. We use `snake_case` for game files and `PascalCase` for Godot nodes. The engineering guide covers asset placement, scene ownership, Git and verification. [Engineering standards](docs/technical/ENGINEERING-STANDARDS.md) · [Technical overview](docs/technical/README.md)
+These low-fidelity screens show the flow we’re building. The [design gallery](docs/design/README.md) has all four stations, the shared UI Kit and downloadable assets.
 
-Godot 工程放在 `game/`，工作台由 `game/scenes/` 中的四个子场景组成，Python 开发工具放在仓库根目录的独立目录中。游戏文件用 `snake_case`，Godot 节点用 `PascalCase`。素材归档、场景分工、Git 和验证流程见[工程规范](docs/technical/ENGINEERING-STANDARDS.md)与[技术总览](docs/technical/README.md)。
+下面的低保真展示了我们正在制作的流程。[设计页面](docs/design/README.md)里可以查看四个工作区、公共 UI Kit，也可以下载图片和图标。
 
-## Project notes / 项目资料
+| Order counter / 点单台 | Preparation / 料理台 |
+| --- | --- |
+| ![Order-counter design](docs/design/exports/low-fi/order.png) | ![Preparation-station design](docs/design/exports/low-fi/preparation.png) |
 
-[Project board](https://github.com/orgs/sd5913/projects/23) · [Development progress](docs/WEEKLY-PROGRESS.md) · [Credits and AI assistance](CREDITS.md)
+## Try the current build / 运行当前版本
+
+Install [Godot 4.7.2 Standard](https://godotengine.org/download/archive/4.7.2-stable/), then clone or download [this repository](https://github.com/sd5913/forlives--magic_kitchen). In Godot’s Project Manager, choose **Import**, open [`game/project.godot`](game/project.godot) and click **Run Project**.
+
+安装 [Godot 4.7.2 Standard](https://godotengine.org/download/archive/4.7.2-stable/)，克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。
+
+The main branch currently opens the early workbench preview. The [order station](https://github.com/sd5913/forlives--magic_kitchen/pull/7) and [order-to-delivery prototype](https://github.com/sd5913/forlives--magic_kitchen/pull/9) are still on development branches. The preview uses a keyboard or mouse; camera controls and the final UI are being developed separately. For branch details and recorded checks, see [project status](docs/PROJECT-STATUS.md).
+
+主分支目前打开的是早期工作台预览。[点单模块](https://github.com/sd5913/forlives--magic_kitchen/pull/7)和[接单到交付的流程原型](https://github.com/sd5913/forlives--magic_kitchen/pull/9)还在开发分支中。现有预览使用键盘或鼠标，摄像头交互和最终界面另行接入。分支情况和已有检查记录见[项目状态](docs/PROJECT-STATUS.md)。
+
+We’re targeting Windows and macOS. The main-branch workbench preview has been checked on macOS; Windows validation of that preview is still pending. It runs without a camera or API key. Checks for the newer branch prototypes are recorded separately in [project status](docs/PROJECT-STATUS.md).
+
+目标平台是 Windows 和 macOS。主分支的工作台预览已在 macOS 上验证，Windows 验证仍待完成；运行时不需要摄像头或 API 密钥。较新分支原型的检查记录另见[项目状态](docs/PROJECT-STATUS.md)。
+
+## Art and interface / 美术与界面
+
+We’ve chosen wood, parchment and brass for the shop’s interface. Shared navigation, order tickets, buttons and decorative frames live in one [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119), so the stations can feel like parts of the same kitchen.
+
+我们选定了木质、羊皮纸和黄铜的界面风格。导航、订单小票、按钮和装饰边框统一放在 [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) 中，让玩家切换工作区时，始终感觉自己还在同一间店里。
+
+[Design gallery](docs/design/README.md) · [Component guide](docs/design/UI-KIT.md) · [Shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)
+
+[设计展示](docs/design/README.md) · [组件用法](docs/design/UI-KIT.md) · [共享 Figma 文件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)
+
+## Development / 开发
+
+We use Godot and GDScript. Scenes live in `game/scenes/`, runtime art belongs in `game/assets/`, and design files and notes live in `docs/design/`. The workbench brings together four separate scenes. Game files use `snake_case`, and Godot nodes use `PascalCase`; Python development tools stay in their own directories at the repository root. The [engineering guide](docs/technical/ENGINEERING-STANDARDS.md) covers asset placement, scene ownership, Git and checks. The [technical overview](docs/technical/README.md) explains the project structure, and [CONTRIBUTING.md](CONTRIBUTING.md) explains how we work together.
+
+我们用 Godot 和 GDScript 开发。工作台由四个独立场景组成，场景放在 `game/scenes/`，运行时素材放在 `game/assets/`，设计成果和说明放在 `docs/design/`。游戏文件用 `snake_case`，Godot 节点用 `PascalCase`，Python 开发工具放在仓库根目录的独立目录中。[工程规范](docs/technical/ENGINEERING-STANDARDS.md)说明素材归档、场景分工、Git 与检查方式，[技术总览](docs/technical/README.md)介绍工程结构，[协作说明](CONTRIBUTING.md)记录组内的开发流程。
+
+[Project board](https://github.com/orgs/sd5913/projects/23) · [Progress](docs/WEEKLY-PROGRESS.md) · [Credits and AI assistance](CREDITS.md)
 
 [项目看板](https://github.com/orgs/sd5913/projects/23) · [开发进度](docs/WEEKLY-PROGRESS.md) · [致谢与 AI 辅助说明](CREDITS.md)

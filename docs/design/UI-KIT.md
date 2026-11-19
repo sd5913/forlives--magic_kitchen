@@ -1,90 +1,73 @@
-# Shared UI Kit / 公共界面组件
+# Shared UI Kit / 公共 UI 组件
 
-Updated 19 November 2026, Hong Kong time. I maintain this handoff as JIN Minyi (`IceyHikari`). It records the current design delivery and its path into Godot.
+I built this kit so the team can work on different stations without drawing a different interface for each one. The header, controls and frames stay familiar; the customer, food and task inside each station can change.
 
-更新于 2026 年 11 月 19 日，香港时间。我以 JIN Minyi（`IceyHikari`）的身份维护这份交接，记录当前设计成果及后续 Godot 接入方式。
+我整理这套组件，是为了让大家分头制作工作区时，还能保持同一套界面。顶栏、控件和边框保持一致，顾客、食材和具体任务则由各工作区自己处理。
 
-## Repository exports / 仓库成果
+[Open the UI Kit in Figma](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) · [Browse the exported designs](README.md)
 
-The [design review archive](README.md) contains the actual low-fidelity PNGs, UI Kit board exports, individual frames, SVG icons and a source manifest. These are committed files, alongside the editable Figma links below.
+[打开 Figma 组件页](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) · [查看导出设计](README.md)
 
-[设计成果审查页](README.md)保存已提交的低保真 PNG、UI Kit 展示板、独立边框、SVG 图标及来源清单，下面的 Figma 链接仍用于可编辑源文件。
+Updated 19 November 2026. / 更新于 2026 年 11 月 19 日。
 
-## Design sources / 设计入口
+## The visual starting point / 视觉基准
 
-| Source / 来源 | Purpose / 用途 |
+We’re using the [selected cooking-station image](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=131-1686) as the reference: warm wood, parchment and brass, on a 1536 × 1024 canvas. A copy sits at the top of the UI Kit page for comparison. Earlier low-poly explorations remain in the design file.
+
+我们以[选定的料理台原图](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=131-1686)为基准：暖色木质、羊皮纸和黄铜，画布为 1536 × 1024。组件页最上方放了一份原图，方便制作时对照；早期 low-poly 探索仍保留在设计文件里。
+
+## What to reuse / 可以直接复用什么
+
+| Component / 组件 | Use / 用途 |
 | --- | --- |
-| [Shared design file / 共享设计文件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1) | Low-fidelity flow and team designs / 低保真流程与小组设计 |
-| [Approved reference / 选定原图](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=131-1686) | 1536 × 1024 cooking-station visual reference / 1536 × 1024 料理台视觉基准 |
-| [UI Kit page / 组件页](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) | Reference copy, main components and instances / 原图对照、主组件与实例 |
-| [Shared controls / 公共控件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459) | Header states, buttons and order-ticket shells / 顶栏状态、按钮和订单票框 |
-| [Frames and decoration / 边框与装饰](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=178-2243) | Resizable frames, ornaments, materials and icon specimens / 可拉伸边框、装饰、材质与图标规格 |
+| Header and station tabs / 顶栏与导航 | Switch between Order, Roasting and Cooking; keep pause in the same place / 切换点单、烤制和料理，暂停入口位置固定 |
+| Buttons and checkboxes / 按钮与勾选框 | Reuse the default, hover, pressed and disabled states where appropriate / 根据操作复用默认、悬停、按下和不可用状态 |
+| Order tickets / 订单小票 | Main and compact frames with editable order numbers / 大小票框，订单编号可修改 |
+| Panels and frame parts / 面板与边框零件 | Wood plaques, parchment panels, inset frames, scalloped paper, corners and edges / 木牌、纸面板、内嵌框、锯齿纸、角饰和边条 |
+| Decorations / 装饰 | Hanging rope, clips, wood strips, dividers, number badges and small labels / 挂单绳、夹子、木条、分隔线、编号与小铭牌 |
+| Foundations / 基础样式 | Shared colour and spacing variables, typography styles and editable component properties / 共用颜色、间距变量、文字样式与可编辑组件属性 |
+| Materials and icons / 材质与图标 | Parchment, wood, red and brass; pause, close, expand, collapse and check / 纸面、木质、朱红、黄铜，以及暂停、关闭、展开、收起和确认图标 |
 
-I confirmed the low-fidelity flow as completed for this progress update. The other teammates' low-fidelity screens were not individually re-audited during the component work. I selected the reference above as the common visual basis; earlier low-poly explorations remain historical material.
+The [controls board](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459) shows the shared interface in use. The [decoration board](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=178-2243) shows frames, materials and small parts separately.
 
-本次进度同步中，我确认低保真流程已完成；组件整理期间没有逐张重新审查其他组员的低保真页面。我已选定上面的原图作为统一视觉依据，早期 low-poly 探索保留为历史材料。
+[控件展示板](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459)展示公共界面的组合效果，[装饰展示板](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=178-2243)则把边框、材质和小零件单独列出。
 
-## Delivered components / 已完成组件
+## Using the components / 怎么使用
 
-| Family / 类别 | Coverage / 范围 |
-| --- | --- |
-| Header and station tabs / 顶栏与工作台导航 | Order, Roasting and Cooking selected states; consistent position, size and pause control / 点单、烤制、料理三种选中状态，位置、尺寸和暂停入口一致 |
-| Controls / 控件 | Action buttons with default, hover, pressed and disabled states; icon buttons; checkbox states / 操作按钮的默认、悬停、按下、不可用状态，图标按钮与勾选框状态 |
-| Orders / 订单 | Main and mini ticket shells with editable order numbers and empty content areas / 大小订单票框、可编辑订单编号和留空内容区 |
-| Frames / 边框 | Wood-and-paper and vermilion plaques, parchment panels, inset frames and scalloped paper; separate corners and edges / 木框纸面、朱红木牌、羊皮纸面板、内嵌框、锯齿纸及独立角饰、边条 |
-| Decorations / 装饰 | Hanging rope and anchors, reusable clips, wood rail, paper divider, numbered medallions and small label plaques / 挂单绳及固定端、共用夹子、木质横条、纸面分隔线、圆形编号和小铭牌 |
-| Materials / 材质 | Parchment, dark wood, vermilion and brass samples from the approved reference / 从定稿提取的羊皮纸、深木、朱红和黄铜局部材质 |
-| Icons / 图标 | Pause, Close, Expand, Collapse and Check, shown at 28 and 32 px; icon-button hit area 64 × 64 / 暂停、关闭、展开、收起和确认，展示 28、32 px 规格，图标按钮点击区 64 × 64 |
-| Foundations / 基础样式 | Shared colour and spacing variables, typography styles and component properties / 共用颜色、间距变量、文字样式与组件属性 |
+1. Copy an instance and change its label, number, icon or state in the properties panel.
+2. Keep station tabs available. Accepting an order should not unlock navigation.
+3. Put station-specific content into the empty panels, and keep the same order identity when switching stations.
+4. Resize frames by stretching the straight edges and centre. Keep the corners at their original size.
 
-These are reusable Figma components with instances in the specimen boards. Decorative textures are raster crops from the reference; editable text and vector icons remain separate. This is not a fully vectorised version of the original illustration.
+1. 复制组件实例，在属性面板中修改文字、编号、图标或状态。
+2. 工作区始终可以切换，不把接单作为导航的解锁条件。
+3. 把工作区自己的内容放进空面板，切换时继续使用同一张订单。
+4. 拉伸边框时只调整直边和中间区域，四角保留原尺寸。
 
-展示区使用可复用的 Figma 组件实例。装饰纹理取自原图局部位图，文字和矢量图标保持独立可编辑；原图插画本身并未全部转为矢量。
+The icon examples are 28 and 32 px; their buttons use a 64 × 64 hit area. Decorative textures come from cropped parts of the reference image. Text and vector icons remain editable.
 
-Food, customers, recipes, station artwork and specific gesture instructions are outside the shared kit. The approved reference still contains those items as context. They have not been added back as reusable kit content.
+图标展示了 28、32 px 两种大小，对应按钮保留 64 × 64 的点击区。装饰纹理来自原图局部，文字和矢量图标保持可编辑。
 
-食材、顾客、配方、工作台场景和具体手势步骤不属于公共组件。对照原图仍包含这些内容，但它们没有重新进入公共组件库。
+Food, customers, recipes and gesture steps belong to their stations. They are not included in this shared kit.
 
-## Shared layout rules / 共用布局规则
+食材、顾客、配方和具体手势步骤由各工作区制作，不放进公共组件库。
 
-- Use the approved 1536 × 1024 design canvas. Shared header geometry is identical across the three station states.
-- 设计画布采用定稿的 1536 × 1024，三种工作台状态使用相同的顶栏几何布局。
-- Keep station navigation available independently of accepting an order. Carry the same order identity and state between stations.
-- 工作台导航不以接单作为解锁条件；切换时保留同一订单身份和状态。
-- Use instances and editable properties for state, label, number and icon changes. Put station-specific content into the empty content areas.
-- 状态、文字、编号和图标通过实例属性修改，具体工作台内容放入留空内容区。
-- Preserve frame corners when resizing; stretch straight edges and the interior. Do not scale the entire frame as one image.
-- 调整边框大小时保留四角，只拉伸直边和内部，避免把整框当作一张图等比例放大。
+## Checked in Figma / 已检查的部分
 
-## Verification / 已做检查
+I checked the assembled boards, corrected text left in the cropped textures and fixed wrapping and alignment. The three header states use identical positions and sizes. In the resize example, a paper panel grows from 484 × 213 to 720 × 280 while its four corners stay 24 × 24.
 
-During the Figma work, I checked the rendered specimens and corrected source-text remnants, seal wrapping and alignment. Structural inspection confirmed component instances and identical header positions across stations. A parchment panel resized from 484 × 213 to 720 × 280 retained four 24 × 24 corners. The kit contains no food or station-specific gesture components.
+我检查了组合后的展示板，清理取材中残留的文字，调整了换行和对齐。三种顶栏状态的位置与尺寸一致；纸面板从 484 × 213 放大到 720 × 280 时，四角仍保持 24 × 24。
 
-Figma 整理中，我检查了渲染展示，修正取材中的文字残影、印章换行与错位。结构检查确认展示使用组件实例，三站顶栏位置一致；纸面板从 484 × 213 放大到 720 × 280 时，四角仍为 24 × 24。组件库中没有食材或单站手势组件。
+## Bringing it into Godot / 接入 Godot
 
-These are design and structure checks, not a human playtest or verification of the final visuals in Godot.
+The low-fidelity flow and shared kit are ready for the next stage. I’ll start with the common header, controls and panel frames, then connect them to the existing order state. Runtime exports go in `game/assets/ui/`, using the repository’s `snake_case` names. Use `StyleBoxTexture` or `NinePatchRect` for frames, with the [recorded border margins](exports/manifest.json).
 
-以上是设计与结构检查，不是玩家试玩，也不代表最终视觉已在 Godot 中验证。
+低保真流程和公共组件已整理好。下一步，我先接入公共顶栏、控件和面板边框，再连接现有订单状态。运行时素材放入 `game/assets/ui/`，沿用仓库的 `snake_case` 命名。边框使用 `StyleBoxTexture` 或 `NinePatchRect`，边距参考[导出清单](exports/manifest.json)。
 
-## Godot handoff / Godot 接入
+There is one layout decision to resolve first: the new design is 1536 × 1024, the main scaffold is 960 × 540, and the earlier ordering layout is 1440 × 900. I’ll settle scaling and safe areas in the shared host before changing individual scenes.
 
-| Stage / 阶段 | Status on 19 November / 11 月 19 日状态 |
-| --- | --- |
-| Low-fidelity flow / 低保真流程 | Completed, confirmed by me / 已完成，由我确认 |
-| Approved reference and shared UI Kit / 定稿与公共组件 | Prepared in the shared Figma file / 已整理在共享 Figma 文件 |
-| Runtime asset export and source credits / 运行时素材导出与来源记录 | Pending; source-image authorship and export permission must be recorded before runtime publication / 待完成，运行时发布前补齐原图作者与导出授权记录 |
-| Godot reusable controls and theme / Godot 公共控件与主题 | Final-kit integration pending / 最终组件库接入待完成 |
-| Full-game visual consistency / 游戏内视觉一致性 | Pending integration and rendered checks / 待接入与实际渲染检查 |
-| Human trial and tutor feedback / 真人试玩与 tutor 反馈 | No new evidence in this design update / 本次设计同步没有新增记录 |
+接入前还要统一尺寸：新设计为 1536 × 1024，主分支基础视口为 960 × 540，早期点单布局为 1440 × 900。我会先在公共主场景中处理缩放与安全区域，再调整各个场景。
 
-I will integrate the shared header, controls and empty panel shells first, then connect their properties to the existing game state. Export runtime assets under `game/assets/ui/` with descriptive `snake_case` names, preserve editable sources in Figma and record provenance in [credits](../../CREDITS.md). For frame artwork, Godot `StyleBoxTexture` or `NinePatchRect` should preserve the same border margins.
+Godot integration and a player trial are still ahead. The Figma checks above cover the design; they do not establish how the finished game feels to play. Branch progress is kept in [project status](../PROJECT-STATUS.md), and asset sources are kept in [credits](../../CREDITS.md).
 
-后续我先接入公共顶栏、控件和空面板，再把实例属性连接到现有游戏状态。运行时导出素材放入 `game/assets/ui/`，使用描述性 `snake_case` 文件名；可编辑源保留在 Figma，来源写入[致谢说明](../../CREDITS.md)。边框使用 Godot `StyleBoxTexture` 或 `NinePatchRect` 时，应保留相同的边距。
-
-The Figma canvas does not automatically change the Godot viewport. The current main-branch scaffold uses 960 × 540; the order-station branch documents an older 1440 × 900 virtual layout. I need to reconcile aspect ratio, scaling and safe areas in the shared host before replacing that layout. Do not edit teammates' scene sizes independently.
-
-Figma 画布不会自动改变 Godot 视口。当前主分支基础工程使用 960 × 540，点单分支记录的是较早的 1440 × 900 虚拟布局。我需要在公共主场景中统一宽高比、缩放和安全区域，再替换旧布局，不分别修改组员场景尺寸。
-
-Use [project status](../PROJECT-STATUS.md) for branch integration and [weekly progress](../WEEKLY-PROGRESS.md) for dated evidence. Keep using [board #23](https://github.com/orgs/sd5913/projects/23); this document does not close implementation or playtest tasks.
-
-分支整合见[项目状态](../PROJECT-STATUS.md)，带日期的证据见[周进度](../WEEKLY-PROGRESS.md)。继续使用[看板 #23](https://github.com/orgs/sd5913/projects/23)；本文件不将实现或试玩任务标记为完成。
+Godot 接入和玩家试玩是后续工作。上面的检查针对设计本身，还不能说明完整游戏玩起来的感受。分支进度见[项目状态](../PROJECT-STATUS.md)，素材来源见[致谢](../../CREDITS.md)。

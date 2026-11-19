@@ -1,31 +1,35 @@
-# Credits and AI assistance / 致谢与 AI 辅助说明
+# Credits / 致谢
 
-## AI-assisted development / AI 辅助开发
+## Tools and AI assistance / 工具与 AI 辅助
 
-We used OpenAI Codex to draft and translate project documents, compare interaction references and set up the repository checks. Codex also helped write the Python input router, simulation and tests, and build the initial Godot workbench scenes and input feedback. We use [Stop Slop](https://github.com/hardikpandya/stop-slop) to edit documentation for clarity.
+We’re building the game with [Godot](https://godotengine.org/) and GDScript. The input simulation and repository checks use Python’s standard library.
 
-我们用 OpenAI Codex 起草和翻译项目文档、比较交互参考，并搭建仓库检查。Codex 也参与了 Python 输入路由、模拟和测试，以及 Godot 工作台初版场景和输入反馈的编写。文档措辞使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
+我们使用 [Godot](https://godotengine.org/) 和 GDScript 制作游戏，输入模拟与仓库检查使用 Python 标准库。
 
-The workbench preview uses Godot’s built-in controls and colours. It runs locally without calling a generative AI service.
+OpenAI Codex helped us draft and translate documentation, compare interaction references, write repository checks and work on the Python input router, simulation and tests. It also helped build the initial Godot workbench and input feedback. Documentation has also been edited with [Stop Slop](https://github.com/hardikpandya/stop-slop).
 
-工作台预览使用 Godot 自带的控件和颜色，在本地运行，无需调用生成式 AI 服务。
+OpenAI Codex 参与了文档起草与翻译、交互参考比较、仓库检查，以及 Python 输入路由、模拟和测试的编写，也协助制作了 Godot 初版工作台与输入反馈。文档曾使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
 
-## Shared interface design / 公共界面设计
+For the shared Figma kit, we used Codex to organise reusable controls, separate them from station content, extract decorative frame parts and check layout and resizing. This component pass reused the selected image; it did not generate new illustrations. The current workbench preview runs locally without a generative AI service.
 
-We used Codex to organise the shared Figma component library, separate common controls from station content, derive decorative frame parts from the team's selected image and inspect layout, text remnants and resize behaviour. The kit keeps text and vector icons editable while using local raster crops for decorative textures. No new generative image assets were created in this component pass.
+整理公共 Figma 组件时，我们用 Codex 归纳共用控件、区分工作区内容、拆分装饰边框，并检查布局与拉伸效果。本轮组件制作复用了选定原图，没有新生成插画。当前工作台预览在本地运行，无需调用生成式 AI 服务。
 
-我们用 Codex 整理共享 Figma 组件库，区分公共控件与工作台内容，从团队选定的图片拆出装饰边框，并检查布局、文字残影和拉伸表现。组件中的文字与矢量图标可编辑，装饰纹理使用原图局部位图。本轮组件整理没有新生成插画素材。
+## Art and design sources / 美术与设计来源
 
-The [UI handoff](docs/design/UI-KIT.md) links the source image and components. The selected image's creator, original-generation details and permission for runtime redistribution have not yet been recorded here. Before exporting it into the game, we will document that provenance rather than infer authorship or a licence from Figma access.
+The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected reference image’s creator and runtime-use permission still need to be added before those textures are published as game assets.
 
-[界面交接](docs/design/UI-KIT.md)保存原图与组件链接。所选图片的作者、原始生成信息及运行时再分发许可尚未在这里登记；导出进入游戏前，我们会补齐来源，不把 Figma 访问权限当作作者或授权证明。
+[设计页面](docs/design/README.md)保存 Figma 与导出文件入口，[清单](docs/design/exports/manifest.json)记录每份导出的来源节点。选定参考图的作者与运行时使用许可还需补齐，再将对应纹理发布为游戏素材。
 
-## Tools and references / 工具与参考
+## References / 参考
 
-We build the game with [Godot](https://godotengine.org/) and GDScript. The input simulation and repository checks use Python’s standard library. We consulted other projects when exploring gesture controls. The [interaction reference notes](docs/INTERACTION-REFERENCES.md) list those projects and what we looked at. We did not copy their code or media.
+The [interaction notes](docs/INTERACTION-REFERENCES.md) list the projects we consulted while exploring gesture controls. We did not copy their code or media.
 
-我们用 [Godot](https://godotengine.org/) 和 GDScript 制作游戏，输入模拟和仓库检查使用 Python 标准库。探索手势操作时，我们参考了其他项目。[交互参考记录](docs/INTERACTION-REFERENCES.md)列出了项目和查阅内容。我们没有复制其中的代码或媒体。
+探索手势操作时查阅的项目记录在[交互参考](docs/INTERACTION-REFERENCES.md)中，没有复制它们的代码或媒体。
 
-We use the course’s [Group Project 2026 template](https://github.com/orgs/sd5913/projects/1) for the [project board](https://github.com/orgs/sd5913/projects/23) that MiaJiao5 set up.
+For the README’s structure, we looked at [SuperTux](https://github.com/SuperTux/supertux/blob/master/README.md) and [Endless Sky](https://github.com/endless-sky/endless-sky/blob/master/README.md): introduce the game, show it, then explain how to run it and where to find development details.
 
-我们的[项目看板](https://github.com/orgs/sd5913/projects/23)由 MiaJiao5 使用课程的 [Group Project 2026 模板](https://github.com/orgs/sd5913/projects/1)建立。
+整理 README 时，我们参考了 [SuperTux](https://github.com/SuperTux/supertux/blob/master/README.md) 和 [Endless Sky](https://github.com/endless-sky/endless-sky/blob/master/README.md) 的信息顺序：先介绍游戏和展示画面，再说明运行方法与开发资料入口。
+
+Our [project board](https://github.com/orgs/sd5913/projects/23) was set up by MiaJiao5 using the course’s [Group Project 2026 template](https://github.com/orgs/sd5913/projects/1).
+
+[项目看板](https://github.com/orgs/sd5913/projects/23)由 MiaJiao5 使用课程的 [Group Project 2026 模板](https://github.com/orgs/sd5913/projects/1)建立。
