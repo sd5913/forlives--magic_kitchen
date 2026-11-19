@@ -64,6 +64,8 @@ The label-plaque image includes sample text. Use its Figma component when you ne
 
 [Pause](exports/icons/pause.svg) · [Close](exports/icons/close.svg) · [Expand](exports/icons/expand.svg) · [Collapse](exports/icons/collapse.svg) · [Check](exports/icons/check.svg)
 
+[Download the editable Figma backup](source/README.md) / [下载可编辑 Figma 备份](source/README.md)
+
 ## Keep editing / 继续设计
 
 Open the [shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1) to edit the layouts, or go straight to the [UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) for components and variants. The [component guide](UI-KIT.md) explains what stays shared and how to resize the frames.
