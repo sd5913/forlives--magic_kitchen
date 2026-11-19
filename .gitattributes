@@ -12,3 +12,4 @@
 *.jpg binary
 *.wav binary
 *.ogg binary
+docs/design/source/*.fig binary
