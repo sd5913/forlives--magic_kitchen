@@ -18,6 +18,10 @@ On 21 November, we used Figma AI to generate the order-counter environment and c
 
 11 月 21 日，我们使用 Figma AI 生成点单柜台环境与顾客插画。Codex 协助使用公共组件组合点单区高保真、绘制新增矢量图标、配置原型连线，以及导出和检查设计文件。参考图拆出的公共组件与本次新生成插画在设计归档中分别记录。
 
+The food-icon and numbered-gesture pass also used Figma AI. It produced two source atlases, from which we made separate raster components and transparent PNGs. Codex assisted with the asset organisation, reusable hint-card properties, recipe-row icon mapping and export checks. The hawthorn correction follows the team’s clarification: the fourth ingredient is red hawthorn strips.
+
+食物图标和数字手势这一轮也使用了 Figma AI，生成两张源图集，再整理成独立位图组件与透明 PNG。Codex 协助素材整理、提示卡替换属性、配料行图标对应和导出检查。山楂条修正依据组内澄清：第 4 项食材为红色山楂条。
+
 ## Art and design sources / 美术与设计来源
 
 The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected reference image’s creator and runtime-use permission still need to be added before those textures are published as game assets.

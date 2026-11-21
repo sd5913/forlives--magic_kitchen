@@ -12,8 +12,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-1122",
       "width": 1536,
       "height": 1024,
-      "bytes": 1713590,
-      "sha256": "bb5c922b2b31f5eb48dec587f6a648d9723330a06680e9214d4c0e66c9d04b1e"
+      "bytes": 1721107,
+      "sha256": "ea02cc78dfa899f294a3a9eef597bf50eb386d4b87ad36c6e6c559ba1a28575f",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "order_accepted",
@@ -22,8 +23,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-1734",
       "width": 1536,
       "height": 1024,
-      "bytes": 1711132,
-      "sha256": "7288dff469866bdc7cd30f8e7699ee8ceba2b2ad621c960663618f5136cafd60"
+      "bytes": 1718769,
+      "sha256": "ff4a312b97f08cf492721b4204ad1fa635de700525b3421c1c963d9cb9bdc78b",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "order_roasting",
@@ -32,8 +34,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-2094",
       "width": 1536,
       "height": 1024,
-      "bytes": 1710451,
-      "sha256": "87f7639460b9c1d7d826fece6fab480b472b3fce03d6ec18a4c95a850132cdbb"
+      "bytes": 1715318,
+      "sha256": "f7a179c3cde0b5c48ba8cdfc9f1ecb82cb1eeb805a85a33d7e9f8d723571328b",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "order_ready",
@@ -42,8 +45,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-2474",
       "width": 1536,
       "height": 1024,
-      "bytes": 1711258,
-      "sha256": "8392fa7d9e806ce0ca2c5beaa9a36c1c64d73620eb432ac46bc0dd708a9a1b1a"
+      "bytes": 1720823,
+      "sha256": "cb270545bdea85698ec466b2f02fa748ea8d7a94e28ffe4feae6de01232431e7",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "order_detail",
@@ -82,8 +86,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-2550",
       "width": 760,
       "height": 820,
-      "bytes": 122684,
-      "sha256": "22009278e44a64567edac191a783a09765038bc6221daedcf9c7743954113e34"
+      "bytes": 124694,
+      "sha256": "f4cde3b8a23abf94c8650789ff0893d1b106a11618ee1b6fb5130f1b39ae05b7",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "all_orders",
@@ -92,8 +97,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-2525",
       "width": 1100,
       "height": 640,
-      "bytes": 118016,
-      "sha256": "ec2a1c2990032b77b22eb2a6c0d4ae372f5dd04f110c69ffd7f2c7dc4a4b6c02"
+      "bytes": 117994,
+      "sha256": "37f85037dcd8df7d2d354b4dfe30cefb4310d02fe68024262440fd8167ccb86f",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "all_orders_accepted",
@@ -102,8 +108,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-3133",
       "width": 1100,
       "height": 640,
-      "bytes": 118497,
-      "sha256": "52dcd0c4a1786d31468da84a68c39843201c3a8050023b251185f47715cac230"
+      "bytes": 118478,
+      "sha256": "31c6205ddf6ba3eedbffe1d9d649f35dbde65067a13ced69d0fbaed9253d4665",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "paused",
@@ -122,8 +129,9 @@
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530",
       "width": 1536,
       "height": 934,
-      "bytes": 225206,
-      "sha256": "cffd164ebdea4b6a486d4c88b4ed4e39c7079c6338587e8edc150ce2504539b7"
+      "bytes": 228285,
+      "sha256": "e5fb4f1059e8253114be16fae0715d13aace8da2b46602587bbd114611533d96",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "order_counter_background",

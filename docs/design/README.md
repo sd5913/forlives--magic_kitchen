@@ -16,6 +16,14 @@ The [UI Kit additions](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-
 
 [UI Kit 补充区](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530)补齐订单、计时与手势图标、识别状态栏和字体示例。这些是 2026 年 11 月 21 日导出的 Figma 设计，尚未接入 Godot。
 
+## Food and gesture assets / 食物与手势素材
+
+The [food and gesture components](FOOD-AND-GESTURES.md) add six food illustrations and the 1–5 plus fist hand set. The fourth ingredient is red hawthorn strips, correcting the green garnish and “Pickled Radish” in the older generated reference. Each asset has its own transparent PNG; the order tickets now reuse the food icons.
+
+[食物与手势组件](FOOD-AND-GESTURES.md)补齐六种食物插画、数字 1—5 和握拳手势。第 4 项为红色山楂条，纠正旧生成参考中的绿色配菜和“Pickled Radish”错误。每个素材均有独立透明 PNG，点单小票也已复用这套食物图标。
+
+![Food and gesture component sheet](exports/ui-kit/food_gestures.png)
+
 ## Four stations / 四个工作区
 
 | Order / 点单 | Roasting / 烤炉 |
@@ -54,6 +62,9 @@ Wooden plaques, parchment edges, hanging clips and brass details help the interf
 
 | Files / 文件 | What’s inside / 内容 |
 | --- | --- |
+| [Food icons](exports/food) | Six transparent 256 px PNGs / 六种食物透明 PNG |
+| [Numbered hands](exports/gestures) | 1–5 and fist, six transparent 256 px PNGs / 数字 1—5 与握拳，共六张透明 PNG |
+| [Food/gesture source atlases](exports/atlases) | Two 1536 × 1024 source sheets / 两张源图集 |
 | [Order high-fidelity screens](exports/high-fi/order) | Eleven screens and overlays, illustration and interaction record / 十一张界面与弹窗、插画和交互记录 |
 | [New icons and typography](exports/ui-kit/ui_kit_additions.png) | Added shared icons, recognition strip and font examples / 新增共用图标、识别状态栏和字体示例 |
 | [Low-fidelity screens](exports/low-fi) | Four station PNGs / 四个工作区的低保真 |

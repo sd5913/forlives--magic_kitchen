@@ -52,15 +52,16 @@
       "artifact_kind": "low_fidelity_snapshot"
     },
     {
-      "name": "ui_kit_overview",
-      "bytes": 615341,
+      "name": "overview",
+      "bytes": 619963,
       "width": 1536,
       "height": 1760,
-      "sha256": "f57b961dc9d8bc7df5bb43cc9b16581ea3f8bf8bb85d5a6f64bcc00edc82b987",
+      "sha256": "3a4e4854bed6353ee0fa160a78bcc78eb76306ee8e080f353f144a92b04125fc",
       "path": "exports/ui-kit/overview.png",
       "figma_node_id": "159:1459",
       "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459",
-      "artifact_kind": "component_board_snapshot"
+      "artifact_kind": "component_board_snapshot",
+      "updated_on": "2026-11-22"
     },
     {
       "name": "ui_kit_frames_decoration",

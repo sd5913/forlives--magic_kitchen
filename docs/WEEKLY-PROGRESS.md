@@ -79,6 +79,15 @@ Goal: bring observations from another person trying the experience and choose an
 
 本次归档了点单区高保真与组件补充的实际文件。原型可查看、展开和确认订单，公共顶部保持一致；Figma 设计、Godot 实现与真人试玩继续分别记录。
 
+### 22 November: food icons, numbered hands and hawthorn correction
+
+- I clarified the annotations: the missing order icons are food illustrations, and the requested hand set shows numbers 1–5 plus a fist. Added six food components, six hand components and `MK/GestureHint` with replaceable food/gesture instances and editable labels.
+- Confirmed mapping: 1 duck, 2 cucumber, 3 scallions, 4 hawthorn strips, 5 sweet bean sauce; fist rolls the wrap. The old generated reference’s green garnish and “Pickled Radish” are incorrect. Added a visible correction beside that reference without editing teammate pages.
+- Reused the food components in the order-page recipe rows, including a red hawthorn example in Order 03. Archived twelve native transparent 256 × 256 PNGs, the component board, two source atlases and refreshed affected page previews.
+- Inspected the rendered hand counts, ingredient colours, component swaps, readable layout and alpha channels. A preview-download export initially flattened transparency; native content-only exports preserve it. No camera or Godot implementation was changed, and no human trial is claimed.
+
+本次纠正“订单图标”和“手势”的理解，完成实际食物插画、数字手势、透明素材与可替换提示卡。第 4 项统一为红色山楂条；设计原型和运行时实现继续分开记录。
+
 ## Class week of 26 November 2026: delivery candidate
 
 Goal: test a runnable build, deployment or installation setup on the chosen platform.

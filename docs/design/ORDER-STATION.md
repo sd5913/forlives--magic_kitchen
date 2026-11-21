@@ -12,9 +12,9 @@ I want the player to keep talking to the customer while checking the rest of the
 
 ## Reading and accepting an order / 查看与接单
 
-The main ticket shows the recipe, ingredient quantities, status and remaining patience. Its expand button opens a larger, readable ticket; collapse returns to the counter. The sample orders cover a classic wrap, a wrap without cucumber and one with extra scallions.
+The main ticket shows the recipe, ingredient quantities, status and remaining patience. Its expand button opens a larger, readable ticket; collapse returns to the counter. The sample orders cover a classic wrap, a wrap without cucumber and one with hawthorn strips.
 
-主小票展示配方、配料数量、订单状态和耐心时间。展开按钮打开大号小票，收起后回到柜台。示例订单分别为经典配方、不要黄瓜和多加葱丝，方便检查不同要求能否被清楚识别。
+主小票展示配方、配料数量、订单状态和耐心时间。展开按钮打开大号小票，收起后回到柜台。示例订单分别为经典配方、不要黄瓜和加入山楂条，方便检查不同要求能否被清楚识别。
 
 | Accepted / 已接单 | Inspect another order / 查看其他订单 |
 | --- | --- |
@@ -40,15 +40,19 @@ The kit now also includes order, clock, open-hand, pointing-hand and fist icons,
 
 ![UI Kit additions and typography](exports/ui-kit/ui_kit_additions.png)
 
+The recipe rows now instance the [food illustrations](FOOD-AND-GESTURES.md), with a separate icon for each ingredient. Order 03 uses red hawthorn strips. The numbered gesture set is available in the UI Kit for preparation hints; order-taking still uses the mouse.
+
+配料行现已复用[食物插画组件](FOOD-AND-GESTURES.md)，每种食材有独立图标，订单 03 使用红色山楂条。数字手势组件放在 UI Kit 中供料理提示使用，点单仍使用鼠标操作。
+
 ## Files and current scope / 文件与当前范围
 
 [Download the screen exports](exports/high-fi/order) · [Background illustration](exports/high-fi/order/assets/order_counter_background.png) · [SVG icons](exports/icons) · [Export inventory](exports/high-fi/order/manifest.json) · [Prototype connection record](exports/high-fi/order/prototype_connections.json)
 
 [界面导出](exports/high-fi/order) · [场景插画](exports/high-fi/order/assets/order_counter_background.png) · [SVG 图标](exports/icons) · [导出清单](exports/high-fi/order/manifest.json) · [原型连线记录](exports/high-fi/order/prototype_connections.json)
 
-These files capture the design on 21 November 2026. Text, controls and ticket contents remain editable in Figma; PNGs are review images, and the connection record documents the links rather than recreating an interactive Figma file. The existing `.fig` backup is dated 19 November and does not include this update.
+The initial page was archived on 21 November 2026; the food-icon and hawthorn correction was archived on 22 November. Text, controls and ticket contents remain editable in Figma; PNGs are review images, and the connection record documents the links rather than recreating an interactive Figma file. The existing `.fig` backup is dated 19 November and does not include this update.
 
-这些文件保存了 2026 年 11 月 21 日的设计。文字、控件与小票内容在 Figma 中保持可编辑；PNG 用于查看画面，连线记录用于交接，不能代替可交互的 Figma 文件。现有 `.fig` 备份保存于 11 月 19 日，不包含本次更新。
+初版页面于 2026 年 11 月 21 日归档，食物图标与山楂条修正于 11 月 22 日归档。文字、控件与小票内容在 Figma 中保持可编辑；PNG 用于查看画面，连线记录用于交接，不能代替可交互的 Figma 文件。现有 `.fig` 备份保存于 11 月 19 日，不包含本次更新。
 
 I checked rendered layouts, English font consistency, button clearance and 44 configured connections with valid destinations. The prototype uses fixed sample times and does not run gesture recognition. Station tabs open the teammate’s roasting design and preparation low-fidelity reference; those pages were not modified. Godot integration and a human playtest remain to be done.
 

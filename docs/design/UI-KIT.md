@@ -8,7 +8,7 @@ I built this kit so the team can work on different stations without drawing a di
 
 [打开 Figma 组件页](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) · [查看导出设计](README.md)
 
-Updated 21 November 2026. / 更新于 2026 年 11 月 21 日。
+Updated 22 November 2026. / 更新于 2026 年 11 月 22 日。
 
 ## The visual starting point / 视觉基准
 
@@ -44,6 +44,18 @@ English uses Bree Serif at 36 / 28 / 24 / 20 / 16 px for display, title, control
 
 ![Supplementary UI Kit board](exports/ui-kit/ui_kit_additions.png)
 
+## Food and numbered gestures / 食物与数字手势
+
+The [food and gesture board](FOOD-AND-GESTURES.md) supplies six food illustrations, hands for 1–5 and a fist, and a reusable hint card with swap properties. The earlier clipboard and simplified hand outlines are auxiliary control icons; they do not fulfil the food-icon and numbered-gesture annotations.
+
+[食物与手势展示板](FOOD-AND-GESTURES.md)提供六种食物插画、数字 1—5 与握拳，以及支持替换素材的提示卡。之前的夹板和简化手形是辅助控件图标，不能代替标注所指的食物图标和数字手势。
+
+Use **4 → Hawthorn Strips / 山楂条**. The red hawthorn illustration replaces the mistakenly generated green garnish; the older reference image is annotated rather than silently treated as correct. Individual PNGs retain transparent backgrounds.
+
+第 **4 项对应山楂条**，使用红色山楂插画。旧参考图里错误生成的绿色配菜已加纠错说明，不再当作正确食材；独立 PNG 保留透明背景。
+
+![Food illustrations and numbered gesture components](exports/ui-kit/food_gestures.png)
+
 ## Using the components / 怎么使用
 
 1. Copy an instance and change its label, number, icon or state in the properties panel.
@@ -60,9 +72,9 @@ The icon examples are 28 and 32 px; their buttons use a 64 × 64 hit area. Decor
 
 图标展示了 28、32 px 两种大小，对应按钮保留 64 × 64 的点击区。装饰纹理来自原图局部，文字和矢量图标保持可编辑。
 
-Food, customers, recipes and gesture steps belong to their stations. They are not included in this shared kit.
+Food illustrations and numbered hand assets now have their own reusable section. Recipes, customers, station scenes and the timing of gesture actions remain station content.
 
-食材、顾客、配方和具体手势步骤由各工作区制作，不放进公共组件库。
+食物插画和数字手势素材已独立收录为可复用组件；配方、顾客、工作区场景以及手势动作的执行时机仍由各工作区处理。
 
 ## Checked in Figma / 已检查的部分
 

@@ -1,0 +1,164 @@
+{
+  "export_date": "2026-11-22",
+  "source_file": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ",
+  "board_id": "252:2582",
+  "components_are_raster_illustrations": true,
+  "individual_export": "Native PNG export with contentsOnly=true; 256x256 RGBA with transparent pixels.",
+  "artifacts": [
+    {
+      "name": "duck_wrap",
+      "path": "exports/food/duck_wrap.png",
+      "figma_node_id": "252:2530",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2530",
+      "width": 256,
+      "height": 256,
+      "bytes": 59256,
+      "sha256": "56e790c045eef60bc05ea1c25bc16f5873b578b60bd8643c5daafaba2e01c0d8"
+    },
+    {
+      "name": "sliced_duck",
+      "path": "exports/food/sliced_duck.png",
+      "figma_node_id": "252:2532",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2532",
+      "width": 256,
+      "height": 256,
+      "bytes": 79201,
+      "sha256": "61c29cedf76a3cae7c24abab7d284e53a133fe7cbf3c1145121d612ff7f88509"
+    },
+    {
+      "name": "cucumber",
+      "path": "exports/food/cucumber.png",
+      "figma_node_id": "252:2534",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2534",
+      "width": 256,
+      "height": 256,
+      "bytes": 67532,
+      "sha256": "1ee417aa68ed63ff2efd0ca174c92f30da1a1cd525c1a94343adf192d13dffc1"
+    },
+    {
+      "name": "scallions",
+      "path": "exports/food/scallions.png",
+      "figma_node_id": "252:2536",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2536",
+      "width": 256,
+      "height": 256,
+      "bytes": 65202,
+      "sha256": "5d584267d8e54353771c8e1720854b82597e7580e55b7fd7a95c42d570c3c1b2"
+    },
+    {
+      "name": "hawthorn_strips",
+      "path": "exports/food/hawthorn_strips.png",
+      "figma_node_id": "252:2538",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2538",
+      "width": 256,
+      "height": 256,
+      "bytes": 61374,
+      "sha256": "f3172bb9ea390dee6d31b56cd468198bbd7493f4651edd0dd7ca67e74bc56051"
+    },
+    {
+      "name": "sweet_bean_sauce",
+      "path": "exports/food/sweet_bean_sauce.png",
+      "figma_node_id": "252:2540",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2540",
+      "width": 256,
+      "height": 256,
+      "bytes": 60951,
+      "sha256": "8c654cdee3cf23c51251e23f98b3600fde0eb29646ebc399682368b4ca551e63"
+    },
+    {
+      "name": "number_1",
+      "path": "exports/gestures/number_1.png",
+      "figma_node_id": "252:2542",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2542",
+      "width": 256,
+      "height": 256,
+      "bytes": 54664,
+      "sha256": "226e735aec3a37efa6c5a9d1c83593da1ab199c472a75cfc38f9324185dec170"
+    },
+    {
+      "name": "number_2",
+      "path": "exports/gestures/number_2.png",
+      "figma_node_id": "252:2544",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2544",
+      "width": 256,
+      "height": 256,
+      "bytes": 66700,
+      "sha256": "5989e712d49ce3965618509a72920407b3765836802599a0f7d1090704cb9313"
+    },
+    {
+      "name": "number_3",
+      "path": "exports/gestures/number_3.png",
+      "figma_node_id": "252:2546",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2546",
+      "width": 256,
+      "height": 256,
+      "bytes": 63201,
+      "sha256": "11e6672f0d5b66991870cf524319d80d816cb9b6f937d0ae23ed43c2161af414"
+    },
+    {
+      "name": "number_4",
+      "path": "exports/gestures/number_4.png",
+      "figma_node_id": "252:2548",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2548",
+      "width": 256,
+      "height": 256,
+      "bytes": 70749,
+      "sha256": "9559fb9a23e8898afc3fb9d94dca90a6c2e9b1515de112c4eb1e9744f872a96e"
+    },
+    {
+      "name": "number_5",
+      "path": "exports/gestures/number_5.png",
+      "figma_node_id": "252:2550",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2550",
+      "width": 256,
+      "height": 256,
+      "bytes": 87035,
+      "sha256": "b003191bbf8d9c1e4fa9b4cfdeb0cc28c8930d5db742bfcdaa2323126814dd57"
+    },
+    {
+      "name": "fist",
+      "path": "exports/gestures/fist.png",
+      "figma_node_id": "252:2552",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2552",
+      "width": 256,
+      "height": 256,
+      "bytes": 54553,
+      "sha256": "53e423b73b43799e4ef49386edc8b94955d5cf7eb747302729edf120c2aaccc2"
+    },
+    {
+      "name": "food_gestures",
+      "path": "exports/ui-kit/food_gestures.png",
+      "figma_node_id": "252:2582",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2582",
+      "width": 1536,
+      "height": 1436,
+      "bytes": 646616,
+      "sha256": "c0892b8a44314302fff8cdeabe4a5d9a64dd4cdaf525d85a416b772955c58d76"
+    }
+  ],
+  "mapping": {
+    "1": "sliced_duck",
+    "2": "cucumber",
+    "3": "scallions",
+    "4": "hawthorn_strips",
+    "5": "sweet_bean_sauce",
+    "fist": "roll_wrap"
+  },
+  "historical_reference_warning": "Pickled Radish and its green illustration in the original reference are incorrect; use red Hawthorn Strips.",
+  "atlases": {
+    "food": "exports/atlases/food_atlas.png",
+    "gestures": "exports/atlases/gesture_atlas.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "cell_size": [
+      512,
+      512
+    ],
+    "grid": [
+      3,
+      2
+    ]
+  }
+}
