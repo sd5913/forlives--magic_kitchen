@@ -9,3 +9,7 @@ This copy was saved on 19 November 2026 and includes the low-fidelity screens, v
 To open it, download `magic_kitchen.fig` and import it from Figma’s file browser. Keep using the [shared online file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1) for day-to-day collaboration, comments and version history.
 
 下载 `magic_kitchen.fig` 后，在 Figma 文件浏览器中导入即可打开。日常协作、评论和版本历史继续使用[共享在线文件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)。
+
+The [21 November order-page update](../ORDER-STATION.md) is available in the online file and exported design folder. It is not included in this 19 November backup.
+
+[11 月 21 日的点单页更新](../ORDER-STATION.md)保存在在线文件和设计导出目录中，不包含在这份 11 月 19 日的备份里。

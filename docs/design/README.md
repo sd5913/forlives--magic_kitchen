@@ -4,6 +4,18 @@ From taking the first order to serving the finished wrap, these screens show how
 
 从接下第一单，到把做好的烤鸭卷递给顾客，这些画面记录了我们对小店流程的设计。低保真先把四个工作区安排清楚，UI Kit 再把它们的视觉统一起来。
 
+## Order counter / 点单区高保真
+
+The order counter now uses the shared wood-and-parchment UI. A large selected ticket and compact waiting tickets keep the customer in view. The [order-page walkthrough](ORDER-STATION.md) includes the accepted state, expanded tickets, order list and prototype links.
+
+点单区高保真已使用公共木框与羊皮纸组件。选中小票展开、其他小票紧凑显示，让顾客仍是柜台画面的中心。[点单页说明](ORDER-STATION.md)收录接单状态、大号小票、全部订单与原型入口。
+
+![Order-counter high-fidelity design](exports/high-fi/order/order_counter.png)
+
+The [UI Kit additions](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530) supply order, clock and hand icons, recognition-strip states and typography examples. These are Figma designs exported on 21 November 2026; Godot integration is still pending.
+
+[UI Kit 补充区](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530)补齐订单、计时与手势图标、识别状态栏和字体示例。这些是 2026 年 11 月 21 日导出的 Figma 设计，尚未接入 Godot。
+
 ## Four stations / 四个工作区
 
 | Order / 点单 | Roasting / 烤炉 |
@@ -42,10 +54,12 @@ Wooden plaques, parchment edges, hanging clips and brass details help the interf
 
 | Files / 文件 | What’s inside / 内容 |
 | --- | --- |
+| [Order high-fidelity screens](exports/high-fi/order) | Eleven screens and overlays, illustration and interaction record / 十一张界面与弹窗、插画和交互记录 |
+| [New icons and typography](exports/ui-kit/ui_kit_additions.png) | Added shared icons, recognition strip and font examples / 新增共用图标、识别状态栏和字体示例 |
 | [Low-fidelity screens](exports/low-fi) | Four station PNGs / 四个工作区的低保真 |
 | [UI Kit boards](exports/ui-kit) | Controls and decoration overviews / 控件与装饰总览 |
 | [Component exports](exports/components) | Seven frame and component PNGs / 七张边框及组件图 |
-| [Icons](exports/icons) | Five SVGs: pause, close, expand, collapse and check / 暂停、关闭、展开、收起、确认 |
+| [Icons](exports/icons) | Ten SVGs: controls, order, clock and hand shapes / 控件、订单、计时和手形，共十个 SVG |
 | [Export manifest](exports/manifest.json) | Source nodes, dimensions, checksums and frame margins / 来源节点、尺寸、校验值与边框边距 |
 
 | Asset / 素材 | Size / 尺寸 | Border margin / 边框边距 |

@@ -14,6 +14,10 @@ For the shared Figma kit, we used Codex to organise reusable controls, separate 
 
 整理公共 Figma 组件时，我们用 Codex 归纳共用控件、区分工作区内容、拆分装饰边框，并检查布局与拉伸效果。本轮组件制作复用了选定原图，没有新生成插画。当前工作台预览在本地运行，无需调用生成式 AI 服务。
 
+On 21 November, we used Figma AI to generate the order-counter environment and customer illustration. Codex assisted with assembling the high-fidelity order page from the shared components, drawing the additional vector icons, configuring prototype links, and exporting and checking the design files. The reference-derived kit and the newly generated illustration are recorded separately in the design archive.
+
+11 月 21 日，我们使用 Figma AI 生成点单柜台环境与顾客插画。Codex 协助使用公共组件组合点单区高保真、绘制新增矢量图标、配置原型连线，以及导出和检查设计文件。参考图拆出的公共组件与本次新生成插画在设计归档中分别记录。
+
 ## Art and design sources / 美术与设计来源
 
 The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected reference image’s creator and runtime-use permission still need to be added before those textures are published as game assets.

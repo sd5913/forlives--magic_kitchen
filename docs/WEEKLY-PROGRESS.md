@@ -69,6 +69,16 @@ Goal: bring observations from another person trying the experience and choose an
 
 本次把实际成果文件一并归档，不再只有文字与外链；四张低保真、两张组件展示、七张独立组件导出和五个 SVG 可直接在 GitHub 审查。原始尺寸与历史布局差异如实保留。
 
+### 21 November: order-counter high fidelity and UI Kit gaps
+
+- I completed the [order-counter high-fidelity design](design/ORDER-STATION.md) using the existing shared header, ticket shells, frames and controls. Selected orders expand on the left; other tickets remain compact. The design includes acceptance, three order details, all-order views and pause/resume.
+- I addressed the component-page annotations with order, clock and three hand-shape icons, three recognition-strip states and a typography specimen. Teammate pages were not modified.
+- Archived eleven screen/overlay PNGs, the UI Kit supplement, a separate generated counter illustration, five editable SVG icons and the prototype connection record. The earlier native Figma backup remains dated 19 November.
+- Checked rendered layouts, Bree Serif consistency, button clearance and 44 configured prototype connections with valid destinations. No human trial or new tutor review was performed. Sample times are fixed; this does not implement camera input or update Godot scenes.
+- Next: bring the agreed visual assets into the game, check the integrated order flow and collect an uncoached player trial.
+
+本次归档了点单区高保真与组件补充的实际文件。原型可查看、展开和确认订单，公共顶部保持一致；Figma 设计、Godot 实现与真人试玩继续分别记录。
+
 ## Class week of 26 November 2026: delivery candidate
 
 Goal: test a runnable build, deployment or installation setup on the chosen platform.

@@ -2,6 +2,16 @@
 
 Updated 19 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep current implementation, design delivery and remaining work separate so the team can continue from either computer.
 
+## 21 November: design archive update
+
+The [order-counter high-fidelity page](design/ORDER-STATION.md) and [UI Kit additions](design/UI-KIT.md) are now exported to the repository. This adds the counter illustration, screen/overlay previews, five SVG icons and a record of the Figma prototype links. The shared online file contains the editable components; the native backup remains the 19 November version.
+
+点单区高保真和公共组件补充已导出到仓库，包含柜台插画、界面与弹窗预览、五个 SVG 图标及 Figma 连线记录。可编辑组件保留在共享在线文件中，原生备份仍为 11 月 19 日版本。
+
+This design-only update leaves Godot scenes and implementation branches untouched. The branch snapshot below is dated 19 November; it was not re-audited during this export. Godot integration, a human playtest and new tutor feedback are still separate follow-ups.
+
+本次只同步设计，没有修改 Godot 场景或实现分支。下方分支快照日期为 11 月 19 日，本轮导出未重新审查分支。接入 Godot、真人试玩和新的 tutor 反馈仍需分别完成。
+
 ## Current snapshot
 
 | Area | Verified state |

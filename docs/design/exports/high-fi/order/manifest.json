@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "export_date": "2026-11-21",
+  "timezone": "Asia/Hong_Kong",
+  "source_file": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ",
+  "purpose": "Order-station high-fidelity design exports; interactive components remain in the shared Figma file",
+  "artifacts": [
+    {
+      "name": "order_counter",
+      "path": "exports/high-fi/order/order_counter.png",
+      "figma_node_id": "217:1122",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-1122",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1713590,
+      "sha256": "bb5c922b2b31f5eb48dec587f6a648d9723330a06680e9214d4c0e66c9d04b1e"
+    },
+    {
+      "name": "order_accepted",
+      "path": "exports/high-fi/order/order_accepted.png",
+      "figma_node_id": "217:1734",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-1734",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1711132,
+      "sha256": "7288dff469866bdc7cd30f8e7699ee8ceba2b2ad621c960663618f5136cafd60"
+    },
+    {
+      "name": "order_roasting",
+      "path": "exports/high-fi/order/order_roasting.png",
+      "figma_node_id": "217:2094",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-2094",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1710451,
+      "sha256": "87f7639460b9c1d7d826fece6fab480b472b3fce03d6ec18a4c95a850132cdbb"
+    },
+    {
+      "name": "order_ready",
+      "path": "exports/high-fi/order/order_ready.png",
+      "figma_node_id": "218:2474",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-2474",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1711258,
+      "sha256": "8392fa7d9e806ce0ca2c5beaa9a36c1c64d73620eb432ac46bc0dd708a9a1b1a"
+    },
+    {
+      "name": "order_detail",
+      "path": "exports/high-fi/order/order_detail.png",
+      "figma_node_id": "217:2451",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-2451",
+      "width": 760,
+      "height": 820,
+      "bytes": 128001,
+      "sha256": "30264bd8dbe81cffb11abcbc6d1491e8bdbce401f13d385fc3f6e51d30a50ce0"
+    },
+    {
+      "name": "order_detail_accepted",
+      "path": "exports/high-fi/order/order_detail_accepted.png",
+      "figma_node_id": "218:3145",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-3145",
+      "width": 760,
+      "height": 820,
+      "bytes": 122926,
+      "sha256": "7a4193c51a08506fd93bd12ded461459a538fa7cdac2f52470fa06b53cc62cc2"
+    },
+    {
+      "name": "order_detail_roasting",
+      "path": "exports/high-fi/order/order_detail_roasting.png",
+      "figma_node_id": "218:2527",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-2527",
+      "width": 760,
+      "height": 820,
+      "bytes": 118511,
+      "sha256": "557283ecef1dda492fa5ef600ff636d2958f45441fbcdc0d4d7c9c3588c160e6"
+    },
+    {
+      "name": "order_detail_ready",
+      "path": "exports/high-fi/order/order_detail_ready.png",
+      "figma_node_id": "218:2550",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-2550",
+      "width": 760,
+      "height": 820,
+      "bytes": 122684,
+      "sha256": "22009278e44a64567edac191a783a09765038bc6221daedcf9c7743954113e34"
+    },
+    {
+      "name": "all_orders",
+      "path": "exports/high-fi/order/all_orders.png",
+      "figma_node_id": "217:2525",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-2525",
+      "width": 1100,
+      "height": 640,
+      "bytes": 118016,
+      "sha256": "ec2a1c2990032b77b22eb2a6c0d4ae372f5dd04f110c69ffd7f2c7dc4a4b6c02"
+    },
+    {
+      "name": "all_orders_accepted",
+      "path": "exports/high-fi/order/all_orders_accepted.png",
+      "figma_node_id": "218:3133",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=218-3133",
+      "width": 1100,
+      "height": 640,
+      "bytes": 118497,
+      "sha256": "52dcd0c4a1786d31468da84a68c39843201c3a8050023b251185f47715cac230"
+    },
+    {
+      "name": "paused",
+      "path": "exports/high-fi/order/paused.png",
+      "figma_node_id": "217:2575",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=217-2575",
+      "width": 660,
+      "height": 460,
+      "bytes": 112563,
+      "sha256": "70e33fabaa52f52c3b53533cb05c282add700799d77e81794dd8e8c14b206742"
+    },
+    {
+      "name": "ui_kit_additions",
+      "path": "exports/ui-kit/ui_kit_additions.png",
+      "figma_node_id": "215:2530",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530",
+      "width": 1536,
+      "height": 934,
+      "bytes": 225206,
+      "sha256": "cffd164ebdea4b6a486d4c88b4ed4e39c7079c6338587e8edc150ce2504539b7"
+    },
+    {
+      "name": "order_counter_background",
+      "path": "exports/high-fi/order/assets/order_counter_background.png",
+      "figma_node_id": "214:2899",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=214-2899",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2209152,
+      "sha256": "dfba0609d2659ef1f5dcbab8edb62e914985fd41969382a2bae2e7ef5f0f116d"
+    },
+    {
+      "name": "order",
+      "path": "exports/icons/order.svg",
+      "figma_node_id": "215:2488",
+      "artifact_kind": "editable_vector_icon"
+    },
+    {
+      "name": "clock",
+      "path": "exports/icons/clock.svg",
+      "figma_node_id": "215:2492",
+      "artifact_kind": "editable_vector_icon"
+    },
+    {
+      "name": "hand_open",
+      "path": "exports/icons/hand_open.svg",
+      "figma_node_id": "215:2496",
+      "artifact_kind": "editable_vector_icon"
+    },
+    {
+      "name": "hand_point",
+      "path": "exports/icons/hand_point.svg",
+      "figma_node_id": "215:2499",
+      "artifact_kind": "editable_vector_icon"
+    },
+    {
+      "name": "hand_fist",
+      "path": "exports/icons/hand_fist.svg",
+      "figma_node_id": "215:2502",
+      "artifact_kind": "editable_vector_icon"
+    }
+  ]
+}

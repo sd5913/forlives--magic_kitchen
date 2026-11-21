@@ -8,7 +8,7 @@ I built this kit so the team can work on different stations without drawing a di
 
 [打开 Figma 组件页](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) · [查看导出设计](README.md)
 
-Updated 19 November 2026. / 更新于 2026 年 11 月 19 日。
+Updated 21 November 2026. / 更新于 2026 年 11 月 21 日。
 
 ## The visual starting point / 视觉基准
 
@@ -31,6 +31,18 @@ We’re using the [selected cooking-station image](https://www.figma.com/design/
 The [controls board](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459) shows the shared interface in use. The [decoration board](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=178-2243) shows frames, materials and small parts separately.
 
 [控件展示板](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459)展示公共界面的组合效果，[装饰展示板](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=178-2243)则把边框、材质和小零件单独列出。
+
+## Icons, recognition and type / 图标、识别与字体
+
+The [supplementary board](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530) adds `MK/Icon/Order`, `Clock`, `HandOpen`, `HandPoint` and `HandFist`, with editable SVG exports. `MK/RecognitionStatus` provides Waiting, Recognized and Unavailable variants with an editable label. Reuse the hand symbols across stations; station-specific gesture mappings stay outside the kit.
+
+[补充展示板](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=215-2530)新增 `MK/Icon/Order`、`Clock`、`HandOpen`、`HandPoint` 和 `HandFist`，并提供可编辑 SVG。`MK/RecognitionStatus` 包含 Waiting、Recognized、Unavailable 三种状态，文案可修改。手形符号供多个工作区复用，具体动作映射仍由各工作区定义。
+
+English uses Bree Serif at 36 / 28 / 24 / 20 / 16 px for display, title, control, body and caption. Chinese uses the existing Noto Serif SC title and Noto Sans SC body styles. These font examples make the existing styles easier to find; they do not replace teammate text layers.
+
+英文使用 Bree Serif，展示、标题、控件、正文和辅助文字分别为 36 / 28 / 24 / 20 / 16 px。中文沿用 Noto Serif SC 标题和 Noto Sans SC 正文样式。字体样张用于帮助查找现有样式，没有替换组员页面中的文字图层。
+
+![Supplementary UI Kit board](exports/ui-kit/ui_kit_additions.png)
 
 ## Using the components / 怎么使用
 
