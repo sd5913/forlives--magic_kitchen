@@ -46,9 +46,9 @@ English uses Bree Serif at 36 / 28 / 24 / 20 / 16 px for display, title, control
 
 ## Food and numbered gestures / 食物与数字手势
 
-The [food and gesture board](FOOD-AND-GESTURES.md) supplies six food illustrations, hands for 1–5 and a fist, and a reusable hint card with swap properties. The earlier clipboard and simplified hand outlines are auxiliary control icons; they do not fulfil the food-icon and numbered-gesture annotations.
+The [food and gesture board](FOOD-AND-GESTURES.md) supplies six food illustrations in a simplified pixel game style, matching hands for 1–5 and a fist, and a reusable hint card with swap properties. The earlier clipboard and simplified hand outlines are auxiliary control icons; they do not fulfil the food-icon and numbered-gesture annotations.
 
-[食物与手势展示板](FOOD-AND-GESTURES.md)提供六种食物插画、数字 1—5 与握拳，以及支持替换素材的提示卡。之前的夹板和简化手形是辅助控件图标，不能代替标注所指的食物图标和数字手势。
+[食物与手势展示板](FOOD-AND-GESTURES.md)提供六种像素游戏风格食物插画、同风格的数字 1—5 与握拳，以及支持替换素材的提示卡。之前的夹板和简化手形是辅助控件图标，不能代替标注所指的食物图标和数字手势。
 
 Use **4 → Hawthorn Strips / 山楂条**. The red hawthorn illustration replaces the mistakenly generated green garnish; the older reference image is annotated rather than silently treated as correct. Individual PNGs retain transparent backgrounds.
 

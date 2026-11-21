@@ -22,6 +22,10 @@ The food-icon and numbered-gesture pass also used Figma AI. It produced two sour
 
 食物图标和数字手势这一轮也使用了 Figma AI，生成两张源图集，再整理成独立位图组件与透明 PNG。Codex 协助素材整理、提示卡替换属性、配料行图标对应和导出检查。山楂条修正依据组内澄清：第 4 项食材为红色山楂条。
 
+The current food and hand artwork is a Figma AI-assisted redraw in a simplified pixel game style, revised after feedback on the earlier realistic rendering. The source atlases, individual PNGs and Figma instances were updated together.
+
+当前食物与手势使用 Figma AI 辅助重绘为简化像素游戏风格，依据对上一版偏写实效果的反馈调整。源图集、独立 PNG 和 Figma 实例已同步更新。
+
 ## Art and design sources / 美术与设计来源
 
 The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected reference image’s creator and runtime-use permission still need to be added before those textures are published as game assets.

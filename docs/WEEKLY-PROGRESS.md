@@ -88,6 +88,14 @@ Goal: bring observations from another person trying the experience and choose an
 
 本次纠正“订单图标”和“手势”的理解，完成实际食物插画、数字手势、透明素材与可替换提示卡。第 4 项统一为红色山楂条；设计原型和运行时实现继续分开记录。
 
+### 22 November: food and hand visual revision
+
+- I redrew the six food icons and six hand illustrations after feedback that their first rendering looked too realistic. The current set uses warm colour blocks, clear pixel contours, rounded silhouettes and simplified shading.
+- Replaced the illustration fills inside the existing main components. Their IDs, hint-card properties, ingredient mapping and prototype connections stay in place, so existing instances update together.
+- Refreshed the twelve transparent 256 × 256 PNGs, both source atlases, the component board and four affected order-page previews. Checked assembled layouts, hand counts, alpha channels and export records. This updates Figma assets only; no runtime or player trial was performed.
+
+本次按反馈调整食物与手势画风，减少写实纹理，统一为像素游戏插画。红色山楂条、数字对应关系和组件结构保持一致，已有实例同步更新。
+
 ## Class week of 26 November 2026: delivery candidate
 
 Goal: test a runnable build, deployment or installation setup on the chosen platform.

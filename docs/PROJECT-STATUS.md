@@ -4,6 +4,10 @@ Updated 19 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep 
 
 ## 22 November: food and gesture correction
 
+The current food and hand exports have been redrawn in a simplified pixel game style. Existing component identities and prototype links are preserved.
+
+当前食物和手势导出已重绘为简化像素游戏风格，保留原组件标识与原型连线。
+
 The [food and gesture assets](design/FOOD-AND-GESTURES.md) now cover the actual annotation: six food illustrations, hands for numbers 1–5 and a fist, and a reusable hint card. Ingredient 4 is red hawthorn strips. The order prototype reuses the food icons, and the repository contains the individual transparent PNGs, source atlases and refreshed previews. Godot recipes and gesture recognition were not changed.
 
 [食物与手势素材](design/FOOD-AND-GESTURES.md)已按原标注意图补齐六种食物插画、数字 1—5、握拳及通用提示卡。第 4 项为红色山楂条，点单原型已复用食物图标。独立透明 PNG、源图集和更新后的预览均已归档；没有修改 Godot 配方或手势识别。

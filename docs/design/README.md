@@ -18,9 +18,9 @@ The [UI Kit additions](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-
 
 ## Food and gesture assets / 食物与手势素材
 
-The [food and gesture components](FOOD-AND-GESTURES.md) add six food illustrations and the 1–5 plus fist hand set. The fourth ingredient is red hawthorn strips, correcting the green garnish and “Pickled Radish” in the older generated reference. Each asset has its own transparent PNG; the order tickets now reuse the food icons.
+The [food and gesture components](FOOD-AND-GESTURES.md) add six food illustrations and the 1–5 plus fist hand set in a shared pixel game style. The fourth ingredient is red hawthorn strips, correcting the green garnish and “Pickled Radish” in the older generated reference. Each asset has its own transparent PNG; the order tickets now reuse the food icons.
 
-[食物与手势组件](FOOD-AND-GESTURES.md)补齐六种食物插画、数字 1—5 和握拳手势。第 4 项为红色山楂条，纠正旧生成参考中的绿色配菜和“Pickled Radish”错误。每个素材均有独立透明 PNG，点单小票也已复用这套食物图标。
+[食物与手势组件](FOOD-AND-GESTURES.md)补齐同一像素游戏风格的六种食物插画、数字 1—5 和握拳手势。第 4 项为红色山楂条，纠正旧生成参考中的绿色配菜和“Pickled Radish”错误。每个素材均有独立透明 PNG，点单小票也已复用这套食物图标。
 
 ![Food and gesture component sheet](exports/ui-kit/food_gestures.png)
 

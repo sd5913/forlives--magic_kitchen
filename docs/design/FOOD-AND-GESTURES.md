@@ -4,6 +4,10 @@ I use the same food illustrations on the order tickets and in the preparation hi
 
 我把同一套食物插画用于订单小票和料理提示，让玩家先认出食材，再选择对应手势。数字手势、食物、文字与面板边框分别保留，组合时不用重新裁整张界面。
 
+I redrew the set with warm colour blocks, clear pixel contours and simple shading. The food shapes and hands stay rounded and readable at small sizes, with fewer surface details. The same components and ingredient mapping continue to drive the ticket icons and hint-card examples.
+
+我把这套素材重绘为暖色像素游戏插画，使用清楚轮廓、简化色块和少量明暗。食物与手形保持圆润，小尺寸下也容易辨认，并减少表面细节。小票和提示卡继续使用原来的组件与食材对应关系。
+
 [Open the components in Figma](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2582)
 
 [打开 Figma 组件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2582)
