@@ -10,6 +10,7 @@ func _initialize() -> void:
 
 
 func _run() -> void:
+	root.size = Vector2i(960, 540)
 	var station = Station.instantiate()
 	root.add_child(station)
 	station.order_completed.connect(func(order: Dictionary): submissions.append(order))
@@ -42,6 +43,30 @@ func _run() -> void:
 	station._toggle_pause()
 	station.receive_action("add_duck", true)
 	_check(station.added == ["duck"], "fresh action works after resume")
+	# Exercise the actual scaled hit area, including input delivery to the UI.
+	await process_frame
+	var point: Vector2 = station.view.canvas.get_global_transform() * Vector2(810, 463)
+	var motion := InputEventMouseMotion.new()
+	motion.position = point
+	motion.global_position = point
+	Input.parse_input_event(motion)
+	await process_frame
+	var press := InputEventMouseButton.new()
+	press.button_index = MOUSE_BUTTON_LEFT
+	press.position = point
+	press.global_position = point
+	press.pressed = true
+	Input.parse_input_event(press)
+	await process_frame
+	var release := InputEventMouseButton.new()
+	release.button_index = MOUSE_BUTTON_LEFT
+	release.position = point
+	release.global_position = point
+	release.pressed = false
+	Input.parse_input_event(release)
+	await process_frame
+	_check("cucumber" in station.added, "clicking the cucumber art adds cucumber")
+	_check(station.view.order_checks[1].text == "☑", "order checklist updates")
 	station.queue_free()
 	print("Cooking station checks: %d failure(s)" % failures)
 	quit(1 if failures else 0)
