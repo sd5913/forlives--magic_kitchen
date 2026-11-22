@@ -2,8 +2,10 @@ extends Control
 
 ## Standalone cooking prototype. The host may set an order and listen for submission.
 signal order_completed(order: Dictionary)
+signal navigation_requested(station_name: String)
 
-const CookingView = preload("res://scenes/cooking_station/cooking_view.gd")
+const GestureAdapter = preload("res://scenes/cooking_station/gesture_adapter.gd")
+
 const INGREDIENTS := ["duck", "cucumber", "scallion", "radish", "sauce"]
 const NAMES := {
 	"duck": "Sliced duck", "cucumber": "Cucumber", "scallion": "Scallion",
@@ -22,18 +24,25 @@ var completed := false
 var paused := false
 var held_actions: Dictionary = {}
 var message := "Choose an ingredient to begin."
+var gesture_message := "Gesture: camera bridge not running · click cards or use keys 1–5 / 0"
 var view
+var gesture_adapter
+var camera_process_id := -1
 
 
 func _ready() -> void:
+	if get_parent() == get_tree().root:
+		get_window().title = "Magic Kitchen - Cooking Station"
 	_build_interface()
+	gesture_adapter = GestureAdapter.new()
+	gesture_adapter.station = self
+	add_child(gesture_adapter)
 	_refresh()
 
 
 func _build_interface() -> void:
-	view = CookingView.new()
-	view.station = self
-	add_child(view)
+	view = $Canvas
+	view.initialize(self)
 
 
 func _add_ingredient(ingredient: String) -> void:
@@ -111,6 +120,39 @@ func receive_action(action: String, active: bool) -> void:
 		_add_ingredient(ACTIONS[action])
 	elif action == "roll_wrap":
 		_roll()
+
+
+func set_gesture_status(status: String) -> void:
+	gesture_message = "Gesture: " + status
+	if is_node_ready() and view != null:
+		view.update_display()
+
+
+func is_camera_running() -> bool:
+	return camera_process_id > 0 and OS.is_process_running(camera_process_id)
+
+
+func _toggle_camera() -> void:
+	if is_camera_running():
+		OS.kill(camera_process_id)
+		camera_process_id = -1
+		set_gesture_status("camera stopped")
+		return
+	var python_path := ProjectSettings.globalize_path("res://../.venv-gesture/Scripts/python.exe")
+	var script_path := ProjectSettings.globalize_path("res://../tools/gesture_camera.py")
+	if not FileAccess.file_exists(python_path):
+		set_gesture_status("setup missing - run tools/setup-gesture.ps1")
+		return
+	camera_process_id = OS.create_process(python_path, PackedStringArray([script_path]))
+	if camera_process_id <= 0:
+		set_gesture_status("could not start camera")
+	else:
+		set_gesture_status("camera starting - allow access if prompted")
+
+
+func _exit_tree() -> void:
+	if is_camera_running():
+		OS.kill(camera_process_id)
 
 
 ## Minimal handoff for the host scene; caller supplies stable ingredient IDs.
