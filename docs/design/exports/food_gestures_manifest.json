@@ -1,0 +1,192 @@
+{
+  "export_date": "2026-11-22",
+  "source_file": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ",
+  "board_id": "252:2582",
+  "components_are_raster_illustrations": true,
+  "individual_export": "Native PNG export with contentsOnly=true; 256x256 RGBA with transparent pixels.",
+  "artifacts": [
+    {
+      "name": "duck_wrap",
+      "path": "exports/food/duck_wrap.png",
+      "figma_node_id": "252:2530",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2530",
+      "width": 256,
+      "height": 256,
+      "bytes": 35069,
+      "sha256": "cd98111b22907c92443f2393bdc992d2c2ad0e284b03a2a8f02832058d914f27",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "sliced_duck",
+      "path": "exports/food/sliced_duck.png",
+      "figma_node_id": "252:2532",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2532",
+      "width": 256,
+      "height": 256,
+      "bytes": 45852,
+      "sha256": "b2bbbc873d3e37d303ee5ca0f0674e548101b1cb332bca51376f90824d25a43f",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "cucumber",
+      "path": "exports/food/cucumber.png",
+      "figma_node_id": "252:2534",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2534",
+      "width": 256,
+      "height": 256,
+      "bytes": 43356,
+      "sha256": "7329a48d1d5c5b4dc058b04117fe88cf9d108730abfb12797caa3285f22a2cf3",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "scallions",
+      "path": "exports/food/scallions.png",
+      "figma_node_id": "252:2536",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2536",
+      "width": 256,
+      "height": 256,
+      "bytes": 39760,
+      "sha256": "35ff4df350142cd269cdcdee6b3348279d05e8b3f47e7a6ae32701a0bb7c556b",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "hawthorn_strips",
+      "path": "exports/food/hawthorn_strips.png",
+      "figma_node_id": "252:2538",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2538",
+      "width": 256,
+      "height": 256,
+      "bytes": 40361,
+      "sha256": "e4a050faf63afdb617b62bd6aa14283524c1686da7d200485b4afd8d6a2d9912",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "sweet_bean_sauce",
+      "path": "exports/food/sweet_bean_sauce.png",
+      "figma_node_id": "252:2540",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2540",
+      "width": 256,
+      "height": 256,
+      "bytes": 34734,
+      "sha256": "8d2ee9b11003c998c7a1c9c9e4f70139e6ebd3358e5d06d5c0c5e87c9f3bf949",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "number_1",
+      "path": "exports/gestures/number_1.png",
+      "figma_node_id": "252:2542",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2542",
+      "width": 256,
+      "height": 256,
+      "bytes": 28385,
+      "sha256": "7f85e4c3025f1dae4d93483085f90d5f15f8e0cd95520da27fce19b37e04f080",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "number_2",
+      "path": "exports/gestures/number_2.png",
+      "figma_node_id": "252:2544",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2544",
+      "width": 256,
+      "height": 256,
+      "bytes": 38033,
+      "sha256": "10f957dc7a2d51f2e5e3308d94a9d0ae4aabddb2e811e6c542e16216a25ecb17",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "number_3",
+      "path": "exports/gestures/number_3.png",
+      "figma_node_id": "252:2546",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2546",
+      "width": 256,
+      "height": 256,
+      "bytes": 37945,
+      "sha256": "67a863ea56f1e071642289c35f63f80e19023e3b5d2079768ddada0650baaaa1",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "number_4",
+      "path": "exports/gestures/number_4.png",
+      "figma_node_id": "252:2548",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2548",
+      "width": 256,
+      "height": 256,
+      "bytes": 40911,
+      "sha256": "ac648df7d88deecd5613ae359892e0669c7954bbc0affe358931d0f0273dae9e",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "number_5",
+      "path": "exports/gestures/number_5.png",
+      "figma_node_id": "252:2550",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2550",
+      "width": 256,
+      "height": 256,
+      "bytes": 43740,
+      "sha256": "9be2f6a8273f0cbf98076ae5b219f8c11eb937d25024278fe3eae74b9096ac12",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "fist",
+      "path": "exports/gestures/fist.png",
+      "figma_node_id": "252:2552",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2552",
+      "width": 256,
+      "height": 256,
+      "bytes": 30148,
+      "sha256": "fe9c81b78e9c2b8e631fa16970e03f2993d24de2d4c3aca7abd4bde79cd56ea2",
+      "art_style": "simplified pixel game illustration",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "food_gestures",
+      "path": "exports/ui-kit/food_gestures.png",
+      "figma_node_id": "252:2582",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=252-2582",
+      "width": 1536,
+      "height": 1436,
+      "bytes": 547396,
+      "sha256": "16b890e42dbe0516eb436115d6d139c81a0382be6567262f482c31b396b2d111",
+      "updated_on": "2026-11-22"
+    }
+  ],
+  "mapping": {
+    "1": "sliced_duck",
+    "2": "cucumber",
+    "3": "scallions",
+    "4": "hawthorn_strips",
+    "5": "sweet_bean_sauce",
+    "fist": "roll_wrap"
+  },
+  "historical_reference_warning": "Pickled Radish and its green illustration in the original reference are incorrect; use red Hawthorn Strips.",
+  "atlases": {
+    "food": "exports/atlases/food_atlas.png",
+    "gestures": "exports/atlases/gesture_atlas.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "cell_size": [
+      512,
+      512
+    ],
+    "grid": [
+      3,
+      2
+    ],
+    "food_source_node": "257:2724",
+    "gesture_source_node": "257:2725"
+  },
+  "art_style": "Simplified pixel game illustration; warm colour blocks, clear stepped contours and minimal shading."
+}

@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "export_date": "2026-11-19",
+  "timezone": "Asia/Hong_Kong",
+  "source_file": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ",
+  "ui_kit_page_id": "148:1119",
+  "purpose": "Design review archive; not a Godot import or editable .fig backup",
+  "low_fidelity_selection": "One current representative per named station area, visually inspected. Earlier variants remain in Figma.",
+  "artifacts": [
+    {
+      "name": "order_low_fi",
+      "bytes": 80308,
+      "width": 1440,
+      "height": 900,
+      "sha256": "b921fd819a0d414c20f2ffe47dfff535f9d50cc6816c022b9f0a8f61bfb535a0",
+      "path": "exports/low-fi/order.png",
+      "figma_node_id": "121:1068",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=121-1068",
+      "artifact_kind": "low_fidelity_snapshot"
+    },
+    {
+      "name": "roasting_low_fi",
+      "bytes": 96980,
+      "width": 1440,
+      "height": 900,
+      "sha256": "048b57427dbf31263fb080e80abc5433a64a1a7bbb37e66f90b45d86c76eb2fc",
+      "path": "exports/low-fi/roasting.png",
+      "figma_node_id": "59:5",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=59-5",
+      "artifact_kind": "low_fidelity_snapshot"
+    },
+    {
+      "name": "preparation_low_fi",
+      "bytes": 1077619,
+      "width": 1458,
+      "height": 912,
+      "sha256": "1a32a349a35f51a1de0228576387af7abb7339c5ffa71b686a2c65c4b0c00c82",
+      "path": "exports/low-fi/preparation.png",
+      "figma_node_id": "124:391",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-391",
+      "artifact_kind": "low_fidelity_snapshot"
+    },
+    {
+      "name": "scoring_low_fi",
+      "bytes": 1132868,
+      "width": 1407,
+      "height": 880,
+      "sha256": "9914601e217cab1519f881bf7fbba86f68808202c34385a9780240556d15f187",
+      "path": "exports/low-fi/scoring.png",
+      "figma_node_id": "69:3",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=69-3",
+      "artifact_kind": "low_fidelity_snapshot"
+    },
+    {
+      "name": "overview",
+      "bytes": 619963,
+      "width": 1536,
+      "height": 1760,
+      "sha256": "3a4e4854bed6353ee0fa160a78bcc78eb76306ee8e080f353f144a92b04125fc",
+      "path": "exports/ui-kit/overview.png",
+      "figma_node_id": "159:1459",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=159-1459",
+      "artifact_kind": "component_board_snapshot",
+      "updated_on": "2026-11-22"
+    },
+    {
+      "name": "ui_kit_frames_decoration",
+      "bytes": 522092,
+      "width": 1536,
+      "height": 2584,
+      "sha256": "c6eb21fab0bb4b46bf11fd00ec466fe5e7af7aec84fd22c87b46286a9f92a825",
+      "path": "exports/ui-kit/frames_decoration.png",
+      "figma_node_id": "178:2243",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=178-2243",
+      "artifact_kind": "component_board_snapshot"
+    },
+    {
+      "name": "navigation_paper_frame",
+      "bytes": 20252,
+      "width": 248,
+      "height": 72,
+      "border_margin": 18,
+      "sha256": "083a326d43e78a39957b8b9ad69cd84d4e18ae3195deb23b5d46701d6af9512e",
+      "path": "exports/components/navigation_paper_frame.png",
+      "figma_node_id": "155:1150",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=155-1150",
+      "artifact_kind": "frame_texture"
+    },
+    {
+      "name": "navigation_selected_frame",
+      "bytes": 17703,
+      "width": 248,
+      "height": 72,
+      "border_margin": 18,
+      "sha256": "228a367b950592d47e2caa691e32181b78842d09887236de847069208d16fad4",
+      "path": "exports/components/navigation_selected_frame.png",
+      "figma_node_id": "155:1160",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=155-1160",
+      "artifact_kind": "frame_texture"
+    },
+    {
+      "name": "parchment_panel",
+      "bytes": 44271,
+      "width": 484,
+      "height": 213,
+      "border_margin": 24,
+      "sha256": "c881a7a004845fe08012bbdae9ec345d13377ef782db6db5878a421f80696a2f",
+      "path": "exports/components/parchment_panel.png",
+      "figma_node_id": "177:2208",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=177-2208",
+      "artifact_kind": "frame_texture"
+    },
+    {
+      "name": "inset_panel",
+      "bytes": 5073,
+      "width": 96,
+      "height": 96,
+      "border_margin": 10,
+      "sha256": "020d0e060075893d7e18dc9e3fe1e9a387748a85bd5211ca1d5b38fd2e937480",
+      "path": "exports/components/inset_panel.png",
+      "figma_node_id": "177:2267",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=177-2267",
+      "artifact_kind": "frame_texture"
+    },
+    {
+      "name": "order_main_frame",
+      "bytes": 70641,
+      "width": 320,
+      "height": 548,
+      "border_margin": 24,
+      "sha256": "ce38c19f1fb54d022aa9830a0f20f609ccbfbf521541a62a1616fde39946bd61",
+      "path": "exports/components/order_main_frame.png",
+      "figma_node_id": "155:1180",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=155-1180",
+      "artifact_kind": "frame_texture"
+    },
+    {
+      "name": "order_mini_frame",
+      "bytes": 13370,
+      "width": 176,
+      "height": 180,
+      "border_margin": 14,
+      "sha256": "3326a963fb0f6ef1ef0a91358c49f0aae7c7f3323dff76c22276d4e0a33aeeeb",
+      "path": "exports/components/order_mini_frame.png",
+      "figma_node_id": "155:1190",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=155-1190",
+      "artifact_kind": "frame_texture"
+    },
+    {
+      "name": "label_plaque",
+      "bytes": 11427,
+      "width": 206,
+      "height": 50,
+      "border_margin": 12,
+      "sha256": "c3a6d5e2b231883b4d94b23a9ac4dd4567f9f3769d57e0889ac7655b235cf1ed",
+      "path": "exports/components/label_plaque.png",
+      "figma_node_id": "180:2445",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=180-2445",
+      "artifact_kind": "component_specimen"
+    },
+    {
+      "name": "pause",
+      "format": "svg",
+      "width": 28,
+      "height": 28,
+      "bytes": 247,
+      "sha256": "2d0e050ddc25ff300c2077197d38731f876f33dc686ae370fea0f471b9451603",
+      "path": "exports/icons/pause.svg",
+      "figma_node_id": "151:1121",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=151-1121",
+      "artifact_kind": "vector_icon"
+    },
+    {
+      "name": "close",
+      "format": "svg",
+      "width": 28,
+      "height": 28,
+      "bytes": 219,
+      "sha256": "84c490d5db08efea334777d86699a98e2ba88e0ed3fa0a8187907aad15b53616",
+      "path": "exports/icons/close.svg",
+      "figma_node_id": "151:1124",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=151-1124",
+      "artifact_kind": "vector_icon"
+    },
+    {
+      "name": "expand",
+      "format": "svg",
+      "width": 28,
+      "height": 28,
+      "bytes": 569,
+      "sha256": "3fd8e6917c907d1eb29cd39c4838dd0012a08efe3d30c0a995e9ec736005acca",
+      "path": "exports/icons/expand.svg",
+      "figma_node_id": "151:1128",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=151-1128",
+      "artifact_kind": "vector_icon"
+    },
+    {
+      "name": "collapse",
+      "format": "svg",
+      "width": 28,
+      "height": 28,
+      "bytes": 545,
+      "sha256": "0635a69362a5378e99ae1d804f28b3031fa699d67a7947d2d70170d62cf906be",
+      "path": "exports/icons/collapse.svg",
+      "figma_node_id": "151:1132",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=151-1132",
+      "artifact_kind": "vector_icon"
+    },
+    {
+      "name": "check",
+      "format": "svg",
+      "width": 28,
+      "height": 28,
+      "bytes": 236,
+      "sha256": "c0d2fc3332727fa603b96ba977c9d0a4b1d8c0f192f2c39e411e91e6bf469d54",
+      "path": "exports/icons/check.svg",
+      "figma_node_id": "151:1135",
+      "source_url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=151-1135",
+      "artifact_kind": "vector_icon"
+    }
+  ],
+  "components": [
+    {
+      "name": "MK/Icon/Pause",
+      "type": "COMPONENT",
+      "width": 28,
+      "height": 28,
+      "figma_node_id": "151:1121"
+    },
+    {
+      "name": "MK/Icon/Close",
+      "type": "COMPONENT",
+      "width": 28,
+      "height": 28,
+      "figma_node_id": "151:1124"
+    },
+    {
+      "name": "MK/Icon/Expand",
+      "type": "COMPONENT",
+      "width": 28,
+      "height": 28,
+      "figma_node_id": "151:1128"
+    },
+    {
+      "name": "MK/Icon/Collapse",
+      "type": "COMPONENT",
+      "width": 28,
+      "height": 28,
+      "figma_node_id": "151:1132"
+    },
+    {
+      "name": "MK/Icon/Check",
+      "type": "COMPONENT",
+      "width": 28,
+      "height": 28,
+      "figma_node_id": "151:1135"
+    },
+    {
+      "name": "MK/Button",
+      "type": "COMPONENT_SET",
+      "width": 1080,
+      "height": 200,
+      "figma_node_id": "151:1139"
+    },
+    {
+      "name": "MK/IconButton",
+      "type": "COMPONENT_SET",
+      "width": 288,
+      "height": 112,
+      "figma_node_id": "151:1156"
+    },
+    {
+      "name": "MK/StationTab",
+      "type": "COMPONENT_SET",
+      "width": 816,
+      "height": 112,
+      "figma_node_id": "151:1166"
+    },
+    {
+      "name": "MK/Checkbox",
+      "type": "COMPONENT_SET",
+      "width": 180,
+      "height": 76,
+      "figma_node_id": "151:1173"
+    },
+    {
+      "name": "MK/Decoration/Clip",
+      "type": "COMPONENT",
+      "width": 20,
+      "height": 32,
+      "figma_node_id": "152:1124"
+    },
+    {
+      "name": "MK/OrderTicket/Main",
+      "type": "COMPONENT",
+      "width": 320,
+      "height": 548,
+      "figma_node_id": "152:1136"
+    },
+    {
+      "name": "MK/OrderTicket/Mini",
+      "type": "COMPONENT",
+      "width": 176,
+      "height": 180,
+      "figma_node_id": "152:1170"
+    },
+    {
+      "name": "MK/BrandPlaque",
+      "type": "COMPONENT",
+      "width": 326,
+      "height": 114,
+      "figma_node_id": "152:1188"
+    },
+    {
+      "name": "MK/Header",
+      "type": "COMPONENT_SET",
+      "width": 1584,
+      "height": 456,
+      "figma_node_id": "152:1192"
+    },
+    {
+      "name": "MK/Skin/Navigation",
+      "type": "COMPONENT_SET",
+      "width": 568,
+      "height": 120,
+      "figma_node_id": "155:1149"
+    },
+    {
+      "name": "MK/Skin/Brand",
+      "type": "COMPONENT",
+      "width": 326,
+      "height": 114,
+      "figma_node_id": "155:1170"
+    },
+    {
+      "name": "MK/Skin/OrderMain",
+      "type": "COMPONENT",
+      "width": 320,
+      "height": 548,
+      "figma_node_id": "155:1180"
+    },
+    {
+      "name": "MK/Skin/OrderMini",
+      "type": "COMPONENT",
+      "width": 176,
+      "height": 180,
+      "figma_node_id": "155:1190"
+    },
+    {
+      "name": "MK/Skin/IconButton",
+      "type": "COMPONENT",
+      "width": 64,
+      "height": 64,
+      "figma_node_id": "155:1200"
+    },
+    {
+      "name": "MK/FramePart/Navigation",
+      "type": "COMPONENT_SET",
+      "width": 816,
+      "height": 200,
+      "figma_node_id": "176:1802"
+    },
+    {
+      "name": "MK/FramePart/Order",
+      "type": "COMPONENT_SET",
+      "width": 816,
+      "height": 200,
+      "figma_node_id": "176:1875"
+    },
+    {
+      "name": "MK/FramePart/ParchmentPanel",
+      "type": "COMPONENT_SET",
+      "width": 816,
+      "height": 112,
+      "figma_node_id": "177:2189"
+    },
+    {
+      "name": "MK/Skin/ParchmentPanel",
+      "type": "COMPONENT",
+      "width": 484,
+      "height": 213,
+      "figma_node_id": "177:2208"
+    },
+    {
+      "name": "MK/Panel/Parchment",
+      "type": "COMPONENT",
+      "width": 484,
+      "height": 213,
+      "figma_node_id": "177:2227"
+    },
+    {
+      "name": "MK/FramePart/InsetPanel",
+      "type": "COMPONENT_SET",
+      "width": 816,
+      "height": 112,
+      "figma_node_id": "177:2248"
+    },
+    {
+      "name": "MK/Skin/InsetPanel",
+      "type": "COMPONENT",
+      "width": 96,
+      "height": 96,
+      "figma_node_id": "177:2267"
+    },
+    {
+      "name": "MK/Panel/Inset",
+      "type": "COMPONENT",
+      "width": 96,
+      "height": 96,
+      "figma_node_id": "177:2286"
+    },
+    {
+      "name": "MK/Decoration/WoodRail",
+      "type": "COMPONENT",
+      "width": 720,
+      "height": 48,
+      "figma_node_id": "177:2307"
+    },
+    {
+      "name": "MK/Decoration/OrderHanger",
+      "type": "COMPONENT",
+      "width": 740,
+      "height": 54,
+      "figma_node_id": "177:2309"
+    },
+    {
+      "name": "MK/Decoration/PaperDivider",
+      "type": "COMPONENT",
+      "width": 272,
+      "height": 6,
+      "figma_node_id": "177:2313"
+    },
+    {
+      "name": "MK/Material/Parchment",
+      "type": "COMPONENT",
+      "width": 160,
+      "height": 96,
+      "figma_node_id": "177:2315"
+    },
+    {
+      "name": "MK/Material/DarkWood",
+      "type": "COMPONENT",
+      "width": 160,
+      "height": 96,
+      "figma_node_id": "177:2317"
+    },
+    {
+      "name": "MK/Material/Vermilion",
+      "type": "COMPONENT",
+      "width": 160,
+      "height": 96,
+      "figma_node_id": "177:2319"
+    },
+    {
+      "name": "MK/Material/Brass",
+      "type": "COMPONENT",
+      "width": 160,
+      "height": 96,
+      "figma_node_id": "177:2321"
+    },
+    {
+      "name": "MK/Decoration/RopeSegment",
+      "type": "COMPONENT",
+      "width": 96,
+      "height": 22,
+      "figma_node_id": "179:2406"
+    },
+    {
+      "name": "MK/FramePart/LabelPlaque",
+      "type": "COMPONENT_SET",
+      "width": 816,
+      "height": 112,
+      "figma_node_id": "180:2426"
+    },
+    {
+      "name": "MK/LabelPlaque",
+      "type": "COMPONENT",
+      "width": 206,
+      "height": 50,
+      "figma_node_id": "180:2445"
+    },
+    {
+      "name": "MK/NumberBadge",
+      "type": "COMPONENT",
+      "width": 58,
+      "height": 58,
+      "figma_node_id": "180:2465"
+    }
+  ]
+}

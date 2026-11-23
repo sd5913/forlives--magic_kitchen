@@ -88,6 +88,53 @@ Goal: bring observations from another person trying the experience and choose an
 - Actual playtest observations: not yet recorded
 - Tutor feedback and next improvement with owner: pending review
 
+### 19 November: low-fidelity flow and shared UI Kit
+
+- I confirmed the low-fidelity flow as completed. I use the team's selected cooking-station image as the shared visual reference. The [design handoff](design/UI-KIT.md) links the flow, reference, controls and decoration boards in the same Figma file.
+- I organised shared headers/navigation, action and icon buttons, main/mini order-ticket shells and checkboxes. The decoration pass adds resizable parchment and inset panels, wood frames, corners and edges, hanging rope/clips, dividers, material samples, numbered markers and small nameplates. Station-specific food, recipes and gesture instructions are excluded from the kit.
+- Verification during the Figma work: inspected rendered specimens and corrected text remnants and wrapping; confirmed reusable instances and identical station-header geometry. A 484 × 213 panel resized to 720 × 280 retained four 24 × 24 corners. Other teammates' low-fidelity screens were not individually re-audited in this pass.
+- Runtime boundary: this is a design delivery. Final-kit export, Godot theme/control integration, aspect-ratio reconciliation and in-game visual checks are pending. No new human playtest or tutor feedback is claimed.
+- Remote implementation snapshot: `main` was `1c81f21`; [PR #7](https://github.com/sd5913/forlives--magic_kitchen/pull/7) (order station) and [PR #9](https://github.com/sd5913/forlives--magic_kitchen/pull/9) (shared playable shift, based on #7's branch) were open. This update does not merge their game code or claim their reported checks were rerun.
+- Next: I coordinate the shared Godot UI handoff and viewport decision; station owners connect their content after ownership is agreed. Record asset provenance and export permissions, then check the integrated result with another player.
+
+本次完成低保真进度同步、公共组件及装饰层交接；Figma 成果与 Godot 实现分开记录。后续由我统筹公共 UI 接入与视口尺寸，组员接入各自内容；真人试玩与 tutor 反馈保留为待记录。
+
+### 19 November: design exports archived for review
+
+- Archived four original-size low-fidelity PNGs from the Order, Roasting, Preparation and Scoring areas. I visually checked each export; source layouts were not edited or resized.
+- Added two UI Kit board PNGs, seven individual component PNGs and five SVG icons. A [visual review page](design/README.md) embeds the deliverables; the [manifest](design/exports/manifest.json) records source nodes, dimensions, checksums and border margins.
+- The selected low-fidelity screens retain their differing historical header layouts. Final common-header geometry belongs to the shared kit. This export pass does not assert that every old screen has been updated.
+- PNG/SVG files do not replace editable Figma components or prototype connections. No Godot scenes changed and no human trial was performed for this archive.
+
+本次把实际成果文件一并归档，不再只有文字与外链；四张低保真、两张组件展示、七张独立组件导出和五个 SVG 可直接在 GitHub 审查。原始尺寸与历史布局差异如实保留。
+
+### 21 November: order-counter high fidelity and UI Kit gaps
+
+- I completed the [order-counter high-fidelity design](design/ORDER-STATION.md) using the existing shared header, ticket shells, frames and controls. Selected orders expand on the left; other tickets remain compact. The design includes acceptance, three order details, all-order views and pause/resume.
+- I addressed the component-page annotations with order, clock and three hand-shape icons, three recognition-strip states and a typography specimen. Teammate pages were not modified.
+- Archived eleven screen/overlay PNGs, the UI Kit supplement, a separate generated counter illustration, five editable SVG icons and the prototype connection record. The earlier native Figma backup remains dated 19 November.
+- Checked rendered layouts, Bree Serif consistency, button clearance and 44 configured prototype connections with valid destinations. No human trial or new tutor review was performed. Sample times are fixed; this does not implement camera input or update Godot scenes.
+- Next: bring the agreed visual assets into the game, check the integrated order flow and collect an uncoached player trial.
+
+本次归档了点单区高保真与组件补充的实际文件。原型可查看、展开和确认订单，公共顶部保持一致；Figma 设计、Godot 实现与真人试玩继续分别记录。
+
+### 22 November: food icons, numbered hands and hawthorn correction
+
+- I clarified the annotations: the missing order icons are food illustrations, and the requested hand set shows numbers 1–5 plus a fist. Added six food components, six hand components and `MK/GestureHint` with replaceable food/gesture instances and editable labels.
+- Confirmed mapping: 1 duck, 2 cucumber, 3 scallions, 4 hawthorn strips, 5 sweet bean sauce; fist rolls the wrap. The old generated reference’s green garnish and “Pickled Radish” are incorrect. Added a visible correction beside that reference without editing teammate pages.
+- Reused the food components in the order-page recipe rows, including a red hawthorn example in Order 03. Archived twelve native transparent 256 × 256 PNGs, the component board, two source atlases and refreshed affected page previews.
+- Inspected the rendered hand counts, ingredient colours, component swaps, readable layout and alpha channels. A preview-download export initially flattened transparency; native content-only exports preserve it. No camera or Godot implementation was changed, and no human trial is claimed.
+
+本次纠正“订单图标”和“手势”的理解，完成实际食物插画、数字手势、透明素材与可替换提示卡。第 4 项统一为红色山楂条；设计原型和运行时实现继续分开记录。
+
+### 22 November: food and hand visual revision
+
+- I redrew the six food icons and six hand illustrations after feedback that their first rendering looked too realistic. The current set uses warm colour blocks, clear pixel contours, rounded silhouettes and simplified shading.
+- Replaced the illustration fills inside the existing main components. Their IDs, hint-card properties, ingredient mapping and prototype connections stay in place, so existing instances update together.
+- Refreshed the twelve transparent 256 × 256 PNGs, both source atlases, the component board and four affected order-page previews. Checked assembled layouts, hand counts, alpha channels and export records. This updates Figma assets only; no runtime or player trial was performed.
+
+本次按反馈调整食物与手势画风，减少写实纹理，统一为像素游戏插画。红色山楂条、数字对应关系和组件结构保持一致，已有实例同步更新。
+
 ## Class week of 26 November 2026: delivery candidate
 
 Goal: test a runnable build, deployment or installation setup on the chosen platform.

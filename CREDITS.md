@@ -1,29 +1,53 @@
-# Credits and AI assistance / 致谢与 AI 辅助说明
+# Credits / 致谢
 
-## AI-assisted development / AI 辅助开发
+## Tools and AI assistance / 工具与 AI 辅助
 
-We used OpenAI Codex to draft and translate project documents, compare interaction references and set up the repository checks. Codex also helped write the Python input router, simulation and tests, and build the initial Godot workbench scenes and input feedback. We use [Stop Slop](https://github.com/hardikpandya/stop-slop) to edit documentation for clarity.
+We’re building the game with [Godot](https://godotengine.org/) and GDScript. The input simulation and repository checks use Python’s standard library.
 
-我们用 OpenAI Codex 起草和翻译项目文档、比较交互参考，并搭建仓库检查。Codex 也参与了 Python 输入路由、模拟和测试，以及 Godot 工作台初版场景和输入反馈的编写。文档措辞使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
+我们使用 [Godot](https://godotengine.org/) 和 GDScript 制作游戏，输入模拟与仓库检查使用 Python 标准库。
 
-The original workbench uses Godot's built-in controls and colours. The order station added on 14 November uses four image assets generated with OpenAI's built-in image tool from the user's supplied kitchen style reference. Codex wrote the module, tests and supporting documentation under NEKO / JIN Minyi's direction. The user corrected the first visual draft to match the team's established restaurant style. See [asset provenance and generation briefs](docs/technical/ORDER-ASSETS.md).
+OpenAI Codex helped us draft and translate documentation, compare interaction references, write repository checks and work on the Python input router, simulation and tests. It also helped build the initial Godot workbench and input feedback. Documentation has also been edited with [Stop Slop](https://github.com/hardikpandya/stop-slop).
 
-旧工作台使用 Godot 自带控件和颜色。11 月 14 日新增点单模块使用内置图片生成工具制作的四份图像素材，以用户提供的厨房渲染稿为风格参考；Codex 在 NEKO / JIN Minyi 的指导下编写模块、测试和文档。用户指出初版风格不统一，随后替换为团队的暖色低多边形方向。[素材来源与生成说明](docs/technical/ORDER-ASSETS.md)
+OpenAI Codex 参与了文档起草与翻译、交互参考比较、仓库检查，以及 Python 输入路由、模拟和测试的编写，也协助制作了 Godot 初版工作台与输入反馈。文档曾使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
 
-Both previews run locally without calling a generative AI service. System fonts are referenced from the operating system, not redistributed. We did not retrieve Figma artwork, copy the supplied reference screenshot into the runtime, or import code/media from the example repositories for this module.
+For the shared Figma kit, we used Codex to organise reusable controls, separate them from station content, extract decorative frame parts and check layout and resizing. This component pass reused the selected image; it did not generate new illustrations. The current workbench preview runs locally without a generative AI service.
 
-两种预览都在本地运行，不调用在线生成服务。字体使用系统字体，不随仓库分发。点单模块没有声称取得 Figma 资源，也没有把参考截图整张贴入游戏；未复制课程例子仓库的代码或素材。
+整理公共 Figma 组件时，我们用 Codex 归纳共用控件、区分工作区内容、拆分装饰边框，并检查布局与拉伸效果。本轮组件制作复用了选定原图，没有新生成插画。当前工作台预览在本地运行，无需调用生成式 AI 服务。
 
-We also used Codex to implement and verify the shared-clock playtest flow, including the connections between the existing order station and the provisional cooking controls.
+On 21 November, we used Figma AI to generate the order-counter environment and customer illustration. Codex assisted with assembling the high-fidelity order page from the shared components, drawing the additional vector icons, configuring prototype links, and exporting and checking the design files. The reference-derived kit and the newly generated illustration are recorded separately in the design archive.
 
-我们也用 Codex 编写和验证试玩版的统一计时流程，并把现有点单台接入临时烹饪操作。
+11 月 21 日，我们使用 Figma AI 生成点单柜台环境与顾客插画。Codex 协助使用公共组件组合点单区高保真、绘制新增矢量图标、配置原型连线，以及导出和检查设计文件。参考图拆出的公共组件与本次新生成插画在设计归档中分别记录。
 
-## Tools and references / 工具与参考
+The food-icon and numbered-gesture pass also used Figma AI. It produced two source atlases, from which we made separate raster components and transparent PNGs. Codex assisted with the asset organisation, reusable hint-card properties, recipe-row icon mapping and export checks. The hawthorn correction follows the team’s clarification: the fourth ingredient is red hawthorn strips.
 
-We build the game with [Godot](https://godotengine.org/) and GDScript. The input simulation and repository checks use Python’s standard library. We consulted other projects when exploring gesture controls. The [interaction reference notes](docs/INTERACTION-REFERENCES.md) list those projects and what we looked at. We did not copy their code or media.
+食物图标和数字手势这一轮也使用了 Figma AI，生成两张源图集，再整理成独立位图组件与透明 PNG。Codex 协助素材整理、提示卡替换属性、配料行图标对应和导出检查。山楂条修正依据组内澄清：第 4 项食材为红色山楂条。
 
-我们用 [Godot](https://godotengine.org/) 和 GDScript 制作游戏，输入模拟和仓库检查使用 Python 标准库。探索手势操作时，我们参考了其他项目。[交互参考记录](docs/INTERACTION-REFERENCES.md)列出了项目和查阅内容。我们没有复制其中的代码或媒体。
+The current food and hand artwork is a Figma AI-assisted redraw in a simplified pixel game style, revised after feedback on the earlier realistic rendering. The source atlases, individual PNGs and Figma instances were updated together.
 
-We use the course’s [Group Project 2026 template](https://github.com/orgs/sd5913/projects/1) for the [project board](https://github.com/orgs/sd5913/projects/23) that MiaJiao5 set up.
+当前食物与手势使用 Figma AI 辅助重绘为简化像素游戏风格，依据对上一版偏写实效果的反馈调整。源图集、独立 PNG 和 Figma 实例已同步更新。
 
-我们的[项目看板](https://github.com/orgs/sd5913/projects/23)由 MiaJiao5 使用课程的 [Group Project 2026 模板](https://github.com/orgs/sd5913/projects/1)建立。
+## Art and design sources / 美术与设计来源
+
+The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected reference image’s creator and runtime-use permission still need to be added before those textures are published as game assets.
+
+[设计页面](docs/design/README.md)保存 Figma 与导出文件入口，[清单](docs/design/exports/manifest.json)记录每份导出的来源节点。选定参考图的作者与运行时使用许可还需补齐，再将对应纹理发布为游戏素材。
+
+## References / 参考
+
+The [interaction notes](docs/INTERACTION-REFERENCES.md) list the projects we consulted while exploring gesture controls. We did not copy their code or media.
+
+探索手势操作时查阅的项目记录在[交互参考](docs/INTERACTION-REFERENCES.md)中，没有复制它们的代码或媒体。
+
+For the README’s structure, we looked at [SuperTux](https://github.com/SuperTux/supertux/blob/master/README.md) and [Endless Sky](https://github.com/endless-sky/endless-sky/blob/master/README.md): introduce the game, show it, then explain how to run it and where to find development details.
+
+整理 README 时，我们参考了 [SuperTux](https://github.com/SuperTux/supertux/blob/master/README.md) 和 [Endless Sky](https://github.com/endless-sky/endless-sky/blob/master/README.md) 的信息顺序：先介绍游戏和展示画面，再说明运行方法与开发资料入口。
+
+Our [project board](https://github.com/orgs/sd5913/projects/23) was set up by MiaJiao5 using the course’s [Group Project 2026 template](https://github.com/orgs/sd5913/projects/1).
+
+[项目看板](https://github.com/orgs/sd5913/projects/23)由 MiaJiao5 使用课程的 [Group Project 2026 模板](https://github.com/orgs/sd5913/projects/1)建立。
+
+## Order station implementation / 点单实现
+
+The order station uses four AI-generated image assets and a shared-clock prototype built with Codex assistance. See [runtime asset notes](docs/technical/ORDER-ASSETS.md). System fonts are referenced locally, not redistributed. The original workbench, manager, tests and shared-order flow remain in the source history.
+
+点单台使用四份 AI 生成图像，公共计时与订单流程由 Codex 辅助实现，详见[运行素材说明](docs/technical/ORDER-ASSETS.md)。系统字体不随工程分发；原工作台、管理器与测试的历史保留。

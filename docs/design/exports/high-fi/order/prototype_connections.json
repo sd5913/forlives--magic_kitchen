@@ -1,0 +1,1435 @@
+{
+  "source_file": "OUk4C7fCqrzPmnOuzZpYGZ",
+  "page_id": "215:2593",
+  "start_frame": "217:1122",
+  "connections": [
+    {
+      "node_id": "I217:1124;152:1200",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:1124;152:1202",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:1124;152:1204",
+      "name": "MK/IconButton",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2575",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2575",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1471",
+      "name": "Expand order",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2451",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2451",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1542",
+      "name": "Order 02 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2527",
+            "navigation": "OVERLAY",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2527",
+              "navigation": "OVERLAY",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1571",
+      "name": "Order 03 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2550",
+            "navigation": "OVERLAY",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2550",
+              "navigation": "OVERLAY",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1634",
+      "name": "Confirm order",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:1734",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:1734",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1713",
+      "name": "View all orders",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2525",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2525",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:1736;152:1200",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:1736;152:1202",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:1736;152:1204",
+      "name": "MK/IconButton",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2575",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2575",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1889",
+      "name": "Expand order",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:3145",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:3145",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1932",
+      "name": "Order 02 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2094",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2094",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:1961",
+      "name": "Order 03 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2474",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2474",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2073",
+      "name": "View all orders",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:3133",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:3133",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:2096;152:1200",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:2096;152:1202",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I217:2096;152:1204",
+      "name": "MK/IconButton",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2575",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2575",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2246",
+      "name": "Expand order",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2527",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2527",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2260",
+      "name": "Order 01 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:1734",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:1734",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2318",
+      "name": "Order 03 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2474",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2474",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2430",
+      "name": "View all orders",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:3133",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:3133",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2491",
+      "name": "Collapse ticket",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2504",
+      "name": "Confirm expanded order",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:1734",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:1734",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2548",
+      "name": "Select order 1",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2550",
+      "name": "Select order 2",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2527",
+            "navigation": "SWAP",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2527",
+              "navigation": "SWAP",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2552",
+      "name": "Select order 3",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2550",
+            "navigation": "SWAP",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2550",
+              "navigation": "SWAP",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2554",
+      "name": "Close orders",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2598",
+      "name": "Resume",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "217:2619",
+      "name": "Restart preview",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:1122",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:1122",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I218:2476;152:1200",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=196-1617",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I218:2476;152:1202",
+      "name": "MK/StationTab",
+      "reactions": [
+        {
+          "action": {
+            "type": "URL",
+            "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+            "openInNewTab": true
+          },
+          "actions": [
+            {
+              "type": "URL",
+              "url": "https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=124-381",
+              "openInNewTab": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "I218:2476;152:1204",
+      "name": "MK/IconButton",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2575",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2575",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:2489",
+      "name": "Expand order",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2550",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2550",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:2491",
+      "name": "Order 01 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:1734",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:1734",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:2497",
+      "name": "Order 02 compact",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2094",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2094",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:2526",
+      "name": "View all orders",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:3133",
+            "navigation": "OVERLAY",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:3133",
+              "navigation": "OVERLAY",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:2548",
+      "name": "Collapse ticket",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:2571",
+      "name": "Collapse ticket",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:3138",
+      "name": "Select order 1",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:1734",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:1734",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:3140",
+      "name": "Select order 2",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "217:2094",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "217:2094",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:3142",
+      "name": "Select order 3",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "218:2474",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "DISSOLVE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.15000000596046448
+            },
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "218:2474",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "DISSOLVE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.15000000596046448
+              },
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:3144",
+      "name": "Close orders",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "node_id": "218:3166",
+      "name": "Collapse ticket",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    }
+  ]
+}
