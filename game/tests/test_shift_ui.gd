@@ -15,8 +15,10 @@ func _run() -> void:
 	game.receiver.set_process(false)
 	root.focus_exited.disconnect(game._on_focus_lost)
 	await capture("order")
-	game.session.accept_current()
-	game.session.navigate("roast")
+	await click_caption("Accept order")
+	assert(game.session.manager.get_order(game.session.manager.selected_order_id).status == "accepted")
+	await click_caption("Roast")
+	assert(game.session.station == "roast")
 	game.session.perform_action(1)
 	game.session.advance_time(12.0)
 	assert(game.session.station == "roast" and game.session.current_food().stage == "roasting")
@@ -70,3 +72,30 @@ func capture(filename: String) -> void:
 	DirAccess.make_dir_recursive_absolute(directory)
 	if root.get_texture().get_image().save_png(directory.path_join(filename + ".png")) != OK:
 		failures += 1
+
+
+func click_caption(caption: String) -> void:
+	game._refresh()
+	await process_frame
+	var target: Button
+	for node in game._canvas.get_children():
+		if node is Button and node.text == caption:
+			target = node
+			break
+	assert(target != null and not target.disabled, "clickable control: " + caption)
+	var point := target.get_global_rect().get_center()
+	var motion := InputEventMouseMotion.new()
+	motion.position = point
+	root.push_input(motion, true)
+	var event := InputEventMouseButton.new()
+	event.button_index = MOUSE_BUTTON_LEFT
+	event.position = point
+	event.pressed = true
+	root.push_input(event, true)
+	await process_frame
+	event = InputEventMouseButton.new()
+	event.button_index = MOUSE_BUTTON_LEFT
+	event.position = point
+	event.pressed = false
+	root.push_input(event, true)
+	await process_frame

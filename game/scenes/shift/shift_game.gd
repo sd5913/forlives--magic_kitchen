@@ -19,6 +19,11 @@ var _refresh_elapsed := 0.0
 var _popup: PopupPanel
 var _key_holds: Dictionary = {}
 var _camera_line: Label
+var _last_signature := ""
+var _rail_clocks: Dictionary = {}
+var _oven_clocks: Dictionary = {}
+var _oven_bars: Dictionary = {}
+var _ticket_clock: Label
 
 
 func _ready() -> void:
@@ -48,6 +53,7 @@ func _load_art() -> void:
 		_textures[key] = load("res://assets/ui/cooking_station/%s.png" % key)
 	for key in FOOD_FILES:
 		_textures[key] = load("res://assets/ui/food/%s.png" % FOOD_FILES[key])
+	_textures["portraits"] = load("res://assets/ui/orders/customer_portraits.png")
 	_textures["wrap"] = load("res://assets/ui/food/duck_wrap.png")
 	for number in range(6):
 		_textures["hand_%d" % number] = load("res://assets/ui/gestures/%s.png" % ("fist" if number == 0 else "number_%d" % number))
@@ -64,10 +70,43 @@ func _fit() -> void:
 func _process(delta: float) -> void:
 	session.advance_time(delta)
 	receiver.enabled = session.can_interact()
-	_refresh_elapsed += delta
-	if _dirty and _refresh_elapsed >= 0.15 and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		_refresh_elapsed = 0.0
-		_refresh()
+	_refresh_timers()
+	if _dirty and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		if _view_signature() != _last_signature:
+			_refresh()
+		_dirty = false
+
+
+func _view_signature() -> String:
+	var snapshot := {"station": session.station, "paused": session.paused, "summary": session.summary_visible, "rating": session.rating, "can_return": session.can_return(), "message": session.message, "selected": session.manager.selected_order_id, "language": language, "camera": receiver.status, "orders": [], "food": session.food.duplicate(true)}
+	for order in session.manager.get_visible_orders():
+		snapshot.orders.append([order.order_id, order.status])
+	for entry in snapshot.food.values():
+		entry.erase("roast_seconds")
+		entry.erase("animation_seconds")
+	return JSON.stringify(snapshot)
+
+
+func _refresh_timers() -> void:
+	for id in _rail_clocks:
+		var order := session.manager.get_order(id)
+		if not order.is_empty() and is_instance_valid(_rail_clocks[id]):
+			_rail_clocks[id].text = "%s · %ds" % [_status(order.status), ceili(order.remaining_seconds)]
+	if is_instance_valid(_ticket_clock):
+		var order := session.manager.get_order(session.manager.selected_order_id)
+		if not order.is_empty():
+			_ticket_clock.text = _t("Patience: %ds", "耐心剩余：%d 秒") % ceili(order.remaining_seconds)
+	for id in _oven_clocks:
+		if not session.food.has(id):
+			continue
+		var duck: Dictionary = session.food[id]
+		_oven_clocks[id].text = "%s · %.1fs\n%s" % [id, float(duck.roast_seconds), session.roast_quality(duck.roast_seconds).to_upper()]
+		var bar: ProgressBar = _oven_bars[id]
+		bar.value = float(duck.roast_seconds)
+		var fill: StyleBoxFlat = bar.get_theme_stylebox("fill")
+		fill.bg_color = Color("538548") if bar.value >= 12 and bar.value < 18 else Color("e4a13e")
+		if bar.value >= 18:
+			fill.bg_color = Color("43271b")
 
 
 func _on_focus_lost() -> void:
@@ -122,6 +161,11 @@ func _input(event: InputEvent) -> void:
 
 func _refresh() -> void:
 	_dirty = false
+	_last_signature = _view_signature()
+	_rail_clocks.clear()
+	_oven_clocks.clear()
+	_oven_bars.clear()
+	_ticket_clock = null
 	for child in _canvas.get_children():
 		_canvas.remove_child(child)
 		child.queue_free()
@@ -167,7 +211,7 @@ func _build_rail() -> void:
 		var order: Dictionary = orders[i]
 		var button := _button(_canvas, "", rect, func(): _select(order.order_id), not session.can_interact(), order.order_id == session.manager.selected_order_id)
 		_label(button, "%s · %s" % [order.order_id, order.customer_name[language]], Rect2(16, 8, 236, 30), 20, PAPER if order.order_id == session.manager.selected_order_id else INK)
-		_label(button, "%s · %ds" % [_status(order.status), ceili(order.remaining_seconds)], Rect2(16, 42, 236, 27), 16, PAPER if order.order_id == session.manager.selected_order_id else INK)
+		_rail_clocks[order.order_id] = _label(button, "%s · %ds" % [_status(order.status), ceili(order.remaining_seconds)], Rect2(16, 42, 236, 27), 16, PAPER if order.order_id == session.manager.selected_order_id else INK)
 	_button(_canvas, _t("All tickets", "全部订单"), Rect2(1156, 116, 260, 38), _show_orders, not session.can_interact())
 	_button(_canvas, _t("Camera", "摄像头"), Rect2(1156, 164, 260, 36), receiver.toggle_camera)
 
@@ -200,7 +244,7 @@ func _build_ticket() -> void:
 		row.add_theme_font_size_override("font_size", 17)
 		row.modulate = Color.WHITE if required else Color(0.75, 0.7, 0.62)
 	_label(_canvas, _t("Needs: ", "要求：") + order.special_request[language], Rect2(50, 558, 288, 40), 15)
-	_label(_canvas, _t("Patience: %ds", "耐心剩余：%d 秒") % ceili(order.remaining_seconds), Rect2(52, 600, 277, 30), 19)
+	_ticket_clock = _label(_canvas, _t("Patience: %ds", "耐心剩余：%d 秒") % ceili(order.remaining_seconds), Rect2(52, 600, 277, 30), 19)
 	_button(_canvas, _t("Expand ticket", "展开小票"), Rect2(48, 668, 290, 44), _show_details, not session.can_interact())
 
 
@@ -209,11 +253,19 @@ func _build_station() -> void:
 	var entry := session.current_food()
 	match session.station:
 		"order":
+			var current_order := session.manager.get_order(session.manager.selected_order_id)
+			if not current_order.is_empty():
+				var portrait := AtlasTexture.new()
+				portrait.atlas = _textures.portraits
+				var portrait_index: int = {"customer_lin": 0, "customer_chen": 1, "customer_mei": 2}.get(current_order.portrait, 0)
+				var tile := Vector2(portrait.atlas.get_width() / 3.0, portrait.atlas.get_height())
+				portrait.region = Rect2(Vector2(portrait_index * tile.x, 0), tile)
+				_picture(_canvas, portrait, Rect2(1052, 294, 280, 320))
 			_label(_canvas, _t("At the counter", "点单柜台"), Rect2(424, 244, 550, 48), 33)
 			var current := session.manager.get_order(session.manager.selected_order_id)
 			var prompt: String = current.get("special_request", {"en": "The next guest is on the way.", "zh": "下一位顾客正在路上。"})[language]
-			_label(_canvas, prompt, Rect2(424, 312, 870, 90), 27)
-			_label(_canvas, _t("Read the ticket, accept it, then choose Roast.\nOther customers keep waiting while you cook.", "查看小票并接单，再前往烤炉台。\n制作时，其他顾客仍会继续等待。"), Rect2(424, 421, 840, 75), 22)
+			_label(_canvas, prompt, Rect2(424, 312, 580, 90), 27)
+			_label(_canvas, _t("Read the ticket, accept it, then choose Roast.\nOther customers keep waiting while you cook.", "查看小票并接单，再前往烤炉台。\n制作时，其他顾客仍会继续等待。"), Rect2(424, 421, 580, 75), 22)
 			_button(_canvas, _t("Accept order", "确认接单"), Rect2(424, 537, 420, 66), session.accept_current, not session.can_interact() or current.get("status") != "pending", true)
 		"roast":
 			_label(_canvas, _t("Two ovens · watch the heat", "双炉位 · 留意火候"), Rect2(424, 239, 920, 48), 30)
@@ -228,7 +280,23 @@ func _build_station() -> void:
 				if i < in_oven.size():
 					var duck: Dictionary = session.food[in_oven[i]]
 					oven_text = "%s · %.1fs\n%s" % [in_oven[i], float(duck.roast_seconds), session.roast_quality(duck.roast_seconds).to_upper()]
-				_label(_canvas, oven_text, Rect2(x + 26, 326, 385, 106), 27, PAPER)
+				var oven_clock := _label(_canvas, oven_text, Rect2(x + 26, 316, 385, 100), 27, PAPER)
+				var heat := ProgressBar.new()
+				heat.position = Vector2(x + 24, 426)
+				heat.size = Vector2(386, 16)
+				heat.max_value = float(session.rules.burnt_seconds)
+				heat.show_percentage = false
+				if i < in_oven.size():
+					heat.value = float(session.food[in_oven[i]].roast_seconds)
+				var heat_fill := StyleBoxFlat.new()
+				heat_fill.bg_color = Color("538548") if heat.value >= 12 and heat.value < 18 else Color("e4a13e")
+				if heat.value >= 18:
+					heat_fill.bg_color = Color("43271b")
+				heat.add_theme_stylebox_override("fill", heat_fill)
+				_canvas.add_child(heat)
+				if i < in_oven.size():
+					_oven_clocks[in_oven[i]] = oven_clock
+					_oven_bars[in_oven[i]] = heat
 			_label(_canvas, _t("Raw <12s  |  Cooked 12–<18s  |  Burnt ≥18s", "未熟 <12 秒  |  适熟 12–<18 秒  |  烤焦 ≥18 秒"), Rect2(424, 478, 920, 40), 23)
 			_label(_canvas, _t("Selected ticket: ", "当前订单：") + str(entry.get("stage", "waiting")).replace("_", " "), Rect2(424, 538, 900, 40), 24)
 			_button(_canvas, _t("Go to Prepare", "进入料理台"), Rect2(1004, 582, 355, 49), func(): _navigate("prepare"), not session.can_interact())
@@ -242,7 +310,7 @@ func _build_station() -> void:
 					var ingredient: String = session.rules.ingredient_actions[i]
 					var card := _button(_canvas, "", Rect2(414 + i * 196, 310, 180, 180), func(): session.perform_action(i + 1), not session.action_available(i + 1), ingredient in added)
 					_picture(card, _textures[ingredient], Rect2(22, 10, 136, 112))
-					_label(card, "%d · %s" % [i + 1, session.manager.catalog.ingredients[ingredient][language]], Rect2(8, 122, 164, 50), 16)
+					_label(card, "%d · %s" % [i + 1, session.manager.catalog.ingredients[ingredient][language]], Rect2(8, 120, 164, 54), 15)
 			_label(_canvas, _t("Added: ", "已加入：") + str(added.size()) + _t(" / 5 · click a checked side on the ticket to remove it", " / 5 · 点击小票已勾选的配菜可移除"), Rect2(424, 510, 940, 35), 20)
 			_label(_canvas, _t("Stage: ", "状态：") + str(entry.get("stage", "waiting")).replace("_", " "), Rect2(424, 555, 500, 36), 22)
 			_button(_canvas, _t("Complete order", "完成订单"), Rect2(1004, 578, 355, 54), session.serve_current, not session.can_interact() or entry.get("stage") != "ready", true)
@@ -265,7 +333,7 @@ func _build_actions() -> void:
 					caption += " · " + session.manager.catalog.ingredients[session.rules.ingredient_actions[number - 1]][language]
 			var card := _button(_canvas, "", Rect2(384 + i * width, 676, width - 12, 142), func(): session.perform_action(number), not session.action_available(number))
 			_picture(card, _textures["hand_%d" % number], Rect2((width - 98) / 2.0, 8, 86, 88))
-			_label(card, caption, Rect2(9, 99, width - 30, 35), 16)
+			_label(card, caption, Rect2(9, 96, width - 30, 42), 14)
 	_camera_line = _label(_canvas, receiver.status, Rect2(28, 754, 325, 66), 15, PAPER)
 
 
@@ -397,11 +465,14 @@ func _label(parent: Control, text: String, rect: Rect2, font_size: int, color: C
 	label.text = text
 	label.position = rect.position
 	label.size = rect.size
-	label.add_theme_font_override("font", _font)
+	label.add_theme_font_override("font", ThemeDB.fallback_font if text == "Magic Kitchen" else _font)
 	label.add_theme_font_size_override("font_size", font_size)
 	label.add_theme_color_override("font_color", color)
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.clip_text = text != "Magic Kitchen"
+	if text == "Magic Kitchen":
+		label.autowrap_mode = TextServer.AUTOWRAP_OFF
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	parent.add_child(label)
 	return label

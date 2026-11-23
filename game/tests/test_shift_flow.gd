@@ -113,6 +113,32 @@ func _run() -> void:
 	check(session.serve_current() and session.rating.roast_score == 40 and session.rating.prep_score == 20, "raw imperfect wrap scores actual output")
 	check(not session.return_to_work(), "early return refused")
 
+	# Complete a whole successful shift using each real recipe, not just a forced summary.
+	session.restart()
+	for guest in range(5):
+		while session.manager.selected_order_id.is_empty():
+			session.advance_time(1.0)
+		check(session.accept_current(), "full-shift guest accepted")
+		session.navigate("roast")
+		session.perform_action(1)
+		session.advance_time(12.0)
+		session.perform_action(2)
+		session.perform_action(3)
+		session.advance_time(1.0)
+		session.navigate("prepare")
+		var recipe: Dictionary = session.manager.get_order(session.manager.selected_order_id)
+		for number in range(1, 6):
+			for item in recipe.ingredients:
+				if item.id == session.rules.ingredient_actions[number - 1]:
+					session.perform_action(number)
+		session.perform_action(0)
+		session.advance_time(1.0)
+		check(session.serve_current(), "full-shift recipe delivered")
+		check(session.rating.prep_score == 100, "full-shift exact recipe score")
+		session.advance_time(3.0)
+		session.return_to_work()
+	check(session.summary_visible and session.summary().served == 5 and session.summary().success, "successful five-guest shift reaches correct summary")
+
 	var gate := Gate.new()
 	check(gate.sample(1, 0.49) == -1 and gate.sample(1, 0.01) == 1, "gesture stable for half a second")
 	check(gate.sample(1, 2.0) == -1 and gate.sample(2, 1.0) == -1, "held or changed pose cannot bypass release")

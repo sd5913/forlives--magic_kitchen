@@ -77,6 +77,7 @@ func _button_rects() -> Dictionary:
 
 
 func _run() -> void:
+	root.content_scale_size = Vector2i(1440, 900)
 	root.size = Vector2i(1440, 900)
 	station = Station.instantiate()
 	root.add_child(station)
@@ -150,6 +151,7 @@ func _run() -> void:
 	root.push_input(key, true)
 	await _frames()
 	_check(station.manager.get_visible_orders().size() == 1, "keyboard Space activates focused arrival button")
+	root.content_scale_size = Vector2i(960, 540)
 	root.size = Vector2i(960, 540)
 	await _frames()
 	_check(station._canvas.get_global_rect().end.x <= 961, "960px layout fits horizontally")

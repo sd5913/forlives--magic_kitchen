@@ -159,3 +159,18 @@ This is the final Canvas deadline, not a tutor meeting.
 - Canvas group submission: not yet verified
 
 Record actual results after each review. Plans, template cards and automated checks must not be presented as completed user trials or tutor feedback.
+
+
+## 23 November 2026 / 2026 年 11 月 23 日
+
+We integrated the six-part flow supplied by the team: timed arrivals, four tickets, two independent oven slots, take-out and slicing, five-ingredient preparation, scored serving and a five-order summary. The latest flow changes the input mapping to 2 hawthorn / 4 cucumber. Trial values remain configurable pending planning confirmation.
+
+我们按组内提供的六部分流程接通到达、四张订单、双炉位、取出片鸭、五种配料、交付评分和五单汇总。新稿映射为 2 山楂 / 4 黄瓜，试运行数值集中配置，等待策划确认。
+
+Resolved archive/start-scene conflicts while preserving the order, cooking, serving and roasting-design contributions. Fixed a malformed old cooking scene. The [handoff](technical/INTEGRATION-HANDOFF.md) lists the rule, final-art and validation work still needed from each module.
+
+整合保留点单、料理、交付及烘烤策划贡献，解决归档和启动入口冲突，并修复旧料理场景损坏。[对接清单](technical/INTEGRATION-HANDOFF.md)列出各部分仍需补齐的规则、美术和验证。
+
+Actual macOS/Godot 4.7.2 checks: seven game suites passed; new flow 67 and UDP 9 checks; existing order manager 38, order UI 378 and legacy shift 27 checks, plus cooking regression. Seven integrated screens were rendered and inspected. Six Python input tests and repository checks passed. The camera environment initialized its model and processed a blank frame. A project pack exported and launched. No human playtest, live-camera gesture result, Windows gameplay or tutor feedback is claimed.
+
+实际验证平台为 macOS、Godot 4.7.2：七组游戏检查通过；新流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项及料理回归通过。七种整合画面已渲染检查，Python 六项输入测试和仓库检查通过。相机环境完成模型初始化和空白帧处理；资源包已导出启动。未据此声称真人试玩、摄像头手势效果、Windows 玩法或教师审查通过。

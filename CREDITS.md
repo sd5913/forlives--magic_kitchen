@@ -57,3 +57,10 @@ Our [project board](https://github.com/orgs/sd5913/projects/23) was set up by Mi
 The order station uses four AI-generated image assets and a shared-clock prototype built with Codex assistance. See [runtime asset notes](docs/technical/ORDER-ASSETS.md). System fonts are referenced locally, not redistributed. The original workbench, manager, tests and shared-order flow remain in the source history.
 
 点单台使用四份 AI 生成图像，公共计时与订单流程由 Codex 辅助实现，详见[运行素材说明](docs/technical/ORDER-ASSETS.md)。系统字体不随工程分发；原工作台、管理器与测试的历史保留。
+
+
+## Shared shift integration / 统一营业整合
+
+We used Codex to implement the team-supplied six-part flow, reconcile branches, connect shared state and input, add scoring and automated regression checks, and update setup and handoff notes. Existing cooking textures and the archived food/hand PNGs were reused; this integration did not generate new art. The shared camera bridge reuses the cooking contributor's landmark-count function with a separate raw-count transport.
+
+我们使用 Codex 实现组内六部分流程、处理分支冲突、连接共享状态与输入、增加评分和回归检查，并整理环境及对接说明。本轮复用料理纹理和已归档食物手势 PNG，没有生成新美术。统一摄像头桥接复用料理模块的手指计数函数，另行传输原始数字。
