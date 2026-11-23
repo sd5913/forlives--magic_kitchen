@@ -2,6 +2,16 @@
 
 Updated 19 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep current implementation, design delivery and remaining work separate so the team can continue from either computer.
 
+## 23 November: integrated shift
+
+I integrated the current main archive, order/playable-shift work, cooking station, serving scaffold and roasting design into a shared shift. The default entry is now `game/scenes/shift/shift_game.tscn`. The [flow guide](technical/SHIFT-FLOW.md) records controls, configuration and actual verification. The [handoff](technical/INTEGRATION-HANDOFF.md) separates resolved conflicts from the decisions and artwork still needed from each module.
+
+我已将当前主线归档、点单与旧试玩、料理台、交付场景和烘烤策划整合到统一营业流程。默认入口为 `game/scenes/shift/shift_game.tscn`。[流程说明](technical/SHIFT-FLOW.md)记录操作、配置和实际检查，[对接清单](technical/INTEGRATION-HANDOFF.md)区分已解决的冲突与各模块待确认的规则和素材。
+
+This implements the supplied six-part flow with trial defaults, including the new **2 hawthorn / 4 cucumber** mapping. Earlier branch and design snapshots below are historical. Real-camera accuracy, Windows gameplay, uncoached playtesting and tutor feedback remain unverified.
+
+本次按六部分流程实现，采用其中的试运行默认值，并更新为 **2 山楂 / 4 黄瓜**。下方旧分支及设计状态作为历史记录保留。真人识别、Windows 玩法、未解释试玩及 tutor 反馈仍待验证。
+
 ## 22 November: food and gesture correction
 
 The current food and hand exports have been redrawn in a simplified pixel game style. Existing component identities and prototype links are preserved.

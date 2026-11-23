@@ -43,6 +43,45 @@ Goal: demonstrate the main game loop, app flow or installation interaction worki
 
 ## Class week of 19 November 2026: playtest and feedback
 
+### 16 November: PR #7 Linux CI setup correction
+
+- Diagnosis: PR head `2a4c26e` failed during setup-python, because the Ubuntu 26.04 runner had no Python 3.9 build. The project checks had not started; the Windows and macOS jobs passed.
+- Change: select Python 3.13 on the existing three-platform matrix, using the official actions/python-versions manifest to confirm an Ubuntu 26.04 x64 build. No tests were disabled and no gameplay files changed. Run outcomes remain inspectable on PR #7.
+
+### 14 November: NEKO ordering implementation prepared for review
+
+- Design input: user supplied GDD v1.0 for Peking duck rolls and confirmed NEKO / JIN Minyi owns ordering. The user rejected the first flat-vector visual draft and supplied a warm, faceted low-poly kitchen reference; that draft was replaced before any push.
+- Implemented on `feature/order-station`: isolated order manager, data-driven ingredient requests, customer arrival and selection, guarded acceptance/capacity, waiting and expiry, English/Chinese UI, pause and restart confirmation. Added a station overlay to the existing order panel; other zones and shared project settings were left unchanged.
+- Art: generated background, customer sheet, food-icon sheet and panel textures to follow the supplied reference. UI text, order state and buttons remain live Godot controls. Existing remote branches contained no matching art; Figma access was denied, so this is not a verified Figma reproduction.
+- Verification on Windows / Godot 4.7.2 / Compatibility renderer: 38 manager checks and 31 rendered UI checks passed, along with six existing Python router tests. Fixed oversized texture borders and verified local art imports, alpha, small-window layout, capacity, expiry, mouse/keyboard input and open/close behaviour. Screenshots and reproduction commands are linked in the [module guide](technical/ORDER-STATION.md).
+- Pending: review by the team's visual owner, real teammate trial and integration of oven/prep/delivery/scoring. No player or tutor feedback was invented. This is a usable ordering increment, not the completed cooking game.
+
+### 15 November: bilingual alignment follow-up
+
+- User feedback: English and Chinese appeared misaligned; use English by default for presentation and retain a Chinese toggle.
+- Changed: explicit vertical centring and text rectangles, language-specific heading fonts, queue subtitle/time heights, centred ingredient captions and customer nameplates. Some short text boxes were smaller than the system font's minimum height and Godot expanded them; the layout check now catches that condition.
+- Evidence: the rendered UI/layout run passes 385 assertions, including same-ticket bilingual screenshots, label bounds and button-geometry comparisons. The checks use simulated input; this is user-directed iteration, not an invented classmate trial. Final visual-owner review and fresh-machine/export checks remain pending.
+- Reproduction: a fresh local clone of code commit `141e96c`, without cached imports, passed asset import, 38 state checks, 385 UI/layout assertions and the repository checker on this Windows machine. A second physical machine and exported build have not been tested.
+
+### 16 November: macOS order station improvement
+
+- A clean export of [PR #7](https://github.com/sd5913/forlives--magic_kitchen/pull/7) exposed font-loading errors and 18 UI layout failures on macOS. I changed the macOS font selection and enlarged the title, ingredient quantities and customer name boxes.
+- Verification on this Mac with Godot 4.7.2 Standard: 38 order state checks and 385 rendered UI assertions passed. [Reproduction steps](technical/ORDER-STATION.md#macos-verification)
+- For the tutor review, ask someone to open the order station, find an ingredient requirement, accept a ticket and locate its waiting indicator. Record where they hesitate, then choose one change based on what they did. The cooking stations are still the integration blocker. Human observations and tutor feedback are pending.
+
+### 17 November: integrated playtest
+
+- Connected the same ticket from acceptance to timed roasting, ingredient matching and delivery. The workbench owns the manager and clock. A wrong recipe can be cleared and retried, and expiry clears food in progress.
+- Automated verification on macOS with Godot 4.7.2 Standard passed 38 order manager checks, 385 rendered order-station assertions and the integrated path from acceptance to delivery. The integration check also covers rejected recipes, pause, expiry and duplicate delivery.
+- Before the tutor review, have another person try a complete order with no initial walkthrough. Watch whether they find the ticket requirements, know where to roast and can recover from a recipe mismatch. Record one observation and the change it motivates. Human observations and tutor feedback are pending.
+
+### 18 November: full shift regression
+
+- Automated regression on macOS with Godot 4.7.2 Standard covers acceptance, roasting, recipe correction, delivery, expiry and repeated delivery. Added checks for two-ticket switching, a busy oven, isolated ingredient selections, focus loss and restart confirmation/cancellation.
+- Fixed the restart confirmation: both the shared clock and guest arrivals now pause while it is open. Cancellation restores controls and preserves food; confirmation clears food and old tickets, resets timers and keeps an existing pause.
+- Verification: 38 order-manager checks, 27 shift checks, 385 rendered UI assertions, six Python interaction tests and the repository checker passed. A rendered shift run also saves ready/served screenshots and checks both files. These are automated observations, not human playtest feedback.
+- Remaining evidence for the 19 November review: another person tries a complete order before receiving instructions; record observed hesitation, choose one improvement and record tutor feedback. Exported-build and fresh-machine checks remain pending.
+
 Goal: bring observations from another person trying the experience and choose an improvement.
 
 - Owners / usable delivery / evidence: pending
@@ -120,3 +159,18 @@ This is the final Canvas deadline, not a tutor meeting.
 - Canvas group submission: not yet verified
 
 Record actual results after each review. Plans, template cards and automated checks must not be presented as completed user trials or tutor feedback.
+
+
+## 23 November 2026 / 2026 年 11 月 23 日
+
+We integrated the six-part flow supplied by the team: timed arrivals, four tickets, two independent oven slots, take-out and slicing, five-ingredient preparation, scored serving and a five-order summary. The latest flow changes the input mapping to 2 hawthorn / 4 cucumber. Trial values remain configurable pending planning confirmation.
+
+我们按组内提供的六部分流程接通到达、四张订单、双炉位、取出片鸭、五种配料、交付评分和五单汇总。新稿映射为 2 山楂 / 4 黄瓜，试运行数值集中配置，等待策划确认。
+
+Resolved archive/start-scene conflicts while preserving the order, cooking, serving and roasting-design contributions. Fixed a malformed old cooking scene. The [handoff](technical/INTEGRATION-HANDOFF.md) lists the rule, final-art and validation work still needed from each module.
+
+整合保留点单、料理、交付及烘烤策划贡献，解决归档和启动入口冲突，并修复旧料理场景损坏。[对接清单](technical/INTEGRATION-HANDOFF.md)列出各部分仍需补齐的规则、美术和验证。
+
+Actual macOS/Godot 4.7.2 checks: seven game suites passed; new flow 67 and UDP 9 checks; existing order manager 38, order UI 378 and legacy shift 27 checks, plus cooking regression. Seven integrated screens were rendered and inspected. Six Python input tests and repository checks passed. The camera environment initialized its model and processed a blank frame. A project pack exported and launched. No human playtest, live-camera gesture result, Windows gameplay or tutor feedback is claimed.
+
+实际验证平台为 macOS、Godot 4.7.2：七组游戏检查通过；新流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项及料理回归通过。七种整合画面已渲染检查，Python 六项输入测试和仓库检查通过。相机环境完成模型初始化和空白帧处理；资源包已导出启动。未据此声称真人试玩、摄像头手势效果、Windows 玩法或教师审查通过。

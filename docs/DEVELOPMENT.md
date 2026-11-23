@@ -22,6 +22,8 @@ The script reads Git-tracked and non-ignored untracked Markdown, Python, JSON, Y
 
 The file checker does not execute the game, validate YAML/Godot syntax, visit external links, inspect Markdown reference links/anchors or scan for secrets. GitHub Actions runs the file checker and interaction contract tests on Linux, Windows and macOS for pushes and pull requests. These checks do not establish that a teammate can play.
 
+CI uses Python 3.13 on all three operating systems. On 16 November, the PR #7 Ubuntu log showed that installation of Python 3.9 failed on the new Ubuntu 26.04 runner before any project check ran. The actions/python-versions manifest lists Python 3.13 builds for that runner, so the workflow now selects 3.13; no checks or operating systems were removed. This CI choice does not itself verify compatibility with every older Python version.
+
 ## Shared files
 
 - `.editorconfig` suggests UTF-8 and LF text, with tabs for GDScript.

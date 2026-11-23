@@ -33,13 +33,21 @@ Install [Godot 4.7.2 Standard](https://godotengine.org/download/archive/4.7.2-st
 
 安装 [Godot 4.7.2 Standard](https://godotengine.org/download/archive/4.7.2-stable/)，克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。
 
-The main branch currently opens the early workbench preview. The [order station](https://github.com/sd5913/forlives--magic_kitchen/pull/7) and [order-to-delivery prototype](https://github.com/sd5913/forlives--magic_kitchen/pull/9) are still on development branches. The preview uses a keyboard or mouse; camera controls and the final UI are being developed separately. For branch details and recorded checks, see [project status](docs/PROJECT-STATUS.md).
+The project now opens the shared shift. Accept a ticket, use **Roast: 1 put in, 2 take out, 3 slice**, then **Prepare: 1 duck, 2 hawthorn, 3 scallion, 4 cucumber, 5 sauce; Space to roll**. Action cards also work with a mouse. Click **Complete order** to see the scores, then return to work. Five served or expired orders finish the shift.
 
-主分支目前打开的是早期工作台预览。[点单模块](https://github.com/sd5913/forlives--magic_kitchen/pull/7)和[接单到交付的流程原型](https://github.com/sd5913/forlives--magic_kitchen/pull/9)还在开发分支中。现有预览使用键盘或鼠标，摄像头交互和最终界面另行接入。分支情况和已有检查记录见[项目状态](docs/PROJECT-STATUS.md)。
+工程现在默认打开统一营业流程。接单后，在烤炉台按 **1 放入、2 取出、3 片鸭**；料理台按 **1 鸭肉、2 山楂、3 葱、4 黄瓜、5 酱，空格卷制**。也可点击动作卡和食材卡。完成订单后查看评分并返回，交付或过期共五单后结束营业。
 
-We’re targeting Windows and macOS. The main-branch workbench preview has been checked on macOS; Windows validation of that preview is still pending. It runs without a camera or API key. Checks for the newer branch prototypes are recorded separately in [project status](docs/PROJECT-STATUS.md).
+Two oven slots and up to four active tickets share one clock. Switching stations keeps progress; **Esc** pauses, and leaving the window pauses until you resume. You can fix side ingredients before rolling. An imperfect wrap still earns a score, so mistakes become part of the shift rather than a dead end.
 
-目标平台是 Windows 和 macOS。主分支的工作台预览已在 macOS 上验证，Windows 验证仍待完成；运行时不需要摄像头或 API 密钥。较新分支原型的检查记录另见[项目状态](docs/PROJECT-STATUS.md)。
+两个炉位和最多四张活动订单共享时间。切换保留进度，**Esc** 暂停；失焦后手动继续。卷制前可移除误加配菜，配错的卷仍可评分交付，让一次失误成为营业中的一部分。
+
+The integrated flow has been checked on macOS with Godot 4.7.2. Windows gameplay, real-camera accuracy and a human playtest remain pending. Keyboard and mouse need no camera or API key. Optional camera setup and the trial rule values are in the [flow guide](docs/technical/SHIFT-FLOW.md); [integration handoff](docs/technical/INTEGRATION-HANDOFF.md) lists the remaining team decisions and assets.
+
+整合流程已在 macOS、Godot 4.7.2 下检查。Windows 实机、真人相机识别与用户试玩仍待完成。键鼠运行不需要摄像头或 API 密钥。可选相机配置与试运行规则见[流程说明](docs/technical/SHIFT-FLOW.md)，待对接的决策与素材见[对接清单](docs/technical/INTEGRATION-HANDOFF.md)。
+
+| Shared preparation / 整合料理 | Order rating / 订单评分 |
+| --- | --- |
+| ![Integrated preparation](docs/images/shift_preparation.png) | ![Integrated rating](docs/images/shift_rating.png) |
 
 ## Art and interface / 美术与界面
 
@@ -47,19 +55,21 @@ We’ve chosen wood, parchment and brass for the shop’s interface. Shared navi
 
 我们选定了木质、羊皮纸和黄铜的界面风格。导航、订单小票、按钮和装饰边框统一放在 [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) 中，让玩家切换工作区时，始终感觉自己还在同一间店里。
 
-The [order counter high-fidelity prototype](docs/design/ORDER-STATION.md) shows compact order tracking, expandable tickets and the shared controls in context. Its Figma interactions are available to preview; the design has not yet been integrated into Godot.
+The [order counter high-fidelity prototype](docs/design/ORDER-STATION.md) shows compact order tracking, expandable tickets and the shared controls in context. Its Figma interactions remain available to preview. The integrated game reuses the food, hands and shared UI textures; final station-specific layout and animation are still being reconciled.
 
-[点单区高保真原型](docs/design/ORDER-STATION.md)展示紧凑订单栏、可展开小票和公共控件的组合效果，可以在 Figma 中预览交互；设计尚未接入 Godot。
+[点单区高保真原型](docs/design/ORDER-STATION.md)展示紧凑订单栏、可展开小票和公共控件的组合效果，可以在 Figma 中预览交互。整合版已复用食物、手势和公共纹理，各站最终排版与动画仍在对接。
 
 [Design gallery](docs/design/README.md) · [Component guide](docs/design/UI-KIT.md) · [Shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)
 
 [设计展示](docs/design/README.md) · [组件用法](docs/design/UI-KIT.md) · [共享 Figma 文件](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)
 
+[High-fidelity cooking station](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ/forlives--magic_kitchen?node-id=292-7590&t=BEjKqzKKbmWPvlqU-0) / [高保真料理台](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ/forlives--magic_kitchen?node-id=292-7590&t=BEjKqzKKbmWPvlqU-0)
+
 ## Development / 开发
 
-We use Godot and GDScript. Scenes live in `game/scenes/`, runtime art belongs in `game/assets/`, and design files and notes live in `docs/design/`. The workbench brings together four separate scenes. Game files use `snake_case`, and Godot nodes use `PascalCase`; Python development tools stay in their own directories at the repository root. The [engineering guide](docs/technical/ENGINEERING-STANDARDS.md) covers asset placement, scene ownership, Git and checks. The [technical overview](docs/technical/README.md) explains the project structure, and [CONTRIBUTING.md](CONTRIBUTING.md) explains how we work together.
+We use Godot and GDScript. Scenes live in `game/scenes/`, runtime art belongs in `game/assets/`, and design files and notes live in `docs/design/`. The shared shift host owns gameplay state; contributor scenes remain available for independent editing. Game files use `snake_case`, and Godot nodes use `PascalCase`; Python development tools stay in their own directories at the repository root. The [engineering guide](docs/technical/ENGINEERING-STANDARDS.md) covers asset placement, scene ownership, Git and checks. The [technical overview](docs/technical/README.md) explains the project structure, and [CONTRIBUTING.md](CONTRIBUTING.md) explains how we work together.
 
-我们用 Godot 和 GDScript 开发。工作台由四个独立场景组成，场景放在 `game/scenes/`，运行时素材放在 `game/assets/`，设计成果和说明放在 `docs/design/`。游戏文件用 `snake_case`，Godot 节点用 `PascalCase`，Python 开发工具放在仓库根目录的独立目录中。[工程规范](docs/technical/ENGINEERING-STANDARDS.md)说明素材归档、场景分工、Git 与检查方式，[技术总览](docs/technical/README.md)介绍工程结构，[协作说明](CONTRIBUTING.md)记录组内的开发流程。
+我们用 Godot 和 GDScript 开发。统一营业主场景管理玩法状态，各组员独立场景仍可编辑。场景放在 `game/scenes/`，运行时素材放在 `game/assets/`，设计成果和说明放在 `docs/design/`。游戏文件用 `snake_case`，Godot 节点用 `PascalCase`，Python 开发工具放在仓库根目录的独立目录中。[工程规范](docs/technical/ENGINEERING-STANDARDS.md)说明素材归档、场景分工、Git 与检查方式，[技术总览](docs/technical/README.md)介绍工程结构，[协作说明](CONTRIBUTING.md)记录组内的开发流程。
 
 [Project board](https://github.com/orgs/sd5913/projects/23) · [Progress](docs/WEEKLY-PROGRESS.md) · [Credits and AI assistance](CREDITS.md)
 

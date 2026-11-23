@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "trial_values_from_team_flow_pending_confirmation",
+  "source": "docs/design/sources/interaction_flow_six_parts.pdf",
+  "arrival_seconds": 20.0,
+  "patience_seconds": 120.0,
+  "max_orders": 4,
+  "shift_orders": 5,
+  "oven_slots": 2,
+  "cooked_seconds": 12.0,
+  "burnt_seconds": 18.0,
+  "slice_seconds": 1.0,
+  "wrap_seconds": 1.0,
+  "rating_seconds": 3.0,
+  "gesture_stable_seconds": 0.5,
+  "gesture_release_seconds": 0.25,
+  "target_served": 3,
+  "target_average": 70,
+  "roast_scores": {"raw": 40, "cooked": 100, "burnt": 0},
+  "ingredient_actions": ["duck_meat", "hawthorn", "scallion", "cucumber", "sweet_sauce"]
+}

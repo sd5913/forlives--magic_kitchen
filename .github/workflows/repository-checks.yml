@@ -19,7 +19,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          # Ubuntu 26.04 has no setup-python build for the retired 3.9 line.
+          python-version: '3.13'
       - name: Check repository files
         run: python tools/check_repository.py
       - name: Test interaction contract

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/cooking_station/cooking_station_layered.tscn" id="1"]
+
+[node name="CookingStation" instance=ExtResource("1")]

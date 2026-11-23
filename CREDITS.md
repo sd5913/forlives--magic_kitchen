@@ -8,6 +8,12 @@ We’re building the game with [Godot](https://godotengine.org/) and GDScript. T
 
 OpenAI Codex helped us draft and translate documentation, compare interaction references, write repository checks and work on the Python input router, simulation and tests. It also helped build the initial Godot workbench and input feedback. Documentation has also been edited with [Stop Slop](https://github.com/hardikpandya/stop-slop).
 
+Codex also helped build the standalone cooking-station prototype, including placeholder food drawings and interaction logic, using the team's exported UI frames.
+
+The cooking-station redesign uses the reference image embedded in the committed Figma backup (`images/049ea5164cd047abb08c95ffe9a2a5bf5b86517f`) alongside the exported shared UI frames. Codex helped assemble the scene and its interactive overlays. The reference image's creator and permission for runtime use are still to be confirmed.
+
+The 1440 × 900 cooking scene uses an AI-generated background made with OpenAI image generation using that reference, plus rectangular food and gesture crops from the reference. Codex assembled the editable Godot controls. The reference image's creator and permission for runtime use remain to be confirmed.
+
 OpenAI Codex 参与了文档起草与翻译、交互参考比较、仓库检查，以及 Python 输入路由、模拟和测试的编写，也协助制作了 Godot 初版工作台与输入反馈。文档曾使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
 
 For the shared Figma kit, we used Codex to organise reusable controls, separate them from station content, extract decorative frame parts and check layout and resizing. This component pass reused the selected image; it did not generate new illustrations. The current workbench preview runs locally without a generative AI service.
@@ -45,3 +51,16 @@ For the README’s structure, we looked at [SuperTux](https://github.com/SuperTu
 Our [project board](https://github.com/orgs/sd5913/projects/23) was set up by MiaJiao5 using the course’s [Group Project 2026 template](https://github.com/orgs/sd5913/projects/1).
 
 [项目看板](https://github.com/orgs/sd5913/projects/23)由 MiaJiao5 使用课程的 [Group Project 2026 模板](https://github.com/orgs/sd5913/projects/1)建立。
+
+## Order station implementation / 点单实现
+
+The order station uses four AI-generated image assets and a shared-clock prototype built with Codex assistance. See [runtime asset notes](docs/technical/ORDER-ASSETS.md). System fonts are referenced locally, not redistributed. The original workbench, manager, tests and shared-order flow remain in the source history.
+
+点单台使用四份 AI 生成图像，公共计时与订单流程由 Codex 辅助实现，详见[运行素材说明](docs/technical/ORDER-ASSETS.md)。系统字体不随工程分发；原工作台、管理器与测试的历史保留。
+
+
+## Shared shift integration / 统一营业整合
+
+We used Codex to implement the team-supplied six-part flow, reconcile branches, connect shared state and input, add scoring and automated regression checks, and update setup and handoff notes. Existing cooking textures and the archived food/hand PNGs were reused; this integration did not generate new art. The shared camera bridge reuses the cooking contributor's landmark-count function with a separate raw-count transport.
+
+我们使用 Codex 实现组内六部分流程、处理分支冲突、连接共享状态与输入、增加评分和回归检查，并整理环境及对接说明。本轮复用料理纹理和已归档食物手势 PNG，没有生成新美术。统一摄像头桥接复用料理模块的手指计数函数，另行传输原始数字。

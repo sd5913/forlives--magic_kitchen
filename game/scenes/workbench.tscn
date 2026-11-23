@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/mortar.tscn" id="1_mortar"]
 [ext_resource type="PackedScene" path="res://scenes/order_panel.tscn" id="2_orders"]
 
 [ext_resource type="PackedScene" path="res://scenes/ingredient_storage.tscn" id="3_ingredients"]
 [ext_resource type="PackedScene" path="res://scenes/delivery_counter.tscn" id="4_delivery"]
+
+[ext_resource type="Script" path="res://scenes/workbench.gd" id="5_shift"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_worktop"]
 bg_color = Color(0.16, 0.22, 0.21, 1)
@@ -20,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_shift")
 
 [node name="Title" type="Label" parent="."]
 offset_left = 48.0
@@ -32,7 +35,7 @@ offset_left = 48.0
 offset_top = 91.0
 theme_override_colors/font_color = Color(0.7, 0.79, 0.76, 1)
 theme_override_font_sizes/font_size = 18
-text = "Workbench layout"
+text = "Peking duck roll · Playtest"
 
 [node name="Worktop" type="Panel" parent="."]
 offset_left = 48.0
@@ -68,7 +71,10 @@ offset_bottom = 404.0
 
 [node name="ControlsHint" type="Label" parent="."]
 offset_left = 48.0
-offset_top = 459.0
+offset_top = 452.0
+offset_right = 912.0
+offset_bottom = 522.0
+autowrap_mode = 2
 theme_override_colors/font_color = Color(0.7, 0.79, 0.76, 1)
 theme_override_font_sizes/font_size = 16
-text = "Test input with a click, or press Tab then Enter or Space."
+text = "Open the order station and accept a ticket to begin."

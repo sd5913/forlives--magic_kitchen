@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/order_panel.gd" id="1_panel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orders"]
 bg_color = Color(0.22, 0.28, 0.29, 1)
@@ -11,6 +13,7 @@ corner_radius_bottom_right = 12
 offset_right = 266.0
 offset_bottom = 104.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_orders")
+script = ExtResource("1_panel")
 
 [node name="Title" type="Label" parent="."]
 offset_left = 20.0
@@ -18,9 +21,11 @@ offset_top = 20.0
 theme_override_font_sizes/font_size = 25
 text = "Orders"
 
-[node name="Placeholder" type="Label" parent="."]
+[node name="OpenOrders" type="Button" parent="."]
 offset_left = 20.0
 offset_top = 57.0
-theme_override_colors/font_color = Color(0.72, 0.8, 0.78, 1)
-theme_override_font_sizes/font_size = 18
-text = "Order display"
+offset_right = 246.0
+offset_bottom = 93.0
+text = "Open order station"
+
+[connection signal="pressed" from="OpenOrders" to="." method="_on_open_pressed"]
