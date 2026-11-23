@@ -19,6 +19,10 @@ const TRANSITIONS := {
 	"ready_to_serve": ["served"],
 }
 
+var max_active_orders := MAX_ACTIVE_ORDERS
+var max_visible_orders := MAX_VISIBLE_ORDERS
+var allow_multiple_pending := false
+
 var catalog: Dictionary = {}
 var catalog_error := ""
 var selected_order_id := ""
@@ -69,11 +73,11 @@ func load_catalog(path: String = CATALOG_PATH) -> bool:
 
 
 func create_order(recipe_id: String = "") -> Dictionary:
-	if not catalog_error.is_empty() or get_visible_orders().size() >= MAX_VISIBLE_ORDERS:
+	if not catalog_error.is_empty() or get_visible_orders().size() >= max_visible_orders:
 		return {}
 	# One unaccepted guest at a time; accepted orders remain visible.
 	for entry in _orders:
-		if entry["status"] == "pending":
+		if not allow_multiple_pending and entry["status"] == "pending":
 			return {}
 	var recipe: Dictionary = {}
 	if recipe_id.is_empty():
@@ -114,7 +118,7 @@ func create_order(recipe_id: String = "") -> Dictionary:
 
 func accept_order(order_id: String) -> bool:
 	var index := _find_order(order_id)
-	if index < 0 or _orders[index]["status"] != "pending" or get_active_count() >= MAX_ACTIVE_ORDERS:
+	if index < 0 or _orders[index]["status"] != "pending" or get_active_count() >= max_active_orders:
 		return false
 	_orders[index]["status"] = "accepted"
 	_orders[index]["accepted_at_seconds"] = elapsed_seconds
