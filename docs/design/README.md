@@ -24,6 +24,18 @@ The [food and gesture components](FOOD-AND-GESTURES.md) add six food illustratio
 
 ![Food and gesture component sheet](exports/ui-kit/food_gestures.png)
 
+**High-fidelity cooking-station reference / 高保真料理台参考：** [Open Figma node 292-7590](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ/forlives--magic_kitchen?node-id=292-7590&t=BEjKqzKKbmWPvlqU-0)
+
+## High-fidelity cooking steps / 高保真料理步骤
+
+| Step 1 / 第一步 | Step 2 / 第二步 |
+| --- | --- |
+| ![Cooking step 1](../../game/assets/ui/cooking_station/cooking_step_1.png) | ![Cooking step 2](../../game/assets/ui/cooking_station/cooking_step_2.png) |
+
+| Step 3 / 第三步 | Step 4 / 第四步 |
+| --- | --- |
+| ![Cooking step 3](../../game/assets/ui/cooking_station/cooking_step_3.png) | ![Cooking step 4](../../game/assets/ui/cooking_station/cooking_step_4.png) |
+
 ## Four stations / 四个工作区
 
 | Order / 点单 | Roasting / 烤炉 |

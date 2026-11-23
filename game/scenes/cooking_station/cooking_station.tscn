@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://0c8soohes3rn"]
+
+[ext_resource type="Script" uid="uid://ffq4irqylxea" path="res://scenes/cooking_station/cooking_station.gd" id="1"]
+
+my-mcp-server-85a126e4figma[node name="CookingStation" type="Control" unique_id=1300989486]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
