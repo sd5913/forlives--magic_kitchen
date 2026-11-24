@@ -8,8 +8,8 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [node name="DeliveryCounter" type="Panel" unique_id=185892533]
-offset_right = 266.0
-offset_bottom = 104.0
+offset_right = 329.0
+offset_bottom = 116.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
 [node name="Title" type="Label" parent="." unique_id=1172597514]

@@ -6,25 +6,25 @@ signal navigation_requested(station_name: String)
 
 const GestureAdapter = preload("res://scenes/cooking_station/gesture_adapter.gd")
 
-const INGREDIENTS := ["duck", "cucumber", "scallion", "radish", "sauce"]
+const INGREDIENTS := ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 const NAMES := {
 	"duck": "Sliced duck", "cucumber": "Cucumber", "scallion": "Scallion",
-	"radish": "Pickled radish", "sauce": "Sweet bean sauce"
+	"hawthorn": "Hawthorn", "sauce": "Sweet bean sauce"
 }
 const ACTIONS := {
 	"add_duck": "duck", "add_cucumber": "cucumber", "add_scallion": "scallion",
-	"add_radish": "radish", "add_sauce": "sauce"
+	"add_hawthorn": "hawthorn", "add_sauce": "sauce"
 }
 
 var order_id := "01"
-var required: Array[String] = ["duck", "cucumber", "scallion", "sauce"]
+var required: Array[String] = ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 var added: Array[String] = []
 var rolled := false
 var completed := false
 var paused := false
 var held_actions: Dictionary = {}
-var message := "Choose an ingredient to begin."
-var gesture_message := "Gesture: camera bridge not running · click cards or use keys 1–5 / 0"
+var message := "Gesture Status: Waiting for input"
+var gesture_message := "Camera off"
 var view
 var gesture_adapter
 var camera_process_id := -1
@@ -47,6 +47,12 @@ func _build_interface() -> void:
 
 func _add_ingredient(ingredient: String) -> void:
 	if paused or completed or rolled:
+		return
+	if not NAMES.has(ingredient):
+		return
+	if ingredient != "duck" and "duck" not in added:
+		message = "Add sliced duck first."
+		_refresh()
 		return
 	if ingredient in added:
 		message = "%s is already on the wrap." % NAMES[ingredient]
@@ -123,7 +129,7 @@ func receive_action(action: String, active: bool) -> void:
 
 
 func set_gesture_status(status: String) -> void:
-	gesture_message = "Gesture: " + status
+	gesture_message = "Camera off" if status.begins_with("waiting for camera bridge") else status.left(22)
 	if is_node_ready() and view != null:
 		view.update_display()
 
@@ -163,7 +169,7 @@ func set_order(id: String, ingredients: Array[String]) -> void:
 	rolled = false
 	completed = false
 	held_actions.clear()
-	message = "Choose an ingredient to begin."
+	message = "Gesture Status: Waiting for input"
 	if is_node_ready():
 		_refresh()
 
@@ -177,9 +183,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	match event.keycode:
 		KEY_1: _add_ingredient("duck")
-		KEY_2: _add_ingredient("cucumber")
+		KEY_2: _add_ingredient("hawthorn")
 		KEY_3: _add_ingredient("scallion")
-		KEY_4: _add_ingredient("radish")
+		KEY_4: _add_ingredient("cucumber")
 		KEY_5: _add_ingredient("sauce")
 		KEY_0: _roll()
 		KEY_BACKSPACE: _undo()

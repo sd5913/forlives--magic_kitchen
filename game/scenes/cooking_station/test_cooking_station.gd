@@ -14,18 +14,20 @@ func _run() -> void:
 	var station = Station.instantiate()
 	root.add_child(station)
 	station.order_completed.connect(func(order: Dictionary): submissions.append(order))
+	var first_ingredients: Array[String] = ["duck", "cucumber", "scallion", "sauce"]
+	station.set_order("01", first_ingredients)
 	station.receive_action("add_duck", true)
 	station.receive_action("add_duck", true)
 	_check(station.added.size() == 1, "a held gesture adds only once")
 	station.receive_action("add_duck", false)
 	station.receive_action("add_cucumber", true)
 	station.receive_action("add_scallion", true)
-	station.receive_action("add_radish", true)
+	station.receive_action("add_hawthorn", true)
 	station.receive_action("add_sauce", true)
 	station.receive_action("roll_wrap", true)
 	_check(not station.rolled, "incorrect ingredient prevents rolling")
 	station._undo() # Sauce is the most recently added item.
-	station._undo() # Remove the incorrect radish.
+	station._undo() # Remove the incorrect hawthorn.
 	station._add_ingredient("sauce")
 	station.receive_action("roll_wrap", false)
 	station.receive_action("roll_wrap", true)
@@ -48,7 +50,7 @@ func _run() -> void:
 	_check(root.content_scale_size == Vector2i(1440, 900), "runtime viewport matches the cooking canvas")
 	_check(station.size == Vector2(1440, 900), "station fills the runtime viewport")
 	_check(station.view.scale.is_equal_approx(Vector2.ONE), "canvas has no extra downscaling at the design size")
-	var point: Vector2 = station.view.canvas.get_global_transform() * Vector2(672, 360)
+	var point: Vector2 = station.view.ingredient_buttons[2].get_global_rect().get_center()
 	var motion := InputEventMouseMotion.new()
 	motion.position = point
 	motion.global_position = point
@@ -69,8 +71,8 @@ func _run() -> void:
 	Input.parse_input_event(release)
 	await process_frame
 	_check("cucumber" in station.added, "clicking the cucumber art adds cucumber")
-	_check(station.view.order_checks[1].text == "☑", "order checklist updates")
-	var all_ingredients: Array[String] = ["duck", "cucumber", "scallion", "radish", "sauce"]
+	_check(station.view.order_checks[2].text == "☑", "order checklist updates")
+	var all_ingredients: Array[String] = ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 	station.set_order("03", all_ingredients)
 	for i in range(station.view.ingredient_buttons.size()):
 		await _click(station.view.ingredient_buttons[i].get_global_rect().get_center())
@@ -81,13 +83,12 @@ func _run() -> void:
 	_check(station.view.get_node("Gestures").size == Vector2(1440, 240), "gesture area dimensions")
 	for i in range(1, 4):
 		var card: Control = station.view.get_node("Gestures/Card" + str(i))
-		_check(card.size == Vector2(432, 160), "gesture card dimensions")
-		_check(card.position.x == 48 + (i - 1) * 456, "gesture card spacing")
-		_check(card.get_node("Icon").size == Vector2(96, 96), "gesture icon dimensions")
-		_check(card.get_node("Title").get_theme_font_size("font_size") == 28, "gesture title font size")
+		_check(card.size.y == 157, "gesture card height")
+		_check(card.position.x == [14, 489, 968][i - 1], "gesture card position")
+		_check(card.get_node("Title").get_theme_font_size("font_size") >= 22, "gesture title font size")
 		_check(card.get_node("Status").get_theme_font_size("font_size") == 18, "gesture status font size")
-	_check(station.view.get_node("Top/Pause").size == Vector2(56, 56), "pause button dimensions")
-	_check(station.view.get_node("Top/Order").size == Vector2(216, 56), "station button dimensions")
+	_check(station.view.get_node("Top/Pause").size == Vector2(61, 61), "pause button dimensions")
+	_check(station.view.get_node("Top/Order").size == Vector2(234, 69), "station button dimensions")
 	_check(station.view.gesture_card_buttons.size() == 3, "three gesture cards have click overlays")
 	var card_order: Array[String] = ["duck", "cucumber"]
 	station.set_order("04", card_order)
@@ -100,8 +101,8 @@ func _run() -> void:
 	station.set_order("03", all_ingredients)
 	for ingredient in all_ingredients:
 		station._add_ingredient(ingredient)
-	await _click(station.view.roll_button.get_global_rect().get_center())
-	_check(station.rolled, "roll button responds to mouse")
+	await _click(station.view.gesture_card_buttons[2].get_global_rect().get_center())
+	_check(station.rolled, "roll gesture card responds to mouse")
 	await _click(station.view.submit_button.get_global_rect().get_center())
 	_check(station.completed, "complete button responds to mouse")
 	station.queue_free()

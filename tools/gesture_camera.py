@@ -21,9 +21,9 @@ NO_HAND_RELEASE_FRAMES = 5
 ACTIONS = {
     0: ("roll_wrap", "fist · roll wrap"),
     1: ("add_duck", "1 finger · sliced duck"),
-    2: ("add_cucumber", "2 fingers · cucumber"),
+    2: ("add_hawthorn", "2 fingers · hawthorn"),
     3: ("add_scallion", "3 fingers · scallion"),
-    4: ("add_radish", "4 fingers · pickled radish"),
+    4: ("add_cucumber", "4 fingers · cucumber"),
     5: ("add_sauce", "5 fingers · sweet bean sauce"),
 }
 
