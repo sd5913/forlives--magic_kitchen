@@ -1,6 +1,7 @@
 extends Control
 ## Shared station shell; original contributor scenes remain independently editable.
 const Session = preload("res://scenes/shift/shift_session.gd")
+const ApprovedOrderView = preload("res://scenes/shift/approved_order_view.gd")
 const Receiver = preload("res://scenes/shift/gesture_receiver.gd")
 const DESIGN_SIZE := Vector2(1440, 900)
 const INK := Color("542c14")
@@ -12,11 +13,14 @@ var receiver := Receiver.new()
 var language := "en"
 var _canvas: Control
 var _body: Control
+var _order_view: Control
 var _font := SystemFont.new()
 var _textures: Dictionary = {}
 var _dirty := true
 var _refresh_elapsed := 0.0
-var _popup: PopupPanel
+var _popup: PanelContainer
+var _popup_scrim: ColorRect
+var _popup_clocks: Dictionary = {}
 var _key_holds: Dictionary = {}
 var _camera_line: Label
 var _last_signature := ""
@@ -36,7 +40,7 @@ func _ready() -> void:
 	add_child(receiver)
 	receiver.gate.stable_seconds = float(session.rules.gesture_stable_seconds)
 	receiver.gate.release_seconds = float(session.rules.gesture_release_seconds)
-	receiver.gesture_triggered.connect(func(number): session.perform_action(number))
+	receiver.gesture_triggered.connect(_receive_gesture)
 	receiver.status_changed.connect(func(_status): _dirty = true)
 	session.changed.connect(func(): _dirty = true)
 	_canvas = Control.new()
@@ -62,19 +66,32 @@ func _load_art() -> void:
 func _fit() -> void:
 	if not is_instance_valid(_canvas):
 		return
-	var factor := minf(size.x / DESIGN_SIZE.x, size.y / DESIGN_SIZE.y)
+	var design_size := _canvas.size
+	var factor := minf(size.x / design_size.x, size.y / design_size.y)
 	_canvas.scale = Vector2.ONE * factor
-	_canvas.position = (size - DESIGN_SIZE * factor) / 2.0
+	_canvas.position = (size - design_size * factor) / 2.0
+	if is_instance_valid(_popup):
+		_popup.scale = Vector2.ONE * factor
+		_popup.position = (size - _popup.size * factor) / 2.0
 
 
 func _process(delta: float) -> void:
 	session.advance_time(delta)
-	receiver.enabled = session.can_interact()
+	receiver.enabled = session.can_interact() and not _popup_open()
 	_refresh_timers()
 	if _dirty and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if _view_signature() != _last_signature:
 			_refresh()
 		_dirty = false
+
+
+func _popup_open() -> bool:
+	return (is_instance_valid(_popup) and _popup.visible) or (is_instance_valid(_order_view) and _order_view.overlay_open())
+
+
+func _receive_gesture(number: int) -> void:
+	if not _popup_open():
+		session.perform_action(number)
 
 
 func _view_signature() -> String:
@@ -88,6 +105,14 @@ func _view_signature() -> String:
 
 
 func _refresh_timers() -> void:
+	if is_instance_valid(_order_view):
+		_order_view.refresh_times()
+	for id in _popup_clocks:
+		var order := session.manager.get_order(id)
+		if not order.is_empty():
+			var button: Button = _popup_clocks[id]
+			button.text = "%s · %s · %ds · %s" % [id, order.recipe_name[language], ceili(order.remaining_seconds), _status(order.status)]
+			button.disabled = order.status in ["served", "expired"] or not session.can_interact()
 	for id in _rail_clocks:
 		var order := session.manager.get_order(id)
 		if not order.is_empty() and is_instance_valid(_rail_clocks[id]):
@@ -140,12 +165,20 @@ func _input(event: InputEvent) -> void:
 	if not event.pressed:
 		_key_holds.erase(key)
 		return
+	if _popup_open():
+		if key == KEY_ESCAPE:
+			if session.paused:
+				_pause()
+			else:
+				_close_popup()
+			get_viewport().set_input_as_handled()
+		return
 	if event.echo or _key_holds.has(key):
 		return
 	_key_holds[key] = true
 	if key == KEY_ESCAPE:
-		if is_instance_valid(_popup) and _popup.visible:
-			_popup.hide()
+		if _popup_open():
+			_close_popup()
 		else:
 			_pause()
 	elif key >= KEY_1 and key <= KEY_5:
@@ -160,6 +193,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _refresh() -> void:
+	var overlay_mode: String = _order_view._overlay_mode if is_instance_valid(_order_view) else ""
+	_order_view = null
 	_dirty = false
 	_last_signature = _view_signature()
 	_rail_clocks.clear()
@@ -169,6 +204,16 @@ func _refresh() -> void:
 	for child in _canvas.get_children():
 		_canvas.remove_child(child)
 		child.queue_free()
+	_canvas.size = DESIGN_SIZE
+	if session.station == "order" and session.rating.is_empty() and not session.summary_visible:
+		_canvas.size = ApprovedOrderView.CANVAS_SIZE
+		_order_view = ApprovedOrderView.new()
+		_canvas.add_child(_order_view)
+		_order_view.initialize(self)
+		if overlay_mode in ["all", "detail"] and not session.paused:
+			_order_view.show_overlay(overlay_mode)
+		_fit()
+		return
 	_picture(_canvas, _textures.kitchen_background, Rect2(0, 0, 1440, 900), false)
 	var shade := ColorRect.new()
 	shade.color = Color(0.12, 0.06, 0.02, 0.46)
@@ -210,8 +255,8 @@ func _build_rail() -> void:
 			continue
 		var order: Dictionary = orders[i]
 		var button := _button(_canvas, "", rect, func(): _select(order.order_id), not session.can_interact(), order.order_id == session.manager.selected_order_id)
-		_label(button, "%s · %s" % [order.order_id, order.customer_name[language]], Rect2(16, 8, 236, 30), 20, PAPER if order.order_id == session.manager.selected_order_id else INK)
-		_rail_clocks[order.order_id] = _label(button, "%s · %ds" % [_status(order.status), ceili(order.remaining_seconds)], Rect2(16, 42, 236, 27), 16, PAPER if order.order_id == session.manager.selected_order_id else INK)
+		_label(button, "%s · %s" % [order.order_id, order.customer_name[language]], Rect2(16, 8, 236, 30), 20, PAPER if session.can_interact() and order.order_id == session.manager.selected_order_id else INK)
+		_rail_clocks[order.order_id] = _label(button, "%s · %ds" % [_status(order.status), ceili(order.remaining_seconds)], Rect2(16, 42, 236, 27), 16, PAPER if session.can_interact() and order.order_id == session.manager.selected_order_id else INK)
 	_button(_canvas, _t("All tickets", "全部订单"), Rect2(1156, 116, 260, 38), _show_orders, not session.can_interact())
 	_button(_canvas, _t("Camera", "摄像头"), Rect2(1156, 164, 260, 36), receiver.toggle_camera)
 
@@ -311,7 +356,7 @@ func _build_station() -> void:
 					var card := _button(_canvas, "", Rect2(414 + i * 196, 310, 180, 180), func(): session.perform_action(i + 1), not session.action_available(i + 1), ingredient in added)
 					_picture(card, _textures[ingredient], Rect2(22, 10, 136, 112))
 					_label(card, "%d · %s" % [i + 1, session.manager.catalog.ingredients[ingredient][language]], Rect2(8, 120, 164, 54), 15)
-			_label(_canvas, _t("Added: ", "已加入：") + str(added.size()) + _t(" / 5 · click a checked side on the ticket to remove it", " / 5 · 点击小票已勾选的配菜可移除"), Rect2(424, 510, 940, 35), 20)
+			_label(_canvas, _recipe_progress_text(), Rect2(424, 510, 940, 35), 20)
 			_label(_canvas, _t("Stage: ", "状态：") + str(entry.get("stage", "waiting")).replace("_", " "), Rect2(424, 555, 500, 36), 22)
 			_button(_canvas, _t("Complete order", "完成订单"), Rect2(1004, 578, 355, 54), session.serve_current, not session.can_interact() or entry.get("stage") != "ready", true)
 
@@ -382,43 +427,128 @@ func _confirm_restart() -> void:
 
 
 func _show_orders() -> void:
-	_show_popup(true)
+	if session.station == "order" and is_instance_valid(_order_view):
+		_order_view.show_overlay("all")
+	else:
+		_show_popup(true)
 
 
 func _show_details() -> void:
-	_show_popup(false)
+	if session.station == "order" and is_instance_valid(_order_view):
+		_order_view.show_overlay("detail")
+	else:
+		_show_popup(false)
+
+
+func _close_popup() -> void:
+	if is_instance_valid(_order_view):
+		_order_view.close_overlay()
+	if is_instance_valid(_popup):
+		_popup.hide()
+	if is_instance_valid(_popup_scrim):
+		_popup_scrim.hide()
+	_popup_clocks.clear()
+	receiver.invalidate()
+	_key_holds.clear()
 
 
 func _show_popup(all_orders: bool) -> void:
+	if not session.can_interact():
+		return
 	if is_instance_valid(_popup):
 		_popup.queue_free()
-	_popup = PopupPanel.new()
+	if is_instance_valid(_popup_scrim):
+		_popup_scrim.queue_free()
+	_popup_clocks.clear()
+	# In-scene overlay: a native PopupPanel steals the window focus and pauses the shift.
+	_popup_scrim = ColorRect.new()
+	_popup_scrim.color = Color(0.08, 0.04, 0.02, 0.72)
+	_popup_scrim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(_popup_scrim)
+	_popup = PanelContainer.new()
+	_popup.size = Vector2(1000, 650 if all_orders else 340)
+	_popup.add_theme_stylebox_override("panel", _style("parchment_panel"))
 	add_child(_popup)
+	var margin := MarginContainer.new()
+	for side in ["left", "right", "top", "bottom"]:
+		margin.add_theme_constant_override("margin_" + side, 30)
+	_popup.add_child(margin)
+	var layout := VBoxContainer.new()
+	layout.add_theme_constant_override("separation", 16)
+	margin.add_child(layout)
+	var title := Label.new()
+	title.text = _t("All tickets", "全部订单") if all_orders else _t("Ticket details", "订单详情")
+	title.add_theme_font_override("font", _font)
+	title.add_theme_font_size_override("font_size", 28)
+	title.add_theme_color_override("font_color", INK)
+	layout.add_child(title)
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	layout.add_child(scroll)
 	var list := VBoxContainer.new()
-	list.add_theme_constant_override("separation", 12)
-	_popup.add_child(list)
+	list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	list.add_theme_constant_override("separation", 14)
+	scroll.add_child(list)
 	var orders := session.manager.get_visible_orders() if all_orders else [session.manager.get_order(session.manager.selected_order_id)]
 	for order in orders:
 		if order.is_empty():
 			continue
 		var button := Button.new()
-		button.text = "%s · %s · %ds" % [order.order_id, order.recipe_name[language], ceili(order.remaining_seconds)]
-		button.custom_minimum_size = Vector2(640, 50)
-		button.pressed.connect(func(): _select(order.order_id); _popup.hide())
+		button.custom_minimum_size = Vector2(880, 52)
+		button.add_theme_font_override("font", _font)
+		button.add_theme_font_size_override("font_size", 21)
+		for state in ["normal", "hover", "pressed", "disabled"]:
+			button.add_theme_stylebox_override(state, _style("navigation_paper_frame"))
+		button.add_theme_color_override("font_color", INK)
+		button.add_theme_color_override("font_hover_color", INK)
+		button.add_theme_color_override("font_pressed_color", INK)
+		button.pressed.connect(func(): _select(order.order_id); _close_popup())
 		list.add_child(button)
+		_popup_clocks[order.order_id] = button
 		var text := Label.new()
 		text.add_theme_font_override("font", _font)
 		text.add_theme_font_size_override("font_size", 20)
+		text.add_theme_color_override("font_color", INK)
+		text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		text.text = order.special_request[language] + "\n"
 		for item in order.ingredients:
 			text.text += "%s ×%d   " % [session.manager.catalog.ingredients[item.id][language], int(item.quantity)]
-		text.text += "\n" + _status(order.status)
 		list.add_child(text)
 	var close := Button.new()
 	close.text = _t("Close · timers keep running", "关闭 · 计时仍在继续")
-	close.pressed.connect(_popup.hide)
-	list.add_child(close)
-	_popup.popup_centered(Vector2i(710, 500 if all_orders else 220))
+	close.custom_minimum_size.y = 52
+	close.add_theme_font_override("font", _font)
+	close.add_theme_font_size_override("font_size", 21)
+	close.add_theme_color_override("font_color", INK)
+	close.add_theme_color_override("font_hover_color", INK)
+	close.add_theme_color_override("font_pressed_color", INK)
+	for state in ["normal", "hover", "pressed"]:
+		close.add_theme_stylebox_override(state, _style("navigation_paper_frame"))
+	close.pressed.connect(_close_popup)
+	layout.add_child(close)
+	receiver.invalidate()
+	_key_holds.clear()
+	_fit()
+	_refresh_timers()
+	close.grab_focus()
+
+
+func _recipe_progress_text() -> String:
+	var order := session.manager.get_order(session.manager.selected_order_id)
+	var added: Array = session.current_food().get("ingredients", [])
+	var required: Array = []
+	for item in order.get("ingredients", []):
+		if item.id != "wrapper":
+			required.append(item.id)
+	var matched := 0
+	var extra := 0
+	for ingredient in added:
+		if ingredient in required:
+			matched += 1
+		else:
+			extra += 1
+	return _t("Recipe: %d / %d · Extra: %d · click a checked side to remove it", "配方完成：%d / %d · 多加：%d · 点击已勾选配菜可移除") % [matched, required.size(), extra]
 
 
 func _style(texture: String) -> StyleBoxTexture:

@@ -49,15 +49,21 @@ The integrated flow has been checked on macOS with Godot 4.7.2. Windows gameplay
 | --- | --- |
 | ![Integrated preparation](docs/images/shift_preparation.png) | ![Integrated rating](docs/images/shift_rating.png) |
 
+The playable counter now uses our approved green-clothed customer design. Tickets, confirmation, the order list and pause controls are interactive, with the same order carried into roasting and preparation.
+
+点单台现在使用已定稿的绿衣顾客界面。小票、接单、全部订单与暂停均可操作，同一张订单会继续流转到烤炉和料理台。
+
+![Playable order counter](docs/images/approved_order_initial.png)
+
 ## Art and interface / 美术与界面
 
 We’ve chosen wood, parchment and brass for the shop’s interface. Shared navigation, order tickets, buttons and decorative frames live in one [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119), so the stations can feel like parts of the same kitchen.
 
 我们选定了木质、羊皮纸和黄铜的界面风格。导航、订单小票、按钮和装饰边框统一放在 [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) 中，让玩家切换工作区时，始终感觉自己还在同一间店里。
 
-The [order counter high-fidelity prototype](docs/design/ORDER-STATION.md) shows compact order tracking, expandable tickets and the shared controls in context. Its Figma interactions remain available to preview. The integrated game reuses the food, hands and shared UI textures; final station-specific layout and animation are still being reconciled.
+The [order counter high-fidelity prototype](docs/design/ORDER-STATION.md) shows compact order tracking, expandable tickets and the shared controls in context. Its Figma interactions remain available to preview. The playable order counter follows that design, including its ticket and pause overlays. Final roasting, preparation and serving layouts and animation remain in the team handoff.
 
-[点单区高保真原型](docs/design/ORDER-STATION.md)展示紧凑订单栏、可展开小票和公共控件的组合效果，可以在 Figma 中预览交互。整合版已复用食物、手势和公共纹理，各站最终排版与动画仍在对接。
+[点单区高保真原型](docs/design/ORDER-STATION.md)展示紧凑订单栏、可展开小票和公共控件的组合效果，可以在 Figma 中预览交互。可玩点单台已按这份设计接入，包含小票和暂停弹层；烤炉、料理与交付的最终排版和动画仍在对接。
 
 [Design gallery](docs/design/README.md) · [Component guide](docs/design/UI-KIT.md) · [Shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)
 

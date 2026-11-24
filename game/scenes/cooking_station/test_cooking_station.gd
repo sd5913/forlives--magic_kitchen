@@ -10,6 +10,8 @@ func _initialize() -> void:
 
 
 func _run() -> void:
+	# This contributor scene has its own canvas, independent of the default counter.
+	root.content_scale_size = Vector2i(1440, 900)
 	root.size = Vector2i(1440, 900)
 	var station = Station.instantiate()
 	root.add_child(station)

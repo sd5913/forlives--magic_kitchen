@@ -15,12 +15,30 @@ func _run() -> void:
 	game.receiver.set_process(false)
 	root.focus_exited.disconnect(game._on_focus_lost)
 	await capture("order")
-	await click_caption("Accept order")
+	game._order_view.buttons.accept.pressed.emit()
 	assert(game.session.manager.get_order(game.session.manager.selected_order_id).status == "accepted")
-	await click_caption("Roast")
+	game._order_view.buttons.nav_roast.pressed.emit()
+	game._refresh()
 	assert(game.session.station == "roast")
 	game.session.perform_action(1)
-	game.session.advance_time(12.0)
+	game._show_orders()
+	await process_frame
+	assert(game._popup is PanelContainer and not game._popup is Window, "ticket overlay stays in the game window")
+	assert(not game.session.paused, "ticket overlay does not pause")
+	var overlay_start: float = game.session.manager.elapsed_seconds
+	game._process(1.0)
+	assert(game.session.manager.elapsed_seconds > overlay_start, "ticket overlay keeps shared clock running")
+	var overlay_key := InputEventKey.new()
+	overlay_key.keycode = KEY_2
+	overlay_key.pressed = true
+	game._input(overlay_key)
+	assert(game.session.current_food().stage == "roasting", "overlay blocks background gameplay keys")
+	game._receive_gesture(2)
+	assert(game.session.current_food().stage == "roasting", "overlay blocks background camera actions")
+	await capture("all_tickets")
+	game._close_popup()
+	assert(not game._popup_open() and not game.session.paused, "closing tickets preserves running state")
+	game.session.advance_time(11.0)
 	assert(game.session.station == "roast" and game.session.current_food().stage == "roasting")
 	await capture("roast")
 	game.session.perform_action(2)
@@ -29,10 +47,15 @@ func _run() -> void:
 	game.session.navigate("prepare")
 	game.session.perform_action(1)
 	assert(game.session.station == "prepare" and game.session.current_food().stage == "preparing")
+	assert(game._recipe_progress_text().begins_with("Recipe: 1 / 4 · Extra: 0"), "progress uses selected recipe")
+	game.session.perform_action(2)
+	assert(game._recipe_progress_text().begins_with("Recipe: 1 / 4 · Extra: 1"), "extra garnish is not mistaken for required progress")
+	game.session.remove_ingredient("hawthorn")
 	await capture("prepare")
 	game.session.perform_action(3)
 	game.session.perform_action(4)
 	game.session.perform_action(5)
+	assert(game._recipe_progress_text().begins_with("Recipe: 4 / 4 · Extra: 0"), "correct classic recipe reports complete")
 	game.session.perform_action(0)
 	game.session.advance_time(1.0)
 	game.session.serve_current()
@@ -57,7 +80,7 @@ func _run() -> void:
 		failures += 1
 	game.queue_free()
 	await process_frame
-	print("Shared shift UI: seven rendered states; %d failures" % failures)
+	print("Shared shift UI: eight rendered states; %d failures" % failures)
 	quit(0 if failures == 0 else 1)
 
 
