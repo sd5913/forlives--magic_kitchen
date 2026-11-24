@@ -46,6 +46,12 @@ The baseline uses a 960 × 540 reference viewport. Ingredients sit on the left, 
 
 I propose these assignments for the team to confirm. Contributors edit their subscenes in separate branches. I adjust instance positions in the workbench. Changes to a zone's footprint or to shared project settings go through the workbench owner.
 
+## Serve and score integration / 出餐评分整合
+
+See the [scoring integration notes](SERVE-SCORE-INTEGRATION.md) for Sybil's scoring design, the current program mapping, contribution attribution and unresolved demo differences.
+
+[评分整合说明](SERVE-SCORE-INTEGRATION.md)记录 Sybil 的评分设计、当前程序对应关系、协作分工与待对齐的演示差异。
+
 ## Engineering standards
 
 Use the [engineering standards](ENGINEERING-STANDARDS.md) for directory layout, naming, Godot metadata, Git and verification.
