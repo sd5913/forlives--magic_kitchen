@@ -4,6 +4,10 @@ Take orders, watch the roast and roll each duck wrap the way the customer likes 
 
 记住顾客的要求，照看炉里的烤鸭，再把配菜卷进饼里。我们想做一款忙碌又有烟火气的 2D 经营游戏：灵感来自《老爹汉堡店》，场景是一间暖色调的北京烤鸭小店。
 
+We’re designing it for players who enjoy short cooking and time-management sessions. Read a customer's ticket, divide attention between stations, and use the result to improve the next wrap. Mouse and keyboard provide a complete way to play; camera gestures are an optional input under development.
+
+我们面向喜欢短局料理和时间管理游戏的玩家：读懂顾客要求，在几个工作区之间安排顺序，再根据评分调整下一单。鼠标和键盘可以完成整轮营业，摄像头手势作为可选输入继续开发。
+
 ## A shift in the kitchen / 小店的一轮营业
 
 The game moves between four stations: take an order at the counter, roast the duck, assemble the wrap and serve it for a rating. Several customers may be waiting at once, so choosing what to do next matters as much as getting a single dish right. We’re exploring hand gestures for roasting and preparation, alongside mouse controls for orders.
@@ -41,9 +45,9 @@ Two oven slots and up to four active tickets share one clock. Switching stations
 
 两个炉位和最多四张活动订单共享时间。切换保留进度，**Esc** 暂停；失焦后手动继续。卷制前可移除误加配菜，配错的卷仍可评分交付，让一次失误成为营业中的一部分。
 
-The integrated flow has been checked on macOS with Godot 4.7.2. Windows gameplay, real-camera accuracy and a human playtest remain pending. Keyboard and mouse need no camera or API key. Optional camera setup and the trial rule values are in the [flow guide](docs/technical/SHIFT-FLOW.md); [integration handoff](docs/technical/INTEGRATION-HANDOFF.md) lists the remaining team decisions and assets.
+The integrated flow has been checked on macOS with Godot 4.7.2. Windows gameplay and live-camera verification of the current integrated version remain pending. Earlier teammate feedback and two tutor showings are recorded from team recollection in the [feedback notes](docs/assessment/FEEDBACK-AND-CHANGES.md); original dates and versions still need confirmation. Keyboard and mouse need no camera or API key. Optional camera setup and the trial rule values are in the [flow guide](docs/technical/SHIFT-FLOW.md); [integration handoff](docs/technical/INTEGRATION-HANDOFF.md) lists the remaining team decisions and assets.
 
-整合流程已在 macOS、Godot 4.7.2 下检查。Windows 实机、真人相机识别与用户试玩仍待完成。键鼠运行不需要摄像头或 API 密钥。可选相机配置与试运行规则见[流程说明](docs/technical/SHIFT-FLOW.md)，待对接的决策与素材见[对接清单](docs/technical/INTEGRATION-HANDOFF.md)。
+整合流程已在 macOS、Godot 4.7.2 下检查。当前整合版的 Windows 实机和真人相机识别仍待验证。此前同学反馈、两次 tutor 展示已根据组内回忆写入[反馈记录](docs/assessment/FEEDBACK-AND-CHANGES.md)，原日期与版本待补。键鼠运行不需要摄像头或 API 密钥。可选相机配置与试运行规则见[流程说明](docs/technical/SHIFT-FLOW.md)，待对接的决策与素材见[对接清单](docs/technical/INTEGRATION-HANDOFF.md)。
 
 | Shared preparation / 整合料理 | Order rating / 订单评分 |
 | --- | --- |

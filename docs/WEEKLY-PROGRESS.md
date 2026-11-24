@@ -139,7 +139,7 @@ Goal: bring observations from another person trying the experience and choose an
 
 Goal: test a runnable build, deployment or installation setup on the chosen platform.
 
-- Owners / build or deployment / reproduction checks: pending
+- Candidate: keyboard/mouse shared shift and approved order counter; PR #10–#12 integrated. Local project pack requires Godot 4.7.2. See [delivery check](assessment/READINESS-2026-11-25.md); fresh-machine reproduction and final asset rights are pending.
 - Tutor feedback, remaining blockers and next goal: pending review
 
 ## Class week of 3 December 2026: final tutor delivery review
@@ -154,7 +154,7 @@ Goal: rehearse the experience, check setup/access/credits and identify final fix
 This is the final Canvas deadline, not a tutor meeting.
 
 - Final repository and README access: not yet checked for submission
-- Runnable delivery and instructions: pending implementation
+- Source-import route and local project pack exist; final release/platform reproduction and asset rights remain pending.
 - Credits, weekly evidence and team contributions: keep updated
 - Canvas group submission: not yet verified
 
@@ -198,3 +198,17 @@ I ran one order through acceptance, roasting, slicing, preparation, rolling, sco
 The run exposed a layout defect in the generic ticket overlay: the detail branch inferred an incompatible typed array and stopped before adding its content. I fixed the array type, added explicit content space and deferred centering, plus checks for visible recipe content, the close button and viewport bounds in both detail and list overlays.
 
 本次发现通用小票详情分支的数组类型不匹配，导致内容生成中断。已修正类型、补内容空间并在布局后居中，同时检查详情和列表的内容、关闭按钮及窗口边界。
+
+## 25 November 2026 / 2026 年 11 月 25 日
+
+I checked the course brief and Week 8 guide against the repository. All four teammates have Admin permission; repository and board permissions remain separate. PR #12's checks passed and its ticket-detail fix is now on main. I made the README audience explicit, separated current progress from older snapshots, and prepared the [delivery checklist](assessment/READINESS-2026-11-25.md).
+
+我对照课程要求和 Week 8 说明核对仓库，四位成员均有 Admin；看板权限另核。PR #12 检查通过，小票详情修复已合入主线。README 补明确受众，旧快照与现状分开，并整理[交付核对](assessment/READINESS-2026-11-25.md)。
+
+I supplied my recollection of a classmate's cross-screen gesture feedback and the interaction revision, plus two tutor showings (low-fi and playable). The low-fi advice was to continue; the playable-review comments and original dates are not reliably recalled. The [feedback record](assessment/FEEDBACK-AND-CHANGES.md) labels the account and the later code evidence separately. This records prior events today; it does not assign them today's event date. The group Canvas URL is not submitted yet.
+
+我补充了同学提出跨界面手势冲突、随后修改隔离，以及两次 tutor 展示（低保真、试玩）的回忆。低保真建议继续，试玩评价和原日期记不清。[反馈记录](assessment/FEEDBACK-AND-CHANGES.md)区分转述经历与后来的代码证据。今天补录不代表事件发生在今天。小组 Canvas 链接尚未提交。
+
+For the next review, I want to check whether players understand gesture meaning after a station switch, then confirm one agreed rule set. This is a proposed review question, not a fabricated past tutor comment. Live-camera retesting, original meeting notes, final module visuals, reference-art permissions and instructor board access remain open.
+
+下一次 review 拟检查换站后手势含义是否可预判，再统一规则；这是待讨论问题，不是补写旧评价。真人相机复测、原会议记录、最终模块视觉、参考图许可与老师看板可见性仍需补齐。
