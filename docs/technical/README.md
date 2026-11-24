@@ -1,5 +1,10 @@
 # Technical module
 
+Current playable entry: `game/scenes/shift/shift_game.tscn`. See the [shared shift guide](SHIFT-FLOW.md) and [approved order UI integration](ORDER-UI-INTEGRATION.md). The workbench discussion below records the earlier foundation and is not the current launch guide.
+
+当前可玩入口为 `game/scenes/shift/shift_game.tscn`，见[统一营业说明](SHIFT-FLOW.md)和[定稿点单接入](ORDER-UI-INTEGRATION.md)。下文工作台内容保留早期基础架构记录，运行请使用当前入口。
+
+
 **14 November update:** GDD v1.0 now specifies Peking duck rolls. NEKO / JIN Minyi confirmed responsibility for ordering. The earlier ownership table below was a proposal for the herbal-workbench scaffold; it does not override this confirmed module assignment. See [order-station implementation and interface](ORDER-STATION.md). The original workbench geometry and other contributors' subscenes are preserved.
 
 I chose **Godot 4.7.2 Standard, GDScript and Compatibility rendering** for the Windows and macOS versions of Magic Kitchen. Godot is the engine; GDScript is the game scripting language. Go is not part of the stack. The [engine decision](../ENGINE-DECISION.md) records the pinned version and links to the official download.

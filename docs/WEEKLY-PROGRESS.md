@@ -174,3 +174,17 @@ Resolved archive/start-scene conflicts while preserving the order, cooking, serv
 Actual macOS/Godot 4.7.2 checks: seven game suites passed; new flow 67 and UDP 9 checks; existing order manager 38, order UI 378 and legacy shift 27 checks, plus cooking regression. Seven integrated screens were rendered and inspected. Six Python input tests and repository checks passed. The camera environment initialized its model and processed a blank frame. A project pack exported and launched. No human playtest, live-camera gesture result, Windows gameplay or tutor feedback is claimed.
 
 实际验证平台为 macOS、Godot 4.7.2：七组游戏检查通过；新流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项及料理回归通过。七种整合画面已渲染检查，Python 六项输入测试和仓库检查通过。相机环境完成模型初始化和空白帧处理；资源包已导出启动。未据此声称真人试玩、摄像头手势效果、Windows 玩法或教师审查通过。
+
+## 24 November 2026 / 2026 年 11 月 24 日
+
+I connected our approved green-clothed customer counter to the shared shift, replacing the temporary integration layout for ordering. The original illustration, font, frames and icons are reused. Accepting, compact tickets, expanded recipes, all orders and pause now operate on the existing shared session. Roasting and preparation keep their current layouts.
+
+我把定稿的绿衣顾客点单台接入统一营业，替换点单环节的临时整合排版。复用原插画、字体、边框与图标，接单、紧凑订单、展开展示、全部订单和暂停均连接已有共享状态；烤炉和料理保留当前布局。
+
+I fixed two issues found during the integration run: opening a ticket must not steal window focus and pause the shift; preparation progress must count the selected recipe's requirements instead of always showing five ingredients. Overlays now block background keyboard and gesture actions.
+
+我修复了整合试玩中发现的两处问题：查看订单不应因弹窗抢焦点而暂停营业；配料进度应按当前配方计算，不能固定显示五种。弹层打开时也会阻止底层键盘与手势操作。
+
+On macOS / Godot 4.7.2, all eight game suites passed. Eight counter states were rendered, with 28 assertions including saved images. I also used the running window to accept an order, open its details and the order list, switch to roasting and return, then pause. These are assistant-operated checks, not another person's playtest. Windows gameplay, live-camera recognition and tutor review are still pending.
+
+在 macOS / Godot 4.7.2 下，八组游戏检查通过。点单八种状态实际渲染，包含图片保存共 28 项断言通过；也在运行窗口实际点击接单、查看小票和列表、切到烤炉再返回并暂停。这些是助手操作检查，不是其他同学试玩；Windows 玩法、真人摄像头识别和教师审查仍待完成。

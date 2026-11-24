@@ -64,3 +64,13 @@ The order station uses four AI-generated image assets and a shared-clock prototy
 We used Codex to implement the team-supplied six-part flow, reconcile branches, connect shared state and input, add scoring and automated regression checks, and update setup and handoff notes. Existing cooking textures and the archived food/hand PNGs were reused; this integration did not generate new art. The shared camera bridge reuses the cooking contributor's landmark-count function with a separate raw-count transport.
 
 我们使用 Codex 实现组内六部分流程、处理分支冲突、连接共享状态与输入、增加评分和回归检查，并整理环境及对接说明。本轮复用料理纹理和已归档食物手势 PNG，没有生成新美术。统一摄像头桥接复用料理模块的手指计数函数，另行传输原始数字。
+
+## Approved order counter / 定稿点单界面
+
+Codex assisted with porting our approved Figma counter (`217:1122`) and its detail, all-orders and pause states into editable Godot controls. The existing customer illustration, shared texture atlas, food atlas and SVG icons were reused; this pass generated no new artwork. Layout regions and asset paths are recorded in `game/data/approved_order_layout.json` and the [integration notes](docs/technical/ORDER-UI-INTEGRATION.md).
+
+Codex 协助将已定稿的 Figma 点单台（`217:1122`）及详情、全部订单和暂停状态接入可编辑的 Godot 控件。本轮复用已有顾客插画、公共纹理图集、食物图集与 SVG 图标，没有新生成美术。布局区域与素材路径记录在 `game/data/approved_order_layout.json` 和[接入说明](docs/technical/ORDER-UI-INTEGRATION.md)中。
+
+Bree Serif Regular is distributed under the SIL Open Font License 1.1. The font and its original copyright and license notice are included in `game/assets/fonts/`. Source: [Google Fonts / Bree Serif](https://github.com/google/fonts/tree/main/ofl/breeserif).
+
+Bree Serif Regular 按 SIL Open Font License 1.1 分发，字体及原版权和许可声明保存在 `game/assets/fonts/`。来源：[Google Fonts / Bree Serif](https://github.com/google/fonts/tree/main/ofl/breeserif)。

@@ -72,10 +72,16 @@ python3 -m unittest discover -s tests -v
 python3 tools/run_game_checks.py --godot /path/to/Godot
 ```
 
-Verified on macOS with Godot 4.7.2: all seven game suites passed, including 67 new flow checks and 9 UDP checks; the existing manager (38), order UI (378), legacy shift (27) and cooking checks still pass. Seven integrated screen states were rendered and inspected. The camera environment imported OpenCV 4.11.0 and MediaPipe 0.10.21 and initialized the hand model against a blank frame. A project pack exported and launched successfully.
+Verified on macOS with Godot 4.7.2: all eight game suites passed, including 67 new flow checks and 9 UDP checks; the existing manager (38), order UI (378), legacy shift (27) and cooking checks still pass. Eight shared-flow states and eight approved-counter states were rendered and inspected. The approved-counter suite adds 20 behavior/layout checks. The camera environment imported OpenCV 4.11.0 and MediaPipe 0.10.21 and initialized the hand model against a blank frame. A project pack exported and launched successfully.
 
-本轮在 macOS、Godot 4.7.2 下验证：七组游戏检查通过，包括新增流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项和料理检查仍通过。整合界面的七种状态已实际渲染并检查。摄像头环境导入 OpenCV 4.11.0 与 MediaPipe 0.10.21，并完成模型初始化和空白帧处理；资源包已导出并成功启动。
+本轮在 macOS、Godot 4.7.2 下验证：八组游戏检查通过，包括新增流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项和料理检查仍通过。整合流程八种状态和定稿点单八种状态已实际渲染检查；定稿点单新增 20 项行为与布局检查。摄像头环境导入 OpenCV 4.11.0 与 MediaPipe 0.10.21，并完成模型初始化和空白帧处理；资源包已导出并成功启动。
 
 Windows gameplay, real-camera gesture accuracy, an uncoached human playtest and tutor review remain pending. GitHub's three-platform repository checks do not substitute for those tests. The [integration handoff](INTEGRATION-HANDOFF.md) lists the specific decisions and assets still needed.
 
 Windows 实机玩法、真人摄像头识别、未预先解释玩法的试玩和 tutor review 仍待完成。GitHub 三平台仓库检查不替代这些测试。需要补齐的决策与素材见[整合对接清单](INTEGRATION-HANDOFF.md)。
+
+## Approved counter / 定稿点单台
+
+The shared entry now opens the green-clothed customer counter from Figma node `217:1122`. Only the order view uses the 1536 × 1024 design canvas; other integrated stations keep their existing 1440 × 900 layout. See [implementation and verification](ORDER-UI-INTEGRATION.md).
+
+统一入口现在打开 Figma `217:1122` 的绿衣顾客点单台。点单按 1536 × 1024 设计画布实现，其他整合工作区保留原有 1440 × 900 布局。详见[接入与验证记录](ORDER-UI-INTEGRATION.md)。
