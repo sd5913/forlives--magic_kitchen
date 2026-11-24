@@ -1,6 +1,24 @@
 # Team plan
 
-## Current design handoff — 19 November 2026
+## Current delivery plan — 25 November 2026
+
+Our next review is the 26 November class-week delivery candidate; the tutor confirms the actual meeting time. We bring the playable keyboard/mouse flow, setup instructions, test evidence and unresolved design questions. The [readiness check](assessment/READINESS-2026-11-25.md) separates course requirements from improvement suggestions. Earlier pharmacy and ownership proposals below are historical.
+
+下一节点是 11 月 26 日课周的候选版本 review，实际会面时间由 tutor 确认。我们带可玩键鼠流程、运行方法、检查证据和待统一的设计问题。[交付核对](assessment/READINESS-2026-11-25.md)区分课程要求与改进建议。下方药房及旧分工提案作为历史记录保留。
+
+| Part / 部分 | Next deliverable / 下一项交付 | Acceptance / 验收 |
+| --- | --- | --- |
+| Planning and roasting / 总策划与烤炉 | Resolve gesture 2/4, recipe-error rules, demo scope/return and scoring ambiguity; deliver final roasting layers / 统一编号、失误规则、演示范围与返回、扣分歧义，并交付烤炉分层素材 | One agreed rule table and runnable station behavior / 一份统一规则表，对应可运行行为 |
+| Ordering and integration / 点单与技术整合 | Keep the approved counter and shared state stable; connect agreed module handoffs / 维护定稿点单和共享状态，按统一方案接入 | Full order-to-score flow retains order identity and progress / 全流程订单身份与进度不丢失 |
+| Preparation and shared UI / 料理与公共 UI | Final layout/assets and button, ticket, correction, input-status examples / 最终排版素材及按钮、小票、修正和识别状态示例 | Match approved design; every enabled/disabled state has a condition / 与定稿一致，每项按钮状态都有条件 |
+| Serving and testing / 交付与测试 | Separate observation/reaction/coin assets, sequential score presentation; player and launch evidence / 观察、表情、铜钱分层素材与逐项评分，组织试玩和启动验证 | Correct order/result binding, feedback and return; actual observations recorded / 订单结果绑定、反馈返回正确，记录真实观察 |
+
+These are module responsibilities from the agreed four-part division, not a claim that their handoff is already complete. Each module owner records its actual contributor and evidence in the issue or weekly note. Runtime-use rights for reference-derived artwork must be resolved before calling the delivery ready for public distribution.
+
+以上按四部分分工记录，不代表已经完成交接；各模块在任务或周记录中填写真实贡献者及成果链接。参考图衍生素材的运行使用许可需明确，再认定可公开分发。
+
+
+## Historical design handoff — 19 November 2026
 
 I confirmed the low-fidelity flow as completed and prepared the shared Figma UI Kit. The [UI handoff](design/UI-KIT.md) records component coverage, the approved visual reference and remaining Godot integration; [current project status](PROJECT-STATUS.md) distinguishes main from open implementation PRs. I coordinate shared UI integration and the viewport decision. Station-specific content owners still need to be agreed. The dated plan below is historical and does not override the current roast-duck direction.
 

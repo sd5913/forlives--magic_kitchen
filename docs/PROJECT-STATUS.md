@@ -1,6 +1,20 @@
 # Shared project status and handoff
 
-Updated 19 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep current implementation, design delivery and remaining work separate so the team can continue from either computer.
+Updated 25 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep current implementation, design delivery and remaining work separate so the team can continue from either computer.
+
+## Current state on 25 November / 11 月 25 日当前状态
+
+Main includes [PR #10](https://github.com/sd5913/forlives--magic_kitchen/pull/10) (shared shift), [PR #11](https://github.com/sd5913/forlives--magic_kitchen/pull/11) (approved counter) and [PR #12](https://github.com/sd5913/forlives--magic_kitchen/pull/12) (ticket details fix). The source can run the complete keyboard/mouse flow. The approved green-clothed customer counter is implemented; final roasting, preparation and serving visuals remain in the module handoff. The snapshots below retain their original dates and are not the current branch status.
+
+主线已包含 [PR #10](https://github.com/sd5913/forlives--magic_kitchen/pull/10) 统一营业、[PR #11](https://github.com/sd5913/forlives--magic_kitchen/pull/11) 定稿点单和 [PR #12](https://github.com/sd5913/forlives--magic_kitchen/pull/12) 小票详情修复。源码可运行完整键鼠流程；绿衣顾客点单已实现，烤炉、料理与交付最终视觉仍按模块对接。下方快照保留原日期，不代表当前分支状态。
+
+The repository is public and owned by sd5913. Permission checks on 25 November report Admin for all four registered teammates; Project #23 access and actual teammate push checks are separate. No GitHub Release was present in the releases API at this check. A local project pack requires Godot 4.7.2 and is not a standalone application.
+
+11 月 25 日核验仓库公开、归属 sd5913，四位登记成员均有 Admin 权限；看板 #23 可见性和组员实际推送需分别核对。本次 releases API 未返回已发布版本。本地资源包需 Godot 4.7.2，不能当作免安装独立应用。
+
+See the [assessment readiness check](assessment/READINESS-2026-11-25.md) for the 26 November review, final submission, evidence gaps and owners. The team has now reported earlier classmate/tutor trials in the [feedback record](assessment/FEEDBACK-AND-CHANGES.md); automated checks are separate.
+
+[课程交付核对](assessment/READINESS-2026-11-25.md)列出 11 月 26 日 review、最终提交、证据缺项与负责部分。此前同学／tutor 展示已按转述写入[反馈记录](assessment/FEEDBACK-AND-CHANGES.md)，与自动检查分开。
 
 ## 23 November: integrated shift
 
@@ -32,7 +46,7 @@ This design-only update leaves Godot scenes and implementation branches untouche
 
 本次只同步设计，没有修改 Godot 场景或实现分支。下方分支快照日期为 11 月 19 日，本轮导出未重新审查分支。接入 Godot、真人试玩和新的 tutor 反馈仍需分别完成。
 
-## Current snapshot
+## Historical snapshot — 19 November 2026
 
 | Area | Verified state |
 | --- | --- |
