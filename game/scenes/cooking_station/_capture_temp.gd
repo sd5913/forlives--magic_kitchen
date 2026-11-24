@@ -5,7 +5,7 @@ func _initialize() -> void:
 
 func _capture() -> void:
 	root.size = Vector2i(1440, 900)
-	var station = load("res://scenes/cooking_station/cooking_station_layered.tscn").instantiate()
+	var station = load("res://scenes/cooking_station/cooking_station_ui.tscn").instantiate()
 	root.add_child(station)
 	await process_frame
 	await process_frame

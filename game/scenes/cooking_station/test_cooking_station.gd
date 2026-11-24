@@ -1,6 +1,6 @@
 extends SceneTree
 
-const Station = preload("res://scenes/cooking_station/cooking_station_layered.tscn")
+const Station = preload("res://scenes/cooking_station/cooking_station_ui.tscn")
 var failures := 0
 var submissions: Array[Dictionary] = []
 
@@ -13,7 +13,19 @@ func _run() -> void:
 	root.size = Vector2i(1440, 900)
 	var station = Station.instantiate()
 	root.add_child(station)
+	var reused_icons := {
+		"Game/Queue1/IconWrap": "Game/OrderTicket/OrderWrapIcon",
+		"Game/Queue1/IconCucumber": "Game/OrderTicket/IconCucumber",
+		"Game/Queue1/IconSauce": "Game/OrderTicket/IconSauce",
+		"Game/Queue2/IconScallion": "Game/OrderTicket/IconScallion",
+		"Game/Queue2/IconHawthorn": "Game/OrderTicket/IconHawthorn",
+		"Game/Queue3/IconCucumber": "Game/OrderTicket/IconCucumber",
+	}
+	for queue_path in reused_icons:
+		_check(station.view.get_node(queue_path).texture == station.view.get_node(reused_icons[queue_path]).texture, queue_path + " reuses Order 01 icon")
 	station.order_completed.connect(func(order: Dictionary): submissions.append(order))
+	await _click(station.view.get_node("Game/Queue1").get_global_rect().get_center())
+	_check(station.order_id == "02", "clicking Order 02 selects its recipe")
 	var first_ingredients: Array[String] = ["duck", "cucumber", "scallion", "sauce"]
 	station.set_order("01", first_ingredients)
 	station.receive_action("add_duck", true)

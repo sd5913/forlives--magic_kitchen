@@ -40,7 +40,6 @@
 [ext_resource type="Texture2D" uid="uid://diqh4e1ic4yaw" path="res://assets/ui/Cooking_station new/figma_overlay.png" id="34_overlay"]
 [ext_resource type="Texture2D" uid="uid://bd78j4w7ho4by" path="res://assets/ui/Cooking_station new/Board3_Scallion_Strips.png" id="35_1g6td"]
 [ext_resource type="Texture2D" uid="uid://b1st4rr4s1brh" path="res://assets/ui/Cooking_station new/Gesture fist.png" id="35_84wit"]
-[ext_resource type="Texture2D" uid="uid://b46vdwvlofs" path="res://assets/ui/Cooking_station new/SlicedDuckand four mateerials in the middle area.png" id="35_food"]
 [ext_resource type="Texture2D" uid="uid://dxab3sopgypqk" path="res://assets/ui/Cooking_station new/Order Thumbnail-2.png" id="36_uxk3c"]
 [ext_resource type="Texture2D" uid="uid://cukwor3loar2n" path="res://assets/ui/Cooking_station new/Order Thumbnail-3.png" id="37_cb4yv"]
 [ext_resource type="Texture2D" uid="uid://y7j4vqrea8l2" path="res://assets/ui/Cooking_station new/Board1_Sliced_Roast_Duck.png" id="38_84wit"]
@@ -50,7 +49,8 @@
 [ext_resource type="Texture2D" uid="uid://xem2m8op7coy" path="res://assets/ui/Cooking_station new/Gesture 3.png" id="42_84wit"]
 [ext_resource type="Texture2D" uid="uid://dapjvdwq7hihe" path="res://assets/ui/Cooking_station new/Gesture 4.png" id="43_hmbhh"]
 [ext_resource type="Texture2D" uid="uid://dbhasicnr7or" path="res://assets/ui/Cooking_station new/Gesture 5.png" id="44_1mqei"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Camera_hand detected.png" id="45_hand"]
+[ext_resource type="Texture2D" uid="uid://c1jkgkvcru7rk" path="res://assets/ui/Cooking_station new/Camera_hand detected.png" id="45_hand"]
+[ext_resource type="Texture2D" uid="uid://bsbup0kq6dhfg" path="res://assets/ui/Cooking_station new/roast_duck_tray.png" id="46_roast_duck_tray"]
 
 [sub_resource type="SystemFont" id="Font_serif"]
 font_names = PackedStringArray("Georgia", "Times New Roman", "Liberation Serif", "serif")
@@ -67,6 +67,10 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="AtlasTexture" id="Atlas_MiniBlank"]
+atlas = ExtResource("17_mini")
+region = Rect2(16, 76, 144, 42)
+
 [sub_resource type="Shader" id="Shader_remove_gray"]
 code = "shader_type canvas_item;
 void fragment() {
@@ -80,14 +84,6 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="Material_food"]
 shader = SubResource("Shader_remove_gray")
-
-[sub_resource type="AtlasTexture" id="Atlas_MiniBlank"]
-atlas = ExtResource("17_mini")
-region = Rect2(16, 76, 144, 42)
-
-[sub_resource type="AtlasTexture" id="Atlas_NewDuck"]
-atlas = ExtResource("35_food")
-region = Rect2(300, 390, 320, 230)
 
 [sub_resource type="AtlasTexture" id="Atlas_NewRolled"]
 atlas = ExtResource("34_overlay")
@@ -245,7 +241,6 @@ offset_bottom = 660.0
 mouse_filter = 2
 
 [node name="OrderHanger" type="TextureRect" parent="Canvas/Game" unique_id=1947714915]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_top = 18.0
 offset_right = 880.0
@@ -434,7 +429,6 @@ text = "☐"
 autowrap_mode = 2
 
 [node name="OrderWrapIcon" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=117242819]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_left = 23.0
 offset_top = 96.0
@@ -445,7 +439,6 @@ texture = ExtResource("11_7cqb3")
 expand_mode = 1
 
 [node name="IconDuck" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=103161336]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_left = 24.0
 offset_top = 173.0
@@ -456,7 +449,6 @@ texture = ExtResource("12_lorts")
 expand_mode = 1
 
 [node name="IconHawthorn" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=1005453530]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_left = 23.0
 offset_top = 232.0
@@ -467,7 +459,6 @@ texture = ExtResource("13_uxk3c")
 expand_mode = 1
 
 [node name="IconCucumber" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=586621787]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_left = 24.0
 offset_top = 305.0
@@ -478,7 +469,6 @@ texture = ExtResource("14_cb4yv")
 expand_mode = 1
 
 [node name="IconScallion" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=1380665714]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_left = 24.0
 offset_top = 365.0
@@ -489,7 +479,6 @@ texture = ExtResource("15_84wit")
 expand_mode = 1
 
 [node name="IconSauce" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=242167911]
-material = SubResource("Material_food")
 layout_mode = 0
 offset_left = 26.0
 offset_top = 415.0
@@ -649,7 +638,7 @@ offset_top = -9.0
 offset_right = 302.0
 offset_bottom = 216.0
 mouse_filter = 2
-texture = SubResource("Atlas_NewDuck")
+texture = ExtResource("46_roast_duck_tray")
 expand_mode = 1
 
 [node name="Cucumber" type="Button" parent="Canvas/Game" unique_id=717295773]
@@ -892,14 +881,14 @@ theme_override_styles/disabled = SubResource("Style_transparent")
 icon = ExtResource("22_84wit")
 expand_icon = true
 
-[node name="StatusStrip" type="Control" parent="Canvas/Game"]
-layout_mode = 0
+[node name="StatusStrip" type="Control" parent="Canvas/Game" unique_id=8202427]
+anchors_preset = 0
 offset_top = 568.0
 offset_right = 1440.0
 offset_bottom = 616.0
 mouse_filter = 2
 
-[node name="GestureStatusIcon" type="TextureRect" parent="Canvas/Game/StatusStrip"]
+[node name="GestureStatusIcon" type="TextureRect" parent="Canvas/Game/StatusStrip" unique_id=1073661946]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 8.0
@@ -909,7 +898,7 @@ mouse_filter = 2
 texture = ExtResource("45_hand")
 expand_mode = 1
 
-[node name="Feedback" type="Label" parent="Canvas/Game/StatusStrip"]
+[node name="Feedback" type="Label" parent="Canvas/Game/StatusStrip" unique_id=101871240]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 8.0
@@ -920,7 +909,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 20
 text = "Gesture Status: Waiting for input"
 
-[node name="CameraStatus" type="Label" parent="Canvas/Game/StatusStrip"]
+[node name="CameraStatus" type="Label" parent="Canvas/Game/StatusStrip" unique_id=1777920487]
 layout_mode = 0
 offset_left = 822.0
 offset_top = 9.0
@@ -932,7 +921,7 @@ theme_override_font_sizes/font_size = 15
 text = "Camera off"
 horizontal_alignment = 2
 
-[node name="CameraButton" type="Button" parent="Canvas/Game/StatusStrip"]
+[node name="CameraButton" type="Button" parent="Canvas/Game/StatusStrip" unique_id=1971538606]
 layout_mode = 0
 offset_left = 1016.0
 offset_top = 9.0

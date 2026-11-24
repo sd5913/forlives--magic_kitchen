@@ -31,7 +31,10 @@ func initialize(owner_station: Control) -> void:
 		button.button_down.connect(_set_food_pressed.bind(button, true))
 		button.button_up.connect(_set_food_pressed.bind(button, false))
 		order_rows.append(get_node("Game/OrderTicket/" + ingredient))
-		order_checks.append(get_node("Game/OrderTicket/" + ingredient + "Check"))
+		var check_path: String = "Game/OrderTicket/" + ingredient + "Check"
+		if ingredient == "Duck":
+			check_path += "/DuckCheck"
+		order_checks.append(get_node(check_path))
 	for i in range(5):
 		plate_labels.append(get_node("Game/PlateFeedback/Line" + str(i + 1)))
 	pause_button = $Top/Pause
@@ -77,110 +80,6 @@ func initialize(owner_station: Control) -> void:
 		ticket.add_child(button)
 	station.resized.connect(_fit_canvas)
 	_fit_canvas()
-
-
-func _normalize_art() -> void:
-	# Several Figma exports are opaque light gray. Remove that matte from icons,
-	# and use the transparent originals wherever the art folder provides them.
-	$Game/OrderHanger.texture = load("res://assets/ui/Cooking_station new/OrderHanger.png")
-	$Game/OrderTicket.texture = load("res://assets/ui/cooking_station/order_main_frame.png")
-	for ticket_path in ["Game/Queue1", "Game/Queue2", "Game/Queue3"]:
-		get_node(ticket_path).texture = load("res://assets/ui/cooking_station/order_mini_frame.png")
-	for heading_path in ["Game/Queue1/Heading", "Game/Queue2/Heading", "Game/Queue3/Heading"]:
-		get_node(heading_path).visible = true
-	$Game/Queue2/BlankHeader.visible = false
-	$Gestures/Card1.texture = load("res://assets/ui/Cooking_station new/figma_gesture_card_left.png")
-	$Gestures/Card2.texture = load("res://assets/ui/Cooking_station new/figma_gesture_card_middle.png")
-	$Gestures/Card3.texture = load("res://assets/ui/Cooking_station new/figma_gesture_card_right.png")
-	for icon_path in ["Gestures/Card1/Icon", "Gestures/Card2/Side1", "Gestures/Card2/Side2", "Gestures/Card2/Side3", "Gestures/Card2/Side4", "Gestures/Card3/Icon"]:
-		get_node(icon_path).visible = true
-	var matte_shader := Shader.new()
-	matte_shader.code = """shader_type canvas_item;
-void fragment() {
- vec4 c = texture(TEXTURE, UV);
- vec3 matte_gray = vec3(245.0 / 255.0);
- vec3 matte_white = vec3(1.0);
- float gray_distance = length(c.rgb - matte_gray);
- float white_distance = length(c.rgb - matte_white);
- vec3 matte = gray_distance < white_distance ? matte_gray : matte_white;
- float alpha = smoothstep(0.025, 0.14, min(gray_distance, white_distance));
- c.rgb = clamp((c.rgb - matte * (1.0 - alpha)) / max(alpha, 0.001), vec3(0.0), vec3(1.0));
- c.a *= alpha;
- COLOR = c;
-}"""
-	var matte_material := ShaderMaterial.new()
-	matte_material.shader = matte_shader
-	for icon_path in ["Game/OrderTicket/IconDuck", "Game/OrderTicket/IconHawthorn", "Game/OrderTicket/IconCucumber", "Game/OrderTicket/IconScallion", "Game/OrderTicket/IconSauce", "Game/StatusStrip/GestureStatusIcon", "Gestures/Card1/Icon", "Gestures/Card2/Side1", "Gestures/Card2/Side2", "Gestures/Card2/Side3", "Gestures/Card2/Side4", "Gestures/Card3/Icon", "Game/RolledPlate"]:
-		get_node(icon_path).material = matte_material
-	var crops := {
-		"Game/Hawthorn/Art": Rect2(620, 368, 197, 116),
-		"Game/Cucumber/Art": Rect2(620, 490, 197, 130),
-		"Game/Scallion/Art": Rect2(1084, 368, 201, 119),
-		"Game/Sauce/Art": Rect2(1085, 487, 221, 133),
-		"Game/Plate": Rect2(818, 390, 265, 215),
-	}
-	for art_path in crops:
-		var art: TextureRect = get_node(art_path)
-		var crop: AtlasTexture = art.texture
-		crop.region = crops[art_path]
-	# The source sheet's dishes touch each other. Drawing them as separate atlas
-	# rectangles exposes neighboring white pixels at their rectangular edges.
-	# Keep separate invisible buttons for interaction, but draw the intact sheet.
-	var food_display := TextureRect.new()
-	food_display.name = "FoodDisplay"
-	food_display.texture = load("res://assets/ui/Cooking_station new/SlicedDuckand four mateerials in the middle area.png")
-	food_display.position = Vector2(45, -90)
-	food_display.size = Vector2(1405, 841)
-	food_display.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	food_display.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	$Game.add_child(food_display)
-	$Game.move_child(food_display, $Game/Duck.get_index())
-	for art_path in ["Game/Duck/Art", "Game/Hawthorn/Art", "Game/Cucumber/Art", "Game/Scallion/Art", "Game/Sauce/Art", "Game/Plate"]:
-		get_node(art_path).visible = false
-	_add_food_overlay("Badge2", "Order Thumbnail-2", Vector2(651, 268), Vector2(49, 49))
-	_add_food_overlay("Badge3", "Order Thumbnail-3", Vector2(1098, 267), Vector2(49, 49))
-	_add_food_overlay("Badge4", "Order Thumbnail-4", Vector2(651, 398), Vector2(49, 49))
-	_add_food_overlay("Badge5", "Order Thumbnail-5", Vector2(1101, 397), Vector2(49, 49))
-	_add_food_overlay("DuckNameplate", "Board1_", Vector2(409, 477), Vector2(180, 54))
-	_add_food_overlay("HawthornNameplate", "Board2_", Vector2(697, 341), Vector2(128, 44))
-	_add_food_overlay("CucumberNameplate", "Board4_", Vector2(699, 473), Vector2(128, 44))
-	_add_food_overlay("SauceNameplate", "Board5_", Vector2(1157, 474), Vector2(135, 45))
-	if _find_food_asset("Board3_") != null:
-		_add_food_overlay("ScallionNameplate", "Board3_", Vector2(1154, 343), Vector2(135, 45))
-	else:
-		var scallion_label := Label.new()
-		scallion_label.name = "ScallionNameplate"
-		scallion_label.position = Vector2(1154, 354)
-		scallion_label.size = Vector2(135, 28)
-		scallion_label.text = "Scallion Strips"
-		scallion_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		scallion_label.add_theme_color_override("font_color", Color("331805"))
-		scallion_label.add_theme_font_size_override("font_size", 16)
-		scallion_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		$Game.add_child(scallion_label)
-
-
-func _find_food_asset(prefix: String) -> Texture2D:
-	var folder := "res://assets/ui/Cooking_station new/"
-	for filename in DirAccess.get_files_at(folder):
-		if filename.begins_with(prefix) and filename.ends_with(".png"):
-			return load(folder + filename)
-	return null
-
-
-func _add_food_overlay(node_name: String, asset_prefix: String, point: Vector2, dimensions: Vector2) -> void:
-	var image := _find_food_asset(asset_prefix)
-	if image == null:
-		return
-	var overlay := TextureRect.new()
-	overlay.name = node_name
-	overlay.texture = image
-	overlay.position = point
-	overlay.size = dimensions
-	overlay.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	overlay.stretch_mode = TextureRect.STRETCH_SCALE
-	overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$Game.add_child(overlay)
 
 
 func _add_gesture_card_button(card: Control, callback: Callable, tooltip: String) -> void:
@@ -248,6 +147,7 @@ func _select_order(index: int) -> void:
 func update_display() -> void:
 	$Game/OrderTicket/OrderTitle.text = "Order %s" % station.order_id
 	$Game/OrderTicket/OrderTitle.visible = true
+	$Game/OrderTicket/DuckCheck.text = "☑" if station.rolled else "☐"
 	$Gestures/Card1/Title.text = "1 · Add Sliced Duck"
 	$Gestures/Card1/Hint.visible = false
 	$Gestures/Card1/Status.position.y = 80
@@ -267,7 +167,7 @@ func update_display() -> void:
 		order_rows[i].modulate = Color.WHITE if ingredient in station.required else Color(0.58, 0.48, 0.38, 1)
 	$Game/PlateFeedback.visible = not station.added.is_empty() and not station.rolled
 	$Game/RolledPlate.visible = station.rolled
-	$Game/Plate.visible = false
+	$Game/Plate.visible = not station.rolled
 	for label in plate_labels:
 		label.text = ""
 	if station.rolled:

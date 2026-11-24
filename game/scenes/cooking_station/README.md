@@ -2,7 +2,7 @@
 
 ## 当前版本
 
-按 F5 运行 `res://scenes/cooking_station/cooking_station_layered.tscn`。画布为 1440 x 900：顶部 100 px、游戏区 560 px、手势区 240 px。不要运行旧的 `cooking_station.tscn` 或 `workbench.tscn`。
+按 F5 运行 `res://scenes/cooking_station/cooking_station_ui.tscn`。画布为 1440 x 900：顶部 100 px、游戏区 560 px、手势区 240 px。不要运行旧的 `cooking_station.tscn` 或 `workbench.tscn`。
 
 食材、Roll、Undo、Complete 和底部三张手势卡都可以点击。Complete 只有在订单所需食材全部加入并成功卷饼后才会启用。键盘 1-5 添加食材，0 卷饼，Backspace 撤销，Enter 完成，Esc 暂停，R 重置。
 
@@ -10,9 +10,9 @@
 
 共享导航框、订单框和羊皮纸面板来自 `docs/design/exports/components`。当前仓库的 Figma 备份不含最新节点 `257:2724`，连接 Figma 插件后需要再进行最终视觉核对。
 
-Open `game/project.godot` in Godot and press **F5** to run the cooking station on this branch. To edit it, open `scenes/cooking_station/cooking_station_layered.tscn`. The original `scenes/workbench.tscn` remains in the project for later team integration. The older `cooking_station.tscn` can still be open in an editor; use the layered scene for the new design.
+Open `game/project.godot` in Godot and press **F5** to run the cooking station on this branch. To edit it, open `scenes/cooking_station/cooking_station_ui.tscn`. The original `scenes/workbench.tscn` remains in the project for later team integration. The older `cooking_station.tscn` can still be open in an editor; use the layered scene for the new design.
 
-在 Godot 中打开 `game/project.godot`，按 **F5** 即可运行本分支的料理台。需要编辑时，打开 `scenes/cooking_station/cooking_station_layered.tscn`。原来的 `scenes/workbench.tscn` 仍保留在项目中，供之后团队集成使用。旧版 `cooking_station.tscn` 可能仍在编辑器中打开；新版请使用带 `layered` 的场景。
+在 Godot 中打开 `game/project.godot`，按 **F5** 即可运行本分支的料理台。需要编辑时，打开 `scenes/cooking_station/cooking_station_ui.tscn`。原来的 `scenes/workbench.tscn` 仍保留在项目中，供之后团队集成使用。旧版 `cooking_station.tscn` 可能仍在编辑器中打开；新版请使用带 `layered` 的场景。
 
 The sample order needs duck, cucumber, scallion and sweet bean sauce. Click the food cards or press 1–5 to add ingredients, 0 to roll, Backspace to undo, and Enter to submit. R restarts the sample and Escape pauses. Wrong ingredients can be removed in reverse order with Undo; the wrap can be rolled after the ingredients match the order.
 
