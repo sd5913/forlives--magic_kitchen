@@ -36,6 +36,11 @@ func _run() -> void:
 	game._receive_gesture(2)
 	assert(game.session.current_food().stage == "roasting", "overlay blocks background camera actions")
 	await capture("all_tickets")
+	check_popup_layout()
+	game._close_popup()
+	game._show_details()
+	await capture("ticket_detail")
+	check_popup_layout()
 	game._close_popup()
 	assert(not game._popup_open() and not game.session.paused, "closing tickets preserves running state")
 	game.session.advance_time(11.0)
@@ -80,7 +85,7 @@ func _run() -> void:
 		failures += 1
 	game.queue_free()
 	await process_frame
-	print("Shared shift UI: eight rendered states; %d failures" % failures)
+	print("Shared shift UI: nine rendered states; %d failures" % failures)
 	quit(0 if failures == 0 else 1)
 
 
@@ -122,3 +127,16 @@ func click_caption(caption: String) -> void:
 	event.pressed = false
 	root.push_input(event, true)
 	await process_frame
+
+
+func check_popup_layout() -> void:
+	var content: VBoxContainer = game._popup.get_child(0).get_child(0)
+	var scroll: ScrollContainer = content.get_child(1)
+	var close: Button = content.get_child(2)
+	var bounds: Rect2 = game._popup.get_global_rect()
+	if scroll.size.y < 100 or not bounds.encloses(close.get_global_rect()):
+		failures += 1
+		push_error("Order overlay must show recipe content and the close button")
+	if bounds.position.x < 0 or bounds.position.y < 0 or bounds.end.x > game.size.x + 1 or bounds.end.y > game.size.y + 1:
+		failures += 1
+		push_error("Order overlay must fit the game viewport")

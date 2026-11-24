@@ -188,3 +188,13 @@ I fixed two issues found during the integration run: opening a ticket must not s
 On macOS / Godot 4.7.2, all eight game suites passed. Eight counter states were rendered, with 28 assertions including saved images. I also used the running window to accept an order, open its details and the order list, switch to roasting and return, then pause. These are assistant-operated checks, not another person's playtest. Windows gameplay, live-camera recognition and tutor review are still pending.
 
 在 macOS / Godot 4.7.2 下，八组游戏检查通过。点单八种状态实际渲染，包含图片保存共 28 项断言通过；也在运行窗口实际点击接单、查看小票和列表、切到烤炉再返回并暂停。这些是助手操作检查，不是其他同学试玩；Windows 玩法、真人摄像头识别和教师审查仍待完成。
+
+### Navigation follow-up / 跳转复查
+
+I ran one order through acceptance, roasting, slicing, preparation, rolling, scoring and return in the actual macOS game window. Switching to the counter and back preserved the recipe progress. This run returned a score of 48 (ordering 45, burnt roast 0, preparation 100); it verifies the flow, not a high-score claim. Returning currently opens the counter, which differs from the new serving demo's preparation/test-entry return requirement and remains a planning decision.
+
+我在 macOS 实际游戏窗口完成了一单接单、烤制、片鸭、配料、卷制、评分与返回。制作中切到点单再回来，配料进度保留。本次得分 48（点单 45、烤焦 0、料理 100），用于检查流程。当前返回点单台，与新交付 Demo 要求的料理台／测试入口存在差异，留待策划统一。
+
+The run exposed a layout defect in the generic ticket overlay: the detail branch inferred an incompatible typed array and stopped before adding its content. I fixed the array type, added explicit content space and deferred centering, plus checks for visible recipe content, the close button and viewport bounds in both detail and list overlays.
+
+本次发现通用小票详情分支的数组类型不匹配，导致内容生成中断。已修正类型、补内容空间并在布局后居中，同时检查详情和列表的内容、关闭按钮及窗口边界。

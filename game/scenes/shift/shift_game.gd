@@ -466,7 +466,8 @@ func _show_popup(all_orders: bool) -> void:
 	_popup_scrim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(_popup_scrim)
 	_popup = PanelContainer.new()
-	_popup.size = Vector2(1000, 650 if all_orders else 340)
+	_popup.custom_minimum_size = Vector2(1000, 650 if all_orders else 340)
+	_popup.size = _popup.custom_minimum_size
 	_popup.add_theme_stylebox_override("panel", _style("parchment_panel"))
 	add_child(_popup)
 	var margin := MarginContainer.new()
@@ -483,6 +484,7 @@ func _show_popup(all_orders: bool) -> void:
 	title.add_theme_color_override("font_color", INK)
 	layout.add_child(title)
 	var scroll := ScrollContainer.new()
+	scroll.custom_minimum_size = Vector2(880, 360 if all_orders else 140)
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	layout.add_child(scroll)
@@ -490,7 +492,7 @@ func _show_popup(all_orders: bool) -> void:
 	list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	list.add_theme_constant_override("separation", 14)
 	scroll.add_child(list)
-	var orders := session.manager.get_visible_orders() if all_orders else [session.manager.get_order(session.manager.selected_order_id)]
+	var orders: Array = session.manager.get_visible_orders() if all_orders else [session.manager.get_order(session.manager.selected_order_id)]
 	for order in orders:
 		if order.is_empty():
 			continue
@@ -532,6 +534,8 @@ func _show_popup(all_orders: bool) -> void:
 	_fit()
 	_refresh_timers()
 	close.grab_focus()
+	# Containers settle their minimum sizes on the next frame; centre the final bounds.
+	_fit.call_deferred()
 
 
 func _recipe_progress_text() -> String:
