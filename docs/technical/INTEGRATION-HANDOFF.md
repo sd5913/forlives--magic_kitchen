@@ -1,5 +1,10 @@
 # Integration handoff / 整合对接
 
+26 November update: the [latest supplied cooking scene](../design/COOKING-HANDOFF-1125.md) is now connected to the shared session with actual tickets, food layers and scoring. The original source files remain archived. Its new 2 hawthorn / 4 cucumber mapping agrees with main; exact-recipe gating, post-roll undo and one-order demo scope remain planning differences.
+
+11 月 26 日更新：[最新料理交付场景](../design/COOKING-HANDOFF-1125.md)已连接共享订单、食物叠层与真实评分，原件留档；新包 2 山楂／4 黄瓜与主线一致。配齐才能卷制、卷后撤销及单单 Demo 范围仍属策划差异。
+
+
 ## Resolved in code / 已直接处理
 
 - Preserved the latest main design archive and the order/playable-shift implementation history; retained the cooking, serving and roasting-design branch contributions.

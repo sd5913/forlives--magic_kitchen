@@ -1,0 +1,297 @@
+{
+  "source_archive": "sources/handoffs_1125/cooking_station_assets_review.zip",
+  "canvas": [
+    1440,
+    900
+  ],
+  "assets": [
+    {
+      "source": "assets/ui/Cooking_station new/Board1_Sliced_Roast_Duck.png",
+      "runtime": "res://assets/ui/preparation_handoff/board1_sliced_roast_duck.png",
+      "width": 1090,
+      "height": 364
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Board2_Hawthorn_Stricks.png",
+      "runtime": "res://assets/ui/preparation_handoff/board2_hawthorn_stricks.png",
+      "width": 980,
+      "height": 327
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Board3_Scallion_Strips.png",
+      "runtime": "res://assets/ui/preparation_handoff/board3_scallion_strips.png",
+      "width": 1090,
+      "height": 364
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Board4_Cucumber——Strips.png",
+      "runtime": "res://assets/ui/preparation_handoff/board4_cucumber_strips.png",
+      "width": 909,
+      "height": 303
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Board5_Sweet_Bean——Sauce.png",
+      "runtime": "res://assets/ui/preparation_handoff/board5_sweet_bean_sauce.png",
+      "width": 1090,
+      "height": 364
+    },
+    {
+      "source": "assets/ui/Cooking_station new/BottomedBoard_Gesture.png",
+      "runtime": "res://assets/ui/preparation_handoff/bottomedboard_gesture.png",
+      "width": 467,
+      "height": 156
+    },
+    {
+      "source": "assets/ui/Cooking_station new/BrandPlaquePeaking Duck Rolls.png",
+      "runtime": "res://assets/ui/preparation_handoff/brandplaquepeaking_duck_rolls.png",
+      "width": 307,
+      "height": 108
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Button-CompleteOrder.png",
+      "runtime": "res://assets/ui/preparation_handoff/button_completeorder.png",
+      "width": 206,
+      "height": 60
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Camera_hand detected.png",
+      "runtime": "res://assets/ui/preparation_handoff/camera_hand_detected.png",
+      "width": 99,
+      "height": 92
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Filling_Hawthron Sticks.png",
+      "runtime": "res://assets/ui/preparation_handoff/filling_hawthron_sticks.png",
+      "width": 889,
+      "height": 514
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Filling_Sause.png",
+      "runtime": "res://assets/ui/preparation_handoff/filling_sause.png",
+      "width": 771,
+      "height": 514
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Gesture 2.png",
+      "runtime": "res://assets/ui/preparation_handoff/gesture_2.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Gesture 3.png",
+      "runtime": "res://assets/ui/preparation_handoff/gesture_3.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Gesture 4.png",
+      "runtime": "res://assets/ui/preparation_handoff/gesture_4.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Gesture 5.png",
+      "runtime": "res://assets/ui/preparation_handoff/gesture_5.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Gesture fist.png",
+      "runtime": "res://assets/ui/preparation_handoff/gesture_fist.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Gesture1.png",
+      "runtime": "res://assets/ui/preparation_handoff/gesture1.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/IconButton-Stop.png",
+      "runtime": "res://assets/ui/preparation_handoff/iconbutton_stop.png",
+      "width": 61,
+      "height": 61
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Ingredients_OrderMenus (1).png",
+      "runtime": "res://assets/ui/preparation_handoff/ingredients_ordermenus_1_.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Ingredients_OrderMenus (2).png",
+      "runtime": "res://assets/ui/preparation_handoff/ingredients_ordermenus_2_.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Ingredients_OrderMenus (3).png",
+      "runtime": "res://assets/ui/preparation_handoff/ingredients_ordermenus_3_.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Ingredients_OrderMenus (4).png",
+      "runtime": "res://assets/ui/preparation_handoff/ingredients_ordermenus_4_.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Ingredients_OrderMenus (5).png",
+      "runtime": "res://assets/ui/preparation_handoff/ingredients_ordermenus_5_.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Ingredients_OrderMenus (6).png",
+      "runtime": "res://assets/ui/preparation_handoff/ingredients_ordermenus_6_.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order Thumbnail-1.png",
+      "runtime": "res://assets/ui/preparation_handoff/order_thumbnail_1.png",
+      "width": 76,
+      "height": 76
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order Thumbnail-2.png",
+      "runtime": "res://assets/ui/preparation_handoff/order_thumbnail_2.png",
+      "width": 53,
+      "height": 53
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order Thumbnail-3.png",
+      "runtime": "res://assets/ui/preparation_handoff/order_thumbnail_3.png",
+      "width": 53,
+      "height": 53
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order Thumbnail-4.png",
+      "runtime": "res://assets/ui/preparation_handoff/order_thumbnail_4.png",
+      "width": 53,
+      "height": 53
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order Thumbnail-5.png",
+      "runtime": "res://assets/ui/preparation_handoff/order_thumbnail_5.png",
+      "width": 53,
+      "height": 53
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order1with_no_text.png",
+      "runtime": "res://assets/ui/preparation_handoff/order1with_no_text.png",
+      "width": 295,
+      "height": 545
+    },
+    {
+      "source": "assets/ui/Cooking_station new/Order2-3_Boardnotext.png",
+      "runtime": "res://assets/ui/preparation_handoff/order2_3_boardnotext.png",
+      "width": 550,
+      "height": 600
+    },
+    {
+      "source": "assets/ui/Cooking_station new/OrderHanger.png",
+      "runtime": "res://assets/ui/preparation_handoff/orderhanger.png",
+      "width": 878,
+      "height": 60
+    },
+    {
+      "source": "assets/ui/Cooking_station new/StationTab-Cooking Station.png",
+      "runtime": "res://assets/ui/preparation_handoff/stationtab_cooking_station.png",
+      "width": 234,
+      "height": 69
+    },
+    {
+      "source": "assets/ui/Cooking_station new/StationTab-Order Station.png",
+      "runtime": "res://assets/ui/preparation_handoff/stationtab_order_station.png",
+      "width": 234,
+      "height": 69
+    },
+    {
+      "source": "assets/ui/Cooking_station new/StationTab-Roasting Station.png",
+      "runtime": "res://assets/ui/preparation_handoff/stationtab_roasting_station.png",
+      "width": 234,
+      "height": 69
+    },
+    {
+      "source": "assets/ui/Cooking_station new/cooking-station-background-1440x900 1.png",
+      "runtime": "res://assets/ui/preparation_handoff/cooking_station_background_1440x900_1.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "source": "assets/ui/Cooking_station new/cucumber_tray.png",
+      "runtime": "res://assets/ui/preparation_handoff/cucumber_tray.png",
+      "width": 366,
+      "height": 238
+    },
+    {
+      "source": "assets/ui/Cooking_station new/figma_order_mini.png",
+      "runtime": "res://assets/ui/preparation_handoff/figma_order_mini.png",
+      "width": 176,
+      "height": 192
+    },
+    {
+      "source": "assets/ui/Cooking_station new/filling-cucumber-strips 1.png",
+      "runtime": "res://assets/ui/preparation_handoff/filling_cucumber_strips_1.png",
+      "width": 879,
+      "height": 586
+    },
+    {
+      "source": "assets/ui/Cooking_station new/filling-scallion-strips 1 (1).png",
+      "runtime": "res://assets/ui/preparation_handoff/filling_scallion_strips_1_1_.png",
+      "width": 869,
+      "height": 580
+    },
+    {
+      "source": "assets/ui/Cooking_station new/filling-sliced-roast-duck 1.png",
+      "runtime": "res://assets/ui/preparation_handoff/filling_sliced_roast_duck_1.png",
+      "width": 850,
+      "height": 552
+    },
+    {
+      "source": "assets/ui/Cooking_station new/finished_duck_wrap_plate.png",
+      "runtime": "res://assets/ui/preparation_handoff/finished_duck_wrap_plate.png",
+      "width": 478,
+      "height": 380
+    },
+    {
+      "source": "assets/ui/Cooking_station new/hawthorn_tray.png",
+      "runtime": "res://assets/ui/preparation_handoff/hawthorn_tray.png",
+      "width": 367,
+      "height": 217
+    },
+    {
+      "source": "assets/ui/Cooking_station new/roast_duck_tray.png",
+      "runtime": "res://assets/ui/preparation_handoff/roast_duck_tray.png",
+      "width": 565,
+      "height": 404
+    },
+    {
+      "source": "assets/ui/Cooking_station new/scallion_tray.png",
+      "runtime": "res://assets/ui/preparation_handoff/scallion_tray.png",
+      "width": 391,
+      "height": 211
+    },
+    {
+      "source": "assets/ui/Cooking_station new/sweet_bean_sauce_tray.png",
+      "runtime": "res://assets/ui/preparation_handoff/sweet_bean_sauce_tray.png",
+      "width": 403,
+      "height": 239
+    },
+    {
+      "source": "assets/ui/Cooking_station new/wrapper_plate.png",
+      "runtime": "res://assets/ui/preparation_handoff/wrapper_plate.png",
+      "width": 478,
+      "height": 380
+    },
+    {
+      "source": "assets/ui/cooking_station/navigation_paper_frame.png",
+      "runtime": "res://assets/ui/preparation_handoff/navigation_paper_frame.png",
+      "width": 248,
+      "height": 72
+    }
+  ]
+}

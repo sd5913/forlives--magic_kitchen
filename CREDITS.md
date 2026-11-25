@@ -78,3 +78,9 @@ Bree Serif Regular 按 SIL Open Font License 1.1 分发，字体及原版权和�
 Codex also assisted with the review-pack export/check utility, clean-source reproduction and submission-status documentation. These checks are recorded separately from the team's classmate trials and tutor feedback.
 
 Codex 也协助编写候选包导出检查工具、验证干净源码复现，并整理提交状态；这些检查与同学试玩和 tutor 反馈分开记录。
+
+## Team cooking handoff / 组内料理交付
+
+The integrated preparation view reuses the team-supplied cooking asset review package received on 25 November, including 48 PNGs, layout, layered food and editable Godot source. The exact ZIP and cooking PDF/serving DOCX are retained in the [handoff archive](docs/design/COOKING-HANDOFF-1125.md). Codex assisted with normalized runtime paths, the shared-session adapter, layout clearance and regression checks; no new artwork was generated in this pass. The serving design's existing attribution is preserved in its integration notes.
+
+本轮料理界面复用 11 月 25 日收到的组内素材审查包，包括 48 张 PNG、布局、食物叠层和可编辑 Godot 源文件；ZIP、料理 PDF 和交付 Word 原件保存在[交接归档](docs/design/COOKING-HANDOFF-1125.md)。Codex 协助规范运行路径、连接共享状态、处理文字间距和回归检查，没有新增美术；交付设计原有署名保留在其整合说明中。

@@ -59,15 +59,19 @@ The playable counter now uses our approved green-clothed customer design. Ticket
 
 ![Playable order counter](docs/images/approved_order_initial.png)
 
+The [latest cooking/serving handoff](docs/design/COOKING-HANDOFF-1125.md) includes the original asset ZIP, editable scene source, PDF and Word files, plus the implemented cooking preview.
+
+[最新料理／交付交接](docs/design/COOKING-HANDOFF-1125.md)包含原素材 ZIP、可编辑场景源文件、PDF、Word 和已接入的料理预览。
+
 ## Art and interface / 美术与界面
 
 We’ve chosen wood, parchment and brass for the shop’s interface. Shared navigation, order tickets, buttons and decorative frames live in one [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119), so the stations can feel like parts of the same kitchen.
 
 我们选定了木质、羊皮纸和黄铜的界面风格。导航、订单小票、按钮和装饰边框统一放在 [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119) 中，让玩家切换工作区时，始终感觉自己还在同一间店里。
 
-The [order counter high-fidelity prototype](docs/design/ORDER-STATION.md) shows compact order tracking, expandable tickets and the shared controls in context. Its Figma interactions remain available to preview. The playable order counter follows that design, including its ticket and pause overlays. Final roasting, preparation and serving layouts and animation remain in the team handoff.
+The [order counter high-fidelity prototype](docs/design/ORDER-STATION.md) shows compact order tracking, expandable tickets and the shared controls in context. Its Figma interactions remain available to preview. The playable order counter follows that design, including its ticket and pause overlays. The supplied cooking scene is now connected to shared orders, food layers and actual serving scores. Final roasting and serving artwork, plus remaining planning decisions, are still in the team handoff.
 
-[点单区高保真原型](docs/design/ORDER-STATION.md)展示紧凑订单栏、可展开小票和公共控件的组合效果，可以在 Figma 中预览交互。可玩点单台已按这份设计接入，包含小票和暂停弹层；烤炉、料理与交付的最终排版和动画仍在对接。
+[点单区高保真原型](docs/design/ORDER-STATION.md)展示紧凑订单栏、可展开小票和公共控件的组合效果，可以在 Figma 中预览交互。可玩点单台已按这份设计接入，包含小票和暂停弹层；组员交付的料理场景也已连接共享订单、食材叠层和真实交付评分；烤炉与交付最终美术及剩余策划口径仍在对接。
 
 [Design gallery](docs/design/README.md) · [Component guide](docs/design/UI-KIT.md) · [Shared Figma file](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=0-1)
 

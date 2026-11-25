@@ -226,3 +226,13 @@ I reproduced the README source-import path in a new public clone on the same Mac
 The team also confirmed on 25 November that the selected wood/parchment reference was co-created with AIGC. I updated the current credits and packaging disclosure to reflect that origin. The original generator/model remains unrecorded; no external image author or license was invented.
 
 11 月 25 日，组内补充确认木框／羊皮纸公共参考图由小组与 AIGC 协作生成。已更新当前致谢与随包来源说明；最初工具／模型仍未记录，不编造外部作者或授权。
+
+## 26 November 2026 / 2026 年 11 月 26 日
+
+I retained the team's new cooking asset ZIP and both native handoff documents, checked the 48 PNGs against its manifest, and connected the supplied cooking scene to the shared shift. Food layers, per-order progress, actual queue selection, numbered input highlights and ready artwork now follow the existing session. Complete Order reaches actual scoring. The new package's 2 hawthorn / 4 cucumber mapping matches main; the older PDF remains archived as an earlier handoff.
+
+我保留组员新料理 ZIP 和两份原生交接文档，按清单校验 48 张 PNG，并将原料理场景接入统一营业。食物叠层、分单进度、真实小票、数字手势反馈与成品均跟随共享状态，完成按钮进入真实评分。新包 2 山楂／4 黄瓜与主线一致，旧 PDF 按历史交付保留。
+
+The shared imperfect-recipe policy, post-roll lock, five-order flow and counter return are unchanged pending planning agreement. I verified the rendered scene and fixed long ingredient text, correction-row spacing and the camera/feedback overlap. On macOS / Godot 4.7.2 all nine game suites passed; the new source-scene suite passed 25 checks, or 31 including six saved screenshots. No new player or live-camera trial is claimed.
+
+共享失误餐点计分、卷制后锁定、五单与回点单流程继续待策划统一，本轮不自行改口径。渲染自查修正了长食材名、修正行间距及相机／反馈重叠；macOS／Godot 4.7.2 九组游戏检查通过，新增料理场景 25 项，含六张截图保存共 31 项。不作为新增真人／相机试玩。

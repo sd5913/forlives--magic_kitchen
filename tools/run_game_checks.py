@@ -14,6 +14,7 @@ SCRIPTS = [
     'tests/test_shift_udp.gd',
     'tests/test_shift_ui.gd',
     'tests/test_approved_order_ui.gd',
+    'tests/test_preparation_handoff.gd',
 ]
 
 
