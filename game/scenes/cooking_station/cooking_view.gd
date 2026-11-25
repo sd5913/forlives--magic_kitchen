@@ -7,13 +7,11 @@ var canvas: Control
 var ingredient_buttons: Array[Button] = []
 var order_rows: Array[Label] = []
 var order_checks: Array[Label] = []
-var plate_labels: Array[Label] = []
 var pause_button: Button
 var roll_button: Button
 var submit_button: Button
 var undo_button: Button
 var feedback: Label
-var gesture_status: Label
 var camera_button: Button
 var gesture_card_buttons: Array[Button] = []
 
@@ -35,24 +33,17 @@ func initialize(owner_station: Control) -> void:
 		if ingredient == "Duck":
 			check_path += "/DuckCheck"
 		order_checks.append(get_node(check_path))
-	for i in range(5):
-		plate_labels.append(get_node("Game/PlateFeedback/Line" + str(i + 1)))
 	pause_button = $Top/Pause
 	roll_button = $Game/Roll
 	undo_button = $Game/Undo
 	submit_button = $Game/Complete
 	feedback = $Game/StatusStrip/Feedback
-	gesture_status = $Game/StatusStrip/CameraStatus
 	camera_button = $Game/StatusStrip/CameraButton
-	gesture_status.position = Vector2(822, 9)
-	gesture_status.size = Vector2(186, 30)
-	camera_button.position = Vector2(1016, 9)
-	camera_button.size = Vector2(166, 31)
 	pause_button.pressed.connect(station._toggle_pause)
 	roll_button.pressed.connect(station._roll)
 	undo_button.pressed.connect(station._undo)
 	submit_button.pressed.connect(station._submit)
-	camera_button.pressed.connect(station._toggle_camera)
+	camera_button.pressed.connect(station._restart_camera)
 	$Top/Order.pressed.connect(_navigate.bind("order"))
 	$Top/Roasting.pressed.connect(_navigate.bind("roasting"))
 	$Top/Cooking.pressed.connect(_navigate.bind("cooking"))
@@ -147,7 +138,7 @@ func _select_order(index: int) -> void:
 func update_display() -> void:
 	$Game/OrderTicket/OrderTitle.text = "Order %s" % station.order_id
 	$Game/OrderTicket/OrderTitle.visible = true
-	$Game/OrderTicket/DuckCheck.text = "☑" if station.rolled else "☐"
+	$Game/OrderTicket/DuckCheck.text = "☑︎" if station.rolled else "☐"
 	$Gestures/Card1/Title.text = "1 · Add Sliced Duck"
 	$Gestures/Card1/Hint.visible = false
 	$Gestures/Card1/Status.position.y = 80
@@ -163,25 +154,30 @@ func update_display() -> void:
 	for i in range(station.INGREDIENTS.size()):
 		var ingredient: String = station.INGREDIENTS[i]
 		order_rows[i].text = station.NAMES[ingredient]
-		order_checks[i].text = "☑" if ingredient in station.added else "☐"
+		order_checks[i].text = "☑︎" if ingredient in station.added else "☐"
 		order_rows[i].modulate = Color.WHITE if ingredient in station.required else Color(0.58, 0.48, 0.38, 1)
-	$Game/PlateFeedback.visible = not station.added.is_empty() and not station.rolled
 	$Game/RolledPlate.visible = station.rolled
 	$Game/Plate.visible = not station.rolled
-	for label in plate_labels:
-		label.text = ""
-	if station.rolled:
-		plate_labels[0].text = "WRAP ROLLED ✓"
-	else:
-		for i in range(station.added.size()):
-			plate_labels[i].text = "✓ " + station.NAMES[station.added[i]]
-	feedback.text = station.message
-	gesture_status.text = station.gesture_message
-	camera_button.text = "Stop Camera" if station.is_camera_running() else "Start Camera"
+	for ingredient in ["duck", "hawthorn", "scallion", "cucumber", "sauce"]:
+		$Game/Fillings.get_node(ingredient.capitalize()).visible = ingredient in station.added and not station.rolled
+	var badge_ingredients := ["duck", "hawthorn", "scallion", "cucumber", "sauce"]
+	for i in range(badge_ingredients.size()):
+		var ingredient: String = badge_ingredients[i]
+		var badge: TextureRect = get_node("Game/WorkbenchDecor/NumberBadges/OrderThumbnail" + str(i + 1))
+		var gesture_icon: TextureRect = get_node("Gestures/" + ("Card1" if i == 0 else "Card2") + "/Gesture" + str(i + 1))
+		var is_active: bool = ingredient == station.highlighted_ingredient and not station.rolled
+		var is_added: bool = ingredient in station.added
+		badge.pivot_offset = badge.size / 2.0
+		badge.scale = Vector2.ONE * (1.18 if is_active else 1.0)
+		badge.self_modulate = Color(1.0, 0.9, 0.55) if is_active else (Color(0.78, 1.0, 0.72) if is_added else Color.WHITE)
+		gesture_icon.self_modulate = Color(1.0, 0.9, 0.55) if is_active else Color.WHITE
+	$Gestures/Card3/GestureFist.self_modulate = Color(1.0, 0.9, 0.55) if station.rolled else Color.WHITE
+	feedback.text = "Gesture Status: " + {"waiting": "Waiting for input", "recognized": "Recognized", "unavailable": "Camera unavailable"}[station.gesture_state]
+	camera_button.text = "Restart Camera"
 	pause_button.text = ""
 	pause_button.tooltip_text = "Resume (Esc)" if station.paused else "Pause (Esc)"
 	roll_button.disabled = station.paused or station.completed or station.rolled
-	submit_button.disabled = station.paused or station.completed
+	submit_button.disabled = station.paused or station.completed or not station.rolled
 	undo_button.disabled = station.paused or station.completed
 	for button in ingredient_buttons:
 		button.disabled = station.paused or station.completed or station.rolled

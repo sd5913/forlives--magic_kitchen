@@ -23,24 +23,16 @@
 [ext_resource type="Texture2D" uid="uid://byq2135muddd6" path="res://assets/ui/Cooking_station new/scallion_tray.png" id="21_ihl6d"]
 [ext_resource type="Texture2D" uid="uid://c4bgyiptfrxuh" path="res://assets/ui/Cooking_station new/hawthorn_tray.png" id="22_7qv3j"]
 [ext_resource type="Texture2D" uid="uid://cb8qyb2ii3wek" path="res://assets/ui/Cooking_station new/Button-CompleteOrder.png" id="22_84wit"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Gesture1.png" id="22_one"]
 [ext_resource type="Texture2D" uid="uid://cngxb45lr3vww" path="res://assets/ui/Cooking_station new/sweet_bean_sauce_tray.png" id="23_qv17v"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Gesture 2.png" id="23_two"]
 [ext_resource type="Texture2D" uid="uid://dtk8alfccunrc" path="res://assets/ui/Cooking_station new/BottomedBoard_Gesture.png" id="24_ddsir"]
 [ext_resource type="Texture2D" uid="uid://blqbddae0wt8s" path="res://assets/ui/Cooking_station new/wrapper_plate.png" id="24_ihl6d"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Gesture 3.png" id="24_three"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Gesture 4.png" id="25_four"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Gesture 5.png" id="26_five"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Gesture fist.png" id="27_fist"]
 [ext_resource type="Texture2D" uid="uid://bqixya8d2o65c" path="res://assets/ui/Cooking_station new/Order Thumbnail-4.png" id="31_ddsir"]
 [ext_resource type="Texture2D" uid="uid://boxwuflneotqb" path="res://assets/ui/Cooking_station new/Order Thumbnail-1.png" id="31_nv0bu"]
 [ext_resource type="Texture2D" uid="uid://s5ctqgcsof4q" path="res://assets/ui/Cooking_station new/Order Thumbnail-5.png" id="32_1g6td"]
 [ext_resource type="Texture2D" uid="uid://l43h4w276b50" path="res://assets/ui/Cooking_station new/Board4_Cucumber——Strips.png" id="33_7cqb3"]
 [ext_resource type="Texture2D" uid="uid://yh1m28en2jtk" path="res://assets/ui/Cooking_station new/Board5_Sweet_Bean——Sauce.png" id="34_lorts"]
-[ext_resource type="Texture2D" uid="uid://diqh4e1ic4yaw" path="res://assets/ui/Cooking_station new/figma_overlay.png" id="34_overlay"]
 [ext_resource type="Texture2D" uid="uid://bd78j4w7ho4by" path="res://assets/ui/Cooking_station new/Board3_Scallion_Strips.png" id="35_1g6td"]
 [ext_resource type="Texture2D" uid="uid://b1st4rr4s1brh" path="res://assets/ui/Cooking_station new/Gesture fist.png" id="35_84wit"]
-[ext_resource type="Texture2D" uid="uid://b46vdwvlofs" path="res://assets/ui/Cooking_station new/SlicedDuckand four mateerials in the middle area.png" id="35_food"]
 [ext_resource type="Texture2D" uid="uid://dxab3sopgypqk" path="res://assets/ui/Cooking_station new/Order Thumbnail-2.png" id="36_uxk3c"]
 [ext_resource type="Texture2D" uid="uid://cukwor3loar2n" path="res://assets/ui/Cooking_station new/Order Thumbnail-3.png" id="37_cb4yv"]
 [ext_resource type="Texture2D" uid="uid://y7j4vqrea8l2" path="res://assets/ui/Cooking_station new/Board1_Sliced_Roast_Duck.png" id="38_84wit"]
@@ -50,8 +42,14 @@
 [ext_resource type="Texture2D" uid="uid://xem2m8op7coy" path="res://assets/ui/Cooking_station new/Gesture 3.png" id="42_84wit"]
 [ext_resource type="Texture2D" uid="uid://dapjvdwq7hihe" path="res://assets/ui/Cooking_station new/Gesture 4.png" id="43_hmbhh"]
 [ext_resource type="Texture2D" uid="uid://dbhasicnr7or" path="res://assets/ui/Cooking_station new/Gesture 5.png" id="44_1mqei"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/Camera_hand detected.png" id="45_hand"]
-[ext_resource type="Texture2D" path="res://assets/ui/Cooking_station new/roast_duck_tray.png" id="46_roast_duck_tray"]
+[ext_resource type="Texture2D" uid="uid://c1jkgkvcru7rk" path="res://assets/ui/Cooking_station new/Camera_hand detected.png" id="45_hand"]
+[ext_resource type="Texture2D" uid="uid://bsbup0kq6dhfg" path="res://assets/ui/Cooking_station new/roast_duck_tray.png" id="46_roast_duck_tray"]
+[ext_resource type="Texture2D" uid="uid://dgghngv0ystjp" path="res://assets/ui/Cooking_station new/filling-sliced-roast-duck 1.png" id="47_filling_duck"]
+[ext_resource type="Texture2D" uid="uid://bg7utufdkn22t" path="res://assets/ui/Cooking_station new/Filling_Hawthron Sticks.png" id="48_filling_hawthorn"]
+[ext_resource type="Texture2D" uid="uid://neggs1bhxhsx" path="res://assets/ui/Cooking_station new/filling-scallion-strips 1 (1).png" id="49_filling_scallion"]
+[ext_resource type="Texture2D" uid="uid://cd2lrmvgb8630" path="res://assets/ui/Cooking_station new/filling-cucumber-strips 1.png" id="50_filling_cucumber"]
+[ext_resource type="Texture2D" uid="uid://djlelb4q0kp77" path="res://assets/ui/Cooking_station new/Filling_Sause.png" id="51_filling_sauce"]
+[ext_resource type="Texture2D" uid="uid://doqo5kt170opi" path="res://assets/ui/Cooking_station new/finished_duck_wrap_plate.png" id="52_finished_plate"]
 
 [sub_resource type="SystemFont" id="Font_serif"]
 font_names = PackedStringArray("Georgia", "Times New Roman", "Liberation Serif", "serif")
@@ -68,6 +66,21 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="AtlasTexture" id="Atlas_MiniBlank"]
+atlas = ExtResource("17_mini")
+region = Rect2(16, 76, 144, 42)
+
+[sub_resource type="StyleBoxTexture" id="Style_paper"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource("5_nav")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
 [sub_resource type="Shader" id="Shader_remove_gray"]
 code = "shader_type canvas_item;
 void fragment() {
@@ -81,29 +94,6 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="Material_food"]
 shader = SubResource("Shader_remove_gray")
-
-[sub_resource type="AtlasTexture" id="Atlas_MiniBlank"]
-atlas = ExtResource("17_mini")
-region = Rect2(16, 76, 144, 42)
-
-[sub_resource type="AtlasTexture" id="Atlas_NewDuck"]
-atlas = ExtResource("35_food")
-region = Rect2(300, 390, 320, 230)
-
-[sub_resource type="AtlasTexture" id="Atlas_NewRolled"]
-atlas = ExtResource("34_overlay")
-region = Rect2(817, 388, 265, 216)
-
-[sub_resource type="StyleBoxTexture" id="Style_paper"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 8.0
-texture = ExtResource("5_nav")
-texture_margin_left = 18.0
-texture_margin_top = 18.0
-texture_margin_right = 18.0
-texture_margin_bottom = 18.0
 
 [node name="CookingStation" type="Control" unique_id=1599641852]
 layout_mode = 3
@@ -264,10 +254,10 @@ texture = ExtResource("10_7cqb3")
 
 [node name="OrderTitle" type="Label" parent="Canvas/Game/OrderTicket" unique_id=1610537499]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 55.0
-offset_right = 250.0
-offset_bottom = 93.0
+offset_left = 26.0
+offset_top = 71.0
+offset_right = 280.21054
+offset_bottom = 113.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 27
@@ -284,8 +274,7 @@ offset_bottom = 193.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 18
-text = "Peking Duck
-Wrap × 1"
+text = "Peking Duck"
 autowrap_mode = 2
 
 [node name="Recipe" type="Label" parent="Canvas/Game/OrderTicket" unique_id=79286362]
@@ -492,6 +481,18 @@ mouse_filter = 2
 texture = ExtResource("16_hmbhh")
 expand_mode = 1
 
+[node name="OrderWrapLine" type="Label" parent="Canvas/Game/OrderTicket" unique_id=1476338820]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 160.0
+offset_right = 242.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 18
+text = "Wrap × 1"
+clip_text = true
+
 [node name="Queue1" type="NinePatchRect" parent="Canvas/Game" unique_id=1139655023]
 layout_mode = 0
 offset_left = 302.0
@@ -503,9 +504,9 @@ texture = ExtResource("17_lorts")
 [node name="Heading" type="Label" parent="Canvas/Game/Queue1" unique_id=1076525352]
 layout_mode = 0
 offset_left = 13.0
-offset_top = 16.0
+offset_top = 26.0
 offset_right = 163.0
-offset_bottom = 43.0
+offset_bottom = 53.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
@@ -514,55 +515,89 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Waiting" type="Label" parent="Canvas/Game/Queue1" unique_id=524022011]
+visible = false
 layout_mode = 0
 offset_left = 51.0
 offset_top = 52.0
 offset_right = 169.0
 offset_bottom = 164.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_constants/line_spacing = 8
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 16
-theme_override_constants/line_spacing = 8
 text = "Wrap × 1
 Cucumber
 Sauce"
 autowrap_mode = 2
 
-[node name="IconWrap" type="TextureRect" parent="Canvas/Game/Queue1"]
+[node name="IconWrap" type="TextureRect" parent="Canvas/Game/Queue1" unique_id=1403651923]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 48.0
+offset_top = 53.0
 offset_right = 44.0
-offset_bottom = 80.0
+offset_bottom = 85.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("11_7cqb3")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconCucumber" type="TextureRect" parent="Canvas/Game/Queue1"]
+[node name="IconCucumber" type="TextureRect" parent="Canvas/Game/Queue1" unique_id=607942619]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 78.0
+offset_top = 81.0
 offset_right = 44.0
-offset_bottom = 110.0
+offset_bottom = 113.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("14_cb4yv")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconSauce" type="TextureRect" parent="Canvas/Game/Queue1"]
+[node name="IconSauce" type="TextureRect" parent="Canvas/Game/Queue1" unique_id=1975395853]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 108.0
+offset_top = 113.0
 offset_right = 44.0
-offset_bottom = 140.0
+offset_bottom = 145.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("16_hmbhh")
 expand_mode = 1
-stretch_mode = 0
+
+[node name="Row1" type="Label" parent="Canvas/Game/Queue1" unique_id=912739787]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 59.0
+offset_right = 169.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Wrap × 1"
+clip_text = true
+
+[node name="Row2" type="Label" parent="Canvas/Game/Queue1" unique_id=1101138033]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 89.0
+offset_right = 169.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Cucumber"
+clip_text = true
+
+[node name="Row3" type="Label" parent="Canvas/Game/Queue1" unique_id=1752173417]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 119.0
+offset_right = 169.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Sauce"
+clip_text = true
 
 [node name="Queue2" type="NinePatchRect" parent="Canvas/Game" unique_id=508637711]
 layout_mode = 0
@@ -586,9 +621,9 @@ expand_mode = 1
 [node name="Heading" type="Label" parent="Canvas/Game/Queue2" unique_id=568935873]
 layout_mode = 0
 offset_left = 13.0
-offset_top = 16.0
+offset_top = 26.0
 offset_right = 163.0
-offset_bottom = 43.0
+offset_bottom = 53.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
@@ -597,68 +632,113 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Waiting" type="Label" parent="Canvas/Game/Queue2" unique_id=1752666770]
+visible = false
 layout_mode = 0
 offset_left = 51.0
 offset_top = 52.0
 offset_right = 169.0
 offset_bottom = 164.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_constants/line_spacing = 8
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 16
-theme_override_constants/line_spacing = 8
 text = "Wrap × 1
 Scallions
 Hawthorn
 Sauce"
 autowrap_mode = 2
 
-[node name="IconWrap" type="TextureRect" parent="Canvas/Game/Queue2"]
+[node name="IconWrap" type="TextureRect" parent="Canvas/Game/Queue2" unique_id=307186918]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 48.0
+offset_top = 49.0
 offset_right = 44.0
-offset_bottom = 80.0
+offset_bottom = 81.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("11_7cqb3")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconScallion" type="TextureRect" parent="Canvas/Game/Queue2"]
+[node name="IconScallion" type="TextureRect" parent="Canvas/Game/Queue2" unique_id=1323137665]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 78.0
+offset_top = 77.0
 offset_right = 44.0
-offset_bottom = 110.0
+offset_bottom = 109.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("15_84wit")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconHawthorn" type="TextureRect" parent="Canvas/Game/Queue2"]
+[node name="IconHawthorn" type="TextureRect" parent="Canvas/Game/Queue2" unique_id=514247090]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 108.0
+offset_top = 106.0
 offset_right = 44.0
-offset_bottom = 140.0
+offset_bottom = 138.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("13_uxk3c")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconSauce" type="TextureRect" parent="Canvas/Game/Queue2"]
+[node name="IconSauce" type="TextureRect" parent="Canvas/Game/Queue2" unique_id=451745075]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 138.0
+offset_top = 135.0
 offset_right = 44.0
-offset_bottom = 170.0
+offset_bottom = 167.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("16_hmbhh")
 expand_mode = 1
-stretch_mode = 0
+
+[node name="Row1" type="Label" parent="Canvas/Game/Queue2" unique_id=963619131]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 58.0
+offset_right = 169.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Wrap × 1"
+clip_text = true
+
+[node name="Row2" type="Label" parent="Canvas/Game/Queue2" unique_id=339645454]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 85.0
+offset_right = 169.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Scallions"
+clip_text = true
+
+[node name="Row3" type="Label" parent="Canvas/Game/Queue2" unique_id=1804558251]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 114.0
+offset_right = 169.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Hawthorn"
+clip_text = true
+
+[node name="Row4" type="Label" parent="Canvas/Game/Queue2" unique_id=64548324]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 141.0
+offset_right = 169.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Sauce"
+clip_text = true
 
 [node name="Queue3" type="NinePatchRect" parent="Canvas/Game" unique_id=939213839]
 layout_mode = 0
@@ -671,9 +751,9 @@ texture = ExtResource("17_lorts")
 [node name="Heading" type="Label" parent="Canvas/Game/Queue3" unique_id=969519070]
 layout_mode = 0
 offset_left = 13.0
-offset_top = 16.0
+offset_top = 28.0
 offset_right = 163.0
-offset_bottom = 43.0
+offset_bottom = 55.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
@@ -682,68 +762,113 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Waiting" type="Label" parent="Canvas/Game/Queue3" unique_id=185550284]
+visible = false
 layout_mode = 0
 offset_left = 51.0
 offset_top = 52.0
 offset_right = 169.0
 offset_bottom = 164.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_constants/line_spacing = 8
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 16
-theme_override_constants/line_spacing = 8
 text = "Wrap × 1
 Cucumber
 Hawthorn
 Sauce"
 autowrap_mode = 2
 
-[node name="IconWrap" type="TextureRect" parent="Canvas/Game/Queue3"]
+[node name="IconWrap" type="TextureRect" parent="Canvas/Game/Queue3" unique_id=1223937956]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
 offset_top = 48.0
 offset_right = 44.0
 offset_bottom = 80.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("11_7cqb3")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconCucumber" type="TextureRect" parent="Canvas/Game/Queue3"]
+[node name="IconCucumber" type="TextureRect" parent="Canvas/Game/Queue3" unique_id=333197771]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 78.0
+offset_top = 77.0
 offset_right = 44.0
-offset_bottom = 110.0
+offset_bottom = 109.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("14_cb4yv")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconHawthorn" type="TextureRect" parent="Canvas/Game/Queue3"]
+[node name="IconHawthorn" type="TextureRect" parent="Canvas/Game/Queue3" unique_id=2072283274]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
 offset_top = 108.0
 offset_right = 44.0
 offset_bottom = 140.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("13_uxk3c")
 expand_mode = 1
-stretch_mode = 0
 
-[node name="IconSauce" type="TextureRect" parent="Canvas/Game/Queue3"]
+[node name="IconSauce" type="TextureRect" parent="Canvas/Game/Queue3" unique_id=1820170832]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 138.0
+offset_top = 136.0
 offset_right = 44.0
-offset_bottom = 170.0
+offset_bottom = 168.0
 mouse_filter = 2
-texture_filter = 1
 texture = ExtResource("16_hmbhh")
 expand_mode = 1
-stretch_mode = 0
+
+[node name="Row1" type="Label" parent="Canvas/Game/Queue3" unique_id=38088556]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 58.0
+offset_right = 169.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Wrap × 1"
+clip_text = true
+
+[node name="Row2" type="Label" parent="Canvas/Game/Queue3" unique_id=1257528474]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 86.0
+offset_right = 169.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Cucumber"
+clip_text = true
+
+[node name="Row3" type="Label" parent="Canvas/Game/Queue3" unique_id=466786814]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 112.0
+offset_right = 169.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Hawthorn"
+clip_text = true
+
+[node name="Row4" type="Label" parent="Canvas/Game/Queue3" unique_id=1437722960]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 141.0
+offset_right = 169.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
+theme_override_fonts/font = SubResource("Font_serif")
+theme_override_font_sizes/font_size = 16
+text = "Sauce"
+clip_text = true
 
 [node name="Worktop" type="Panel" parent="Canvas/Game" unique_id=885095706]
 visible = false
@@ -892,82 +1017,77 @@ mouse_filter = 2
 texture = ExtResource("24_ihl6d")
 expand_mode = 1
 
-[node name="RolledPlate" type="TextureRect" parent="Canvas/Game" unique_id=1383759701]
-visible = false
-material = SubResource("Material_food")
-layout_mode = 0
-offset_left = 850.0
-offset_top = 308.0
-offset_right = 1100.0
-offset_bottom = 516.0
+[node name="Fillings" type="Control" parent="Canvas/Game" unique_id=1943164923]
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 560.0
 mouse_filter = 2
-texture = SubResource("Atlas_NewRolled")
+
+[node name="Duck" type="TextureRect" parent="Canvas/Game/Fillings" unique_id=1593110184]
+visible = false
+layout_mode = 0
+offset_left = 916.54
+offset_top = 335.0
+offset_right = 1039.74
+offset_bottom = 415.0
+mouse_filter = 2
+texture = ExtResource("47_filling_duck")
 expand_mode = 1
 
-[node name="PlateFeedback" type="ColorRect" parent="Canvas/Game" unique_id=1902118786]
+[node name="Hawthorn" type="TextureRect" parent="Canvas/Game/Fillings" unique_id=834432142]
 visible = false
 layout_mode = 0
-offset_left = 908.0
-offset_top = 345.0
-offset_right = 1058.0
-offset_bottom = 457.0
+offset_left = 944.0
+offset_top = 361.0
+offset_right = 1061.3
+offset_bottom = 430.0
 mouse_filter = 2
-color = Color(1, 0.94, 0.8, 0.72)
+texture = ExtResource("48_filling_hawthorn")
+expand_mode = 1
 
-[node name="Line1" type="Label" parent="Canvas/Game/PlateFeedback" unique_id=503315176]
+[node name="Scallion" type="TextureRect" parent="Canvas/Game/Fillings" unique_id=1794756321]
+visible = false
 layout_mode = 0
-offset_left = 10.0
-offset_top = 5.0
-offset_right = 190.0
-offset_bottom = 27.0
-theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
-theme_override_fonts/font = SubResource("Font_serif")
-theme_override_font_sizes/font_size = 17
-autowrap_mode = 2
+offset_left = 894.0
+offset_top = 356.0
+offset_right = 1011.8298
+offset_bottom = 434.0
+mouse_filter = 2
+texture = ExtResource("49_filling_scallion")
+expand_mode = 1
 
-[node name="Line2" type="Label" parent="Canvas/Game/PlateFeedback" unique_id=1325816871]
+[node name="Cucumber" type="TextureRect" parent="Canvas/Game/Fillings" unique_id=1009973218]
+visible = false
 layout_mode = 0
-offset_left = 10.0
-offset_top = 27.0
-offset_right = 190.0
-offset_bottom = 49.0
-theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
-theme_override_fonts/font = SubResource("Font_serif")
-theme_override_font_sizes/font_size = 17
-autowrap_mode = 2
+offset_left = 944.0
+offset_top = 365.0
+offset_right = 1045.6263
+offset_bottom = 433.0
+mouse_filter = 2
+texture = ExtResource("50_filling_cucumber")
+expand_mode = 1
 
-[node name="Line3" type="Label" parent="Canvas/Game/PlateFeedback" unique_id=1158189932]
+[node name="Sauce" type="TextureRect" parent="Canvas/Game/Fillings" unique_id=1398524388]
+visible = false
 layout_mode = 0
-offset_left = 10.0
-offset_top = 49.0
-offset_right = 190.0
-offset_bottom = 71.0
-theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
-theme_override_fonts/font = SubResource("Font_serif")
-theme_override_font_sizes/font_size = 17
-autowrap_mode = 2
+offset_left = 905.0
+offset_top = 348.0
+offset_right = 1061.9355
+offset_bottom = 453.0
+mouse_filter = 2
+texture = ExtResource("51_filling_sauce")
+expand_mode = 1
 
-[node name="Line4" type="Label" parent="Canvas/Game/PlateFeedback" unique_id=2132041353]
+[node name="RolledPlate" type="TextureRect" parent="Canvas/Game" unique_id=1383759701]
+visible = false
 layout_mode = 0
-offset_left = 10.0
-offset_top = 71.0
-offset_right = 190.0
-offset_bottom = 93.0
-theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
-theme_override_fonts/font = SubResource("Font_serif")
-theme_override_font_sizes/font_size = 17
-autowrap_mode = 2
-
-[node name="Line5" type="Label" parent="Canvas/Game/PlateFeedback" unique_id=111970288]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 93.0
-offset_right = 190.0
-offset_bottom = 115.0
-theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
-theme_override_fonts/font = SubResource("Font_serif")
-theme_override_font_sizes/font_size = 17
-autowrap_mode = 2
+offset_left = 851.0
+offset_top = 301.0
+offset_right = 1101.0
+offset_bottom = 509.0
+mouse_filter = 2
+texture = ExtResource("52_finished_plate")
+expand_mode = 1
 
 [node name="Roll" type="Button" parent="Canvas/Game" unique_id=1524369346]
 visible = false
@@ -1020,14 +1140,14 @@ theme_override_styles/disabled = SubResource("Style_transparent")
 icon = ExtResource("22_84wit")
 expand_icon = true
 
-[node name="StatusStrip" type="Control" parent="Canvas/Game"]
-layout_mode = 0
+[node name="StatusStrip" type="Control" parent="Canvas/Game" unique_id=1852175584]
+anchors_preset = 0
 offset_top = 568.0
 offset_right = 1440.0
 offset_bottom = 616.0
 mouse_filter = 2
 
-[node name="GestureStatusIcon" type="TextureRect" parent="Canvas/Game/StatusStrip"]
+[node name="GestureStatusIcon" type="TextureRect" parent="Canvas/Game/StatusStrip" unique_id=1988438768]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 8.0
@@ -1037,7 +1157,7 @@ mouse_filter = 2
 texture = ExtResource("45_hand")
 expand_mode = 1
 
-[node name="Feedback" type="Label" parent="Canvas/Game/StatusStrip"]
+[node name="Feedback" type="Label" parent="Canvas/Game/StatusStrip" unique_id=1070668465]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 8.0
@@ -1048,7 +1168,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 20
 text = "Gesture Status: Waiting for input"
 
-[node name="CameraStatus" type="Label" parent="Canvas/Game/StatusStrip"]
+[node name="CameraStatus" type="Label" parent="Canvas/Game/StatusStrip" unique_id=1005014327]
 layout_mode = 0
 offset_left = 822.0
 offset_top = 9.0
@@ -1060,11 +1180,11 @@ theme_override_font_sizes/font_size = 15
 text = "Camera off"
 horizontal_alignment = 2
 
-[node name="CameraButton" type="Button" parent="Canvas/Game/StatusStrip"]
+[node name="CameraButton" type="Button" parent="Canvas/Game/StatusStrip" unique_id=1092550506]
 layout_mode = 0
-offset_left = 1016.0
-offset_top = 9.0
-offset_right = 1182.0
+offset_left = 425.0
+offset_top = 6.0
+offset_right = 591.0
 offset_bottom = 40.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
@@ -1074,6 +1194,124 @@ theme_override_styles/normal = SubResource("Style_paper")
 theme_override_styles/pressed = SubResource("Style_paper")
 theme_override_styles/hover = SubResource("Style_paper")
 text = "Start Camera"
+
+[node name="WorkbenchDecor" type="Control" parent="Canvas/Game" unique_id=1462131741]
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 560.0
+mouse_filter = 2
+
+[node name="TrayLabels" type="Control" parent="Canvas/Game/WorkbenchDecor" unique_id=2131885698]
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 560.0
+mouse_filter = 2
+
+[node name="Board1SlicedRoastDuck" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/TrayLabels" unique_id=798360193]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 458.0
+offset_right = 603.0
+offset_bottom = 533.0
+mouse_filter = 2
+texture = ExtResource("38_84wit")
+expand_mode = 1
+
+[node name="Board2HawthornStricks" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/TrayLabels" unique_id=1967859367]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 348.0
+offset_right = 825.0
+offset_bottom = 396.0
+mouse_filter = 2
+texture = ExtResource("39_hmbhh")
+expand_mode = 1
+
+[node name="Board3ScallionStrips" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/TrayLabels" unique_id=712327100]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 355.0
+offset_right = 1265.0
+offset_bottom = 391.0
+mouse_filter = 2
+texture = ExtResource("35_1g6td")
+expand_mode = 1
+
+[node name="Board4CucumberStrips" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/TrayLabels" unique_id=1149970827]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 473.0
+offset_right = 828.0
+offset_bottom = 525.0
+mouse_filter = 2
+texture = ExtResource("33_7cqb3")
+expand_mode = 1
+
+[node name="Board5SweetBeanSauce" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/TrayLabels" unique_id=1997147672]
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 470.0
+offset_right = 1306.0
+offset_bottom = 521.0
+mouse_filter = 2
+texture = ExtResource("34_lorts")
+expand_mode = 1
+
+[node name="NumberBadges" type="Control" parent="Canvas/Game/WorkbenchDecor" unique_id=1665482904]
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 560.0
+mouse_filter = 2
+
+[node name="OrderThumbnail1" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=797553835]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 278.0
+offset_right = 443.0
+offset_bottom = 354.0
+mouse_filter = 2
+texture = ExtResource("31_nv0bu")
+expand_mode = 1
+
+[node name="OrderThumbnail2" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1266627486]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 263.0
+offset_right = 703.0
+offset_bottom = 316.0
+mouse_filter = 2
+texture = ExtResource("36_uxk3c")
+expand_mode = 1
+
+[node name="OrderThumbnail3" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1860025745]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 258.0
+offset_right = 1141.0
+offset_bottom = 311.0
+mouse_filter = 2
+texture = ExtResource("37_cb4yv")
+expand_mode = 1
+
+[node name="OrderThumbnail4" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1465297432]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 386.0
+offset_right = 701.0
+offset_bottom = 439.0
+mouse_filter = 2
+texture = ExtResource("31_ddsir")
+expand_mode = 1
+
+[node name="OrderThumbnail5" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1918549259]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 384.0
+offset_right = 1158.0
+offset_bottom = 437.0
+mouse_filter = 2
+texture = ExtResource("32_1g6td")
+expand_mode = 1
 
 [node name="Gestures" type="Control" parent="Canvas" unique_id=896993289]
 anchors_preset = 0
@@ -1108,7 +1346,7 @@ offset_top = 27.0
 offset_right = 122.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("22_one")
+texture = ExtResource("40_1g6td")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Canvas/Gestures/Card1" unique_id=1429491626]
@@ -1148,6 +1386,16 @@ theme_override_font_sizes/font_size = 18
 text = "Waiting"
 autowrap_mode = 2
 
+[node name="Gesture1" type="TextureRect" parent="Canvas/Gestures/Card1" unique_id=1161012181]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 13.0
+offset_right = 140.0
+offset_bottom = 126.0
+mouse_filter = 2
+texture = ExtResource("40_1g6td")
+expand_mode = 1
+
 [node name="Card2" type="NinePatchRect" parent="Canvas/Gestures" unique_id=1698146815]
 layout_mode = 0
 offset_left = 489.0
@@ -1164,7 +1412,7 @@ offset_top = 27.0
 offset_right = 122.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("23_two")
+texture = ExtResource("41_cb4yv")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Canvas/Gestures/Card2" unique_id=451204166]
@@ -1214,7 +1462,7 @@ offset_top = 54.0
 offset_right = 92.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("23_two")
+texture = ExtResource("41_cb4yv")
 expand_mode = 1
 
 [node name="SideLabel1" type="Label" parent="Canvas/Gestures/Card2" unique_id=1368411121]
@@ -1239,7 +1487,7 @@ offset_top = 54.0
 offset_right = 198.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("24_three")
+texture = ExtResource("42_84wit")
 expand_mode = 1
 
 [node name="SideLabel2" type="Label" parent="Canvas/Gestures/Card2" unique_id=1406787398]
@@ -1264,7 +1512,7 @@ offset_top = 54.0
 offset_right = 304.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("25_four")
+texture = ExtResource("43_hmbhh")
 expand_mode = 1
 
 [node name="SideLabel3" type="Label" parent="Canvas/Gestures/Card2" unique_id=809037112]
@@ -1289,7 +1537,7 @@ offset_top = 54.0
 offset_right = 410.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("26_five")
+texture = ExtResource("44_1mqei")
 expand_mode = 1
 
 [node name="SideLabel4" type="Label" parent="Canvas/Gestures/Card2" unique_id=59459288]
@@ -1304,6 +1552,46 @@ theme_override_font_sizes/font_size = 11
 text = "Sweet Bean Sauce"
 horizontal_alignment = 1
 clip_text = true
+
+[node name="Gesture2" type="TextureRect" parent="Canvas/Gestures/Card2" unique_id=45996995]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 42.0
+offset_right = 101.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("41_cb4yv")
+expand_mode = 1
+
+[node name="Gesture3" type="TextureRect" parent="Canvas/Gestures/Card2" unique_id=901362091]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 40.0
+offset_right = 203.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("42_84wit")
+expand_mode = 1
+
+[node name="Gesture4" type="TextureRect" parent="Canvas/Gestures/Card2" unique_id=1157944603]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 44.0
+offset_right = 308.0
+offset_bottom = 124.0
+mouse_filter = 2
+texture = ExtResource("43_hmbhh")
+expand_mode = 1
+
+[node name="Gesture5" type="TextureRect" parent="Canvas/Gestures/Card2" unique_id=772569475]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 42.0
+offset_right = 422.0
+offset_bottom = 124.0
+mouse_filter = 2
+texture = ExtResource("44_1mqei")
+expand_mode = 1
 
 [node name="Card3" type="NinePatchRect" parent="Canvas/Gestures" unique_id=1081329345]
 layout_mode = 0
@@ -1322,7 +1610,7 @@ offset_top = 27.0
 offset_right = 122.0
 offset_bottom = 122.0
 mouse_filter = 2
-texture = ExtResource("27_fist")
+texture = ExtResource("35_84wit")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="Canvas/Gestures/Card3" unique_id=1455967433]
@@ -1361,77 +1649,12 @@ theme_override_font_sizes/font_size = 18
 text = "Waiting"
 autowrap_mode = 2
 
-[node name="OrderThumbnail4" type="Sprite2D" parent="Canvas/Game" unique_id=497990262]
-position = Vector2(674, 412.0)
-texture = ExtResource("31_ddsir")
-
-[node name="OrderThumbnail5" type="Sprite2D" parent="Canvas/Game" unique_id=992683794]
-position = Vector2(1131, 410.0)
-texture = ExtResource("32_1g6td")
-
-[node name="Board4Cucumber——strips" type="Sprite2D" parent="Canvas/Game" unique_id=1437296278]
-position = Vector2(751, 499.0)
-scale = Vector2(0.16914195, 0.16914195)
-texture = ExtResource("33_7cqb3")
-
-[node name="Board5SweetBean——sauce" type="Sprite2D" parent="Canvas/Game" unique_id=1617644942]
-position = Vector2(1230, 495.0)
-scale = Vector2(0.13942316, 0.13942315)
-texture = ExtResource("34_lorts")
-
-[node name="Board3ScallionStrips" type="Sprite2D" parent="Canvas/Game" unique_id=1360669901]
-position = Vector2(1211, 373.0)
-scale = Vector2(0.09890113, 0.09890113)
-texture = ExtResource("35_1g6td")
-
-[node name="GestureFist" type="Sprite2D" parent="Canvas/Gestures" unique_id=17795057]
-position = Vector2(1046.0001, 130.00005999999996)
-scale = Vector2(0.4267578, 0.4267578)
+[node name="GestureFist" type="TextureRect" parent="Canvas/Gestures/Card3" unique_id=1438138093]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 8.0
+offset_right = 139.0
+offset_bottom = 130.0
+mouse_filter = 2
 texture = ExtResource("35_84wit")
-
-[node name="OrderThumbnail1" type="Sprite2D" parent="Canvas/Game" unique_id=6689944]
-position = Vector2(405, 316.0)
-texture = ExtResource("31_nv0bu")
-
-[node name="OrderThumbnail2" type="Sprite2D" parent="Canvas/Game" unique_id=804894260]
-position = Vector2(676, 289.0)
-texture = ExtResource("36_uxk3c")
-
-[node name="OrderThumbnail3" type="Sprite2D" parent="Canvas/Game" unique_id=1076590303]
-position = Vector2(1114, 284.0)
-texture = ExtResource("37_cb4yv")
-
-[node name="Board1SlicedRoastDuck" type="Sprite2D" parent="Canvas/Game" unique_id=1905813150]
-position = Vector2(491.00003, 495.0)
-scale = Vector2(0.2046703, 0.20467031)
-texture = ExtResource("38_84wit")
-
-[node name="Board2HawthornStricks" type="Sprite2D" parent="Canvas/Game" unique_id=515051524]
-position = Vector2(753, 372.0)
-scale = Vector2(0.14774464, 0.14774463)
-texture = ExtResource("39_hmbhh")
-
-[node name="Gesture1" type="Sprite2D" parent="Canvas/Gestures" unique_id=528329162]
-position = Vector2(97, 127.0)
-scale = Vector2(0.44140625, 0.44140625)
-texture = ExtResource("40_1g6td")
-
-[node name="Gesture2" type="Sprite2D" parent="Canvas/Gestures" unique_id=496977736]
-position = Vector2(552, 138.00005999999996)
-scale = Vector2(0.29687503, 0.29687503)
-texture = ExtResource("41_cb4yv")
-
-[node name="Gesture3" type="Sprite2D" parent="Canvas/Gestures" unique_id=792466885]
-position = Vector2(651.87506, 138.12505999999996)
-scale = Vector2(0.31347665, 0.31347665)
-texture = ExtResource("42_84wit")
-
-[node name="Gesture4" type="Sprite2D" parent="Canvas/Gestures" unique_id=411314138]
-position = Vector2(757, 142.00005999999996)
-scale = Vector2(0.31250048, 0.31250048)
-texture = ExtResource("43_hmbhh")
-
-[node name="Gesture5" type="Sprite2D" parent="Canvas/Gestures" unique_id=1282410897]
-position = Vector2(869.74994, 141.25)
-scale = Vector2(0.32226565, 0.32226565)
-texture = ExtResource("44_1mqei")
+expand_mode = 1

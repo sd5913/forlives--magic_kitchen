@@ -13,6 +13,25 @@ func _run() -> void:
 	root.size = Vector2i(1440, 900)
 	var station = Station.instantiate()
 	root.add_child(station)
+	current_scene = station
+	_check(load("res://scenes/cooking_station/cooking_station_layered.tscn") != null, "legacy scene opens without missing assets")
+	_check(station.view.get_node_or_null("Game/PlateFeedback") == null, "obsolete plate feedback panel is removed")
+	_check(station.view.get_node_or_null("Game/StatusStrip/CameraStatus") == null, "duplicate camera status is removed")
+	_check(station.view.camera_button.text == "Restart Camera", "camera button offers restart")
+	_check(station.view.feedback.text == "Gesture Status: Waiting for input", "camera status starts waiting")
+	station.set_gesture_status("camera could not be opened")
+	_check(station.view.feedback.text == "Gesture Status: Camera unavailable", "camera failure appears in left status")
+	station.set_gesture_status("camera connected · show a stable gesture")
+	_check(station.view.feedback.text == "Gesture Status: Waiting for input", "connected camera waits for gesture")
+	station.receive_action("add_duck", true)
+	_check(station.view.feedback.text == "Gesture Status: Recognized", "recognized gesture appears in left status")
+	station.receive_action("add_duck", false)
+	_check(station.view.feedback.text == "Gesture Status: Waiting for input", "released gesture returns to waiting")
+	station.set_gesture_status("camera bridge stopped")
+	_check(station.view.feedback.text == "Gesture Status: Camera unavailable", "disconnected camera appears unavailable")
+	station.set_gesture_status("waiting for camera bridge on UDP 4242")
+	_check(station.view.get_node("Game/WorkbenchDecor/NumberBadges/OrderThumbnail1") is TextureRect, "order number is a UI control")
+	_check(station.view.get_node("Gestures/Card1/Gesture1") is TextureRect, "gesture art is grouped into its card")
 	var reused_icons := {
 		"Game/Queue1/IconWrap": "Game/OrderTicket/OrderWrapIcon",
 		"Game/Queue1/IconCucumber": "Game/OrderTicket/IconCucumber",
@@ -31,9 +50,12 @@ func _run() -> void:
 	station.receive_action("add_duck", true)
 	station.receive_action("add_duck", true)
 	_check(station.added.size() == 1, "a held gesture adds only once")
+	_check(station.view.get_node("Game/WorkbenchDecor/NumberBadges/OrderThumbnail1").scale.x > 1.1, "duck number highlights on gesture 1")
 	station.receive_action("add_duck", false)
 	station.receive_action("add_cucumber", true)
 	station.receive_action("add_scallion", true)
+	_check(station.view.get_node("Game/WorkbenchDecor/NumberBadges/OrderThumbnail3").scale.x > 1.1, "scallion number highlights on gesture 3")
+	_check(station.view.get_node("Game/WorkbenchDecor/NumberBadges/OrderThumbnail1").scale.x == 1.0, "previous number returns to normal size")
 	station.receive_action("add_hawthorn", true)
 	station.receive_action("add_sauce", true)
 	station.receive_action("roll_wrap", true)
@@ -44,11 +66,9 @@ func _run() -> void:
 	station.receive_action("roll_wrap", false)
 	station.receive_action("roll_wrap", true)
 	_check(station.rolled, "matching order rolls")
-	station._submit()
-	station._submit()
-	_check(submissions.size() == 1, "submission is emitted only once")
-	if not submissions.is_empty():
-		_check(submissions[0].order_id == "01", "submission retains order ID")
+	_check(station.view.get_node("Game/RolledPlate").visible, "finished wrap appears after rolling")
+	_check(not station.view.get_node("Game/Plate").visible, "wrapper plate hides after rolling")
+	_check(station.view.get_node("Game/OrderTicket/DuckCheck").text == "☑︎", "wrap is checked only after rolling")
 	var next_ingredients: Array[String] = ["duck", "cucumber"]
 	station.set_order("02", next_ingredients)
 	station._toggle_pause()
@@ -83,7 +103,7 @@ func _run() -> void:
 	Input.parse_input_event(release)
 	await process_frame
 	_check("cucumber" in station.added, "clicking the cucumber art adds cucumber")
-	_check(station.view.order_checks[2].text == "☑", "order checklist updates")
+	_check(station.view.order_checks[2].text == "☑︎", "order checklist updates")
 	var all_ingredients: Array[String] = ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 	station.set_order("03", all_ingredients)
 	for i in range(station.view.ingredient_buttons.size()):
@@ -111,13 +131,21 @@ func _run() -> void:
 	await _click(station.view.gesture_card_buttons[2].get_global_rect().get_center())
 	_check(station.rolled, "third gesture card click rolls wrap")
 	station.set_order("03", all_ingredients)
+	var badge_indices := {"duck": 1, "hawthorn": 2, "scallion": 3, "cucumber": 4, "sauce": 5}
 	for ingredient in all_ingredients:
 		station._add_ingredient(ingredient)
+		_check(station.view.get_node("Game/Fillings/" + ingredient.capitalize()).visible, ingredient + " filling appears on plate")
+		_check(station.view.get_node("Game/WorkbenchDecor/NumberBadges/OrderThumbnail" + str(badge_indices[ingredient])).scale.x > 1.1, ingredient + " number highlights")
+	_check(not station.view.get_node("Game/OrderTicket/DuckCheck").text == "☑︎", "wrap is unchecked before rolling")
 	await _click(station.view.gesture_card_buttons[2].get_global_rect().get_center())
 	_check(station.rolled, "roll gesture card responds to mouse")
+	for ingredient in all_ingredients:
+		_check(not station.view.get_node("Game/Fillings/" + ingredient.capitalize()).visible, ingredient + " filling hides when rolled")
 	await _click(station.view.submit_button.get_global_rect().get_center())
-	_check(station.completed, "complete button responds to mouse")
-	station.queue_free()
+	await process_frame
+	await process_frame
+	_check(submissions.size() == 1, "submission is emitted once")
+	_check(root.get_node_or_null("RatingPlaceholder") != null, "complete button opens black rating placeholder")
 	print("Cooking station checks: %d failure(s)" % failures)
 	quit(1 if failures else 0)
 

@@ -19,12 +19,13 @@ const ACTIONS := {
 var order_id := "01"
 var required: Array[String] = ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 var added: Array[String] = []
+var highlighted_ingredient := ""
 var rolled := false
 var completed := false
 var paused := false
 var held_actions: Dictionary = {}
-var message := "Gesture Status: Waiting for input"
-var gesture_message := "Camera off"
+var message := ""
+var gesture_state := "waiting"
 var view
 var gesture_adapter
 var camera_process_id := -1
@@ -58,6 +59,7 @@ func _add_ingredient(ingredient: String) -> void:
 		message = "%s is already on the wrap." % NAMES[ingredient]
 	else:
 		added.append(ingredient)
+		highlighted_ingredient = ingredient
 		message = "Added %s.%s" % [NAMES[ingredient], " This is not in the order; use Undo." if ingredient not in required else ""]
 	_refresh()
 
@@ -76,6 +78,7 @@ func _roll() -> void:
 			_refresh()
 			return
 	rolled = true
+	highlighted_ingredient = ""
 	message = "Wrap rolled! Complete the order when ready."
 	_refresh()
 
@@ -85,9 +88,11 @@ func _undo() -> void:
 		return
 	if rolled:
 		rolled = false
+		highlighted_ingredient = added.back() if not added.is_empty() else ""
 		message = "Wrap opened again."
 	elif not added.is_empty():
 		var removed: String = added.pop_back()
+		highlighted_ingredient = added.back() if not added.is_empty() else ""
 		message = "Removed %s." % NAMES[removed]
 	else:
 		message = "There is nothing to undo."
@@ -105,6 +110,7 @@ func _submit() -> void:
 	message = "Order %s complete! Press R to try again." % order_id
 	order_completed.emit({"order_id": order_id, "ingredients": added.duplicate(), "rolled": true})
 	_refresh()
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/cooking_station/rating_placeholder.tscn")
 
 
 func _toggle_pause() -> void:
@@ -118,10 +124,16 @@ func _toggle_pause() -> void:
 func receive_action(action: String, active: bool) -> void:
 	if not active:
 		held_actions.erase(action)
+		if held_actions.is_empty() and gesture_state == "recognized":
+			gesture_state = "waiting"
+			_refresh()
 		return
 	if paused or held_actions.has(action):
 		return
+	if not ACTIONS.has(action) and action != "roll_wrap":
+		return
 	held_actions[action] = true
+	gesture_state = "recognized"
 	if ACTIONS.has(action):
 		_add_ingredient(ACTIONS[action])
 	elif action == "roll_wrap":
@@ -129,7 +141,11 @@ func receive_action(action: String, active: bool) -> void:
 
 
 func set_gesture_status(status: String) -> void:
-	gesture_message = "Camera off" if status.begins_with("waiting for camera bridge") else status.left(22)
+	var normalized := status.to_lower()
+	if normalized.contains("unavailable") or normalized.contains("could not") or normalized.contains("missing") or normalized.contains("failed") or normalized.contains("stopped unexpectedly") or normalized.contains("bridge stopped"):
+		gesture_state = "unavailable"
+	elif normalized.begins_with("camera connected") or normalized.begins_with("waiting for camera bridge") or normalized.begins_with("camera starting"):
+		gesture_state = "waiting"
 	if is_node_ready() and view != null:
 		view.update_display()
 
@@ -138,15 +154,15 @@ func is_camera_running() -> bool:
 	return camera_process_id > 0 and OS.is_process_running(camera_process_id)
 
 
-func _toggle_camera() -> void:
+func _restart_camera() -> void:
 	if is_camera_running():
 		OS.kill(camera_process_id)
-		camera_process_id = -1
-		set_gesture_status("camera stopped")
-		return
+	camera_process_id = -1
+	held_actions.clear()
+	set_gesture_status("camera starting")
 	var python_path := ProjectSettings.globalize_path("res://../.venv-gesture/Scripts/python.exe")
 	var script_path := ProjectSettings.globalize_path("res://../tools/gesture_camera.py")
-	if not FileAccess.file_exists(python_path):
+	if not FileAccess.file_exists(python_path) or not FileAccess.file_exists(script_path):
 		set_gesture_status("setup missing - run tools/setup-gesture.ps1")
 		return
 	camera_process_id = OS.create_process(python_path, PackedStringArray([script_path]))
@@ -154,6 +170,13 @@ func _toggle_camera() -> void:
 		set_gesture_status("could not start camera")
 	else:
 		set_gesture_status("camera starting - allow access if prompted")
+
+
+func _process(_delta: float) -> void:
+	if camera_process_id > 0 and not OS.is_process_running(camera_process_id):
+		camera_process_id = -1
+		held_actions.clear()
+		set_gesture_status("camera process stopped unexpectedly")
 
 
 func _exit_tree() -> void:
@@ -166,10 +189,11 @@ func set_order(id: String, ingredients: Array[String]) -> void:
 	order_id = id
 	required = ingredients.duplicate()
 	added.clear()
+	highlighted_ingredient = ""
 	rolled = false
 	completed = false
 	held_actions.clear()
-	message = "Gesture Status: Waiting for input"
+	message = ""
 	if is_node_ready():
 		_refresh()
 
