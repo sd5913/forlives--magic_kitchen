@@ -103,7 +103,7 @@ func _perform_action(number: int) -> void:
 
 
 func _view_signature() -> String:
-	var snapshot := {"station": session.station, "paused": session.paused, "summary": session.summary_visible, "rating": session.rating, "can_return": session.can_return(), "message": session.message, "selected": session.manager.selected_order_id, "language": language, "camera": receiver.status, "orders": [], "food": session.food.duplicate(true)}
+	var snapshot := {"station": session.station, "paused": session.paused, "summary": session.summary_visible, "rating": session.rating, "can_return": session.can_return(), "rating_stage": _rating_stage(), "message": session.message, "selected": session.manager.selected_order_id, "language": language, "camera": receiver.status, "orders": [], "food": session.food.duplicate(true)}
 	for order in session.manager.get_visible_orders():
 		snapshot.orders.append([order.order_id, order.status])
 	for entry in snapshot.food.values():
@@ -402,15 +402,24 @@ func _build_actions() -> void:
 	_camera_line = _label(_canvas, receiver.status, Rect2(28, 754, 325, 66), 15, PAPER)
 
 
+func _rating_stage() -> int:
+	if session.rating.is_empty():
+		return 0
+	return clampi(int(floor(session.rating_elapsed / float(session.rules.rating_seconds) * 4.0 + 0.00001)), 0, 4)
+
+
 func _build_rating() -> void:
 	var result := session.rating
+	var stage := _rating_stage()
 	_panel(_canvas, Rect2(144, 220, 1152, 585), "parchment_panel")
 	_label(_canvas, "%s · %s" % [result.order_id, result.customer_name[language]], Rect2(190, 248, 1010, 55), 33)
 	_picture(_canvas, _textures.wrap, Rect2(210, 344, 310, 240))
-	_label(_canvas, "%s · %d / 100" % [result.reaction, int(result.total)], Rect2(560, 327, 680, 72), 40)
-	_label(_canvas, _t("Ordering %.0f   Roasting %d   Preparation %d", "点单 %.0f   烘烤 %d   料理 %d") % [float(result.wait_score), int(result.roast_score), int(result.prep_score)], Rect2(560, 423, 680, 60), 25)
+	var reaction: String = {"Happy": _t("Happy", "非常满意"), "Satisfied": _t("Satisfied", "满意"), "Unhappy": _t("Unhappy", "不满意")}.get(result.reaction, result.reaction)
+	_label(_canvas, ("%s · %d / 100" % [reaction, int(result.total)]) if stage == 4 else _t("Checking your order…", "正在核对这份订单…"), Rect2(560, 327, 680, 72), 40)
+	var score_text := _t("Ordering %s   Roasting %s   Preparation %s", "点单 %s   烘烤 %s   料理 %s") % [str(roundi(float(result.wait_score))) if stage >= 1 else "—", str(result.roast_score) if stage >= 2 else "—", str(result.prep_score) if stage >= 3 else "—"]
+	_label(_canvas, score_text, Rect2(560, 423, 680, 60), 25)
 	_label(_canvas, _t("The three station scores are averaged.\nEach ingredient matches or loses 20 preparation points.", "三站分数取平均。\n五种食材逐项核对，每项正确得 20 料理分。"), Rect2(560, 510, 650, 75), 21)
-	_button(_canvas, _t("Return to work", "返回工作区") if session.can_return() else _t("Tasting…", "品尝中…"), Rect2(500, 674, 440, 70), _return_to_work, not session.can_return(), true)
+	_button(_canvas, _t("Return to work", "返回工作区") if session.can_return() else _t("Checking scores…", "正在展示评分…"), Rect2(500, 674, 440, 70), _return_to_work, not session.can_return(), true)
 
 
 func _return_to_work() -> void:

@@ -236,3 +236,13 @@ I retained the team's new cooking asset ZIP and both native handoff documents, c
 The shared imperfect-recipe policy, post-roll lock, five-order flow and counter return are unchanged pending planning agreement. I verified the rendered scene and fixed long ingredient text, correction-row spacing and the camera/feedback overlap. On macOS / Godot 4.7.2 all nine game suites passed; the new source-scene suite passed 25 checks, or 31 including six saved screenshots. No new player or live-camera trial is claimed.
 
 共享失误餐点计分、卷制后锁定、五单与回点单流程继续待策划统一，本轮不自行改口径。渲染自查修正了长食材名、修正行间距及相机／反馈重叠；macOS／Godot 4.7.2 九组游戏检查通过，新增料理场景 25 项，含六张截图保存共 31 项。不作为新增真人／相机试玩。
+
+### Integrated demo feedback polish / 整合 Demo 反馈优化
+
+I fixed the compact ticket so a full five-ingredient order does not lose its last side behind the five-row limit: the wrap icon represents the duck wrap, leaving four rows for sides. Preparation now explains acceptance, roasting/slicing prerequisites, missing ingredients, extra ingredients and the roll input. Side progress is recipe-specific and disabled controls provide a reason.
+
+我修正满配小票五行限制可能漏掉配菜的问题：鸭卷图标代表主餐，另外四行显示配菜。料理反馈明确待接单、烤制／片鸭前置、缺料、误加和卷制输入；配菜进度按当前配方计算，禁用控件附原因。
+
+I connected sequential station-score presentation to the existing three-second rating period. Total, reaction and return appear last; scoring arithmetic and lifecycle rules are unchanged. On macOS / Godot 4.7.2 all ten game suites passed, including 17 new feedback checks (20 with three rendered screenshots). No new artwork or human/live-camera validation is claimed.
+
+我把逐项评分接到原有三秒展示中，总分、档位和返回最后出现，计分及状态规则保持不变。macOS／Godot 4.7.2 十组游戏检查通过，新增反馈 17 项（含三张渲染截图共 20 项）。本轮没有新增美术，不作为真人或相机验证。

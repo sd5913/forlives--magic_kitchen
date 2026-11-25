@@ -37,9 +37,9 @@ Install [Godot 4.7.2 Standard](https://godotengine.org/download/archive/4.7.2-st
 
 安装 [Godot 4.7.2 Standard](https://godotengine.org/download/archive/4.7.2-stable/)，克隆或下载[项目仓库](https://github.com/sd5913/forlives--magic_kitchen)。在 Godot 项目管理器中选择 **导入**，打开 [`game/project.godot`](game/project.godot)，再点击 **运行项目**。
 
-The project now opens the shared shift. Accept a ticket, use **Roast: 1 put in, 2 take out, 3 slice**, then **Prepare: 1 duck, 2 hawthorn, 3 scallion, 4 cucumber, 5 sauce; Space to roll**. Action cards also work with a mouse. Click **Complete order** to see the scores, then return to work. Five served or expired orders finish the shift.
+The project now opens the shared shift. Accept a ticket, use **Roast: 1 put in, 2 take out, 3 slice**, then **Prepare: 1 duck, 2 hawthorn, 3 scallion, 4 cucumber, 5 sauce; Space to roll**. Action cards also work with a mouse. Click **Complete order** to reveal the three station scores in sequence; the total and return button unlock after three seconds. Five served or expired orders finish the shift.
 
-工程现在默认打开统一营业流程。接单后，在烤炉台按 **1 放入、2 取出、3 片鸭**；料理台按 **1 鸭肉、2 山楂、3 葱、4 黄瓜、5 酱，空格卷制**。也可点击动作卡和食材卡。完成订单后查看评分并返回，交付或过期共五单后结束营业。
+工程现在默认打开统一营业流程。接单后，在烤炉台按 **1 放入、2 取出、3 片鸭**；料理台按 **1 鸭肉、2 山楂、3 葱、4 黄瓜、5 酱，空格卷制**。也可点击动作卡和食材卡。完成订单后依次查看三站评分，三秒后显示总分并可返回，交付或过期共五单后结束营业。
 
 Two oven slots and up to four active tickets share one clock. Switching stations keeps progress; **Esc** pauses, and leaving the window pauses until you resume. You can fix side ingredients before rolling. An imperfect wrap still earns a score, so mistakes become part of the shift rather than a dead end.
 

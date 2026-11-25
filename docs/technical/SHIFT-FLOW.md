@@ -72,9 +72,9 @@ python3 -m unittest discover -s tests -v
 python3 tools/run_game_checks.py --godot /path/to/Godot
 ```
 
-Verified on macOS with Godot 4.7.2: all nine game suites passed, including 67 new flow checks and 9 UDP checks; the existing manager (38), order UI (378), legacy shift (27) and cooking checks still pass. Eight shared-flow states and eight approved-counter states were rendered and inspected. The approved-counter suite adds 20 behavior/layout checks. The camera environment imported OpenCV 4.11.0 and MediaPipe 0.10.21 and initialized the hand model against a blank frame. A project pack exported and launched successfully.
+Verified on macOS with Godot 4.7.2: all ten game suites passed, including 67 new flow checks and 9 UDP checks; the existing manager (38), order UI (378), legacy shift (27) and cooking checks still pass. Eight shared-flow states and eight approved-counter states were rendered and inspected. The approved-counter suite adds 20 behavior/layout checks. The camera environment imported OpenCV 4.11.0 and MediaPipe 0.10.21 and initialized the hand model against a blank frame. A project pack exported and launched successfully.
 
-本轮在 macOS、Godot 4.7.2 下验证：九组游戏检查通过，包括新增流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项和料理检查仍通过。整合流程八种状态和定稿点单八种状态已实际渲染检查；定稿点单新增 20 项行为与布局检查。摄像头环境导入 OpenCV 4.11.0 与 MediaPipe 0.10.21，并完成模型初始化和空白帧处理；资源包已导出并成功启动。
+本轮在 macOS、Godot 4.7.2 下验证：十组游戏检查通过，包括新增流程 67 项、UDP 9 项；原管理器 38 项、点单界面 378 项、旧试玩 27 项和料理检查仍通过。整合流程八种状态和定稿点单八种状态已实际渲染检查；定稿点单新增 20 项行为与布局检查。摄像头环境导入 OpenCV 4.11.0 与 MediaPipe 0.10.21，并完成模型初始化和空白帧处理；资源包已导出并成功启动。
 
 Windows gameplay, real-camera gesture accuracy, an uncoached human playtest and tutor review remain pending. GitHub's three-platform repository checks do not substitute for those tests. The [integration handoff](INTEGRATION-HANDOFF.md) lists the specific decisions and assets still needed.
 
@@ -91,3 +91,7 @@ The shared entry now opens the green-clothed customer counter from Figma node `2
 The supplied 1440 × 900 cooking scene is integrated through `game/scenes/preparation_handoff/`. Its 25 behavior checks (31 including six screenshot saves) cover source controls, correction, order/station round trips, food layers, locking, scoring and return. Source files, runtime mappings and screenshots are in the [handoff record](../design/COOKING-HANDOFF-1125.md). Existing shared recipe-error/scoring rules remain authoritative while the planning differences are resolved.
 
 组内 1440 × 900 料理场景通过 `game/scenes/preparation_handoff/` 接入，25 项行为检查（含六张图片保存共 31 项）覆盖控件、修正、切单切站、叠层、锁定、评分返回。[交接记录](../design/COOKING-HANDOFF-1125.md)保留源文件、路径映射与截图。策划差异统一前继续采用现有共享配方失误／评分规则。
+
+The 26 November feedback pass also checks recipe-specific missing/extra hints and the five-row compact ticket for a full recipe. Scoring reveals the three station scores before the total and return unlock. `test_demo_feedback.gd` adds 17 checks, or 20 including three saved previews, without changing scoring rules.
+
+11 月 26 日反馈优化补查配方缺料／误加提示和满配小票，三站评分依次出现后再显示总分并开放返回。`test_demo_feedback.gd` 新增 17 项，含三张预览共 20 项，不改计分规则。

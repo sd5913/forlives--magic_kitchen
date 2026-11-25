@@ -235,7 +235,7 @@ func serve_current() -> bool:
 	rating = result.duplicate(true)
 	rating_elapsed = 0.0
 	food.erase(id)
-	_notify("Order served. The customer is tasting your wrap.")
+	_notify("Order served. Showing the three station scores.")
 	return true
 
 

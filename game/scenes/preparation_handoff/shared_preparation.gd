@@ -129,10 +129,14 @@ func refresh_queue_cards() -> void:
 		var ticket: Control = view.get_node("Game/Queue" + str(slot + 1))
 		var has_order := slot < queue_ids.size()
 		view.queue_buttons[slot].disabled = not has_order or not session.can_interact()
+		view.queue_buttons[slot].tooltip_text = "Switch to " + queue_ids[slot] if has_order else "No waiting order"
 		ticket.get_node("Heading").text = queue_ids[slot] if has_order else "No waiting order"
 		var items: Array = []
 		if has_order:
-			items = session.manager.get_order(queue_ids[slot]).ingredients
+			# The wrap icon already represents the duck wrap; reserve the five rows for wrap + sides.
+			for item in session.manager.get_order(queue_ids[slot]).ingredients:
+				if item.id != "duck_meat":
+					items.append(item)
 		for row_index in range(5):
 			var row: Control = ticket.get_node("Items/Row" + str(row_index + 1))
 			row.visible = row_index < items.size()
@@ -191,7 +195,34 @@ func apply_shared_controls() -> void:
 	var status: String = "Paused · press Esc to resume" if paused else ("Waiting for accepted, sliced duck" if stage == "waiting" or stage.is_empty() else session.message)
 	if stage == "ready" and not paused:
 		status = "Wrap ready · complete this order"
+	var order: Dictionary = session.manager.get_order(order_id)
+	if not paused:
+		if order.get("status") == "pending":
+			status = "Accept this ticket at Order Station first"
+		elif stage == "waiting":
+			status = "Go to Roasting Station · roast, take out, then slice"
+		elif stage == "roasting":
+			status = "Duck is in the oven · return to Roasting Station"
+		elif stage == "taken_out" or stage == "slicing":
+			status = "Finish slicing at Roasting Station before adding duck"
+		elif stage == "preparing":
+			status = preparation_hint()
 	view.feedback.text = status
+	view.feedback.tooltip_text = status
+	view.submit_button.tooltip_text = "Serve this wrap" if stage == "ready" else "Roll the wrap before serving"
+	view.roll_button.tooltip_text = "Make a fist or press Space" if session.action_available(0) else "Add sliced duck before rolling"
+	if session.action_available(0) and preparation_hint() != "Recipe matched · make a fist or press Space to roll":
+		view.roll_button.tooltip_text = "Roll now · missing or extra ingredients affect your score"
+	view.gesture_card_buttons[0].tooltip_text = "Add sliced duck · show 1 finger or press 1"
+	view.gesture_card_buttons[1].tooltip_text = view.roll_button.tooltip_text
+	for index in range(INGREDIENTS.size()):
+		var ingredient: String = INGREDIENTS[index]
+		view.ingredient_buttons[index].tooltip_text = NAMES[ingredient] + (" · already added" if ingredient in added else (" · roast and slice the duck first" if stage != "preparing" else " · click to add"))
+	var matched := 0
+	for ingredient in added:
+		if ingredient in required and ingredient != "duck":
+			matched += 1
+	view.get_node("Gestures/Card2/Status").text = "%d / %d required sides" % [matched, required.size() - (1 if "duck" in required else 0)]
 	view.camera_button.text = "Stop Camera" if host.receiver.camera_pid > 0 else "Start Camera"
 	view.camera_button.tooltip_text = host.receiver.status
 	view.get_node("Top/Pause").tooltip_text = "Resume (Esc)" if paused else "Pause (Esc)"
@@ -199,6 +230,22 @@ func apply_shared_controls() -> void:
 	view.get_node("Gestures/Card3/Hint").visible = false
 	view.get_node("Gestures/Card3/Status").visible = true
 	view.get_node("Gestures/Card3/Status").text = "Ready to serve" if rolled else ("Rolling…" if stage == "wrapping" else "Make a fist to roll")
+
+
+func preparation_hint() -> String:
+	var missing: Array[String] = []
+	var extra: Array[String] = []
+	for ingredient in required:
+		if ingredient not in added:
+			missing.append(NAMES[ingredient])
+	for ingredient in added:
+		if ingredient not in required:
+			extra.append(NAMES[ingredient])
+	if not extra.is_empty():
+		return "Extra: " + ", ".join(extra) + " · click its ticket row to remove"
+	if not missing.is_empty():
+		return "Next: " + ", ".join(missing)
+	return "Recipe matched · make a fist or press Space to roll"
 
 
 func refresh_times() -> void:
