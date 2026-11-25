@@ -81,6 +81,10 @@ We use Godot and GDScript. Scenes live in `game/scenes/`, runtime art belongs in
 
 我们用 Godot 和 GDScript 开发。统一营业主场景管理玩法状态，各组员独立场景仍可编辑。场景放在 `game/scenes/`，运行时素材放在 `game/assets/`，设计成果和说明放在 `docs/design/`。游戏文件用 `snake_case`，Godot 节点用 `PascalCase`，Python 开发工具放在仓库根目录的独立目录中。[工程规范](docs/technical/ENGINEERING-STANDARDS.md)说明素材归档、场景分工、Git 与检查方式，[技术总览](docs/technical/README.md)介绍工程结构，[协作说明](CONTRIBUTING.md)记录组内的开发流程。
 
+For a repeatable review package, run `python3 tools/package_review.py --godot /path/to/Godot`. It imports resources, exports a project pack, checks startup and includes run instructions and source/font notices. The result still requires Godot; it is not a standalone application or a substitute for a player trial.
+
+需要重新生成候选试玩包时，运行 `python3 tools/package_review.py --godot /path/to/Godot`。工具会导入资源、导出并检查启动，附运行方法和来源／字体声明。结果仍需 Godot，不是独立应用，也不替代真人试玩。
+
 [Project board](https://github.com/orgs/sd5913/projects/23) · [Progress](docs/WEEKLY-PROGRESS.md) · [Credits and AI assistance](CREDITS.md)
 
 [项目看板](https://github.com/orgs/sd5913/projects/23) · [开发进度](docs/WEEKLY-PROGRESS.md) · [致谢与 AI 辅助说明](CREDITS.md)

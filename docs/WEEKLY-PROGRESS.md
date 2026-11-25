@@ -156,7 +156,7 @@ This is the final Canvas deadline, not a tutor meeting.
 - Final repository and README access: not yet checked for submission
 - Source-import route and local project pack exist; final release/platform reproduction and asset rights remain pending.
 - Credits, weekly evidence and team contributions: keep updated
-- Canvas group submission: not yet verified
+- Canvas group submission: receipt checked on 25 November; correct repository URL submitted at 07:57 as displayed by Canvas. Final grading is pending.
 
 Record actual results after each review. Plans, template cards and automated checks must not be presented as completed user trials or tutor feedback.
 
@@ -205,10 +205,20 @@ I checked the course brief and Week 8 guide against the repository. All four tea
 
 我对照课程要求和 Week 8 说明核对仓库，四位成员均有 Admin；看板权限另核。PR #12 检查通过，小票详情修复已合入主线。README 补明确受众，旧快照与现状分开，并整理[交付核对](assessment/READINESS-2026-11-25.md)。
 
-I supplied my recollection of a classmate's cross-screen gesture feedback and the interaction revision, plus two tutor showings (low-fi and playable). The low-fi advice was to continue; the playable-review comments and original dates are not reliably recalled. The [feedback record](assessment/FEEDBACK-AND-CHANGES.md) labels the account and the later code evidence separately. This records prior events today; it does not assign them today's event date. The group Canvas URL is not submitted yet.
+I supplied my recollection of a classmate's cross-screen gesture feedback and the interaction revision, plus two tutor showings (low-fi and playable). The low-fi advice was to continue; the playable-review comments and original dates are not reliably recalled. The [feedback record](assessment/FEEDBACK-AND-CHANGES.md) labels the account and the later code evidence separately. This records prior events today; it does not assign them today's event date. At the time of that account the Canvas URL was reported pending; a later screenshot confirms submission at 07:57 on 25 November.
 
-我补充了同学提出跨界面手势冲突、随后修改隔离，以及两次 tutor 展示（低保真、试玩）的回忆。低保真建议继续，试玩评价和原日期记不清。[反馈记录](assessment/FEEDBACK-AND-CHANGES.md)区分转述经历与后来的代码证据。今天补录不代表事件发生在今天。小组 Canvas 链接尚未提交。
+我补充了同学提出跨界面手势冲突、随后修改隔离，以及两次 tutor 展示（低保真、试玩）的回忆。低保真建议继续，试玩评价和原日期记不清。[反馈记录](assessment/FEEDBACK-AND-CHANGES.md)区分转述经历与后来的代码证据。今天补录不代表事件发生在今天。当时报告 Canvas 待交；后续截图确认已于 11 月 25 日 07:57 提交。
 
 For the next review, I want to check whether players understand gesture meaning after a station switch, then confirm one agreed rule set. This is a proposed review question, not a fabricated past tutor comment. Live-camera retesting, original meeting notes, final module visuals, reference-art permissions and instructor board access remain open.
 
 下一次 review 拟检查换站后手势含义是否可预判，再统一规则；这是待讨论问题，不是补写旧评价。真人相机复测、原会议记录、最终模块视觉、参考图许可与老师看板可见性仍需补齐。
+
+### Submission receipt and clean-source delivery / 提交回执与干净源码交付
+
+The supplied Canvas receipt confirms the correct repository URL submitted by JIN Minyi at 07:57 on 25 November as displayed. The score is still pending. I updated the current status and supporting pack; the earlier pending-submission account is superseded.
+
+用户提供的 Canvas 回执确认 JIN Minyi 于 11 月 25 日 07:57（页面显示）提交正确仓库链接，尚未评分。已更新当前状态及材料包，此前待交记录以新回执为准。
+
+I reproduced the README source-import path in a new public clone on the same Mac. Godot 4.7.2 imported the project and all eight game suites passed. I added and exercised `tools/package_review.py`: imports, exports, checks pack startup, preserves the font license, includes run instructions/logs and verifies the ZIP. This is development tooling and delivery verification, not a new game feature or a human test. Final visual modules, planning choices, asset rights and live-camera re-trial remain open.
+
+我在同一台 Mac 的全新公开克隆副本复现 README 导入方法，Godot 4.7.2 导入及八组游戏检查通过。新增并实际执行 `tools/package_review.py`，完成导入、导出、资源包启动，保留字体许可、运行方法和日志，并检查 ZIP。这是交付工具和验证，不是新玩法或真人试玩；最终模块视觉、策划口径、素材许可及真人相机复测继续待办。

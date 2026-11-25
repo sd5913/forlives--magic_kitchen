@@ -35,9 +35,9 @@ Use descriptive English names for new runtime files and folders, with no spaces.
 
 ## Scene boundaries / 场景职责
 
-`workbench.tscn` lays out the four zones. Each subscene owns the controls inside its zone. Change a zone's position in the main scene and its contents in the subscene. Coordinate changes to shared settings or zone dimensions with the main scene owner. See the [scene ownership table](README.md#workbench-layout-and-ownership).
+`game/scenes/shift/shift_game.tscn` is the shared playable entry. `shift_session.gd` owns the clock, orders, food and scores. The approved order view uses a 1536 × 1024 design canvas; existing roasting/preparation/rating layouts use 1440 × 900 and are proportionally fitted by the host. Contributor scenes remain available for independent work; changing a branch's standalone entry must not silently replace the shared entry.
 
-`workbench.tscn` 负责四个区域的摆放，各子场景负责本区域内的控件。挪位置改主场景，改内容进子场景。调整区域尺寸或公共设置前，与主场景负责人对齐。分工见[场景分工表](README.md#workbench-layout-and-ownership)。
+当前可玩入口为 `game/scenes/shift/shift_game.tscn`。`shift_session.gd` 管理共享时间、订单、食物和评分。定稿点单使用 1536 × 1024 画布，现有烤炉／料理／评分使用 1440 × 900，由主场景等比适配。组员独立场景继续保留，分支的独立启动页不能直接覆盖共享入口。
 
 When two zones need to communicate, expose a named signal or method and connect it from their parent. For example, an order panel can emit `order_selected(order_id)`. Keep device events inside the input layer and have gameplay code consume named actions. See the [input contract](../INPUT-ARCHITECTURE.md).
 
@@ -53,12 +53,12 @@ When two zones need to communicate, expose a named signal or method and connect 
 ## Integration checks / 集成检查
 
 1. Sync `main` before starting a change. Keep each commit focused and use a message that describes its effect, such as `fix: keep mortar feedback visible after keyboard activation`.
-2. Open the changed scene in Godot, then run the full workbench. Check its placement at 960 × 540 and after resizing. For input changes, try mouse and keyboard, including one ordinary invalid or interrupted action when applicable.
+2. Open the changed scene in Godot, then run the shared shift. Check its native design size, 960 × 540, and resizing. For input changes, try mouse and keyboard, including one ordinary invalid or interrupted action when applicable.
 3. From the repository root, run the file checker and the input contract tests below. GitHub Actions runs these Python checks on Windows, macOS and Linux. Record Godot editor or gameplay checks separately, with the platform you actually tested.
 4. Share the change and verification results with the technical lead for integration. For shared scenes and settings, reconcile overlapping edits before pushing to `main`.
 
 1. 开始前同步 `main`。一次提交解决一个问题，提交信息写出具体效果，例如 `fix: keep mortar feedback visible after keyboard activation`。
-2. 在 Godot 中打开改过的场景，再运行完整工作台。检查 960 × 540 下的布局和缩放效果。输入改动要试键盘和鼠标，适用时再试一次误操作或输入中断。
+2. 在 Godot 中打开改过的场景，再运行统一营业。检查原设计尺寸、960 × 540 和窗口缩放。输入改动要试键盘和鼠标，适用时再试一次误操作或输入中断。
 3. 在仓库根目录运行下面两项检查。GitHub Actions 会在 Windows、macOS 和 Linux 上运行这些 Python 检查。Godot 编辑器或玩法检查单独记录，并注明实际验证的平台。
 4. 把改动和验证结果交给技术负责人统筹集成。涉及共享场景或设置时，先处理重叠改动，再推送到 `main`。
 
@@ -70,3 +70,13 @@ python3 -m unittest discover -s tests -v
 On Windows, use `py -3` in place of `python3`.
 
 Windows 上可用 `py -3` 替代 `python3`。
+
+## Review packaging / 候选版本打包
+
+```sh
+python3 tools/package_review.py --godot /path/to/Godot
+```
+
+The ignored `build/review_candidate.zip` contains the project pack, setup instructions, build evidence and font license. Import/export/startup must succeed before a new archive is produced. This validates the current host only. Verify actual interaction and human feedback separately. The pack still requires Godot 4.7.2 Standard; camera launch needs the source checkout/environment. Resolve the recorded reference-art permissions before treating it as a cleared public release.
+
+输出在忽略提交的 `build/review_candidate.zip`，包含资源包、运行方法、构建证据和字体许可。导入、导出、启动成功后才生成新包；只验证当前主机，实际交互及他人反馈另测。资源包仍需 Godot 4.7.2 Standard，摄像头需要源码环境；参考图许可明确前不当作已核清许可的正式发布。

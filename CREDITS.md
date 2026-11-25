@@ -74,3 +74,7 @@ Codex 协助将已定稿的 Figma 点单台（`217:1122`）及详情、全部订
 Bree Serif Regular is distributed under the SIL Open Font License 1.1. The font and its original copyright and license notice are included in `game/assets/fonts/`. Source: [Google Fonts / Bree Serif](https://github.com/google/fonts/tree/main/ofl/breeserif).
 
 Bree Serif Regular 按 SIL Open Font License 1.1 分发，字体及原版权和许可声明保存在 `game/assets/fonts/`。来源：[Google Fonts / Bree Serif](https://github.com/google/fonts/tree/main/ofl/breeserif)。
+
+Codex also assisted with the review-pack export/check utility, clean-source reproduction and submission-status documentation. These checks are recorded separately from the team's classmate trials and tutor feedback.
+
+Codex 也协助编写候选包导出检查工具、验证干净源码复现，并整理提交状态；这些检查与同学试玩和 tutor 反馈分开记录。
