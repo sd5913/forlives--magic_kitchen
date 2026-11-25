@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uh5aem6anp13"
-path="res://.godot/imported/gesture1.png-75210539377ed7a3f11b647d1f0ef338.ctex"
+uid="uid://bk230t6w47uax"
+path="res://.godot/imported/recipe_icon_2.png-7387999d2e054d65a11c9da6ff27e058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/gesture1.png"
-dest_files=["res://.godot/imported/gesture1.png-75210539377ed7a3f11b647d1f0ef338.ctex"]
+source_file="res://assets/ui/preparation_handoff/recipe_icon_2.png"
+dest_files=["res://.godot/imported/recipe_icon_2.png-7387999d2e054d65a11c9da6ff27e058.ctex"]
 
 [params]
 

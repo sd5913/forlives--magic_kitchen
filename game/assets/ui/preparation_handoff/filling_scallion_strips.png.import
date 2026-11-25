@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4681i2kbwm8h"
-path="res://.godot/imported/filling_scallion_strips_1_1_.png-ccc466e0394d0938189b54935842a59e.ctex"
+path="res://.godot/imported/filling_scallion_strips.png-d41d43dfaf5988bcc7849edde2cd0c34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/filling_scallion_strips_1_1_.png"
-dest_files=["res://.godot/imported/filling_scallion_strips_1_1_.png-ccc466e0394d0938189b54935842a59e.ctex"]
+source_file="res://assets/ui/preparation_handoff/filling_scallion_strips.png"
+dest_files=["res://.godot/imported/filling_scallion_strips.png-d41d43dfaf5988bcc7849edde2cd0c34.ctex"]
 
 [params]
 

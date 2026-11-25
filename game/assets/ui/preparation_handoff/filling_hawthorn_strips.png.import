@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqchqq0psjmov"
-path="res://.godot/imported/orderhanger.png-1b5ff24cd940a576cf1fa2eb0b7df170.ctex"
+uid="uid://w74g1jyopeo0"
+path="res://.godot/imported/filling_hawthorn_strips.png-e63b463edafd30f7d9b2572b51e7aa4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/orderhanger.png"
-dest_files=["res://.godot/imported/orderhanger.png-1b5ff24cd940a576cf1fa2eb0b7df170.ctex"]
+source_file="res://assets/ui/preparation_handoff/filling_hawthorn_strips.png"
+dest_files=["res://.godot/imported/filling_hawthorn_strips.png-e63b463edafd30f7d9b2572b51e7aa4c.ctex"]
 
 [params]
 

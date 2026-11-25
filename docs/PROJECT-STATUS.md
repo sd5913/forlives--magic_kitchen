@@ -2,6 +2,12 @@
 
 Updated 25 November 2026, Hong Kong time. I am JIN Minyi (`IceyHikari`). I keep current implementation, design delivery and remaining work separate so the team can continue from either computer.
 
+## 26 November: supplied cooking scene connected
+
+The [new cooking handoff](design/COOKING-HANDOFF-1125.md) is now connected to the shared shift. The 48 PNGs and exact ZIP/PDF/DOCX source files are retained. Recipe rows, food layers, actual order queue, pause/lock and submission use the existing shared state. No sample order list or scoring placeholder replaces the main flow. Final roasting/serving art and planning differences remain open.
+
+[新料理交付](design/COOKING-HANDOFF-1125.md)已接入统一营业，保留 48 张 PNG 和 ZIP／PDF／Word 原件。配方、叠层、真实订单、暂停锁定及交付使用现有共享状态，不以示例订单或评分占位页替代主流程；烤炉／交付最终美术及策划差异继续待办。
+
 ## Current state on 25 November / 11 月 25 日当前状态
 
 Main includes [PR #10](https://github.com/sd5913/forlives--magic_kitchen/pull/10) (shared shift), [PR #11](https://github.com/sd5913/forlives--magic_kitchen/pull/11) (approved counter) and [PR #12](https://github.com/sd5913/forlives--magic_kitchen/pull/12) (ticket details fix). The source can run the complete keyboard/mouse flow. The approved green-clothed customer counter is implemented; final roasting, preparation and serving visuals remain in the module handoff. The snapshots below retain their original dates and are not the current branch status.

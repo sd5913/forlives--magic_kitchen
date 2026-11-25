@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di7wu4io0ps4c"
-path="res://.godot/imported/filling_sause.png-5e280367c6436c0352e5e0e1ac7c7226.ctex"
+path="res://.godot/imported/filling_sauce.png-c83177581a3c2eb88387ef1254271806.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/filling_sause.png"
-dest_files=["res://.godot/imported/filling_sause.png-5e280367c6436c0352e5e0e1ac7c7226.ctex"]
+source_file="res://assets/ui/preparation_handoff/filling_sauce.png"
+dest_files=["res://.godot/imported/filling_sauce.png-c83177581a3c2eb88387ef1254271806.ctex"]
 
 [params]
 

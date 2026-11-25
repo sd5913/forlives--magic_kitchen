@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvss5o45dfyft"
-path="res://.godot/imported/button_completeorder.png-63f87edb0a6c3496037e4cc4dc4d9f84.ctex"
+uid="uid://uh5aem6anp13"
+path="res://.godot/imported/gesture_1.png-9c90efb382cc6f58a2b80e71f14e7170.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/button_completeorder.png"
-dest_files=["res://.godot/imported/button_completeorder.png-63f87edb0a6c3496037e4cc4dc4d9f84.ctex"]
+source_file="res://assets/ui/preparation_handoff/gesture_1.png"
+dest_files=["res://.godot/imported/gesture_1.png-9c90efb382cc6f58a2b80e71f14e7170.ctex"]
 
 [params]
 

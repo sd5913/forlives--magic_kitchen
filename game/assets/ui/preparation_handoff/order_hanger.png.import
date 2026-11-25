@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qu23j53rtge3"
-path="res://.godot/imported/board2_hawthorn_stricks.png-fdbea91d8ae1c3435ba8c57810cdbbf1.ctex"
+uid="uid://bqchqq0psjmov"
+path="res://.godot/imported/order_hanger.png-53e9434ba058cb0419ccf81231748fbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/board2_hawthorn_stricks.png"
-dest_files=["res://.godot/imported/board2_hawthorn_stricks.png-fdbea91d8ae1c3435ba8c57810cdbbf1.ctex"]
+source_file="res://assets/ui/preparation_handoff/order_hanger.png"
+dest_files=["res://.godot/imported/order_hanger.png-53e9434ba058cb0419ccf81231748fbc.ctex"]
 
 [params]
 

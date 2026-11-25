@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b81fu1f5bpxif"
-path="res://.godot/imported/iconbutton_stop.png-e893923cf223af759a942663b20cc3c4.ctex"
+uid="uid://n4u2spkephhq"
+path="res://.godot/imported/recipe_icon_6.png-618040b8870b4dfdb57bee0d2657a4fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/iconbutton_stop.png"
-dest_files=["res://.godot/imported/iconbutton_stop.png-e893923cf223af759a942663b20cc3c4.ctex"]
+source_file="res://assets/ui/preparation_handoff/recipe_icon_6.png"
+dest_files=["res://.godot/imported/recipe_icon_6.png-618040b8870b4dfdb57bee0d2657a4fa.ctex"]
 
 [params]
 

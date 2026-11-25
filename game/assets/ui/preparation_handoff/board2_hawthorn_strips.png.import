@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk230t6w47uax"
-path="res://.godot/imported/ingredients_ordermenus_2_.png-0b236a81ccd9dedf39a84a0709e28ac5.ctex"
+uid="uid://qu23j53rtge3"
+path="res://.godot/imported/board2_hawthorn_strips.png-2a00d56e3320b311cbaaa95977207d91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/ingredients_ordermenus_2_.png"
-dest_files=["res://.godot/imported/ingredients_ordermenus_2_.png-0b236a81ccd9dedf39a84a0709e28ac5.ctex"]
+source_file="res://assets/ui/preparation_handoff/board2_hawthorn_strips.png"
+dest_files=["res://.godot/imported/board2_hawthorn_strips.png-2a00d56e3320b311cbaaa95977207d91.ctex"]
 
 [params]
 

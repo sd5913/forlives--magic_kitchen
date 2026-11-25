@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://danykhjxdewxt"
-path="res://.godot/imported/ingredients_ordermenus_5_.png-379e271973264af180b0c7f1cbcb70a3.ctex"
+uid="uid://cptvqnjla42h2"
+path="res://.godot/imported/recipe_icon_1.png-255ec07f4aacb1ed36aef94d8edd6f00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/ingredients_ordermenus_5_.png"
-dest_files=["res://.godot/imported/ingredients_ordermenus_5_.png-379e271973264af180b0c7f1cbcb70a3.ctex"]
+source_file="res://assets/ui/preparation_handoff/recipe_icon_1.png"
+dest_files=["res://.godot/imported/recipe_icon_1.png-255ec07f4aacb1ed36aef94d8edd6f00.ctex"]
 
 [params]
 

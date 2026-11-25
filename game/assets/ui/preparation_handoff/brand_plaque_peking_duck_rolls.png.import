@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w74g1jyopeo0"
-path="res://.godot/imported/filling_hawthron_sticks.png-bd6a4dc3c493f4d8ddd8bf0a45f9ec89.ctex"
+uid="uid://b2p657iqnjpw2"
+path="res://.godot/imported/brand_plaque_peking_duck_rolls.png-368cfae4647766cd3a0c0ed55950aa75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/filling_hawthron_sticks.png"
-dest_files=["res://.godot/imported/filling_hawthron_sticks.png-bd6a4dc3c493f4d8ddd8bf0a45f9ec89.ctex"]
+source_file="res://assets/ui/preparation_handoff/brand_plaque_peking_duck_rolls.png"
+dest_files=["res://.godot/imported/brand_plaque_peking_duck_rolls.png-368cfae4647766cd3a0c0ed55950aa75.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv0flej210c7i"
-path="res://.godot/imported/bottomedboard_gesture.png-7b37f471156926c64ea857dbb431c869.ctex"
+path="res://.godot/imported/gesture_card_background.png-2ca6d328a5ee7f9c1b386851d6e0fe25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/bottomedboard_gesture.png"
-dest_files=["res://.godot/imported/bottomedboard_gesture.png-7b37f471156926c64ea857dbb431c869.ctex"]
+source_file="res://assets/ui/preparation_handoff/gesture_card_background.png"
+dest_files=["res://.godot/imported/gesture_card_background.png-2ca6d328a5ee7f9c1b386851d6e0fe25.ctex"]
 
 [params]
 

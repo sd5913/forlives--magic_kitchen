@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cduanu8qiefvw"
-path="res://.godot/imported/ingredients_ordermenus_4_.png-4587f694a10186911fd7434990832a9d.ctex"
+uid="uid://b81fu1f5bpxif"
+path="res://.godot/imported/icon_button_pause.png-fc3a79df7329d72d5cc0d350a05facb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/ingredients_ordermenus_4_.png"
-dest_files=["res://.godot/imported/ingredients_ordermenus_4_.png-4587f694a10186911fd7434990832a9d.ctex"]
+source_file="res://assets/ui/preparation_handoff/icon_button_pause.png"
+dest_files=["res://.godot/imported/icon_button_pause.png-fc3a79df7329d72d5cc0d350a05facb2.ctex"]
 
 [params]
 

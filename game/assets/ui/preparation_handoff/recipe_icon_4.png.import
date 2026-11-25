@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2p657iqnjpw2"
-path="res://.godot/imported/brandplaquepeaking_duck_rolls.png-ae47e227c8faac545f359caeea160c56.ctex"
+uid="uid://cduanu8qiefvw"
+path="res://.godot/imported/recipe_icon_4.png-d345a45c9df1fb1e8ccfcbc35d2f0ba1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/preparation_handoff/brandplaquepeaking_duck_rolls.png"
-dest_files=["res://.godot/imported/brandplaquepeaking_duck_rolls.png-ae47e227c8faac545f359caeea160c56.ctex"]
+source_file="res://assets/ui/preparation_handoff/recipe_icon_4.png"
+dest_files=["res://.godot/imported/recipe_icon_4.png-d345a45c9df1fb1e8ccfcbc35d2f0ba1.ctex"]
 
 [params]
 
