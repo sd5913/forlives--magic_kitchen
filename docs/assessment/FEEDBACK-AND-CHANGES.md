@@ -35,6 +35,6 @@ This is our proposed professional review angle, not a remembered tutor comment. 
 
 ## Submission status / 提交状态
 
-As confirmed on 25 November, the group repository URL has not yet been submitted to Canvas. Submit the existing sd5913 repository URL using the group assignment's actual settings, then record the receipt; do not confuse this with individual Assignment 3.
+The later Canvas submission-details screenshot confirms that JIN Minyi submitted the correct group repository URL on 25 November at 07:57 (the time displayed by Canvas). The URL is https://github.com/sd5913/forlives--magic_kitchen. This supersedes the earlier same-day report that submission was pending. The displayed score is “-/40”, so no grade or final assessment result is established.
 
-11 月 25 日确认：小组仓库 URL 尚未提交 Canvas。请按小组作业实际设置提交现有 sd5913 仓库链接并保留回执，与个人 Assignment 3 分开。
+随后提供的 Canvas 提交详情截图确认：JIN Minyi 于 11 月 25 日 07:57（Canvas 显示时间）提交了正确的小组仓库 URL：https://github.com/sd5913/forlives--magic_kitchen。此前同日“待提交”的状态已被新回执更新。页面评分为“-/40”，尚不能据此认定已评分或通过最终审查。

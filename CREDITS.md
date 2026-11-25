@@ -10,9 +10,9 @@ OpenAI Codex helped us draft and translate documentation, compare interaction re
 
 Codex also helped build the standalone cooking-station prototype, including placeholder food drawings and interaction logic, using the team's exported UI frames.
 
-The cooking-station redesign uses the reference image embedded in the committed Figma backup (`images/049ea5164cd047abb08c95ffe9a2a5bf5b86517f`) alongside the exported shared UI frames. Codex helped assemble the scene and its interactive overlays. The reference image's creator and permission for runtime use are still to be confirmed.
+The cooking-station redesign uses the reference image embedded in the committed Figma backup (`images/049ea5164cd047abb08c95ffe9a2a5bf5b86517f`) alongside the exported shared UI frames. Codex helped assemble the scene and its interactive overlays. The team confirmed on 25 November that the selected shared reference was co-created with generative AI; the original generator/model was not recorded.
 
-The 1440 × 900 cooking scene uses an AI-generated background made with OpenAI image generation using that reference, plus rectangular food and gesture crops from the reference. Codex assembled the editable Godot controls. The reference image's creator and permission for runtime use remain to be confirmed.
+The 1440 × 900 cooking scene uses an AI-generated background made with OpenAI image generation using that reference, plus rectangular food and gesture crops from the reference. Codex assembled the editable Godot controls. The selected reference is the team's AIGC-assisted source described below.
 
 OpenAI Codex 参与了文档起草与翻译、交互参考比较、仓库检查，以及 Python 输入路由、模拟和测试的编写，也协助制作了 Godot 初版工作台与输入反馈。文档曾使用 [Stop Slop](https://github.com/hardikpandya/stop-slop) 辅助编辑。
 
@@ -34,9 +34,9 @@ The current food and hand artwork is a Figma AI-assisted redraw in a simplified 
 
 ## Art and design sources / 美术与设计来源
 
-The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected reference image’s creator and runtime-use permission still need to be added before those textures are published as game assets.
+The [design page](docs/design/README.md) links our Figma work and exported files. The [manifest](docs/design/exports/manifest.json) records the source node for each export. The selected wood-and-parchment reference was co-created by the team with generative AI, confirmed on 25 November. We reused it to build shared frames and scene textures; this origin is a team declaration, not a newly identified external stock-image license. The exact original generator/model is not recorded.
 
-[设计页面](docs/design/README.md)保存 Figma 与导出文件入口，[清单](docs/design/exports/manifest.json)记录每份导出的来源节点。选定参考图的作者与运行时使用许可还需补齐，再将对应纹理发布为游戏素材。
+[设计页面](docs/design/README.md)保存 Figma 与导出文件入口，[清单](docs/design/exports/manifest.json)记录每份导出的来源节点。木框与羊皮纸公共参考图由我们与 AIGC 协作生成，11 月 25 日已确认；随后用于拆分公共边框与场景纹理。这里按组内确认记录来源，不再将它写成来源未明的外部图库图片；最初使用的生成工具／模型尚未记录。
 
 ## References / 参考
 
@@ -74,3 +74,7 @@ Codex 协助将已定稿的 Figma 点单台（`217:1122`）及详情、全部订
 Bree Serif Regular is distributed under the SIL Open Font License 1.1. The font and its original copyright and license notice are included in `game/assets/fonts/`. Source: [Google Fonts / Bree Serif](https://github.com/google/fonts/tree/main/ofl/breeserif).
 
 Bree Serif Regular 按 SIL Open Font License 1.1 分发，字体及原版权和许可声明保存在 `game/assets/fonts/`。来源：[Google Fonts / Bree Serif](https://github.com/google/fonts/tree/main/ofl/breeserif)。
+
+Codex also assisted with the review-pack export/check utility, clean-source reproduction and submission-status documentation. These checks are recorded separately from the team's classmate trials and tutor feedback.
+
+Codex 也协助编写候选包导出检查工具、验证干净源码复现，并整理提交状态；这些检查与同学试玩和 tutor 反馈分开记录。

@@ -16,6 +16,10 @@ See the [assessment readiness check](assessment/READINESS-2026-11-25.md) for the
 
 [课程交付核对](assessment/READINESS-2026-11-25.md)列出 11 月 26 日 review、最终提交、证据缺项与负责部分。此前同学／tutor 展示已按转述写入[反馈记录](assessment/FEEDBACK-AND-CHANGES.md)，与自动检查分开。
 
+Canvas submission is confirmed by the supplied receipt: JIN Minyi, 25 November 07:57 as displayed, correct repository URL. The score remains “-/40”; submission is not a claim of final assessment approval. Keep improving the same repository through the deadline.
+
+用户提供的回执已确认 Canvas 提交：JIN Minyi，显示时间 11 月 25 日 07:57，仓库链接正确。“-/40”表示尚无评分，提交成功不等于最终审核通过；截止前继续完善同一仓库。
+
 ## 23 November: integrated shift
 
 I integrated the current main archive, order/playable-shift work, cooking station, serving scaffold and roasting design into a shared shift. The default entry is now `game/scenes/shift/shift_game.tscn`. The [flow guide](technical/SHIFT-FLOW.md) records controls, configuration and actual verification. The [handoff](technical/INTEGRATION-HANDOFF.md) separates resolved conflicts from the decisions and artwork still needed from each module.

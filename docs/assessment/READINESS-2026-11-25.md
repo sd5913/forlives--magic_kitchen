@@ -2,13 +2,13 @@
 
 ## Conclusion / 结论
 
-We have a playable keyboard/mouse foundation and an implemented order-counter design. We cannot yet claim that every course requirement is evidenced or that the final visual delivery is complete. The immediate priorities are a reproducible delivery candidate, a documented trial by another person, actual tutor feedback and adaptations, final module integration, and resolved asset attribution.
+We have a playable keyboard/mouse foundation and an implemented order-counter design. We cannot yet claim that every course requirement is evidenced or that the final visual delivery is complete. The immediate priorities are a reproducible delivery candidate, a documented trial by another person, actual tutor feedback and adaptations, final module integration, and complete asset attribution.
 
 我们已有可玩键鼠基础和已接入的点单定稿，尚不能认定课程要求全部有证据、最终视觉全部完成。当前优先补可复现的候选版本、他人试玩记录、真实 tutor 反馈与调整、模块最终接入和素材来源。
 
-Sources checked: [group-project brief](https://github.com/sd5913/pfad/blob/2026/assignments/group-project.md), [Week 8 teamwork guide](https://github.com/sd5913/pfad/blob/2026/week08/teamwork.md), current main README, contribution/progress/credits files, PRs #10–#12, repository and collaborator permissions, and the public releases API. Canvas screenshots supplied by the team agree with the brief. The actual Canvas submission receipt and tutor calendar were not inspected.
+Sources checked: [group-project brief](https://github.com/sd5913/pfad/blob/2026/assignments/group-project.md), [Week 8 teamwork guide](https://github.com/sd5913/pfad/blob/2026/week08/teamwork.md), current main README, contribution/progress/credits files, PRs #10–#12, repository and collaborator permissions, and the public releases API. Canvas screenshots supplied by the team agree with the brief. A later supplied Canvas receipt confirms the correct URL and 25 November 07:57 displayed submission time; the tutor calendar was not inspected.
 
-核对依据为课程项目要求、Week 8 协作说明、当前主线 README、协作／进度／致谢、PR #10–#12、仓库及成员权限、公开发布 API。用户提供的 Canvas 截图与项目要求一致；本次未查看 Canvas 提交回执或 tutor 日历。
+核对依据为课程项目要求、Week 8 协作说明、当前主线 README、协作／进度／致谢、PR #10–#12、仓库及成员权限、公开发布 API。用户提供的 Canvas 截图与项目要求一致；后续提供的 Canvas 回执已确认正确 URL 与 11 月 25 日 07:57 的显示提交时间；未查看 tutor 日历。
 
 ## Requirement check / 要求对照
 
@@ -18,15 +18,15 @@ Sources checked: [group-project brief](https://github.com/sd5913/pfad/blob/2026/
 | Teammates have write access / 成员可写 | IceyHikari, MiaJiao5, deadlytomatovo, ZHANGYan-Sybil all report Admin / 四位均有 Admin | Permission met; actual push and board access are separate / 权限满足，实际推送及看板另核对 |
 | Usable interactive project and source / 可用交互与源码 | Shared order → roast → prepare → score; order retention, mistakes, expiry, restart; PR #10–#12 / 主流程和状态处理 | Working foundation; final station visuals and design conflicts remain / 基础已实现，最终美术和规则冲突待处理 |
 | Idea, audience and response / 创意、受众与反馈 | README describes short cooking/time-management play and station behavior / README 介绍短局料理经营与工作区反馈 | Audience made explicit; novelty and usefulness need player evidence, not a claim of uniqueness / 已明确受众，差异与价值需试玩支撑 |
-| README setup, platform and limitations / 安装、平台及限制 | Godot 4.7.2 import/run, keyboard/mouse mapping, macOS evidence, camera/Windows limits / 运行方法及已验证范围 | Mostly met; verify a teammate can reproduce the instructions / 基本满足，需他人按说明复现 |
+| README setup, platform and limitations / 安装、平台及限制 | Godot 4.7.2 import/run, keyboard/mouse mapping, macOS evidence, camera/Windows limits / 运行方法及已验证范围 | Source route reproduced in a new clone on macOS on 25 November; a teammate/fresh-device run remains separate / 11 月 25 日已在全新克隆副本复现；他人／换机仍另测 |
 | Appropriate multimedia / 与体验相符的多媒体 | Original counter illustration, shared textures, food/hand images, interface feedback / 插画、纹理、食物手势与界面反馈 | Visual evidence exists; final roasting/serving states still pending. Sound/video are not individually mandated by the brief / 已有视觉，最终烤炉交付状态待补；课程未逐项强制声音或视频 |
 | Trial with another person / 他人实际体验 | Teammate reported cross-screen gesture conflicts; team revised/isolated gestures, reported on 25 November / 已转述同学发现跨屏手势冲突及后续修改隔离 | Reported trial and adaptation recorded in [feedback notes](FEEDBACK-AND-CHANGES.md); dates/version and current-build live-camera retest pending / 已记录转述试玩与改进，补日期版本及当前版相机复测 |
 | Shared planning, ownership and meaningful contributions / 协作及贡献 | Team plans, contributor history, Figma/source handoffs, PRs and weekly notes / 计划、真实贡献、交接与 PR | Partial: update owners and acceptance evidence; design work counts when its contribution is traceable / 部分满足，补责任人与验收证据，不以代码量替代设计贡献 |
 | Weekly review, feedback and adaptation / 每周 review 与调整 | Dated cards/notes exist; several early weeks still contain placeholders / 有日期记录，早期仍有占位 | Partial: two tutor showings reported; low-fi advice was to continue. Playable-review comments/date not recalled / 已转述两次展示，低保真建议继续；试玩评价和日期待核 |
 | Board/progress reachable by instructor / 老师可访问进度 | README links existing Project #23 and public weekly notes / 已链接 #23 与公开周记录 | Public notes accessible; authenticated board/tutor visibility not verified this audit. Do not create another board / 周记录可见，看板老师权限待核；不另建看板 |
-| Credits, AI disclosure and licensed assets / 来源、AI 与许可 | CREDITS plus Figma manifests and included Bree Serif OFL notice / 致谢、来源清单、字体许可 | Partial: reference-derived art creator/runtime permission still explicitly unresolved; resolve or replace affected art / 参考图作者及运行许可仍有待确认，需补齐或替换 |
+| Credits, AI disclosure and licensed assets / 来源、AI 与许可 | CREDITS plus Figma manifests and included Bree Serif OFL notice / 致谢、来源清单、字体许可 | Shared reference confirmed by the team as AIGC-assisted; CREDITS updated, Bree Serif license included. Original generator/model not recorded / 公共参考图已确认由小组与 AIGC 协作生成，致谢已更新、字体许可已附；最初工具模型未记录 |
 | Secrets configured without exposure / 密钥与私密信息 | Keyboard/mouse game requires no API key; ignored local environments/config / 基础游戏无密钥依赖，忽略本地配置 | No new secret configuration needed for core play. A full history secret scan was not performed / 基础玩法无需新增配置；未执行全历史密钥审计 |
-| Canvas repository URL / Canvas 仓库链接 | Correct URL identified below / 正确地址见下 | Not submitted, confirmed by JIN Minyi on 25 November / 11 月 25 日确认尚未提交 |
+| Canvas repository URL / Canvas 仓库链接 | Correct URL identified below / 正确地址见下 | Submitted: Canvas screenshot shows JIN Minyi, 25 November 07:57, correct URL; grade pending / 回执确认已提交，显示 11 月 25 日 07:57，地址正确，待评分 |
 
 ## What to submit / 最终提交什么
 
@@ -42,9 +42,9 @@ Deadline: **6 December 2026, 23:59 HKT**. Keep the same repository, source, READ
 
 截止为 **2026 年 12 月 6 日 23:59，香港时间**。继续使用同一仓库，保证源码、README 和证据可访问；按实际小组提交设置操作并保存回执。与个人 Assignment 3 分开。当前要求没有额外引入每周 Canvas 上传，也没有列出必须另交报告、幻灯片或视频；若 tutor 或实际 Canvas 页面有补充，以其明确要求为准。
 
-A downloadable build is helpful when appropriate, not a prescribed engine/store requirement. The releases API returned no published release on 25 November. The local `.pck` needs Godot 4.7.2; it is not a standalone macOS or Windows executable, and a desktop-only path is not an instructor download link. The current source-import route is documented. Before publishing a release, settle the art-use rights and validate the exact package on the chosen platform.
+A downloadable build is helpful when appropriate, not a prescribed engine/store requirement. The releases API returned no published release on 25 November. The local `.pck` needs Godot 4.7.2; it is not a standalone macOS or Windows executable, and a desktop-only path is not an instructor download link. The current source-import route is documented. Keep the team-declared AIGC source and font notice with the package, and validate the exact package on the chosen platform.
 
-可下载版本有助复现，但课程不指定引擎或应用商店。11 月 25 日 releases API 未返回已发布版本。本地 `.pck` 需要 Godot 4.7.2，不是独立 macOS／Windows 应用；本机桌面路径也不是老师的下载入口。现有源码导入方式已写明；公开发布前需明确美术许可并验证实际包。
+可下载版本有助复现，但课程不指定引擎或应用商店。11 月 25 日 releases API 未返回已发布版本。本地 `.pck` 需要 Godot 4.7.2，不是独立 macOS／Windows 应用；本机桌面路径也不是老师的下载入口。现有源码导入方式已写明；随包保留组内声明的 AIGC 来源与字体许可，并验证实际包。
 
 ## 26 November review / 11 月 26 日 review
 
@@ -85,10 +85,16 @@ The fetched `feature/cooking-station` branch contains newer cooking assets and s
 
 - Other-person trial: use [the playtest record](PLAYTEST-RECORD.md); no invented quotes or device/date information / 他人试玩按记录表填写，不补造原话、设备或日期。
 - Tutor feedback: actual meeting/date, comments, next goal and owner; earlier reviews can be recorded now with their actual event date and today's recording date / 反馈按真实会议记录，补录同时注明发生与记录日期。
-- Permission: source author, original URL/license or permission evidence for reference-derived art / 素材作者、原链接、许可或授权依据。
+- Shared reference origin: confirmed as team/AIGC co-creation on 25 November; original tool/model details may be added if recovered / 公共参考图来源已于 11 月 25 日确认为小组与 AIGC 协作生成，若找回最初工具模型可补充。
 - Fresh-machine/platform reproduction and board/tutor access / 换机或目标平台复现、老师看板可见性。
-- Group Canvas receipt / 小组 Canvas 回执。
+- Canvas receipt verified from the supplied screenshot; retain it privately. No resubmission is needed merely to reflect ordinary commits to the same repository / 已核对截图回执，请私下保留；同一仓库正常更新不因此要求重复提交。
 
-The team confirmed a classmate trial, a gesture revision, and two tutor showings on 25 November; the Canvas URL is not yet submitted. See [feedback and changes](FEEDBACK-AND-CHANGES.md) for the reported facts and remaining detail.
+The team confirmed a classmate trial, a gesture revision, and two tutor showings on 25 November; the Canvas URL is now confirmed submitted from the later receipt. See [feedback and changes](FEEDBACK-AND-CHANGES.md) for the reported facts and remaining detail.
 
-11 月 25 日已确认同学试玩、手势改进和两次 tutor 展示；Canvas 尚未提交。转述事实与待核细节见[反馈与调整](FEEDBACK-AND-CHANGES.md)。
+11 月 25 日已确认同学试玩、手势改进和两次 tutor 展示；后续回执已确认 Canvas 提交。转述事实与待核细节见[反馈与调整](FEEDBACK-AND-CHANGES.md)。
+
+## Follow-up verification / 后续补齐
+
+On 25 November, I cloned public main into a new temporary directory without this worktree's Godot cache or camera environment. Godot 4.7.2 imported it successfully and all eight game suites passed. This is a clean-source test on the same Mac, not a second device, human session or Windows result. The packaging helper also actually exported a project pack, started it headlessly and checked the ZIP. Its logs are included in the local candidate; no new gameplay was introduced.
+
+11 月 25 日，我将公开主线克隆到新临时目录，不使用当前工作区的 Godot 缓存或相机环境。Godot 4.7.2 导入成功，八组游戏检查通过。这是同一台 Mac 的干净源码验证，不是换机、真人或 Windows 结果。打包工具也已实际导出资源包、无窗口启动并检查 ZIP，候选包附有日志；没有新增玩法。

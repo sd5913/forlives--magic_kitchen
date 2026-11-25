@@ -13,9 +13,9 @@ Our next review is the 26 November class-week delivery candidate; the tutor conf
 | Preparation and shared UI / 料理与公共 UI | Final layout/assets and button, ticket, correction, input-status examples / 最终排版素材及按钮、小票、修正和识别状态示例 | Match approved design; every enabled/disabled state has a condition / 与定稿一致，每项按钮状态都有条件 |
 | Serving and testing / 交付与测试 | Separate observation/reaction/coin assets, sequential score presentation; player and launch evidence / 观察、表情、铜钱分层素材与逐项评分，组织试玩和启动验证 | Correct order/result binding, feedback and return; actual observations recorded / 订单结果绑定、反馈返回正确，记录真实观察 |
 
-These are module responsibilities from the agreed four-part division, not a claim that their handoff is already complete. Each module owner records its actual contributor and evidence in the issue or weekly note. Runtime-use rights for reference-derived artwork must be resolved before calling the delivery ready for public distribution.
+These are module responsibilities from the agreed four-part division, not a claim that their handoff is already complete. Each module owner records its actual contributor and evidence in the issue or weekly note. The shared visual reference is confirmed as team/AIGC co-creation; keep that source declaration and the font license with delivery.
 
-以上按四部分分工记录，不代表已经完成交接；各模块在任务或周记录中填写真实贡献者及成果链接。参考图衍生素材的运行使用许可需明确，再认定可公开分发。
+以上按四部分分工记录，不代表已经完成交接；各模块在任务或周记录中填写真实贡献者及成果链接。公共视觉参考图已确认为小组与 AIGC 协作生成，交付保留来源说明和字体许可。
 
 
 ## Historical design handoff — 19 November 2026
