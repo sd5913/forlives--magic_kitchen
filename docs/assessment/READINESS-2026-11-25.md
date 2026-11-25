@@ -77,9 +77,9 @@ The rubric does not grade raw commit/card counts or formal role titles. No justi
 
 ## Contribution still outside main / 尚未接入主线的成果
 
-The fetched `feature/cooking-station` branch contains newer cooking assets and scene work at `b260dcd`. That work is a real contributor delivery, but this audit did not run it and it is not automatically the shared shift's final preparation view. Compare it with the agreed cooking handoff and integrate the accepted parts before producing another visual replacement.
+The fetched `feature/cooking-station` branch contains newer cooking assets and scene work at `b260dcd`. The later supplied cooking ZIP has now been imported and connected to the shared shift on 26 November; its current record is linked below. The whole older branch and its standalone startup setting were not merged over the shared entry.
 
-已获取的 `feature/cooking-station` 分支在 `b260dcd` 有更新的料理素材与场景。这是组员的真实成果，但本次未运行该分支，也不能直接认定已成为统一营业的最终料理界面。下一步应对照料理交接核对并接入已确认部分，不另造替代界面。
+已获取的 `feature/cooking-station` 分支在 `b260dcd` 有更新的料理素材与场景。这是组员的真实成果。后续提供的新料理 ZIP 已于 11 月 26 日导入并连接共享营业，见下方记录；没有把旧分支的整套独立启动设置覆盖到主入口。
 
 ## Evidence still needed / 待补证据
 
@@ -98,3 +98,7 @@ The team confirmed a classmate trial, a gesture revision, and two tutor showings
 On 25 November, I cloned public main into a new temporary directory without this worktree's Godot cache or camera environment. Godot 4.7.2 imported it successfully and all eight game suites passed. This is a clean-source test on the same Mac, not a second device, human session or Windows result. The packaging helper also actually exported a project pack, started it headlessly and checked the ZIP. Its logs are included in the local candidate; no new gameplay was introduced.
 
 11 月 25 日，我将公开主线克隆到新临时目录，不使用当前工作区的 Godot 缓存或相机环境。Godot 4.7.2 导入成功，八组游戏检查通过。这是同一台 Mac 的干净源码验证，不是换机、真人或 Windows 结果。打包工具也已实际导出资源包、无窗口启动并检查 ZIP，候选包附有日志；没有新增玩法。
+
+26 November follow-up: [the supplied cooking scene](../design/COOKING-HANDOFF-1125.md) now runs inside the shared shift and passes its new input/state tests. All nine game suites pass on macOS / Godot 4.7.2. The native ZIP, cooking PDF and serving Word are committed as actual deliverables, not only described in prose. Final serving/roasting art, planning choices and human retesting remain open.
+
+11 月 26 日补充：[新料理场景](../design/COOKING-HANDOFF-1125.md)已在统一营业运行，并通过新增输入／状态测试；macOS／Godot 4.7.2 九组游戏检查通过。原 ZIP、料理 PDF 和交付 Word 已作为实际文件提交。交付／烤炉最终美术、策划口径与真人复测继续待办。

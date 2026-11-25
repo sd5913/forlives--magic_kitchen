@@ -2,6 +2,7 @@ extends Control
 ## Shared station shell; original contributor scenes remain independently editable.
 const Session = preload("res://scenes/shift/shift_session.gd")
 const ApprovedOrderView = preload("res://scenes/shift/approved_order_view.gd")
+const PreparationScene = preload("res://scenes/preparation_handoff/preparation_station.tscn")
 const Receiver = preload("res://scenes/shift/gesture_receiver.gd")
 const DESIGN_SIZE := Vector2(1440, 900)
 const INK := Color("542c14")
@@ -14,6 +15,8 @@ var language := "en"
 var _canvas: Control
 var _body: Control
 var _order_view: Control
+var _preparation_view: Control
+var preparation_highlight := -1
 var _font := SystemFont.new()
 var _textures: Dictionary = {}
 var _dirty := true
@@ -91,7 +94,12 @@ func _popup_open() -> bool:
 
 func _receive_gesture(number: int) -> void:
 	if not _popup_open():
-		session.perform_action(number)
+		_perform_action(number)
+
+
+func _perform_action(number: int) -> void:
+	if not _popup_open() and session.perform_action(number):
+		preparation_highlight = number if session.station == "prepare" else -1
 
 
 func _view_signature() -> String:
@@ -105,6 +113,8 @@ func _view_signature() -> String:
 
 
 func _refresh_timers() -> void:
+	if is_instance_valid(_preparation_view):
+		_preparation_view.refresh_times()
 	if is_instance_valid(_order_view):
 		_order_view.refresh_times()
 	for id in _popup_clocks:
@@ -142,17 +152,20 @@ func _on_focus_lost() -> void:
 
 func _navigate(destination: String) -> void:
 	if session.navigate(destination):
+		preparation_highlight = -1
 		receiver.invalidate()
 		_key_holds.clear()
 
 
 func _select(id: String) -> void:
 	if session.select_order(id):
+		preparation_highlight = -1
 		receiver.invalidate()
 		_key_holds.clear()
 
 
 func _pause() -> void:
+	preparation_highlight = -1
 	session.set_paused(not session.paused)
 	receiver.invalidate()
 	_key_holds.clear()
@@ -182,9 +195,9 @@ func _input(event: InputEvent) -> void:
 		else:
 			_pause()
 	elif key >= KEY_1 and key <= KEY_5:
-		session.perform_action(key - KEY_1 + 1)
+		_perform_action(key - KEY_1 + 1)
 	elif key in [KEY_SPACE, KEY_0]:
-		session.perform_action(0)
+		_perform_action(0)
 	elif key in [KEY_ENTER, KEY_KP_ENTER] and session.station == "prepare":
 		session.serve_current()
 	else:
@@ -195,6 +208,7 @@ func _input(event: InputEvent) -> void:
 func _refresh() -> void:
 	var overlay_mode: String = _order_view._overlay_mode if is_instance_valid(_order_view) else ""
 	_order_view = null
+	_preparation_view = null
 	_dirty = false
 	_last_signature = _view_signature()
 	_rail_clocks.clear()
@@ -212,6 +226,12 @@ func _refresh() -> void:
 		_order_view.initialize(self)
 		if overlay_mode in ["all", "detail"] and not session.paused:
 			_order_view.show_overlay(overlay_mode)
+		_fit()
+		return
+	if session.station == "prepare" and session.rating.is_empty() and not session.summary_visible:
+		_preparation_view = PreparationScene.instantiate()
+		_canvas.add_child(_preparation_view)
+		_preparation_view.initialize(self)
 		_fit()
 		return
 	_picture(_canvas, _textures.kitchen_background, Rect2(0, 0, 1440, 900), false)
@@ -408,6 +428,7 @@ func _build_summary() -> void:
 
 
 func _restart() -> void:
+	preparation_highlight = -1
 	session.restart()
 	receiver.invalidate()
 	_key_holds.clear()

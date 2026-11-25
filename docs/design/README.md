@@ -1,5 +1,10 @@
 # Kitchen design / 小店的界面设计
 
+Latest delivery: [cooking assets and serving handoff](COOKING-HANDOFF-1125.md), received 25 November and integrated 26 November. The original ZIP/PDF/DOCX are retained alongside the runtime preview.
+
+最新交付：[料理素材与交付交接](COOKING-HANDOFF-1125.md)，11 月 25 日收到、26 日接入，保留 ZIP／PDF／Word 原件与运行预览。
+
+
 From taking the first order to serving the finished wrap, these screens show how we want the kitchen to work. The low-fidelity flow helped us arrange the four stations; the UI Kit gives them a shared visual language.
 
 从接下第一单，到把做好的烤鸭卷递给顾客，这些画面记录了我们对小店流程的设计。低保真先把四个工作区安排清楚，UI Kit 再把它们的视觉统一起来。
