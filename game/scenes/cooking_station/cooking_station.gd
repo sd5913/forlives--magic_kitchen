@@ -15,15 +15,23 @@ const ACTIONS := {
 	"add_duck": "duck", "add_cucumber": "cucumber", "add_scallion": "scallion",
 	"add_hawthorn": "hawthorn", "add_sauce": "sauce"
 }
+const SAMPLE_ORDERS := {
+	"01": ["duck", "hawthorn", "cucumber", "scallion", "sauce"],
+	"02": ["duck", "cucumber", "sauce"],
+	"03": ["duck", "scallion", "hawthorn", "sauce"],
+	"04": ["duck", "cucumber", "hawthorn", "sauce"],
+}
 
 var order_id := "01"
 var required: Array[String] = ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 var added: Array[String] = []
 var highlighted_ingredient := ""
+var highlighted_action := ""
 var rolled := false
 var completed := false
 var paused := false
 var held_actions: Dictionary = {}
+var order_progress: Dictionary = {}
 var message := ""
 var gesture_state := "waiting"
 var view
@@ -51,15 +59,10 @@ func _add_ingredient(ingredient: String) -> void:
 		return
 	if not NAMES.has(ingredient):
 		return
-	if ingredient != "duck" and "duck" not in added:
-		message = "Add sliced duck first."
-		_refresh()
-		return
 	if ingredient in added:
 		message = "%s is already on the wrap." % NAMES[ingredient]
 	else:
 		added.append(ingredient)
-		highlighted_ingredient = ingredient
 		message = "Added %s.%s" % [NAMES[ingredient], " This is not in the order; use Undo." if ingredient not in required else ""]
 	_refresh()
 
@@ -88,11 +91,9 @@ func _undo() -> void:
 		return
 	if rolled:
 		rolled = false
-		highlighted_ingredient = added.back() if not added.is_empty() else ""
 		message = "Wrap opened again."
 	elif not added.is_empty():
 		var removed: String = added.pop_back()
-		highlighted_ingredient = added.back() if not added.is_empty() else ""
 		message = "Removed %s." % NAMES[removed]
 	else:
 		message = "There is nothing to undo."
@@ -116,6 +117,8 @@ func _submit() -> void:
 func _toggle_pause() -> void:
 	paused = not paused
 	held_actions.clear()
+	highlighted_ingredient = ""
+	highlighted_action = ""
 	message = "Paused." if paused else "Ready to continue."
 	_refresh()
 
@@ -126,7 +129,7 @@ func receive_action(action: String, active: bool) -> void:
 		held_actions.erase(action)
 		if held_actions.is_empty() and gesture_state == "recognized":
 			gesture_state = "waiting"
-			_refresh()
+		_refresh()
 		return
 	if paused or held_actions.has(action):
 		return
@@ -134,6 +137,8 @@ func receive_action(action: String, active: bool) -> void:
 		return
 	held_actions[action] = true
 	gesture_state = "recognized"
+	highlighted_ingredient = ACTIONS.get(action, "")
+	highlighted_action = action
 	if ACTIONS.has(action):
 		_add_ingredient(ACTIONS[action])
 	elif action == "roll_wrap":
@@ -146,6 +151,9 @@ func set_gesture_status(status: String) -> void:
 		gesture_state = "unavailable"
 	elif normalized.begins_with("camera connected") or normalized.begins_with("waiting for camera bridge") or normalized.begins_with("camera starting"):
 		gesture_state = "waiting"
+	if gesture_state == "unavailable" or normalized.begins_with("waiting for camera bridge") or normalized.begins_with("camera starting"):
+		highlighted_ingredient = ""
+		highlighted_action = ""
 	if is_node_ready() and view != null:
 		view.update_display()
 
@@ -186,16 +194,42 @@ func _exit_tree() -> void:
 
 ## Minimal handoff for the host scene; caller supplies stable ingredient IDs.
 func set_order(id: String, ingredients: Array[String]) -> void:
+	order_progress.erase(id)
 	order_id = id
 	required = ingredients.duplicate()
 	added.clear()
 	highlighted_ingredient = ""
+	highlighted_action = ""
 	rolled = false
 	completed = false
 	held_actions.clear()
 	message = ""
 	if is_node_ready():
 		_refresh()
+
+
+## Switch the active ticket while keeping each ticket's unfinished wrap.
+func switch_order(id: String, ingredients: Array[String]) -> void:
+	if id == order_id:
+		return
+	order_progress[order_id] = {"required": required.duplicate(), "added": added.duplicate(), "rolled": rolled}
+	var saved: Dictionary = order_progress.get(id, {})
+	order_id = id
+	required = ingredients.duplicate()
+	if saved.has("required"):
+		required.clear()
+		for ingredient in saved["required"]:
+			required.append(str(ingredient))
+	added.clear()
+	for ingredient in saved.get("added", []):
+		added.append(str(ingredient))
+	rolled = bool(saved.get("rolled", false))
+	completed = false
+	held_actions.clear()
+	highlighted_ingredient = ""
+	highlighted_action = ""
+	message = ""
+	_refresh()
 
 
 func _refresh() -> void:

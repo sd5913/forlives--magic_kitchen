@@ -4,11 +4,11 @@
 
 按 F5 运行 `res://scenes/cooking_station/cooking_station_ui.tscn`。画布为 1440 x 900：顶部 100 px、游戏区 560 px、手势区 240 px。不要运行旧的 `cooking_station.tscn` 或 `workbench.tscn`。
 
-食材、Roll、Undo、Complete 和底部三张手势卡都可以点击。手势 1–5 分别放入烤鸭片、山楂条、葱丝、黄瓜丝和甜面酱；食材按此顺序分层显示。握拳时检查当前订单；所需食材都已加入且没有多余食材时，隐藏饼皮与配料并显示完成的烤鸭卷，左侧 Wrap 随之打勾。点击 Complete Order 后进入黑屏评分占位场景。键盘 1–5 可模拟对应手势，0 模拟握拳，Backspace 撤销，Enter 完成，Esc 暂停，R 重置。
+点击任一小订单可与左侧大订单交换；每张订单的配料和卷制进度独立保存。手势 1–5 分别放入烤鸭片、山楂条、葱丝、黄瓜丝和甜面酱，玩家可按当前订单需要以任意顺序添加，底部四个配料手势也分别对应固定食材；盘中图片仍按固定图层叠放。握拳时检查当前订单；所需食材都已加入且没有多余食材时，隐藏饼皮与配料并显示完成的烤鸭卷，左侧 Wrap 随之打勾。点击 Complete Order 后进入黑屏评分占位场景。键盘 1–5 可模拟对应手势，0 模拟握拳，Backspace 撤销，Enter 完成，Esc 暂停，R 重置。
 
-场景树中 `Canvas/Game/WorkbenchDecor` 按托盘标签和圆形编号分组，底部手势图分别位于对应的 `Card1`、`Card2`、`Card3` 内，均为可在 Godot 中编辑位置的 `TextureRect`。加入食材时对应编号和手势图会变为金色，已加入的其他编号变为绿色；旧的 `PlateFeedback` 已删除，盘中直接显示独立的食材图片图层。
+场景树中 `Canvas/Game/WorkbenchDecor` 按托盘标签和圆形编号分组，底部手势图分别位于对应的 `Card1`、`Card2`、`Card3` 内，均为可在 Godot 中编辑位置的 `TextureRect`。识别到食材手势时，当前数字角标放大 10% 并微微变黄，对应手势图和底部卡片同步以暖黄色提亮；其他角标和手势图保持素材原色。握拳时第三张卡片与拳头图高亮。旧的 `PlateFeedback` 已删除，盘中直接显示独立的食材图片图层。
 
-摄像头手势已接入。首次使用先在仓库根目录运行 `powershell -ExecutionPolicy Bypass -File tools/setup-gesture.ps1`，之后在游戏状态栏点击 **Start Camera**。1–5 指分别对应鸭肉、山楂、葱丝、黄瓜、甜面酱，握拳对应卷饼。动作需稳定保持约 8 帧；做下一次动作前先改变手势或把手移出画面。
+摄像头手势已接入。首次使用先在仓库根目录运行 `powershell -ExecutionPolicy Bypass -File tools/setup-gesture.ps1`，之后在游戏状态栏点击 **Restart Camera** 启动或重新连接摄像头。左侧状态栏根据连接和识别结果显示 `Gesture Status: Waiting for input`、`Gesture Status: Recognized` 或 `Gesture Status: Camera unavailable`。1–5 指分别对应鸭肉、山楂、葱丝、黄瓜、甜面酱，握拳对应卷饼。动作需稳定保持约 8 帧；做下一次动作前先改变手势或把手移出画面。
 
 共享导航框、订单框和羊皮纸面板来自 `docs/design/exports/components`。当前仓库的 Figma 备份不含最新节点 `257:2724`，连接 Figma 插件后需要再进行最终视觉核对。
 

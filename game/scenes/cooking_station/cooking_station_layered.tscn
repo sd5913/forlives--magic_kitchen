@@ -775,7 +775,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Duck" unique_id=1471675364]
@@ -801,7 +801,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Cucumber" unique_id=1071398018]
@@ -826,7 +826,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Scallion" unique_id=531393442]
@@ -852,7 +852,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Hawthorn" unique_id=828854442]
@@ -877,7 +877,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Sauce" unique_id=1164929852]

@@ -454,9 +454,9 @@ expand_mode = 1
 [node name="IconCucumber" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=586621787]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 340.0
+offset_top = 324.0
 offset_right = 80.0
-offset_bottom = 394.0
+offset_bottom = 378.0
 mouse_filter = 2
 texture = ExtResource("14_cb4yv")
 expand_mode = 1
@@ -464,9 +464,9 @@ expand_mode = 1
 [node name="IconScallion" type="TextureRect" parent="Canvas/Game/OrderTicket" unique_id=1380665714]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 400.0
+offset_top = 387.0
 offset_right = 80.0
-offset_bottom = 454.0
+offset_bottom = 441.0
 mouse_filter = 2
 texture = ExtResource("15_84wit")
 expand_mode = 1
@@ -892,7 +892,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Duck" unique_id=1471675364]
@@ -918,7 +918,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Cucumber" unique_id=1071398018]
@@ -943,7 +943,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Scallion" unique_id=531393442]
@@ -969,7 +969,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Hawthorn" unique_id=828854442]
@@ -994,7 +994,7 @@ theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("Style_transparent")
 theme_override_styles/pressed = SubResource("Style_transparent")
-theme_override_styles/hover = SubResource("Style_hover")
+theme_override_styles/hover = SubResource("Style_transparent")
 theme_override_styles/disabled = SubResource("Style_transparent")
 
 [node name="Art" type="TextureRect" parent="Canvas/Game/Sauce" unique_id=1164929852]
@@ -1125,10 +1125,10 @@ text = "Undo"
 
 [node name="Complete" type="Button" parent="Canvas/Game" unique_id=1725269919]
 layout_mode = 0
-offset_left = 1208.0
-offset_top = 536.0
-offset_right = 1413.0
-offset_bottom = 595.0
+offset_left = 1202.0
+offset_top = 520.0
+offset_right = 1407.0
+offset_bottom = 579.0
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_colors/font_hover_color = Color(0.23, 0.13, 0.08, 1)
 theme_override_fonts/font = SubResource("Font_serif")
@@ -1149,10 +1149,10 @@ mouse_filter = 2
 
 [node name="GestureStatusIcon" type="TextureRect" parent="Canvas/Game/StatusStrip" unique_id=1988438768]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 8.0
-offset_right = 50.0
-offset_bottom = 40.0
+offset_left = 24.09375
+offset_top = 12.0
+offset_right = 54.0
+offset_bottom = 41.0
 mouse_filter = 2
 texture = ExtResource("45_hand")
 expand_mode = 1
@@ -1160,31 +1160,19 @@ expand_mode = 1
 [node name="Feedback" type="Label" parent="Canvas/Game/StatusStrip" unique_id=1070668465]
 layout_mode = 0
 offset_left = 62.0
-offset_top = 8.0
+offset_top = 16.0
 offset_right = 810.0
-offset_bottom = 42.0
+offset_bottom = 50.0
 theme_override_colors/font_color = Color(1, 0.94, 0.82, 1)
 theme_override_fonts/font = SubResource("Font_serif")
 theme_override_font_sizes/font_size = 20
 text = "Gesture Status: Waiting for input"
 
-[node name="CameraStatus" type="Label" parent="Canvas/Game/StatusStrip" unique_id=1005014327]
-layout_mode = 0
-offset_left = 822.0
-offset_top = 9.0
-offset_right = 1008.0
-offset_bottom = 39.0
-theme_override_colors/font_color = Color(1, 0.9, 0.72, 1)
-theme_override_fonts/font = SubResource("Font_serif")
-theme_override_font_sizes/font_size = 15
-text = "Camera off"
-horizontal_alignment = 2
-
 [node name="CameraButton" type="Button" parent="Canvas/Game/StatusStrip" unique_id=1092550506]
 layout_mode = 0
-offset_left = 425.0
+offset_left = 437.0
 offset_top = 6.0
-offset_right = 591.0
+offset_right = 603.0
 offset_bottom = 40.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.23, 0.13, 0.08, 1)
@@ -1193,7 +1181,7 @@ theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("Style_paper")
 theme_override_styles/pressed = SubResource("Style_paper")
 theme_override_styles/hover = SubResource("Style_paper")
-text = "Start Camera"
+text = "Restart Camera"
 
 [node name="WorkbenchDecor" type="Control" parent="Canvas/Game" unique_id=1462131741]
 anchors_preset = 0
@@ -1259,56 +1247,58 @@ expand_mode = 1
 
 [node name="NumberBadges" type="Control" parent="Canvas/Game/WorkbenchDecor" unique_id=1665482904]
 anchors_preset = 0
-offset_right = 1440.0
-offset_bottom = 560.0
+offset_left = 15.0
+offset_top = -145.0
+offset_right = 1455.0
+offset_bottom = 415.0
 mouse_filter = 2
 
 [node name="OrderThumbnail1" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=797553835]
 layout_mode = 0
-offset_left = 367.0
-offset_top = 278.0
-offset_right = 443.0
-offset_bottom = 354.0
+offset_left = 348.0
+offset_top = 418.0
+offset_right = 424.0
+offset_bottom = 494.0
 mouse_filter = 2
 texture = ExtResource("31_nv0bu")
 expand_mode = 1
 
 [node name="OrderThumbnail2" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1266627486]
 layout_mode = 0
-offset_left = 650.0
-offset_top = 263.0
-offset_right = 703.0
-offset_bottom = 316.0
+offset_left = 634.0
+offset_top = 403.0
+offset_right = 687.0
+offset_bottom = 456.0
 mouse_filter = 2
 texture = ExtResource("36_uxk3c")
 expand_mode = 1
 
 [node name="OrderThumbnail3" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1860025745]
 layout_mode = 0
-offset_left = 1088.0
-offset_top = 258.0
-offset_right = 1141.0
-offset_bottom = 311.0
+offset_left = 1080.0
+offset_top = 398.0
+offset_right = 1133.0
+offset_bottom = 451.0
 mouse_filter = 2
 texture = ExtResource("37_cb4yv")
 expand_mode = 1
 
 [node name="OrderThumbnail4" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1465297432]
 layout_mode = 0
-offset_left = 648.0
-offset_top = 386.0
-offset_right = 701.0
-offset_bottom = 439.0
+offset_left = 632.0
+offset_top = 526.0
+offset_right = 685.0
+offset_bottom = 579.0
 mouse_filter = 2
 texture = ExtResource("31_ddsir")
 expand_mode = 1
 
 [node name="OrderThumbnail5" type="TextureRect" parent="Canvas/Game/WorkbenchDecor/NumberBadges" unique_id=1918549259]
 layout_mode = 0
-offset_left = 1105.0
-offset_top = 384.0
-offset_right = 1158.0
-offset_bottom = 437.0
+offset_left = 1089.0
+offset_top = 524.0
+offset_right = 1142.0
+offset_bottom = 577.0
 mouse_filter = 2
 texture = ExtResource("32_1g6td")
 expand_mode = 1
@@ -1322,10 +1312,10 @@ mouse_filter = 2
 
 [node name="GestureShade" type="ColorRect" parent="Canvas/Gestures" unique_id=1017130166]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 27.0
-offset_right = 1444.0
-offset_bottom = 267.0
+offset_left = 48.0
+offset_top = 270.0
+offset_right = 1488.0
+offset_bottom = 510.0
 mouse_filter = 2
 color = Color(0.2, 0.08, 0.03, 0)
 
