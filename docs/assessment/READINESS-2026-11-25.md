@@ -2,7 +2,7 @@
 
 ## Conclusion / 结论
 
-We have a playable keyboard/mouse foundation and an implemented order-counter design. We cannot yet claim that every course requirement is evidenced or that the final visual delivery is complete. The immediate priorities are a reproducible delivery candidate, a documented trial by another person, actual tutor feedback and adaptations, final module integration, and resolved asset attribution.
+We have a playable keyboard/mouse foundation and an implemented order-counter design. We cannot yet claim that every course requirement is evidenced or that the final visual delivery is complete. The immediate priorities are a reproducible delivery candidate, a documented trial by another person, actual tutor feedback and adaptations, final module integration, and complete asset attribution.
 
 我们已有可玩键鼠基础和已接入的点单定稿，尚不能认定课程要求全部有证据、最终视觉全部完成。当前优先补可复现的候选版本、他人试玩记录、真实 tutor 反馈与调整、模块最终接入和素材来源。
 
@@ -24,7 +24,7 @@ Sources checked: [group-project brief](https://github.com/sd5913/pfad/blob/2026/
 | Shared planning, ownership and meaningful contributions / 协作及贡献 | Team plans, contributor history, Figma/source handoffs, PRs and weekly notes / 计划、真实贡献、交接与 PR | Partial: update owners and acceptance evidence; design work counts when its contribution is traceable / 部分满足，补责任人与验收证据，不以代码量替代设计贡献 |
 | Weekly review, feedback and adaptation / 每周 review 与调整 | Dated cards/notes exist; several early weeks still contain placeholders / 有日期记录，早期仍有占位 | Partial: two tutor showings reported; low-fi advice was to continue. Playable-review comments/date not recalled / 已转述两次展示，低保真建议继续；试玩评价和日期待核 |
 | Board/progress reachable by instructor / 老师可访问进度 | README links existing Project #23 and public weekly notes / 已链接 #23 与公开周记录 | Public notes accessible; authenticated board/tutor visibility not verified this audit. Do not create another board / 周记录可见，看板老师权限待核；不另建看板 |
-| Credits, AI disclosure and licensed assets / 来源、AI 与许可 | CREDITS plus Figma manifests and included Bree Serif OFL notice / 致谢、来源清单、字体许可 | Partial: reference-derived art creator/runtime permission still explicitly unresolved; resolve or replace affected art / 参考图作者及运行许可仍有待确认，需补齐或替换 |
+| Credits, AI disclosure and licensed assets / 来源、AI 与许可 | CREDITS plus Figma manifests and included Bree Serif OFL notice / 致谢、来源清单、字体许可 | Shared reference confirmed by the team as AIGC-assisted; CREDITS updated, Bree Serif license included. Original generator/model not recorded / 公共参考图已确认由小组与 AIGC 协作生成，致谢已更新、字体许可已附；最初工具模型未记录 |
 | Secrets configured without exposure / 密钥与私密信息 | Keyboard/mouse game requires no API key; ignored local environments/config / 基础游戏无密钥依赖，忽略本地配置 | No new secret configuration needed for core play. A full history secret scan was not performed / 基础玩法无需新增配置；未执行全历史密钥审计 |
 | Canvas repository URL / Canvas 仓库链接 | Correct URL identified below / 正确地址见下 | Submitted: Canvas screenshot shows JIN Minyi, 25 November 07:57, correct URL; grade pending / 回执确认已提交，显示 11 月 25 日 07:57，地址正确，待评分 |
 
@@ -42,9 +42,9 @@ Deadline: **6 December 2026, 23:59 HKT**. Keep the same repository, source, READ
 
 截止为 **2026 年 12 月 6 日 23:59，香港时间**。继续使用同一仓库，保证源码、README 和证据可访问；按实际小组提交设置操作并保存回执。与个人 Assignment 3 分开。当前要求没有额外引入每周 Canvas 上传，也没有列出必须另交报告、幻灯片或视频；若 tutor 或实际 Canvas 页面有补充，以其明确要求为准。
 
-A downloadable build is helpful when appropriate, not a prescribed engine/store requirement. The releases API returned no published release on 25 November. The local `.pck` needs Godot 4.7.2; it is not a standalone macOS or Windows executable, and a desktop-only path is not an instructor download link. The current source-import route is documented. Before publishing a release, settle the art-use rights and validate the exact package on the chosen platform.
+A downloadable build is helpful when appropriate, not a prescribed engine/store requirement. The releases API returned no published release on 25 November. The local `.pck` needs Godot 4.7.2; it is not a standalone macOS or Windows executable, and a desktop-only path is not an instructor download link. The current source-import route is documented. Keep the team-declared AIGC source and font notice with the package, and validate the exact package on the chosen platform.
 
-可下载版本有助复现，但课程不指定引擎或应用商店。11 月 25 日 releases API 未返回已发布版本。本地 `.pck` 需要 Godot 4.7.2，不是独立 macOS／Windows 应用；本机桌面路径也不是老师的下载入口。现有源码导入方式已写明；公开发布前需明确美术许可并验证实际包。
+可下载版本有助复现，但课程不指定引擎或应用商店。11 月 25 日 releases API 未返回已发布版本。本地 `.pck` 需要 Godot 4.7.2，不是独立 macOS／Windows 应用；本机桌面路径也不是老师的下载入口。现有源码导入方式已写明；随包保留组内声明的 AIGC 来源与字体许可，并验证实际包。
 
 ## 26 November review / 11 月 26 日 review
 
@@ -85,7 +85,7 @@ The fetched `feature/cooking-station` branch contains newer cooking assets and s
 
 - Other-person trial: use [the playtest record](PLAYTEST-RECORD.md); no invented quotes or device/date information / 他人试玩按记录表填写，不补造原话、设备或日期。
 - Tutor feedback: actual meeting/date, comments, next goal and owner; earlier reviews can be recorded now with their actual event date and today's recording date / 反馈按真实会议记录，补录同时注明发生与记录日期。
-- Permission: source author, original URL/license or permission evidence for reference-derived art / 素材作者、原链接、许可或授权依据。
+- Shared reference origin: confirmed as team/AIGC co-creation on 25 November; original tool/model details may be added if recovered / 公共参考图来源已于 11 月 25 日确认为小组与 AIGC 协作生成，若找回最初工具模型可补充。
 - Fresh-machine/platform reproduction and board/tutor access / 换机或目标平台复现、老师看板可见性。
 - Canvas receipt verified from the supplied screenshot; retain it privately. No resubmission is needed merely to reflect ordinary commits to the same repository / 已核对截图回执，请私下保留；同一仓库正常更新不因此要求重复提交。
 

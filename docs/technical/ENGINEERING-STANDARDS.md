@@ -77,6 +77,6 @@ Windows 上可用 `py -3` 替代 `python3`。
 python3 tools/package_review.py --godot /path/to/Godot
 ```
 
-The ignored `build/review_candidate.zip` contains the project pack, setup instructions, build evidence and font license. Import/export/startup must succeed before a new archive is produced. This validates the current host only. Verify actual interaction and human feedback separately. The pack still requires Godot 4.7.2 Standard; camera launch needs the source checkout/environment. Resolve the recorded reference-art permissions before treating it as a cleared public release.
+The ignored `build/review_candidate.zip` contains the project pack, setup instructions, build evidence and font license. Import/export/startup must succeed before a new archive is produced. This validates the current host only. Verify actual interaction and human feedback separately. The pack still requires Godot 4.7.2 Standard; camera launch needs the source checkout/environment. Keep the team-confirmed AIGC source disclosure and the font license with the package.
 
-输出在忽略提交的 `build/review_candidate.zip`，包含资源包、运行方法、构建证据和字体许可。导入、导出、启动成功后才生成新包；只验证当前主机，实际交互及他人反馈另测。资源包仍需 Godot 4.7.2 Standard，摄像头需要源码环境；参考图许可明确前不当作已核清许可的正式发布。
+输出在忽略提交的 `build/review_candidate.zip`，包含资源包、运行方法、构建证据和字体许可。导入、导出、启动成功后才生成新包；只验证当前主机，实际交互及他人反馈另测。资源包仍需 Godot 4.7.2 Standard，摄像头需要源码环境；随包保留组内确认的 AIGC 来源及字体许可。

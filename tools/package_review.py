@@ -63,12 +63,13 @@ def main():
         "verified_host": platform.system(),
         "checks": ["source_import", "project_pack_export", "headless_pack_startup"],
         "not_verified_by_this_tool": ["human_playtest", "camera_accuracy", "other_operating_systems"],
-        "distribution_status": "review_candidate_asset_permissions_pending",
+        "distribution_status": "development_review_candidate",
     }
     (output / "build_info.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
     (output / "CANVAS-URL.txt").write_text(REPOSITORY + "\n", encoding="utf-8")
     for name in ("READINESS-2026-11-25.md", "PLAYTEST-RECORD.md", "FEEDBACK-AND-CHANGES.md"):
         shutil.copy2(ROOT / "docs" / "assessment" / name, output / name)
+    shutil.copy2(ROOT / "CREDITS.md", output / "CREDITS.md")
     licenses = output / "licenses"
     licenses.mkdir(exist_ok=True)
     shutil.copy2(ROOT / "game" / "assets" / "fonts" / "bree_serif_license.txt", licenses)
@@ -99,11 +100,13 @@ This is a project pack, not a standalone application. It needs no API key.
 Camera launching requires the source checkout and its separate environment.
 The tool checks import, export and headless startup on the recorded host;
 it does not establish a human trial or verification on another OS.
-Final module visuals, rule reconciliation and reference-art permissions remain open.
+Final module visuals and rule reconciliation remain open. The shared reference
+was co-created by the team with AIGC; see the repository CREDITS.
 
 这是需要 Godot 的资源包，不是独立应用，不需要 API 密钥。
 摄像头启动需要源码和另外配置的环境。本工具检查记录平台的导入、导出及无窗口启动，
-不能代表真人试玩或其他系统验证。最终模块视觉、规则统一及参考图许可仍待处理。
+不能代表真人试玩或其他系统验证。最终模块视觉和规则统一仍待处理。
+公共参考图由小组与 AIGC 协作生成，来源说明见仓库 CREDITS。
 
 Source, full setup and credits / 源码、运行说明及致谢：
 https://github.com/sd5913/forlives--magic_kitchen
@@ -118,7 +121,7 @@ Canvas 提交仓库 URL，不提交本机目录；截止前持续完善并保持
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as bundle:
         names = ["magic_kitchen.pck", "build_info.json", "CANVAS-URL.txt", "README.md",
                  "READINESS-2026-11-25.md", "PLAYTEST-RECORD.md", "FEEDBACK-AND-CHANGES.md",
-                 "licenses/bree_serif_license.txt", "checks/engine.txt", "checks/import.log",
+                 "CREDITS.md", "licenses/bree_serif_license.txt", "checks/engine.txt", "checks/import.log",
                  "checks/export.log", "checks/launch.log"]
         for name in names:
             path = output / name

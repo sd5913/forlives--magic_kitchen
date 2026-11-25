@@ -222,3 +222,7 @@ The supplied Canvas receipt confirms the correct repository URL submitted by JIN
 I reproduced the README source-import path in a new public clone on the same Mac. Godot 4.7.2 imported the project and all eight game suites passed. I added and exercised `tools/package_review.py`: imports, exports, checks pack startup, preserves the font license, includes run instructions/logs and verifies the ZIP. This is development tooling and delivery verification, not a new game feature or a human test. Final visual modules, planning choices, asset rights and live-camera re-trial remain open.
 
 我在同一台 Mac 的全新公开克隆副本复现 README 导入方法，Godot 4.7.2 导入及八组游戏检查通过。新增并实际执行 `tools/package_review.py`，完成导入、导出、资源包启动，保留字体许可、运行方法和日志，并检查 ZIP。这是交付工具和验证，不是新玩法或真人试玩；最终模块视觉、策划口径、素材许可及真人相机复测继续待办。
+
+The team also confirmed on 25 November that the selected wood/parchment reference was co-created with AIGC. I updated the current credits and packaging disclosure to reflect that origin. The original generator/model remains unrecorded; no external image author or license was invented.
+
+11 月 25 日，组内补充确认木框／羊皮纸公共参考图由小组与 AIGC 协作生成。已更新当前致谢与随包来源说明；最初工具／模型仍未记录，不编造外部作者或授权。
