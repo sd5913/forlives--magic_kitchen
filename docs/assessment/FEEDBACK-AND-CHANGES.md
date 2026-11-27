@@ -19,9 +19,9 @@ A classmate found that gestures could trigger effects belonging to different scr
 
 ## Tutor reviews / Tutor 展示
 
-I recall showing the tutor two stages: the Figma low-fidelity design and a playable version. At the low-fidelity review, the advice was to continue development. The specific comments from the playable review are not reliably recalled and are not reconstructed here. Dates and the original notes need confirmation. These visits do not establish tutor approval of the latest scope, rules or final submission.
+JIN Minyi later supplied the teacher’s original comments and proposed responses. They are reproduced in the root [README](../../README.md#project-feedback--improvement-plan-teachers-original-comments). The review date and exact build/version shown still need confirmation. The proposed improvements are plans, not evidence that they have been implemented; this record does not imply approval of the latest scope or final submission.
 
-我记得曾向 tutor 展示两个阶段：Figma 低保真和可试玩版本。低保真阶段的建议是继续推进。试玩阶段的具体评价目前记不清，本记录不补写；日期及原始记录待核对。这不代表老师已认可当前全部范围、规则或最终交付。
+之后，JIN Minyi 补充了老师的原始意见及拟采取的改进方向，详见根目录 [README](../../README.md#project-feedback--improvement-plan-teachers-original-comments)。审阅日期及当时展示的具体版本仍待确认。改进内容属于计划，并不代表已经实现；本记录也不表示老师已认可当前全部范围或最终提交。
 
 ## Question for the 26 November review / 11 月 26 日拟提问
 

@@ -63,6 +63,54 @@ The [latest cooking/serving handoff](docs/design/COOKING-HANDOFF-1125.md) includ
 
 [最新料理／交付交接](docs/design/COOKING-HANDOFF-1125.md)包含原素材 ZIP、可编辑场景源文件、PDF、Word 和已接入的料理预览。
 
+## Project Feedback & Improvement Plan / 项目反馈与改进计划
+
+### Teacher’s Original Comments / 老师的原始意见
+
+The following comments and proposed responses were provided after a teacher review. The improvement items are plans, not claims that the changes are already implemented.
+
+以下意见及改进方向由老师审阅后提供。改进项属于后续计划，不代表相关功能已经完成。
+
+#### 1. Increase gesture gameplay difficulty and challenge / 提高手势玩法的难度与挑战性
+
+The current 1–5 finger counting mechanic is too simple and underwhelming, lacking challenge, risk, and entertainment value.
+
+当前 1–5 根手指计数的手势玩法过于简单、体验平淡，没有挑战性、风险感和趣味性。
+
+We will replace basic finger counting with richer gestures such as fist, thumbs-up, cross gestures, or sequence-based gesture memory modes, so the gameplay is skill-based instead of being overly easy.
+
+我们将把简单数手指替换为拳头、点赞、交叉等复杂手势，或序列记忆式手势玩法，让游戏需要操作和记忆，不再过于简单。
+
+#### 2. Embed the camera view in the game UI / 将摄像头画面嵌入游戏界面
+
+The separate floating camera window causes a fragmented user experience.
+
+独立弹出的摄像头窗口导致游戏体验割裂、不够沉浸。
+
+We will remove the external camera window and embed a cropped hand-camera view directly inside the game interface, such as a fixed-size hand preview area in a corner.
+
+我们将取消外置摄像头弹窗，把手部画面嵌入游戏 UI，例如在角落设置固定尺寸的手部预览区，提升整体沉浸感。
+
+#### 3. Add immediate visual and audio feedback / 增加即时视觉与音频反馈
+
+The current system provides no instant feedback after gesture recognition, making users unsure whether the gesture is detected successfully.
+
+当前手势识别后缺少即时反馈，玩家无法判断手势是否识别成功。
+
+We will add sound effects, icon highlight animations, and visual prompts for every successful gesture input, together with background music to enhance the game atmosphere.
+
+我们会为每一次成功识别添加即时音效、图标点亮动效和视觉提示，并加入背景音乐，完善整体游戏氛围。
+
+#### 4. Combine all four modules into one runnable game / 整合四个模块，形成完整可运行的游戏
+
+The current four functional modules are separated and cannot run as a complete game flow.
+
+目前四个功能模块相互独立，无法形成完整可运行的游戏流程。
+
+We will integrate all modules as soon as possible to build a fully integrated, deployable game before the final submission stage.
+
+我们会尽早整合所有模块，制作从头到尾完整可运行、可部署的成品版本，不拖延到最后才合并。
+
 ## Art and interface / 美术与界面
 
 We’ve chosen wood, parchment and brass for the shop’s interface. Shared navigation, order tickets, buttons and decorative frames live in one [Figma UI Kit](https://www.figma.com/design/OUk4C7fCqrzPmnOuzZpYGZ?node-id=148-1119), so the stations can feel like parts of the same kitchen.
