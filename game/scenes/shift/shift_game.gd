@@ -3,6 +3,7 @@ extends Control
 const Session = preload("res://scenes/shift/shift_session.gd")
 const ApprovedOrderView = preload("res://scenes/shift/approved_order_view.gd")
 const PreparationScene = preload("res://scenes/preparation_handoff/preparation_station.tscn")
+const RoastingScene = preload("res://scenes/roasting/roasting_station.tscn")
 const Receiver = preload("res://scenes/shift/gesture_receiver.gd")
 const DESIGN_SIZE := Vector2(1440, 900)
 const INK := Color("542c14")
@@ -16,6 +17,7 @@ var _canvas: Control
 var _body: Control
 var _order_view: Control
 var _preparation_view: Control
+var _roasting_view: Control
 var preparation_highlight := -1
 var _font := SystemFont.new()
 var _textures: Dictionary = {}
@@ -113,6 +115,8 @@ func _view_signature() -> String:
 
 
 func _refresh_timers() -> void:
+	if is_instance_valid(_roasting_view):
+		_roasting_view.refresh_times()
 	if is_instance_valid(_preparation_view):
 		_preparation_view.refresh_times()
 	if is_instance_valid(_order_view):
@@ -209,6 +213,7 @@ func _refresh() -> void:
 	var overlay_mode: String = _order_view._overlay_mode if is_instance_valid(_order_view) else ""
 	_order_view = null
 	_preparation_view = null
+	_roasting_view = null
 	_dirty = false
 	_last_signature = _view_signature()
 	_rail_clocks.clear()
@@ -219,6 +224,13 @@ func _refresh() -> void:
 		_canvas.remove_child(child)
 		child.queue_free()
 	_canvas.size = DESIGN_SIZE
+	if session.station == "roast" and session.rating.is_empty() and not session.summary_visible:
+		_canvas.size = Vector2(1536, 1024)
+		_roasting_view = RoastingScene.instantiate()
+		_canvas.add_child(_roasting_view)
+		_roasting_view.initialize(self)
+		_fit()
+		return
 	if session.station == "order" and session.rating.is_empty() and not session.summary_visible:
 		_canvas.size = ApprovedOrderView.CANVAS_SIZE
 		_order_view = ApprovedOrderView.new()
