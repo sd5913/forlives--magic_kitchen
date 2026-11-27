@@ -31,7 +31,6 @@ func _process(_delta: float) -> void:
 			var active := bool(data.get("active", false))
 			if not action.is_empty():
 				station.receive_action(action, active)
-			station.set_gesture_status(str(data.get("label", action)))
 
 
 func _exit_tree() -> void:

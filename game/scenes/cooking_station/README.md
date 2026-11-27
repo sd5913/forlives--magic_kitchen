@@ -2,21 +2,23 @@
 
 ## 当前版本
 
-按 F5 运行 `res://scenes/cooking_station/cooking_station_layered.tscn`。画布为 1440 x 900：顶部 100 px、游戏区 560 px、手势区 240 px。不要运行旧的 `cooking_station.tscn` 或 `workbench.tscn`。
+按 F5 运行 `res://scenes/cooking_station/cooking_station_ui.tscn`。画布为 1440 x 900：顶部 100 px、游戏区 560 px、手势区 240 px。不要运行旧的 `cooking_station.tscn` 或 `workbench.tscn`。
 
-食材、Roll、Undo、Complete 和底部三张手势卡都可以点击。Complete 只有在订单所需食材全部加入并成功卷饼后才会启用。键盘 1-5 添加食材，0 卷饼，Backspace 撤销，Enter 完成，Esc 暂停，R 重置。
+点击任一小订单可与左侧大订单交换；每张订单的配料和卷制进度独立保存。手势 1–5 分别放入烤鸭片、山楂条、葱丝、黄瓜丝和甜面酱，玩家可按当前订单需要以任意顺序添加，底部四个配料手势也分别对应固定食材；盘中图片仍按固定图层叠放。握拳时检查当前订单；所需食材都已加入且没有多余食材时，隐藏饼皮与配料并显示完成的烤鸭卷，左侧 Wrap 随之打勾。点击 Complete Order 后进入黑屏评分占位场景。键盘 1–5 可模拟对应手势，0 模拟握拳，Backspace 撤销，Enter 完成，Esc 暂停，R 重置。
 
-摄像头手势已接入。首次使用先在仓库根目录运行 `powershell -ExecutionPolicy Bypass -File tools/setup-gesture.ps1`，之后在游戏状态栏点击 **Start Camera**。1-5 指分别对应鸭肉、黄瓜、葱、萝卜、甜面酱，握拳对应卷饼。动作需稳定保持约 8 帧；做下一次动作前先改变手势或把手移出画面。
+场景树中 `Canvas/Game/WorkbenchDecor` 按托盘标签和圆形编号分组，底部手势图分别位于对应的 `Card1`、`Card2`、`Card3` 内，均为可在 Godot 中编辑位置的 `TextureRect`。识别到食材手势时，当前数字角标放大 10% 并微微变黄，对应手势图和底部卡片同步以暖黄色提亮；其他角标和手势图保持素材原色。握拳时第三张卡片与拳头图高亮。旧的 `PlateFeedback` 已删除，盘中直接显示独立的食材图片图层。
+
+摄像头手势已接入。首次使用先在仓库根目录运行 `powershell -ExecutionPolicy Bypass -File tools/setup-gesture.ps1`，之后在游戏状态栏点击 **Restart Camera** 启动或重新连接摄像头。左侧状态栏根据连接和识别结果显示 `Gesture Status: Waiting for input`、`Gesture Status: Recognized` 或 `Gesture Status: Camera unavailable`。1–5 指分别对应鸭肉、山楂、葱丝、黄瓜、甜面酱，握拳对应卷饼。动作需稳定保持约 8 帧；做下一次动作前先改变手势或把手移出画面。
 
 共享导航框、订单框和羊皮纸面板来自 `docs/design/exports/components`。当前仓库的 Figma 备份不含最新节点 `257:2724`，连接 Figma 插件后需要再进行最终视觉核对。
 
-Open `game/project.godot` in Godot and press **F5** to run the cooking station on this branch. To edit it, open `scenes/cooking_station/cooking_station_layered.tscn`. The original `scenes/workbench.tscn` remains in the project for later team integration. The older `cooking_station.tscn` can still be open in an editor; use the layered scene for the new design.
+Open `game/project.godot` in Godot and press **F5** to run the cooking station on this branch. To edit it, open `scenes/cooking_station/cooking_station_ui.tscn`. The original `scenes/workbench.tscn` remains in the project for later team integration. `cooking_station_layered.tscn` also opens with the current artwork for compatibility.
 
-在 Godot 中打开 `game/project.godot`，按 **F5** 即可运行本分支的料理台。需要编辑时，打开 `scenes/cooking_station/cooking_station_layered.tscn`。原来的 `scenes/workbench.tscn` 仍保留在项目中，供之后团队集成使用。旧版 `cooking_station.tscn` 可能仍在编辑器中打开；新版请使用带 `layered` 的场景。
+在 Godot 中打开 `game/project.godot`，按 **F5** 即可运行本分支的料理台。需要编辑时，打开 `scenes/cooking_station/cooking_station_ui.tscn`。原来的 `scenes/workbench.tscn` 仍保留在项目中，供之后团队集成使用。`cooking_station_layered.tscn` 也已同步到新版素材，可以正常打开。
 
-The sample order needs duck, cucumber, scallion and sweet bean sauce. Click the food cards or press 1–5 to add ingredients, 0 to roll, Backspace to undo, and Enter to submit. R restarts the sample and Escape pauses. Wrong ingredients can be removed in reverse order with Undo; the wrap can be rolled after the ingredients match the order.
+The sample order needs duck, hawthorn, cucumber, scallion and sweet bean sauce. Click the food cards or press 1–5 to add ingredients, 0 to roll, Backspace to undo, and Enter to submit. R restarts the sample and Escape pauses. Wrong ingredients can be removed in reverse order with Undo; the wrap can be rolled after the ingredients match the order.
 
-示例订单需要鸭肉、黄瓜、葱和甜面酱。点击食材卡或按 1–5 添加食材，0 卷饼，Backspace 撤销，Enter 完成订单，R 重新开始，Esc 暂停。放错食材时可按加入顺序的逆序撤销，配料与订单一致后可以卷饼。
+示例订单需要鸭肉、山楂、黄瓜、葱和甜面酱。点击食材卡或按 1–5 添加食材，0 卷饼，Backspace 撤销，Enter 完成订单，R 重新开始，Esc 暂停。放错食材时可按加入顺序的逆序撤销，配料与订单一致后可以卷饼。
 
 The scene is built at 1440 × 900, with editable `Canvas/Top`, `Canvas/Game` and `Canvas/Gestures` nodes. The navigation, ingredients, plate, order text, status and three 432 × 160 gesture cards are separate Godot controls; the ingredient artwork uses rectangular crops from the selected reference image. The kitchen background was generated using that reference. The shared navigation, ticket and parchment frames come from `docs/design/exports/components`. The reference image's creator and runtime-use permission remain to be confirmed as recorded in `CREDITS.md`. The other station tabs emit `navigation_requested`; the team host still needs to connect that signal. Empty queue slots await the shared order system.
 

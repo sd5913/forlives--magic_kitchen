@@ -6,25 +6,34 @@ signal navigation_requested(station_name: String)
 
 const GestureAdapter = preload("res://scenes/cooking_station/gesture_adapter.gd")
 
-const INGREDIENTS := ["duck", "cucumber", "scallion", "radish", "sauce"]
+const INGREDIENTS := ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 const NAMES := {
 	"duck": "Sliced duck", "cucumber": "Cucumber", "scallion": "Scallion",
-	"radish": "Pickled radish", "sauce": "Sweet bean sauce"
+	"hawthorn": "Hawthorn", "sauce": "Sweet bean sauce"
 }
 const ACTIONS := {
 	"add_duck": "duck", "add_cucumber": "cucumber", "add_scallion": "scallion",
-	"add_radish": "radish", "add_sauce": "sauce"
+	"add_hawthorn": "hawthorn", "add_sauce": "sauce"
+}
+const SAMPLE_ORDERS := {
+	"01": ["duck", "hawthorn", "cucumber", "scallion", "sauce"],
+	"02": ["duck", "cucumber", "sauce"],
+	"03": ["duck", "scallion", "hawthorn", "sauce"],
+	"04": ["duck", "cucumber", "hawthorn", "sauce"],
 }
 
 var order_id := "01"
-var required: Array[String] = ["duck", "cucumber", "scallion", "sauce"]
+var required: Array[String] = ["duck", "hawthorn", "cucumber", "scallion", "sauce"]
 var added: Array[String] = []
+var highlighted_ingredient := ""
+var highlighted_action := ""
 var rolled := false
 var completed := false
 var paused := false
 var held_actions: Dictionary = {}
-var message := "Choose an ingredient to begin."
-var gesture_message := "Gesture: camera bridge not running · click cards or use keys 1–5 / 0"
+var order_progress: Dictionary = {}
+var message := ""
+var gesture_state := "waiting"
 var view
 var gesture_adapter
 var camera_process_id := -1
@@ -48,6 +57,8 @@ func _build_interface() -> void:
 func _add_ingredient(ingredient: String) -> void:
 	if paused or completed or rolled:
 		return
+	if not NAMES.has(ingredient):
+		return
 	if ingredient in added:
 		message = "%s is already on the wrap." % NAMES[ingredient]
 	else:
@@ -70,6 +81,7 @@ func _roll() -> void:
 			_refresh()
 			return
 	rolled = true
+	highlighted_ingredient = ""
 	message = "Wrap rolled! Complete the order when ready."
 	_refresh()
 
@@ -99,11 +111,14 @@ func _submit() -> void:
 	message = "Order %s complete! Press R to try again." % order_id
 	order_completed.emit({"order_id": order_id, "ingredients": added.duplicate(), "rolled": true})
 	_refresh()
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/cooking_station/rating_placeholder.tscn")
 
 
 func _toggle_pause() -> void:
 	paused = not paused
 	held_actions.clear()
+	highlighted_ingredient = ""
+	highlighted_action = ""
 	message = "Paused." if paused else "Ready to continue."
 	_refresh()
 
@@ -112,10 +127,18 @@ func _toggle_pause() -> void:
 func receive_action(action: String, active: bool) -> void:
 	if not active:
 		held_actions.erase(action)
+		if held_actions.is_empty() and gesture_state == "recognized":
+			gesture_state = "waiting"
+		_refresh()
 		return
 	if paused or held_actions.has(action):
 		return
+	if not ACTIONS.has(action) and action != "roll_wrap":
+		return
 	held_actions[action] = true
+	gesture_state = "recognized"
+	highlighted_ingredient = ACTIONS.get(action, "")
+	highlighted_action = action
 	if ACTIONS.has(action):
 		_add_ingredient(ACTIONS[action])
 	elif action == "roll_wrap":
@@ -123,7 +146,14 @@ func receive_action(action: String, active: bool) -> void:
 
 
 func set_gesture_status(status: String) -> void:
-	gesture_message = "Gesture: " + status
+	var normalized := status.to_lower()
+	if normalized.contains("unavailable") or normalized.contains("could not") or normalized.contains("missing") or normalized.contains("failed") or normalized.contains("stopped unexpectedly") or normalized.contains("bridge stopped"):
+		gesture_state = "unavailable"
+	elif normalized.begins_with("camera connected") or normalized.begins_with("waiting for camera bridge") or normalized.begins_with("camera starting"):
+		gesture_state = "waiting"
+	if gesture_state == "unavailable" or normalized.begins_with("waiting for camera bridge") or normalized.begins_with("camera starting"):
+		highlighted_ingredient = ""
+		highlighted_action = ""
 	if is_node_ready() and view != null:
 		view.update_display()
 
@@ -132,15 +162,15 @@ func is_camera_running() -> bool:
 	return camera_process_id > 0 and OS.is_process_running(camera_process_id)
 
 
-func _toggle_camera() -> void:
+func _restart_camera() -> void:
 	if is_camera_running():
 		OS.kill(camera_process_id)
-		camera_process_id = -1
-		set_gesture_status("camera stopped")
-		return
+	camera_process_id = -1
+	held_actions.clear()
+	set_gesture_status("camera starting")
 	var python_path := ProjectSettings.globalize_path("res://../.venv-gesture/Scripts/python.exe")
 	var script_path := ProjectSettings.globalize_path("res://../tools/gesture_camera.py")
-	if not FileAccess.file_exists(python_path):
+	if not FileAccess.file_exists(python_path) or not FileAccess.file_exists(script_path):
 		set_gesture_status("setup missing - run tools/setup-gesture.ps1")
 		return
 	camera_process_id = OS.create_process(python_path, PackedStringArray([script_path]))
@@ -150,6 +180,13 @@ func _toggle_camera() -> void:
 		set_gesture_status("camera starting - allow access if prompted")
 
 
+func _process(_delta: float) -> void:
+	if camera_process_id > 0 and not OS.is_process_running(camera_process_id):
+		camera_process_id = -1
+		held_actions.clear()
+		set_gesture_status("camera process stopped unexpectedly")
+
+
 func _exit_tree() -> void:
 	if is_camera_running():
 		OS.kill(camera_process_id)
@@ -157,15 +194,42 @@ func _exit_tree() -> void:
 
 ## Minimal handoff for the host scene; caller supplies stable ingredient IDs.
 func set_order(id: String, ingredients: Array[String]) -> void:
+	order_progress.erase(id)
 	order_id = id
 	required = ingredients.duplicate()
 	added.clear()
+	highlighted_ingredient = ""
+	highlighted_action = ""
 	rolled = false
 	completed = false
 	held_actions.clear()
-	message = "Choose an ingredient to begin."
+	message = ""
 	if is_node_ready():
 		_refresh()
+
+
+## Switch the active ticket while keeping each ticket's unfinished wrap.
+func switch_order(id: String, ingredients: Array[String]) -> void:
+	if id == order_id:
+		return
+	order_progress[order_id] = {"required": required.duplicate(), "added": added.duplicate(), "rolled": rolled}
+	var saved: Dictionary = order_progress.get(id, {})
+	order_id = id
+	required = ingredients.duplicate()
+	if saved.has("required"):
+		required.clear()
+		for ingredient in saved["required"]:
+			required.append(str(ingredient))
+	added.clear()
+	for ingredient in saved.get("added", []):
+		added.append(str(ingredient))
+	rolled = bool(saved.get("rolled", false))
+	completed = false
+	held_actions.clear()
+	highlighted_ingredient = ""
+	highlighted_action = ""
+	message = ""
+	_refresh()
 
 
 func _refresh() -> void:
@@ -177,9 +241,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	match event.keycode:
 		KEY_1: _add_ingredient("duck")
-		KEY_2: _add_ingredient("cucumber")
+		KEY_2: _add_ingredient("hawthorn")
 		KEY_3: _add_ingredient("scallion")
-		KEY_4: _add_ingredient("radish")
+		KEY_4: _add_ingredient("cucumber")
 		KEY_5: _add_ingredient("sauce")
 		KEY_0: _roll()
 		KEY_BACKSPACE: _undo()
