@@ -1,5 +1,22 @@
 [gd_scene format=3 uid="uid://dpiihrpmtst0p"]
 
+[ext_resource type="Texture2D" uid="uid://bxid55us5qde4" path="res://assets/ui/serve_station/serve_background.png" id="1_ldgwv"]
+[ext_resource type="Script" uid="uid://ctlagfa8s8d24" path="res://scenes/serve_station/serve_station.gd" id="1_udlk0"]
+[ext_resource type="Texture2D" uid="uid://chqowftd8n73p" path="res://assets/ui/serve_station/customer_happy.png" id="3_f8xnk"]
+[ext_resource type="Texture2D" uid="uid://bluq4ey4ogvdc" path="res://assets/ui/serve_station/customer_observe.png" id="3_n8323"]
+[ext_resource type="Texture2D" uid="uid://kxkpeacggfky" path="res://assets/ui/serve_station/customer_normal.png" id="4_3m4aj"]
+[ext_resource type="Texture2D" uid="uid://0jwk7q271gy1" path="res://assets/ui/serve_station/customer_angry.png" id="5_6dclv"]
+[ext_resource type="Texture2D" uid="uid://d0y3yaa2jqiwj" path="res://assets/ui/serve_station/customer comment-medium.png" id="7_6wvdi"]
+[ext_resource type="Texture2D" uid="uid://uf2ayn85b6tw" path="res://assets/ui/serve_station/finished_wrap.png" id="7_q6mg0"]
+[ext_resource type="Texture2D" uid="uid://mntkdlnee6fl" path="res://assets/ui/serve_station/customer comment-high.png" id="7_qywsl"]
+[ext_resource type="Texture2D" uid="uid://cc56s7lyw28ck" path="res://assets/ui/serve_station/order_ticket.png" id="8_cfqfx"]
+[ext_resource type="Texture2D" uid="uid://colyg3w4yot5t" path="res://assets/ui/serve_station/customer comment-low.png" id="8_h1bxy"]
+[ext_resource type="Texture2D" uid="uid://dnsbd8oios70l" path="res://assets/ui/serve_station/Compact service bar.png" id="9_qywsl"]
+[ext_resource type="Texture2D" uid="uid://o0icnmy6058o" path="res://assets/ui/serve_station/coins_high.png" id="10_wifmj"]
+[ext_resource type="Texture2D" uid="uid://c1bnlv1ekqe24" path="res://assets/ui/serve_station/coins_medium.png" id="10_xueh4"]
+[ext_resource type="Texture2D" uid="uid://dca1pvpxjrunl" path="res://assets/ui/serve_station/coins_low.png" id="11_7rlkf"]
+[ext_resource type="Texture2D" uid="uid://cxang3djcsy7v" path="res://assets/ui/serve_station/goback_button.png" id="16_h1bxy"]
+
 [node name="ServeStation" type="Control" unique_id=1125775023]
 layout_mode = 3
 anchors_preset = 15
@@ -7,28 +24,140 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_udlk0")
+observe_texture = ExtResource("3_n8323")
+happy_texture = ExtResource("3_f8xnk")
+normal_texture = ExtResource("4_3m4aj")
+angry_texture = ExtResource("5_6dclv")
+high_comment_texture = ExtResource("7_qywsl")
+medium_comment_texture = ExtResource("7_6wvdi")
+low_comment_texture = ExtResource("8_h1bxy")
+coins_high_texture = ExtResource("10_wifmj")
+coins_medium_texture = ExtResource("10_xueh4")
+coins_low_texture = ExtResource("11_7rlkf")
+angry_height_ratio = 1.06
+metadata/_edit_vertical_guides_ = [-155.0]
 
-[node name="TopBar" type="ColorRect" parent="." unique_id=1333983306]
-layout_mode = 0
-offset_right = 1440.0
-offset_bottom = 100.0
-color = Color(0.8217887, 0.82178867, 0.82178867, 1)
+[node name="Background" type="TextureRect" parent="." unique_id=1554464296]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ldgwv")
 
-[node name="TitleLabel" type="Label" parent="TopBar" unique_id=816490590]
+[node name="CustomerComment" type="TextureRect" parent="." unique_id=1563367483]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 18.0
-offset_right = 540.0
-offset_bottom = 58.0
+offset_left = 1138.0
+offset_top = 312.0
+offset_right = 1522.0
+offset_bottom = 530.0
+mouse_filter = 2
+texture = ExtResource("7_qywsl")
+stretch_mode = 3
+
+[node name="Customer" type="TextureRect" parent="." unique_id=859028138]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 187.0
+offset_right = 1368.0
+offset_bottom = 732.0
+texture = ExtResource("3_n8323")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FinishedWrap" type="TextureRect" parent="." unique_id=825015518]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 628.0
+offset_right = 880.0
+offset_bottom = 880.0
+texture = ExtResource("7_q6mg0")
+stretch_mode = 5
+
+[node name="OrderTicket" type="TextureRect" parent="." unique_id=506838563]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 534.0
+offset_right = 396.0
+offset_bottom = 877.0
+texture = ExtResource("8_cfqfx")
+stretch_mode = 5
+
+[node name="CoinsReward" type="TextureRect" parent="." unique_id=2131540560]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 647.0
+offset_right = 1366.0
+offset_bottom = 851.0
+mouse_filter = 2
+texture = ExtResource("10_wifmj")
+stretch_mode = 5
+
+[node name="ScoreBar" type="TextureRect" parent="." unique_id=606916983]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 851.0
+offset_right = 1509.0
+offset_bottom = 1003.0
+texture = ExtResource("9_qywsl")
+
+[node name="OrderScore" type="Label" parent="ScoreBar" unique_id=255440188]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 58.0
+offset_right = 312.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.21960784, 0.14117648, 0.09803922, 1)
 theme_override_font_sizes/font_size = 26
-text = "Magic Kitchen 北京烤鸭卷"
+text = "--"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="SubtitleLabel" type="Label" parent="TopBar" unique_id=23718353]
+[node name="CookingScore" type="Label" parent="ScoreBar" unique_id=1390792872]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 60.0
-offset_right = 120.0
-offset_bottom = 88.0
-theme_override_colors/font_color = Color(0.39688927, 0.39688927, 0.39688924, 1)
-theme_override_font_sizes/font_size = 20
-text = "交付结算"
+offset_left = 952.0
+offset_top = 58.0
+offset_right = 992.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.21960784, 0.14117648, 0.09803922, 1)
+theme_override_font_sizes/font_size = 26
+text = "--"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoastingScore" type="Label" parent="ScoreBar" unique_id=1562560618]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 58.0
+offset_right = 653.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.21960784, 0.14117648, 0.09803922, 1)
+theme_override_font_sizes/font_size = 26
+text = "--"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TotalScoreLabel" type="Label" parent="." unique_id=1073278812]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 573.0
+offset_right = 806.0
+offset_bottom = 661.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.9, 0.63375, 0.261, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 64
+text = "Totally 96 !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoBackButton" type="TextureButton" parent="." unique_id=242308869]
+layout_mode = 0
+offset_left = 1209.0
+offset_top = 891.0
+offset_right = 1457.0
+offset_bottom = 963.0
+disabled = true
+texture_normal = ExtResource("16_h1bxy")
